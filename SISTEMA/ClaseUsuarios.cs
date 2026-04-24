@@ -19,14 +19,14 @@ namespace SISTEMA
         };
 
         private int _id_usuario;
-        private string _cedula;
-        private string _nombreCompleto;
+        private string _nombre;
         private string _correo;
-        private string _telefono;
         private string _estado;
-        private string _usuario;
         private string _contrasena;
+        private string _pregunta;
+        private string _respuesta;
         private string _rol;
+        private string _descripcionRol;
 
         //validaciones
         public int id_usuario
@@ -38,22 +38,14 @@ namespace SISTEMA
                 if (_id_usuario <= 0 || string.IsNullOrEmpty(_id_usuario.ToString()) || string.IsNullOrWhiteSpace(_id_usuario.ToString())) MessageBox.Show("El id de usuario no puede ir vacio o ser cero.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Error); 
             }
         }
-        public string cedula
-        {
-            get { return _cedula; }
-            set {
-                _cedula = value;
-                if (_cedula == "") MessageBox.Show("El campo 'Cédula' no puede ir vacio.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
 
-        public string nombreCompleto
+        public string nombre
         {
-            get { return _nombreCompleto; }
+            get { return _nombre; }
             set
             {
-                _cedula = value;
-                if (_cedula == "") MessageBox.Show("El campo 'Cédula' no puede ir vacio.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                _nombre = value;
+                if (_nombre == "") MessageBox.Show("El campo 'Cédula' no puede ir vacio.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -67,15 +59,6 @@ namespace SISTEMA
             }
         }
 
-        public string telefono
-        {
-            get { return _telefono; }
-            set
-            {
-                _telefono = value;
-                if (_telefono == "") MessageBox.Show("El campo 'Teléfono' no puede ir vacio.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
 
         public string estado
         {
@@ -83,16 +66,6 @@ namespace SISTEMA
             set {
                 _estado = value;
                 if (_estado == "") MessageBox.Show("El estado no puede ir vacio.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        public string usuario
-        {
-            get { return _usuario; }
-            set
-            {
-                _usuario = value;
-                if (_usuario == "") MessageBox.Show("El campo 'Usuario' no puede ir vacio.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

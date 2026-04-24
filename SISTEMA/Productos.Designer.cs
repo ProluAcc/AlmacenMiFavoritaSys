@@ -39,20 +39,9 @@
             button4 = new Button();
             button3 = new Button();
             dataGridView1 = new DataGridView();
-            Column1 = new DataGridViewTextBoxColumn();
-            Column2 = new DataGridViewTextBoxColumn();
-            Column3 = new DataGridViewTextBoxColumn();
-            Column4 = new DataGridViewTextBoxColumn();
-            Column5 = new DataGridViewTextBoxColumn();
-            Column6 = new DataGridViewTextBoxColumn();
-            Column7 = new DataGridViewTextBoxColumn();
-            Column8 = new DataGridViewTextBoxColumn();
-            Column9 = new DataGridViewTextBoxColumn();
-            Column10 = new DataGridViewTextBoxColumn();
             textBox5 = new TextBox();
             textBox4 = new TextBox();
             textBox3 = new TextBox();
-            textBox2 = new TextBox();
             textBox1 = new TextBox();
             comboBox4 = new ComboBox();
             comboBox3 = new ComboBox();
@@ -69,6 +58,17 @@
             label3 = new Label();
             label2 = new Label();
             button1 = new Button();
+            Column1 = new DataGridViewTextBoxColumn();
+            Column2 = new DataGridViewTextBoxColumn();
+            Column3 = new DataGridViewTextBoxColumn();
+            Column4 = new DataGridViewTextBoxColumn();
+            Column5 = new DataGridViewTextBoxColumn();
+            Column6 = new DataGridViewTextBoxColumn();
+            Column7 = new DataGridViewTextBoxColumn();
+            Column8 = new DataGridViewTextBoxColumn();
+            Column9 = new DataGridViewTextBoxColumn();
+            Column10 = new DataGridViewTextBoxColumn();
+            comboBox5 = new ComboBox();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
@@ -189,57 +189,6 @@
             dataGridView1.Size = new Size(997, 217);
             dataGridView1.TabIndex = 100;
             // 
-            // Column1
-            // 
-            Column1.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            Column1.HeaderText = "Código";
-            Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            Column2.HeaderText = "Nombre del Producto";
-            Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            Column3.HeaderText = "Categoría";
-            Column3.Name = "Column3";
-            // 
-            // Column4
-            // 
-            Column4.HeaderText = "Unidad/Medida";
-            Column4.Name = "Column4";
-            // 
-            // Column5
-            // 
-            Column5.HeaderText = "Marca";
-            Column5.Name = "Column5";
-            // 
-            // Column6
-            // 
-            Column6.HeaderText = "Stock";
-            Column6.Name = "Column6";
-            // 
-            // Column7
-            // 
-            Column7.HeaderText = "Stock Minimo";
-            Column7.Name = "Column7";
-            // 
-            // Column8
-            // 
-            Column8.HeaderText = "Precio Venta";
-            Column8.Name = "Column8";
-            // 
-            // Column9
-            // 
-            Column9.HeaderText = "Estado";
-            Column9.Name = "Column9";
-            // 
-            // Column10
-            // 
-            Column10.HeaderText = "Editar";
-            Column10.Name = "Column10";
-            // 
             // textBox5
             // 
             textBox5.Location = new Point(435, 154);
@@ -260,13 +209,6 @@
             textBox3.Name = "textBox3";
             textBox3.Size = new Size(100, 23);
             textBox3.TabIndex = 96;
-            // 
-            // textBox2
-            // 
-            textBox2.Location = new Point(180, 154);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(100, 23);
-            textBox2.TabIndex = 95;
             // 
             // textBox1
             // 
@@ -327,9 +269,9 @@
             label10.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             label10.Location = new Point(575, 75);
             label10.Name = "label10";
-            label10.Size = new Size(92, 15);
+            label10.Size = new Size(48, 15);
             label10.TabIndex = 88;
-            label10.Text = "Unidad/Medida";
+            label10.Text = "Medida";
             // 
             // label9
             // 
@@ -365,7 +307,7 @@
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            label6.Location = new Point(315, 136);
+            label6.Location = new Point(310, 136);
             label6.Name = "label6";
             label6.Size = new Size(77, 15);
             label6.TabIndex = 84;
@@ -385,11 +327,11 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            label4.Location = new Point(195, 136);
+            label4.Location = new Point(180, 136);
             label4.Name = "label4";
-            label4.Size = new Size(83, 15);
+            label4.Size = new Size(84, 15);
             label4.TabIndex = 82;
-            label4.Text = "Stack Minimo";
+            label4.Text = "Disponibilidad";
             // 
             // label3
             // 
@@ -423,12 +365,72 @@
             button1.TabIndex = 99;
             button1.UseVisualStyleBackColor = false;
             // 
+            // Column1
+            // 
+            Column1.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            Column1.HeaderText = "Código";
+            Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            Column2.HeaderText = "Nombre del Producto";
+            Column2.Name = "Column2";
+            // 
+            // Column3
+            // 
+            Column3.HeaderText = "Categoría";
+            Column3.Name = "Column3";
+            // 
+            // Column4
+            // 
+            Column4.HeaderText = "Medida";
+            Column4.Name = "Column4";
+            // 
+            // Column5
+            // 
+            Column5.HeaderText = "Marca";
+            Column5.Name = "Column5";
+            // 
+            // Column6
+            // 
+            Column6.HeaderText = "Stock";
+            Column6.Name = "Column6";
+            // 
+            // Column7
+            // 
+            Column7.HeaderText = "Disponibilidad";
+            Column7.Name = "Column7";
+            // 
+            // Column8
+            // 
+            Column8.HeaderText = "Precio Venta";
+            Column8.Name = "Column8";
+            // 
+            // Column9
+            // 
+            Column9.HeaderText = "Estado";
+            Column9.Name = "Column9";
+            // 
+            // Column10
+            // 
+            Column10.HeaderText = "Editar";
+            Column10.Name = "Column10";
+            // 
+            // comboBox5
+            // 
+            comboBox5.FormattingEnabled = true;
+            comboBox5.Location = new Point(180, 154);
+            comboBox5.Name = "comboBox5";
+            comboBox5.Size = new Size(100, 23);
+            comboBox5.TabIndex = 105;
+            // 
             // Productos
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Gold;
             ClientSize = new Size(1169, 469);
+            Controls.Add(comboBox5);
             Controls.Add(button8);
             Controls.Add(button2);
             Controls.Add(button7);
@@ -437,7 +439,6 @@
             Controls.Add(textBox5);
             Controls.Add(textBox4);
             Controls.Add(textBox3);
-            Controls.Add(textBox2);
             Controls.Add(textBox1);
             Controls.Add(comboBox4);
             Controls.Add(comboBox3);
@@ -475,20 +476,9 @@
         private Button button4;
         private Button button3;
         private DataGridView dataGridView1;
-        private DataGridViewTextBoxColumn Column1;
-        private DataGridViewTextBoxColumn Column2;
-        private DataGridViewTextBoxColumn Column3;
-        private DataGridViewTextBoxColumn Column4;
-        private DataGridViewTextBoxColumn Column5;
-        private DataGridViewTextBoxColumn Column6;
-        private DataGridViewTextBoxColumn Column7;
-        private DataGridViewTextBoxColumn Column8;
-        private DataGridViewTextBoxColumn Column9;
-        private DataGridViewTextBoxColumn Column10;
         private TextBox textBox5;
         private TextBox textBox4;
         private TextBox textBox3;
-        private TextBox textBox2;
         private TextBox textBox1;
         private ComboBox comboBox4;
         private ComboBox comboBox3;
@@ -505,5 +495,16 @@
         private Label label3;
         private Label label2;
         private Button button1;
+        private DataGridViewTextBoxColumn Column1;
+        private DataGridViewTextBoxColumn Column2;
+        private DataGridViewTextBoxColumn Column3;
+        private DataGridViewTextBoxColumn Column4;
+        private DataGridViewTextBoxColumn Column5;
+        private DataGridViewTextBoxColumn Column6;
+        private DataGridViewTextBoxColumn Column7;
+        private DataGridViewTextBoxColumn Column8;
+        private DataGridViewTextBoxColumn Column9;
+        private DataGridViewTextBoxColumn Column10;
+        private ComboBox comboBox5;
     }
 }

@@ -49,19 +49,16 @@
             label3 = new Label();
             label2 = new Label();
             dataGridView1 = new DataGridView();
-            Column1 = new DataGridViewTextBoxColumn();
-            Column2 = new DataGridViewTextBoxColumn();
-            Column3 = new DataGridViewTextBoxColumn();
-            Column4 = new DataGridViewTextBoxColumn();
-            Column5 = new DataGridViewTextBoxColumn();
             comboBox1 = new ComboBox();
-            textBox1 = new TextBox();
-            label1 = new Label();
             panel3 = new Panel();
             panel4 = new Panel();
             button7 = new Button();
             label8 = new Label();
             label6 = new Label();
+            Column2 = new DataGridViewTextBoxColumn();
+            Column3 = new DataGridViewTextBoxColumn();
+            Column4 = new DataGridViewTextBoxColumn();
+            Column5 = new DataGridViewTextBoxColumn();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
@@ -184,14 +181,14 @@
             // 
             // textBox3
             // 
-            textBox3.Location = new Point(540, 111);
+            textBox3.Location = new Point(343, 108);
             textBox3.Name = "textBox3";
             textBox3.Size = new Size(136, 23);
             textBox3.TabIndex = 75;
             // 
             // textBox2
             // 
-            textBox2.Location = new Point(343, 111);
+            textBox2.Location = new Point(146, 108);
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(136, 23);
             textBox2.TabIndex = 74;
@@ -236,16 +233,16 @@
             label4.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             label4.Location = new Point(343, 146);
             label4.Name = "label4";
-            label4.Size = new Size(119, 15);
+            label4.Size = new Size(63, 15);
             label4.TabIndex = 70;
-            label4.Text = "Dirección (Opcional)";
+            label4.Text = "Dirección ";
             // 
             // label3
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             label3.ForeColor = Color.Black;
-            label3.Location = new Point(571, 93);
+            label3.Location = new Point(374, 90);
             label3.Name = "label3";
             label3.Size = new Size(59, 15);
             label3.TabIndex = 69;
@@ -256,7 +253,7 @@
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             label2.ForeColor = Color.Black;
-            label2.Location = new Point(343, 93);
+            label2.Location = new Point(146, 90);
             label2.Name = "label2";
             label2.Size = new Size(138, 15);
             label2.TabIndex = 68;
@@ -266,47 +263,13 @@
             // 
             dataGridView1.AllowUserToResizeRows = false;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3, Column4, Column5 });
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Column2, Column3, Column4, Column5 });
             dataGridView1.ImeMode = ImeMode.On;
             dataGridView1.Location = new Point(146, 229);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.Size = new Size(683, 287);
             dataGridView1.TabIndex = 67;
-            // 
-            // Column1
-            // 
-            Column1.HeaderText = "Código RUC";
-            Column1.MinimumWidth = 6;
-            Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            Column2.HeaderText = "Nombre del proveedor";
-            Column2.MinimumWidth = 6;
-            Column2.Name = "Column2";
-            Column2.Width = 150;
-            // 
-            // Column3
-            // 
-            Column3.HeaderText = "Dirección";
-            Column3.MinimumWidth = 6;
-            Column3.Name = "Column3";
-            Column3.Width = 170;
-            // 
-            // Column4
-            // 
-            Column4.HeaderText = "Teléfono";
-            Column4.MinimumWidth = 6;
-            Column4.Name = "Column4";
-            Column4.Width = 125;
-            // 
-            // Column5
-            // 
-            Column5.HeaderText = "Estado";
-            Column5.MinimumWidth = 6;
-            Column5.Name = "Column5";
-            Column5.Width = 125;
             // 
             // comboBox1
             // 
@@ -316,24 +279,6 @@
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(136, 23);
             comboBox1.TabIndex = 66;
-            // 
-            // textBox1
-            // 
-            textBox1.Location = new Point(146, 111);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(136, 23);
-            textBox1.TabIndex = 65;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            label1.ForeColor = Color.Black;
-            label1.Location = new Point(169, 93);
-            label1.Name = "label1";
-            label1.Size = new Size(75, 15);
-            label1.TabIndex = 64;
-            label1.Text = "Código RUC:";
             // 
             // panel3
             // 
@@ -391,6 +336,34 @@
             label6.TabIndex = 10;
             label6.Text = "NUEVO PROVEEDOR:";
             // 
+            // Column2
+            // 
+            Column2.HeaderText = "Nombre del proveedor";
+            Column2.MinimumWidth = 6;
+            Column2.Name = "Column2";
+            Column2.Width = 150;
+            // 
+            // Column3
+            // 
+            Column3.HeaderText = "Dirección";
+            Column3.MinimumWidth = 6;
+            Column3.Name = "Column3";
+            Column3.Width = 170;
+            // 
+            // Column4
+            // 
+            Column4.HeaderText = "Teléfono";
+            Column4.MinimumWidth = 6;
+            Column4.Name = "Column4";
+            Column4.Width = 125;
+            // 
+            // Column5
+            // 
+            Column5.HeaderText = "Estado";
+            Column5.MinimumWidth = 6;
+            Column5.Name = "Column5";
+            Column5.Width = 125;
+            // 
             // Proveedores
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -412,8 +385,6 @@
             Controls.Add(label2);
             Controls.Add(dataGridView1);
             Controls.Add(comboBox1);
-            Controls.Add(textBox1);
-            Controls.Add(label1);
             Controls.Add(panel3);
             Name = "Proveedores";
             Text = "Proveedores";
@@ -450,18 +421,15 @@
         private Label label3;
         private Label label2;
         private DataGridView dataGridView1;
-        private DataGridViewTextBoxColumn Column1;
-        private DataGridViewTextBoxColumn Column2;
-        private DataGridViewTextBoxColumn Column3;
-        private DataGridViewTextBoxColumn Column4;
-        private DataGridViewTextBoxColumn Column5;
         private ComboBox comboBox1;
-        private TextBox textBox1;
-        private Label label1;
         private Panel panel3;
         private Panel panel4;
         private Button button7;
         private Label label8;
         private Label label6;
+        private DataGridViewTextBoxColumn Column2;
+        private DataGridViewTextBoxColumn Column3;
+        private DataGridViewTextBoxColumn Column4;
+        private DataGridViewTextBoxColumn Column5;
     }
 }

@@ -14,6 +14,7 @@ namespace SISTEMA
         private int _id_usuario;
         private int _id_cliente;
         private int _cantidad;
+        private int _numero_factura;
         private double _subtotal;
         private double _descuento;
         private double _total;

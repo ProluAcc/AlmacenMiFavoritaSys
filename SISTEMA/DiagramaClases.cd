@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="SISTEMA.usersLogin" Collapsed="true">
+    <Position X="7" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABgAAAAAAAACAAAAAAAAAAQAAAAAAAAAAAA=</HashCode>
+      <FileName>usersLogin.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SISTEMA.ClaseCaja" Collapsed="true">
+    <Position X="4" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAIAABAAABAAAAAAAAAAAgAAABAAA=</HashCode>
+      <FileName>ClaseCaja.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SISTEMA.ClaseClientes" Collapsed="true">
+    <Position X="3" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAAAAAAAAAAAAAIAgAAAAgAAAAAEIAAAA=</HashCode>
+      <FileName>ClaseClientes.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SISTEMA.ClaseCompra" Collapsed="true">
+    <Position X="6" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQBAAEAAAAAAAABAAAAAAAgggAAAkAAAARAAAAAA=</HashCode>
+      <FileName>ClaseCompra.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SISTEMA.ClaseCredito" Collapsed="true">
+    <Position X="8.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAEAAAAAAAAABAEAAAAAAAAIAAAAAAAAAAA=</HashCode>
+      <FileName>ClaseCredito.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SISTEMA.ClaseDevolucion" Collapsed="true">
+    <Position X="8.5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABCAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAA=</HashCode>
+      <FileName>ClaseDevolucion.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SISTEMA.ClaseProducto" Collapsed="true">
+    <Position X="1.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>FAgAAAAAIAASIAAEAAAAAAQAAAAgAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>ClaseProducto.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SISTEMA.ClaseProveedor" Collapsed="true">
+    <Position X="0.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAAAAAAAAAAAAAIAgAAAAgAAAAAEIAAIA=</HashCode>
+      <FileName>ClaseProveedor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SISTEMA.ClaseUsuarios" Collapsed="true">
+    <Position X="2.25" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAADAACIAgAgACAABCCIAACIgAAAACAAAAAAAIAAAA=</HashCode>
+      <FileName>ClaseUsuarios.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SISTEMA.ClaseVenta" Collapsed="true">
+    <Position X="4.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAgQAAAEAAAAAAAABAAAAAAAgggBACgAAAAAAAAAAA=</HashCode>
+      <FileName>ClaseVenta.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -19,5 +19,45 @@ namespace SISTEMA
         private double _descuento;
         private double _total;
         private int _id_producto;
+
+        internal ClaseCaja ClaseCaja
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
+        internal ClaseProducto ClaseProducto
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
+        internal ClaseClientes ClaseClientes
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
+        internal ClaseDevolucion ClaseDevolucion
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
+        internal ClaseCredito ClaseCredito
+        {
+            get => default;
+            set
+            {
+            }
+        }
     }
 }

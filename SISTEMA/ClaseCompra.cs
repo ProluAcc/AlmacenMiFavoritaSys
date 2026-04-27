@@ -19,5 +19,21 @@ namespace SISTEMA
         private int _impuesto;
         private int _total;
         private int _id_producto;
+
+        internal ClaseProveedor ClaseProveedor
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
+        internal ClaseProducto ClaseProducto
+        {
+            get => default;
+            set
+            {
+            }
+        }
     }
 }

@@ -3,7 +3,7 @@ namespace SISTEMA
     public partial class Login : Form
     {
         ClaseUsuarios cu = new();
-        usersLogin u = new();
+        ClaseRol u = new();
         public Login()
         {
             InitializeComponent();

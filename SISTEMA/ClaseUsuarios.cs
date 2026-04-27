@@ -88,5 +88,29 @@ namespace SISTEMA
                 if (_rol == "") MessageBox.Show("El rol no puede ir vacio.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        internal ClaseVenta ClaseVenta
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
+        internal ClaseCompra ClaseCompra
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
+        internal ClaseCaja ClaseCaja
+        {
+            get => default;
+            set
+            {
+            }
+        }
     }
 }

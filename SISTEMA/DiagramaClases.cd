@@ -1,11 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="SISTEMA.usersLogin" Collapsed="true">
+  <Class Name="SISTEMA.ClaseRol" Collapsed="true">
     <Position X="5.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAABgAAAAAAAACAAAAAAAAAAQAAAAAAAAAAAA=</HashCode>
-      <FileName>usersLogin.cs</FileName>
+      <HashCode>AAAAAAACABgAAAAEAAACAAAAAAAAAAQAAAAAAAAAgAA=</HashCode>
+      <FileName>ClaseRol.cs</FileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="ClaseUsuarios" />
+    </ShowAsAssociation>
   </Class>
   <Class Name="SISTEMA.ClaseCaja" Collapsed="true">
     <Position X="5.5" Y="3.5" Width="1.5" />
@@ -24,9 +27,13 @@
   <Class Name="SISTEMA.ClaseCompra" Collapsed="true">
     <Position X="7.75" Y="2.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAQBAAEAAAAAAAABAAAAAAAgggAAAkAAAARAAAAAA=</HashCode>
+      <HashCode>AAAAQBAAEAAAAAAAABAAAAAAAgggAAAkAAAAZAAAAAA=</HashCode>
       <FileName>ClaseCompra.cs</FileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="ClaseProveedor" />
+      <Property Name="ClaseProducto" />
+    </ShowAsAssociation>
   </Class>
   <Class Name="SISTEMA.ClaseCredito" Collapsed="true">
     <Position X="1.5" Y="5.5" Width="1.5" />
@@ -62,16 +69,27 @@
   <Class Name="SISTEMA.ClaseUsuarios" Collapsed="true">
     <Position X="5.25" Y="1.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAADAACIAgAgACAABCCIAACIgAAAACAAAAAAAIAAAA=</HashCode>
+      <HashCode>AAAADAACIAgAgACAABCCIQACIgAAAACAAAAAAAIAAAA=</HashCode>
       <FileName>ClaseUsuarios.cs</FileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="ClaseVenta" />
+      <Property Name="ClaseCompra" />
+    </ShowAsAssociation>
   </Class>
   <Class Name="SISTEMA.ClaseVenta" Collapsed="true">
     <Position X="3" Y="2.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AIAgQAAAEAAAAAAAABAAAAAAAgggBACgAAAAAAAAAAA=</HashCode>
+      <HashCode>AIAgQAAAEAAAAAQAABAAAAAAAggiDACgAAAAIgAAAAA=</HashCode>
       <FileName>ClaseVenta.cs</FileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="ClaseCaja" />
+      <Property Name="ClaseProducto" />
+      <Property Name="ClaseClientes" />
+      <Property Name="ClaseDevolucion" />
+      <Property Name="ClaseCredito" />
+    </ShowAsAssociation>
   </Class>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>

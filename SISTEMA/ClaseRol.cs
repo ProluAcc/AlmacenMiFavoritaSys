@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace SISTEMA
 {
-    class usersLogin
+    class ClaseRol
     {
+        private string _rol;
+        private string _descripcion;
         private string _usuario;
         private string _contrasena;
 
@@ -28,6 +30,14 @@ namespace SISTEMA
             {
                 _contrasena = value;
                 if (_contrasena == "") MessageBox.Show("Contraseña de usuario incorrecta", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        internal ClaseUsuarios ClaseUsuarios
+        {
+            get => default;
+            set
+            {
             }
         }
     }

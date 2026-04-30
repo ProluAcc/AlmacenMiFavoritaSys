@@ -10,15 +10,10 @@ namespace SISTEMA
     {
         private int _id_venta;
         private string _fecha_venta;
-        private string _tipo_venta;
+        private string _tipo_venta;       
+        private int _numero_factura;
         private int _id_usuario;
         private int _id_cliente;
-        private int _cantidad;
-        private int _numero_factura;
-        private double _subtotal;
-        private double _descuento;
-        private double _total;
-        private int _id_producto;
 
         internal ClaseCaja ClaseCaja
         {
@@ -53,6 +48,14 @@ namespace SISTEMA
         }
 
         internal ClaseCredito ClaseCredito
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
+        internal Clase_detalle_venta_producto Clase_detalle_venta_producto
         {
             get => default;
             set

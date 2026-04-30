@@ -10,14 +10,31 @@ namespace SISTEMA
     {
         private int _id_producto;
         private string _nombre;
-        private string _codigo;
-        private string _categoria;
-        private string _medida;
-        private string _marca;
-        private string _descripcion;
-        private int _precioCompra;
-        private int _precioVenta;
-        private int _stock;
-        private string _disponibilidad; 
+        private string _codigo;    
+        private int _id_detalle_producto;
+
+        internal Clase_detalle_producto Clase_detalle_producto
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
+        internal Clase_detalle_compra Clase_detalle_compra
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
+        internal Clase_detalle_venta_producto Clase_detalle_venta_producto
+        {
+            get => default;
+            set
+            {
+            }
+        }
     }
 }

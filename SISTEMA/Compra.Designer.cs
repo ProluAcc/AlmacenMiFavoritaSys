@@ -101,16 +101,16 @@
             panel1.Controls.Add(label2);
             panel1.Controls.Add(textBox1);
             panel1.Controls.Add(label1);
-            panel1.Location = new Point(13, 22);
+            panel1.Location = new Point(3, 2);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1374, 59);
+            panel1.Size = new Size(960, 50);
             panel1.TabIndex = 0;
             // 
             // button1
             // 
-            button1.Location = new Point(1069, 12);
+            button1.Location = new Point(796, 7);
             button1.Name = "button1";
-            button1.Size = new Size(289, 34);
+            button1.Size = new Size(154, 34);
             button1.TabIndex = 4;
             button1.Text = "Buscar Proveedor ";
             button1.UseVisualStyleBackColor = true;
@@ -118,16 +118,16 @@
             // comboBox1
             // 
             comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(504, 13);
+            comboBox1.Location = new Point(355, 14);
             comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(513, 23);
+            comboBox1.Size = new Size(209, 23);
             comboBox1.TabIndex = 3;
             comboBox1.Text = "Suministros ABX";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(410, 16);
+            label2.Location = new Point(307, 17);
             label2.Name = "label2";
             label2.Size = new Size(42, 15);
             label2.TabIndex = 2;
@@ -136,16 +136,17 @@
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(191, 14);
+            textBox1.Location = new Point(95, 14);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(191, 23);
             textBox1.TabIndex = 1;
             textBox1.Text = "000432";
+            textBox1.TextChanged += textBox1_TextChanged;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(31, 16);
+            label1.Location = new Point(14, 16);
             label1.Name = "label1";
             label1.Size = new Size(75, 15);
             label1.TabIndex = 0;
@@ -155,9 +156,9 @@
             // 
             panel2.BorderStyle = BorderStyle.FixedSingle;
             panel2.Controls.Add(dataGridView1);
-            panel2.Location = new Point(13, 111);
+            panel2.Location = new Point(3, 64);
             panel2.Name = "panel2";
-            panel2.Size = new Size(1018, 365);
+            panel2.Size = new Size(972, 378);
             panel2.TabIndex = 1;
             // 
             // dataGridView1
@@ -167,7 +168,7 @@
             dataGridView1.Location = new Point(0, 14);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 62;
-            dataGridView1.Size = new Size(1011, 348);
+            dataGridView1.Size = new Size(964, 348);
             dataGridView1.TabIndex = 0;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
@@ -221,9 +222,9 @@
             groupBox1.Controls.Add(panel4);
             groupBox1.Controls.Add(panel3);
             groupBox1.ForeColor = SystemColors.ButtonFace;
-            groupBox1.Location = new Point(1052, 111);
+            groupBox1.Location = new Point(981, 64);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(336, 223);
+            groupBox1.Size = new Size(269, 223);
             groupBox1.TabIndex = 2;
             groupBox1.TabStop = false;
             groupBox1.Text = "Informacion Crediticia del cliente";
@@ -237,12 +238,12 @@
             panel5.ForeColor = SystemColors.ActiveCaptionText;
             panel5.Location = new Point(6, 122);
             panel5.Name = "panel5";
-            panel5.Size = new Size(324, 40);
+            panel5.Size = new Size(253, 40);
             panel5.TabIndex = 2;
             // 
             // textBox4
             // 
-            textBox4.Location = new Point(163, 8);
+            textBox4.Location = new Point(92, 8);
             textBox4.Name = "textBox4";
             textBox4.Size = new Size(150, 23);
             textBox4.TabIndex = 3;
@@ -267,14 +268,14 @@
             panel6.ForeColor = SystemColors.ActiveCaptionText;
             panel6.Location = new Point(6, 168);
             panel6.Name = "panel6";
-            panel6.Size = new Size(324, 40);
+            panel6.Size = new Size(253, 40);
             panel6.TabIndex = 2;
             // 
             // label7
             // 
             label7.AutoSize = true;
             label7.BackColor = Color.SpringGreen;
-            label7.Location = new Point(208, 12);
+            label7.Location = new Point(137, 12);
             label7.Name = "label7";
             label7.Size = new Size(61, 15);
             label7.TabIndex = 4;
@@ -299,12 +300,12 @@
             panel4.ForeColor = SystemColors.ActiveCaptionText;
             panel4.Location = new Point(6, 76);
             panel4.Name = "panel4";
-            panel4.Size = new Size(324, 40);
+            panel4.Size = new Size(253, 40);
             panel4.TabIndex = 1;
             // 
             // textBox3
             // 
-            textBox3.Location = new Point(163, 6);
+            textBox3.Location = new Point(92, 7);
             textBox3.Name = "textBox3";
             textBox3.Size = new Size(150, 23);
             textBox3.TabIndex = 2;
@@ -329,12 +330,12 @@
             panel3.ForeColor = SystemColors.ActiveCaptionText;
             panel3.Location = new Point(6, 30);
             panel3.Name = "panel3";
-            panel3.Size = new Size(324, 40);
+            panel3.Size = new Size(253, 40);
             panel3.TabIndex = 0;
             // 
             // textBox2
             // 
-            textBox2.Location = new Point(163, 8);
+            textBox2.Location = new Point(92, 6);
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(150, 23);
             textBox2.TabIndex = 1;
@@ -356,9 +357,9 @@
             groupBox2.Controls.Add(panel9);
             groupBox2.Controls.Add(panel10);
             groupBox2.ForeColor = SystemColors.ButtonFace;
-            groupBox2.Location = new Point(1052, 340);
+            groupBox2.Location = new Point(981, 293);
             groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(336, 136);
+            groupBox2.Size = new Size(269, 136);
             groupBox2.TabIndex = 3;
             groupBox2.TabStop = false;
             groupBox2.Text = "Informacion Crediticia del cliente";
@@ -372,14 +373,14 @@
             panel9.ForeColor = SystemColors.ActiveCaptionText;
             panel9.Location = new Point(6, 76);
             panel9.Name = "panel9";
-            panel9.Size = new Size(324, 40);
+            panel9.Size = new Size(253, 40);
             panel9.TabIndex = 1;
             // 
             // textBox6
             // 
             textBox6.Location = new Point(88, 6);
             textBox6.Name = "textBox6";
-            textBox6.Size = new Size(225, 23);
+            textBox6.Size = new Size(154, 23);
             textBox6.TabIndex = 2;
             // 
             // label11
@@ -401,15 +402,15 @@
             panel10.ForeColor = SystemColors.ActiveCaptionText;
             panel10.Location = new Point(6, 30);
             panel10.Name = "panel10";
-            panel10.Size = new Size(324, 40);
+            panel10.Size = new Size(253, 40);
             panel10.TabIndex = 0;
             // 
             // comboBox2
             // 
             comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(137, 8);
+            comboBox2.Location = new Point(98, 7);
             comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(182, 23);
+            comboBox2.Size = new Size(144, 23);
             comboBox2.TabIndex = 1;
             // 
             // label12
@@ -427,7 +428,7 @@
             panel7.BorderStyle = BorderStyle.FixedSingle;
             panel7.Controls.Add(button3);
             panel7.Controls.Add(button2);
-            panel7.Location = new Point(1051, 495);
+            panel7.Location = new Point(914, 448);
             panel7.Name = "panel7";
             panel7.Size = new Size(336, 60);
             panel7.TabIndex = 4;
@@ -460,41 +461,42 @@
             panel8.Controls.Add(label10);
             panel8.Controls.Add(label9);
             panel8.Controls.Add(label8);
-            panel8.Location = new Point(12, 495);
+            panel8.Location = new Point(4, 448);
             panel8.Name = "panel8";
-            panel8.Size = new Size(1019, 136);
+            panel8.Size = new Size(904, 104);
             panel8.TabIndex = 5;
+            panel8.Paint += panel8_Paint;
             // 
             // textBox8
             // 
             textBox8.BackColor = SystemColors.HotTrack;
             textBox8.ForeColor = SystemColors.InactiveBorder;
-            textBox8.Location = new Point(780, 95);
+            textBox8.Location = new Point(709, 70);
             textBox8.Name = "textBox8";
-            textBox8.Size = new Size(232, 23);
+            textBox8.Size = new Size(185, 23);
             textBox8.TabIndex = 5;
             textBox8.Text = "1,029.75";
             // 
             // textBox7
             // 
-            textBox7.Location = new Point(780, 55);
+            textBox7.Location = new Point(709, 41);
             textBox7.Name = "textBox7";
-            textBox7.Size = new Size(232, 23);
+            textBox7.Size = new Size(185, 23);
             textBox7.TabIndex = 4;
             textBox7.Text = "129.75";
             // 
             // textBox5
             // 
-            textBox5.Location = new Point(780, 17);
+            textBox5.Location = new Point(709, 11);
             textBox5.Name = "textBox5";
-            textBox5.Size = new Size(232, 23);
+            textBox5.Size = new Size(185, 23);
             textBox5.TabIndex = 3;
             textBox5.Text = "900.00                    129.75";
             // 
             // label10
             // 
             label10.AutoSize = true;
-            label10.Location = new Point(644, 98);
+            label10.Location = new Point(588, 78);
             label10.Name = "label10";
             label10.Size = new Size(83, 15);
             label10.TabIndex = 2;
@@ -503,7 +505,7 @@
             // label9
             // 
             label9.AutoSize = true;
-            label9.Location = new Point(716, 55);
+            label9.Location = new Point(642, 44);
             label9.Name = "label9";
             label9.Size = new Size(29, 15);
             label9.TabIndex = 1;
@@ -512,7 +514,7 @@
             // label8
             // 
             label8.AutoSize = true;
-            label8.Location = new Point(685, 14);
+            label8.Location = new Point(614, 14);
             label8.Name = "label8";
             label8.Size = new Size(57, 15);
             label8.TabIndex = 0;
@@ -524,18 +526,18 @@
             panel11.Controls.Add(button6);
             panel11.Controls.Add(button5);
             panel11.Controls.Add(button4);
-            panel11.Location = new Point(12, 637);
+            panel11.Location = new Point(3, 558);
             panel11.Name = "panel11";
-            panel11.Size = new Size(1376, 59);
+            panel11.Size = new Size(1247, 59);
             panel11.TabIndex = 6;
             // 
             // button6
             // 
             button6.BackColor = SystemColors.HotTrack;
             button6.ForeColor = SystemColors.ButtonFace;
-            button6.Location = new Point(1146, 11);
+            button6.Location = new Point(1054, 11);
             button6.Name = "button6";
-            button6.Size = new Size(221, 34);
+            button6.Size = new Size(180, 34);
             button6.TabIndex = 2;
             button6.Text = "Imprimir Comprobante";
             button6.UseVisualStyleBackColor = false;
@@ -543,9 +545,9 @@
             // button5
             // 
             button5.ForeColor = SystemColors.Highlight;
-            button5.Location = new Point(1012, 11);
+            button5.Location = new Point(953, 11);
             button5.Name = "button5";
-            button5.Size = new Size(128, 34);
+            button5.Size = new Size(95, 34);
             button5.TabIndex = 1;
             button5.Text = "Cancelar";
             button5.UseVisualStyleBackColor = true;
@@ -553,9 +555,9 @@
             // button4
             // 
             button4.ForeColor = SystemColors.HotTrack;
-            button4.Location = new Point(774, 11);
+            button4.Location = new Point(824, 11);
             button4.Name = "button4";
-            button4.Size = new Size(232, 34);
+            button4.Size = new Size(123, 34);
             button4.TabIndex = 0;
             button4.Text = "Guardar compra";
             button4.UseVisualStyleBackColor = true;
@@ -565,7 +567,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ControlLight;
-            ClientSize = new Size(1400, 699);
+            ClientSize = new Size(1251, 622);
             Controls.Add(panel11);
             Controls.Add(panel8);
             Controls.Add(panel7);
@@ -574,6 +576,7 @@
             Controls.Add(panel2);
             Controls.Add(panel1);
             Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            FormBorderStyle = FormBorderStyle.None;
             Name = "Compra";
             Text = "Registro de compra";
             panel1.ResumeLayout(false);

@@ -31,8 +31,8 @@
             label1 = new Label();
             label2 = new Label();
             groupBox1 = new GroupBox();
-            textBox1 = new TextBox();
             textBox2 = new TextBox();
+            textBox1 = new TextBox();
             groupBox2 = new GroupBox();
             dataGridView1 = new DataGridView();
             Column1 = new DataGridViewTextBoxColumn();
@@ -41,31 +41,31 @@
             Column4 = new DataGridViewTextBoxColumn();
             backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             groupBox3 = new GroupBox();
+            textBox6 = new TextBox();
+            textBox5 = new TextBox();
+            textBox4 = new TextBox();
+            textBox3 = new TextBox();
+            label11 = new Label();
+            label10 = new Label();
+            label9 = new Label();
+            label8 = new Label();
             groupBox4 = new GroupBox();
+            dataGridView2 = new DataGridView();
             panel1 = new Panel();
+            label7 = new Label();
+            label6 = new Label();
+            label5 = new Label();
+            label4 = new Label();
             panel2 = new Panel();
             label3 = new Label();
-            label4 = new Label();
-            label5 = new Label();
-            label6 = new Label();
-            label7 = new Label();
-            dataGridView2 = new DataGridView();
-            label8 = new Label();
-            label9 = new Label();
-            label10 = new Label();
-            label11 = new Label();
-            textBox3 = new TextBox();
-            textBox4 = new TextBox();
-            textBox5 = new TextBox();
-            textBox6 = new TextBox();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             groupBox3.SuspendLayout();
             groupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -98,19 +98,19 @@
             groupBox1.TabIndex = 2;
             groupBox1.TabStop = false;
             // 
-            // textBox1
-            // 
-            textBox1.Location = new Point(50, 16);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(235, 23);
-            textBox1.TabIndex = 2;
-            // 
             // textBox2
             // 
             textBox2.Location = new Point(401, 16);
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(265, 23);
             textBox2.TabIndex = 3;
+            // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(50, 16);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(235, 23);
+            textBox1.TabIndex = 2;
             // 
             // groupBox2
             // 
@@ -166,6 +166,71 @@
             groupBox3.TabIndex = 4;
             groupBox3.TabStop = false;
             // 
+            // textBox6
+            // 
+            textBox6.Location = new Point(117, 129);
+            textBox6.Name = "textBox6";
+            textBox6.Size = new Size(124, 23);
+            textBox6.TabIndex = 7;
+            // 
+            // textBox5
+            // 
+            textBox5.Location = new Point(117, 96);
+            textBox5.Name = "textBox5";
+            textBox5.Size = new Size(124, 23);
+            textBox5.TabIndex = 6;
+            // 
+            // textBox4
+            // 
+            textBox4.Location = new Point(117, 62);
+            textBox4.Name = "textBox4";
+            textBox4.Size = new Size(124, 23);
+            textBox4.TabIndex = 5;
+            // 
+            // textBox3
+            // 
+            textBox3.Location = new Point(117, 29);
+            textBox3.Name = "textBox3";
+            textBox3.Size = new Size(124, 23);
+            textBox3.TabIndex = 4;
+            // 
+            // label11
+            // 
+            label11.AutoSize = true;
+            label11.Location = new Point(6, 132);
+            label11.Name = "label11";
+            label11.Size = new Size(64, 15);
+            label11.TabIndex = 3;
+            label11.Text = "Saldo Final";
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Location = new Point(6, 96);
+            label10.Name = "label10";
+            label10.Size = new Size(76, 15);
+            label10.TabIndex = 2;
+            label10.Text = "Total Egresos";
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Location = new Point(6, 62);
+            label9.Name = "label9";
+            label9.Size = new Size(75, 15);
+            label9.TabIndex = 1;
+            label9.Text = "Total Ingreso";
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Location = new Point(6, 32);
+            label8.Name = "label8";
+            label8.Size = new Size(70, 15);
+            label8.TabIndex = 0;
+            label8.Text = "Saldo Inicial";
+            label8.Click += label8_Click;
+            // 
             // groupBox4
             // 
             groupBox4.Controls.Add(dataGridView2);
@@ -175,6 +240,14 @@
             groupBox4.TabIndex = 5;
             groupBox4.TabStop = false;
             groupBox4.Text = "Tipos de Caja";
+            // 
+            // dataGridView2
+            // 
+            dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView2.Location = new Point(17, 22);
+            dataGridView2.Name = "dataGridView2";
+            dataGridView2.Size = new Size(293, 72);
+            dataGridView2.TabIndex = 0;
             // 
             // panel1
             // 
@@ -188,6 +261,43 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(206, 235);
             panel1.TabIndex = 6;
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Location = new Point(9, 58);
+            label7.Name = "label7";
+            label7.Size = new Size(31, 15);
+            label7.TabIndex = 11;
+            label7.Text = "Tipo";
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Microsoft Sans Serif", 8.25F);
+            label6.Location = new Point(9, 133);
+            label6.Name = "label6";
+            label6.Size = new Size(37, 13);
+            label6.TabIndex = 10;
+            label6.Text = "Monto";
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Location = new Point(8, 89);
+            label5.Name = "label5";
+            label5.Size = new Size(59, 15);
+            label5.TabIndex = 9;
+            label5.Text = "Concepto";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(9, 166);
+            label4.Name = "label4";
+            label4.Size = new Size(62, 15);
+            label4.TabIndex = 8;
+            label4.Text = "Referencia";
             // 
             // panel2
             // 
@@ -211,117 +321,7 @@
             label3.Text = "Registrar Movimieno";
             label3.Click += label3_Click;
             // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Location = new Point(9, 166);
-            label4.Name = "label4";
-            label4.Size = new Size(62, 15);
-            label4.TabIndex = 8;
-            label4.Text = "Referencia";
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Location = new Point(8, 89);
-            label5.Name = "label5";
-            label5.Size = new Size(59, 15);
-            label5.TabIndex = 9;
-            label5.Text = "Concepto";
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Font = new Font("Microsoft Sans Serif", 8.25F);
-            label6.Location = new Point(9, 133);
-            label6.Name = "label6";
-            label6.Size = new Size(37, 13);
-            label6.TabIndex = 10;
-            label6.Text = "Monto";
-            // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.Location = new Point(9, 58);
-            label7.Name = "label7";
-            label7.Size = new Size(31, 15);
-            label7.TabIndex = 11;
-            label7.Text = "Tipo";
-            // 
-            // dataGridView2
-            // 
-            dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView2.Location = new Point(17, 22);
-            dataGridView2.Name = "dataGridView2";
-            dataGridView2.Size = new Size(293, 72);
-            dataGridView2.TabIndex = 0;
-            // 
-            // label8
-            // 
-            label8.AutoSize = true;
-            label8.Location = new Point(6, 32);
-            label8.Name = "label8";
-            label8.Size = new Size(70, 15);
-            label8.TabIndex = 0;
-            label8.Text = "Saldo Inicial";
-            label8.Click += label8_Click;
-            // 
-            // label9
-            // 
-            label9.AutoSize = true;
-            label9.Location = new Point(6, 62);
-            label9.Name = "label9";
-            label9.Size = new Size(75, 15);
-            label9.TabIndex = 1;
-            label9.Text = "Total Ingreso";
-            // 
-            // label10
-            // 
-            label10.AutoSize = true;
-            label10.Location = new Point(6, 96);
-            label10.Name = "label10";
-            label10.Size = new Size(76, 15);
-            label10.TabIndex = 2;
-            label10.Text = "Total Egresos";
-            // 
-            // label11
-            // 
-            label11.AutoSize = true;
-            label11.Location = new Point(6, 132);
-            label11.Name = "label11";
-            label11.Size = new Size(64, 15);
-            label11.TabIndex = 3;
-            label11.Text = "Saldo Final";
-            // 
-            // textBox3
-            // 
-            textBox3.Location = new Point(117, 29);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(124, 23);
-            textBox3.TabIndex = 4;
-            // 
-            // textBox4
-            // 
-            textBox4.Location = new Point(117, 62);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(124, 23);
-            textBox4.TabIndex = 5;
-            // 
-            // textBox5
-            // 
-            textBox5.Location = new Point(117, 96);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(124, 23);
-            textBox5.TabIndex = 6;
-            // 
-            // textBox6
-            // 
-            textBox6.Location = new Point(117, 129);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(124, 23);
-            textBox6.TabIndex = 7;
-            // 
-            // Form1
+            // Caja
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -331,7 +331,8 @@
             Controls.Add(groupBox3);
             Controls.Add(groupBox2);
             Controls.Add(groupBox1);
-            Name = "Form1";
+            FormBorderStyle = FormBorderStyle.None;
+            Name = "Caja";
             Text = "Form1";
             Load += Form1_Load;
             groupBox1.ResumeLayout(false);
@@ -341,11 +342,11 @@
             groupBox3.ResumeLayout(false);
             groupBox3.PerformLayout();
             groupBox4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
             ResumeLayout(false);
         }
 

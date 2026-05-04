@@ -38,6 +38,7 @@
             label2 = new Label();
             btnGenerarCuenta = new Button();
             groupBox2 = new GroupBox();
+            txtiva = new TextBox();
             txtTotal = new TextBox();
             label18 = new Label();
             panel4 = new Panel();
@@ -81,7 +82,6 @@
             Column6 = new DataGridViewTextBoxColumn();
             btnValidarCredito = new Button();
             btnRegistrarVenta = new Button();
-            txtiva = new TextBox();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             panel7.SuspendLayout();
@@ -189,6 +189,13 @@
             groupBox2.TabIndex = 5;
             groupBox2.TabStop = false;
             groupBox2.Enter += groupBox2_Enter;
+            // 
+            // txtiva
+            // 
+            txtiva.Location = new Point(522, 257);
+            txtiva.Name = "txtiva";
+            txtiva.Size = new Size(129, 23);
+            txtiva.TabIndex = 20;
             // 
             // txtTotal
             // 
@@ -572,13 +579,6 @@
             btnRegistrarVenta.Text = "Registrar Venta a Crédito";
             btnRegistrarVenta.UseVisualStyleBackColor = true;
             // 
-            // txtiva
-            // 
-            txtiva.Location = new Point(522, 257);
-            txtiva.Name = "txtiva";
-            txtiva.Size = new Size(129, 23);
-            txtiva.TabIndex = 20;
-            // 
             // Credito
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -589,6 +589,7 @@
             Controls.Add(groupBox2);
             Controls.Add(btnGenerarCuenta);
             Controls.Add(groupBox1);
+            FormBorderStyle = FormBorderStyle.None;
             Name = "Credito";
             Text = "Credito";
             Load += Credito_Load;

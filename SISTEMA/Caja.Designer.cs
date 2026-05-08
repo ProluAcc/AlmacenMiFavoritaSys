@@ -39,7 +39,6 @@
             Column2 = new DataGridViewTextBoxColumn();
             Column3 = new DataGridViewTextBoxColumn();
             Column4 = new DataGridViewTextBoxColumn();
-            backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             groupBox3 = new GroupBox();
             textBox6 = new TextBox();
             textBox5 = new TextBox();
@@ -208,7 +207,7 @@
             label10.AutoSize = true;
             label10.Location = new Point(6, 96);
             label10.Name = "label10";
-            label10.Size = new Size(76, 15);
+            label10.Size = new Size(75, 15);
             label10.TabIndex = 2;
             label10.Text = "Total Egresos";
             // 
@@ -217,7 +216,7 @@
             label9.AutoSize = true;
             label9.Location = new Point(6, 62);
             label9.Name = "label9";
-            label9.Size = new Size(75, 15);
+            label9.Size = new Size(74, 15);
             label9.TabIndex = 1;
             label9.Text = "Total Ingreso";
             // 
@@ -267,7 +266,7 @@
             label7.AutoSize = true;
             label7.Location = new Point(9, 58);
             label7.Name = "label7";
-            label7.Size = new Size(31, 15);
+            label7.Size = new Size(30, 15);
             label7.TabIndex = 11;
             label7.Text = "Tipo";
             // 
@@ -325,7 +324,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 476);
+            ClientSize = new Size(975, 527);
             Controls.Add(panel1);
             Controls.Add(groupBox4);
             Controls.Add(groupBox3);
@@ -363,7 +362,6 @@
         private DataGridViewTextBoxColumn Column2;
         private DataGridViewTextBoxColumn Column3;
         private DataGridViewTextBoxColumn Column4;
-        private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private GroupBox groupBox3;
         private GroupBox groupBox4;
         private Panel panel1;

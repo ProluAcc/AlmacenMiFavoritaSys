@@ -26,5 +26,10 @@ namespace Registro_de_compra
         {
 
         }
+
+        private void panel11_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

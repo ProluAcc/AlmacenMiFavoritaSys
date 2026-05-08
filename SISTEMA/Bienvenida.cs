@@ -33,7 +33,7 @@ namespace SISTEMA
 
         private void button5_Click(object sender, EventArgs e)
         {
-            AbrirForm(new Devolución()); 
+            AbrirForm(new Devolución());
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -43,7 +43,7 @@ namespace SISTEMA
 
         private void button3_Click(object sender, EventArgs e)
         {
-            AbrirForm(new Ventas()); 
+            AbrirForm(new Ventas());
         }
 
         private void Bienvenida_Load(object sender, EventArgs e)
@@ -53,7 +53,7 @@ namespace SISTEMA
 
         private void button6_Click(object sender, EventArgs e)
         {
-            AbrirForm(new Caja()); 
+            AbrirForm(new Caja());
         }
 
         private void btnProveedor_Click(object sender, EventArgs e)
@@ -79,10 +79,10 @@ namespace SISTEMA
         private void AbrirForm(object formHijo)
         {
             //toma todos los controles del panel
-            for(int i = panelContenedor.Controls.Count; i > 0; i--)
-            {                
+            for (int i = panelContenedor.Controls.Count; i > 0; i--)
+            {
                 //los elimina cada uno
-                this.panelContenedor.Controls.RemoveAt(0);                             
+                this.panelContenedor.Controls.RemoveAt(0);
             }
             Form form = formHijo as Form;
             form.TopLevel = false; //no será un formulario de nivel superior, será secundario
@@ -90,6 +90,11 @@ namespace SISTEMA
             this.panelContenedor.Controls.Add(form); //se añade al panel
             this.panelContenedor.Tag = form; //se establece la instancia como contenedor de datos del panel
             form.Show(); //se muestra
+        }
+
+        private void panelContenedor_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

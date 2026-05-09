@@ -51,11 +51,11 @@
             button3 = new Button();
             button2 = new Button();
             dataGridView1 = new DataGridView();
-            Estado = new DataGridViewTextBoxColumn();
-            Mótivo = new DataGridViewTextBoxColumn();
-            CantidadDevolver = new DataGridViewTextBoxColumn();
-            Cantidadvendida = new DataGridViewTextBoxColumn();
             Producto = new DataGridViewTextBoxColumn();
+            Cantidadvendida = new DataGridViewTextBoxColumn();
+            CantidadDevolver = new DataGridViewTextBoxColumn();
+            Mótivo = new DataGridViewTextBoxColumn();
+            Estado = new DataGridViewTextBoxColumn();
             groupBox4 = new GroupBox();
             groupBox1.SuspendLayout();
             groupBox3.SuspendLayout();
@@ -273,9 +273,9 @@
             // 
             // button5
             // 
-            button5.BackColor = Color.FromArgb(69, 69, 210);
-            button5.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            button5.ForeColor = Color.White;
+            button5.BackColor = SystemColors.ControlLight;
+            button5.Font = new Font("Segoe UI Black", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button5.ForeColor = Color.FromArgb(69, 69, 210);
             button5.Location = new Point(836, 18);
             button5.Margin = new Padding(4, 3, 4, 3);
             button5.Name = "button5";
@@ -335,11 +335,21 @@
             dataGridView1.Size = new Size(774, 137);
             dataGridView1.TabIndex = 0;
             // 
-            // Estado
+            // Producto
             // 
-            Estado.HeaderText = "Estado";
-            Estado.Name = "Estado";
-            Estado.Width = 140;
+            Producto.HeaderText = "Producto";
+            Producto.Name = "Producto";
+            Producto.Width = 140;
+            // 
+            // Cantidadvendida
+            // 
+            Cantidadvendida.HeaderText = "Cant. Vendida";
+            Cantidadvendida.Name = "Cantidadvendida";
+            // 
+            // CantidadDevolver
+            // 
+            CantidadDevolver.HeaderText = "Cant. Devolver";
+            CantidadDevolver.Name = "CantidadDevolver";
             // 
             // Mótivo
             // 
@@ -347,21 +357,11 @@
             Mótivo.Name = "Mótivo";
             Mótivo.Width = 140;
             // 
-            // CantidadDevolver
+            // Estado
             // 
-            CantidadDevolver.HeaderText = "Cant. Devolver";
-            CantidadDevolver.Name = "CantidadDevolver";
-            // 
-            // Cantidadvendida
-            // 
-            Cantidadvendida.HeaderText = "Cant. Vendida";
-            Cantidadvendida.Name = "Cantidadvendida";
-            // 
-            // Producto
-            // 
-            Producto.HeaderText = "Producto";
-            Producto.Name = "Producto";
-            Producto.Width = 140;
+            Estado.HeaderText = "Estado";
+            Estado.Name = "Estado";
+            Estado.Width = 140;
             // 
             // groupBox4
             // 

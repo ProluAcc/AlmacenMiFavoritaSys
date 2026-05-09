@@ -46,5 +46,10 @@ namespace SISTEMA
         {
 
         }
+
+        private void btnBuscarCliente_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

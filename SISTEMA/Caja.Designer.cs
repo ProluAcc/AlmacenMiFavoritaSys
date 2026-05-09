@@ -35,10 +35,6 @@
             textBox1 = new TextBox();
             groupBox2 = new GroupBox();
             dataGridView1 = new DataGridView();
-            Column1 = new DataGridViewTextBoxColumn();
-            Column2 = new DataGridViewTextBoxColumn();
-            Column3 = new DataGridViewTextBoxColumn();
-            Column4 = new DataGridViewTextBoxColumn();
             groupBox3 = new GroupBox();
             textBox6 = new TextBox();
             textBox5 = new TextBox();
@@ -57,6 +53,15 @@
             label4 = new Label();
             panel2 = new Panel();
             label3 = new Label();
+            Column1 = new DataGridViewTextBoxColumn();
+            Column2 = new DataGridViewTextBoxColumn();
+            Column3 = new DataGridViewTextBoxColumn();
+            Column4 = new DataGridViewTextBoxColumn();
+            button1 = new Button();
+            comboBox1 = new ComboBox();
+            textBox7 = new TextBox();
+            textBox8 = new TextBox();
+            textBox9 = new TextBox();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
@@ -70,53 +75,62 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(6, 19);
+            label1.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            label1.ForeColor = Color.White;
+            label1.Location = new Point(12, 20);
             label1.Name = "label1";
-            label1.Size = new Size(38, 15);
+            label1.Size = new Size(49, 20);
             label1.TabIndex = 0;
             label1.Text = "Fecha";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(335, 19);
+            label2.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            label2.ForeColor = Color.White;
+            label2.Location = new Point(333, 20);
             label2.Name = "label2";
-            label2.Size = new Size(40, 15);
+            label2.Size = new Size(63, 20);
             label2.TabIndex = 1;
-            label2.Text = "Usario";
+            label2.Text = "Usuario";
             // 
             // groupBox1
             // 
+            groupBox1.BackColor = Color.FromArgb(69, 69, 210);
+            groupBox1.Controls.Add(button1);
             groupBox1.Controls.Add(textBox2);
             groupBox1.Controls.Add(textBox1);
             groupBox1.Controls.Add(label1);
             groupBox1.Controls.Add(label2);
-            groupBox1.Location = new Point(12, 23);
+            groupBox1.Location = new Point(1, 0);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(776, 53);
+            groupBox1.Size = new Size(978, 64);
             groupBox1.TabIndex = 2;
             groupBox1.TabStop = false;
             // 
             // textBox2
             // 
-            textBox2.Location = new Point(401, 16);
+            textBox2.Font = new Font("Segoe UI", 11F);
+            textBox2.Location = new Point(401, 18);
             textBox2.Name = "textBox2";
-            textBox2.Size = new Size(265, 23);
+            textBox2.Size = new Size(265, 27);
             textBox2.TabIndex = 3;
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(50, 16);
+            textBox1.Font = new Font("Segoe UI", 11F);
+            textBox1.Location = new Point(70, 18);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(235, 23);
+            textBox1.Size = new Size(235, 27);
             textBox1.TabIndex = 2;
             // 
             // groupBox2
             // 
+            groupBox2.BackColor = Color.FromArgb(200, 56, 56);
             groupBox2.Controls.Add(dataGridView1);
-            groupBox2.Location = new Point(18, 82);
+            groupBox2.Location = new Point(3, 82);
             groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(547, 197);
+            groupBox2.Size = new Size(547, 266);
             groupBox2.TabIndex = 3;
             groupBox2.TabStop = false;
             // 
@@ -126,8 +140,203 @@
             dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3, Column4 });
             dataGridView1.Location = new Point(6, 22);
             dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(476, 157);
+            dataGridView1.Size = new Size(535, 238);
             dataGridView1.TabIndex = 0;
+            // 
+            // groupBox3
+            // 
+            groupBox3.BackColor = Color.FromArgb(69, 69, 210);
+            groupBox3.Controls.Add(textBox6);
+            groupBox3.Controls.Add(textBox5);
+            groupBox3.Controls.Add(textBox4);
+            groupBox3.Controls.Add(textBox3);
+            groupBox3.Controls.Add(label11);
+            groupBox3.Controls.Add(label10);
+            groupBox3.Controls.Add(label9);
+            groupBox3.Controls.Add(label8);
+            groupBox3.Location = new Point(12, 354);
+            groupBox3.Name = "groupBox3";
+            groupBox3.Size = new Size(433, 161);
+            groupBox3.TabIndex = 4;
+            groupBox3.TabStop = false;
+            // 
+            // textBox6
+            // 
+            textBox6.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            textBox6.Location = new Point(251, 120);
+            textBox6.Name = "textBox6";
+            textBox6.Size = new Size(176, 27);
+            textBox6.TabIndex = 7;
+            // 
+            // textBox5
+            // 
+            textBox5.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            textBox5.Location = new Point(251, 87);
+            textBox5.Name = "textBox5";
+            textBox5.Size = new Size(176, 27);
+            textBox5.TabIndex = 6;
+            // 
+            // textBox4
+            // 
+            textBox4.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            textBox4.Location = new Point(251, 53);
+            textBox4.Name = "textBox4";
+            textBox4.Size = new Size(176, 27);
+            textBox4.TabIndex = 5;
+            // 
+            // textBox3
+            // 
+            textBox3.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            textBox3.Location = new Point(251, 20);
+            textBox3.Name = "textBox3";
+            textBox3.Size = new Size(176, 27);
+            textBox3.TabIndex = 4;
+            // 
+            // label11
+            // 
+            label11.AutoSize = true;
+            label11.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            label11.ForeColor = Color.White;
+            label11.Location = new Point(144, 123);
+            label11.Name = "label11";
+            label11.Size = new Size(84, 20);
+            label11.TabIndex = 3;
+            label11.Text = "Saldo Final";
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            label10.ForeColor = Color.White;
+            label10.Location = new Point(144, 87);
+            label10.Name = "label10";
+            label10.Size = new Size(102, 20);
+            label10.TabIndex = 2;
+            label10.Text = "Total Egresos";
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            label9.ForeColor = Color.White;
+            label9.Location = new Point(144, 53);
+            label9.Name = "label9";
+            label9.Size = new Size(101, 20);
+            label9.TabIndex = 1;
+            label9.Text = "Total Ingreso";
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            label8.ForeColor = Color.White;
+            label8.Location = new Point(144, 23);
+            label8.Name = "label8";
+            label8.Size = new Size(92, 20);
+            label8.TabIndex = 0;
+            label8.Text = "Saldo Inicial";
+            label8.Click += label8_Click;
+            // 
+            // groupBox4
+            // 
+            groupBox4.BackColor = Color.FromArgb(69, 69, 210);
+            groupBox4.Controls.Add(dataGridView2);
+            groupBox4.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            groupBox4.ForeColor = Color.White;
+            groupBox4.Location = new Point(468, 354);
+            groupBox4.Name = "groupBox4";
+            groupBox4.Size = new Size(495, 161);
+            groupBox4.TabIndex = 5;
+            groupBox4.TabStop = false;
+            groupBox4.Text = "Tipos de Caja";
+            // 
+            // dataGridView2
+            // 
+            dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView2.Location = new Point(17, 22);
+            dataGridView2.Name = "dataGridView2";
+            dataGridView2.Size = new Size(293, 133);
+            dataGridView2.TabIndex = 0;
+            // 
+            // panel1
+            // 
+            panel1.BackColor = SystemColors.ControlLight;
+            panel1.BorderStyle = BorderStyle.FixedSingle;
+            panel1.Controls.Add(textBox9);
+            panel1.Controls.Add(textBox8);
+            panel1.Controls.Add(textBox7);
+            panel1.Controls.Add(comboBox1);
+            panel1.Controls.Add(label7);
+            panel1.Controls.Add(label6);
+            panel1.Controls.Add(label5);
+            panel1.Controls.Add(label4);
+            panel1.Controls.Add(panel2);
+            panel1.Location = new Point(566, 82);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(324, 223);
+            panel1.TabIndex = 6;
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            label7.Location = new Point(9, 56);
+            label7.Name = "label7";
+            label7.Size = new Size(40, 20);
+            label7.TabIndex = 11;
+            label7.Text = "Tipo";
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            label6.Location = new Point(9, 134);
+            label6.Name = "label6";
+            label6.Size = new Size(56, 20);
+            label6.TabIndex = 10;
+            label6.Text = "Monto";
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            label5.Location = new Point(8, 96);
+            label5.Name = "label5";
+            label5.Size = new Size(75, 20);
+            label5.TabIndex = 9;
+            label5.Text = "Concepto";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            label4.Location = new Point(9, 176);
+            label4.Name = "label4";
+            label4.Size = new Size(83, 20);
+            label4.TabIndex = 8;
+            label4.Text = "Referencia";
+            // 
+            // panel2
+            // 
+            panel2.BackColor = Color.FromArgb(69, 69, 210);
+            panel2.BorderStyle = BorderStyle.FixedSingle;
+            panel2.Controls.Add(label3);
+            panel2.Location = new Point(0, 0);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(323, 43);
+            panel2.TabIndex = 7;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 13F, FontStyle.Bold);
+            label3.ForeColor = SystemColors.ButtonHighlight;
+            label3.Location = new Point(66, 6);
+            label3.Name = "label3";
+            label3.Size = new Size(197, 25);
+            label3.TabIndex = 8;
+            label3.Text = "Registrar Movimiento";
+            label3.Click += label3_Click;
             // 
             // Column1
             // 
@@ -146,184 +355,59 @@
             // 
             // Column4
             // 
-            Column4.HeaderText = "Ssado";
+            Column4.HeaderText = "Saldo";
             Column4.Name = "Column4";
             // 
-            // groupBox3
+            // button1
             // 
-            groupBox3.Controls.Add(textBox6);
-            groupBox3.Controls.Add(textBox5);
-            groupBox3.Controls.Add(textBox4);
-            groupBox3.Controls.Add(textBox3);
-            groupBox3.Controls.Add(label11);
-            groupBox3.Controls.Add(label10);
-            groupBox3.Controls.Add(label9);
-            groupBox3.Controls.Add(label8);
-            groupBox3.Location = new Point(18, 285);
-            groupBox3.Name = "groupBox3";
-            groupBox3.Size = new Size(433, 161);
-            groupBox3.TabIndex = 4;
-            groupBox3.TabStop = false;
+            button1.BackColor = SystemColors.ControlLight;
+            button1.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            button1.ForeColor = Color.FromArgb(69, 69, 210);
+            button1.Location = new Point(889, 14);
+            button1.Name = "button1";
+            button1.Size = new Size(78, 36);
+            button1.TabIndex = 4;
+            button1.Text = "Inicio";
+            button1.UseVisualStyleBackColor = false;
             // 
-            // textBox6
+            // comboBox1
             // 
-            textBox6.Location = new Point(117, 129);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(124, 23);
-            textBox6.TabIndex = 7;
+            comboBox1.Font = new Font("Segoe UI", 11F);
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Location = new Point(188, 55);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(121, 28);
+            comboBox1.TabIndex = 12;
             // 
-            // textBox5
+            // textBox7
             // 
-            textBox5.Location = new Point(117, 96);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(124, 23);
-            textBox5.TabIndex = 6;
+            textBox7.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            textBox7.Location = new Point(119, 93);
+            textBox7.Name = "textBox7";
+            textBox7.Size = new Size(190, 27);
+            textBox7.TabIndex = 5;
             // 
-            // textBox4
+            // textBox8
             // 
-            textBox4.Location = new Point(117, 62);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(124, 23);
-            textBox4.TabIndex = 5;
+            textBox8.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            textBox8.Location = new Point(118, 131);
+            textBox8.Name = "textBox8";
+            textBox8.Size = new Size(190, 27);
+            textBox8.TabIndex = 13;
             // 
-            // textBox3
+            // textBox9
             // 
-            textBox3.Location = new Point(117, 29);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(124, 23);
-            textBox3.TabIndex = 4;
-            // 
-            // label11
-            // 
-            label11.AutoSize = true;
-            label11.Location = new Point(6, 132);
-            label11.Name = "label11";
-            label11.Size = new Size(64, 15);
-            label11.TabIndex = 3;
-            label11.Text = "Saldo Final";
-            // 
-            // label10
-            // 
-            label10.AutoSize = true;
-            label10.Location = new Point(6, 96);
-            label10.Name = "label10";
-            label10.Size = new Size(75, 15);
-            label10.TabIndex = 2;
-            label10.Text = "Total Egresos";
-            // 
-            // label9
-            // 
-            label9.AutoSize = true;
-            label9.Location = new Point(6, 62);
-            label9.Name = "label9";
-            label9.Size = new Size(74, 15);
-            label9.TabIndex = 1;
-            label9.Text = "Total Ingreso";
-            // 
-            // label8
-            // 
-            label8.AutoSize = true;
-            label8.Location = new Point(6, 32);
-            label8.Name = "label8";
-            label8.Size = new Size(70, 15);
-            label8.TabIndex = 0;
-            label8.Text = "Saldo Inicial";
-            label8.Click += label8_Click;
-            // 
-            // groupBox4
-            // 
-            groupBox4.Controls.Add(dataGridView2);
-            groupBox4.Location = new Point(457, 338);
-            groupBox4.Name = "groupBox4";
-            groupBox4.Size = new Size(331, 108);
-            groupBox4.TabIndex = 5;
-            groupBox4.TabStop = false;
-            groupBox4.Text = "Tipos de Caja";
-            // 
-            // dataGridView2
-            // 
-            dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView2.Location = new Point(17, 22);
-            dataGridView2.Name = "dataGridView2";
-            dataGridView2.Size = new Size(293, 72);
-            dataGridView2.TabIndex = 0;
-            // 
-            // panel1
-            // 
-            panel1.BorderStyle = BorderStyle.FixedSingle;
-            panel1.Controls.Add(label7);
-            panel1.Controls.Add(label6);
-            panel1.Controls.Add(label5);
-            panel1.Controls.Add(label4);
-            panel1.Controls.Add(panel2);
-            panel1.Location = new Point(571, 97);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(206, 235);
-            panel1.TabIndex = 6;
-            // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.Location = new Point(9, 58);
-            label7.Name = "label7";
-            label7.Size = new Size(30, 15);
-            label7.TabIndex = 11;
-            label7.Text = "Tipo";
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Font = new Font("Microsoft Sans Serif", 8.25F);
-            label6.Location = new Point(9, 133);
-            label6.Name = "label6";
-            label6.Size = new Size(37, 13);
-            label6.TabIndex = 10;
-            label6.Text = "Monto";
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Location = new Point(8, 89);
-            label5.Name = "label5";
-            label5.Size = new Size(59, 15);
-            label5.TabIndex = 9;
-            label5.Text = "Concepto";
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Location = new Point(9, 166);
-            label4.Name = "label4";
-            label4.Size = new Size(62, 15);
-            label4.TabIndex = 8;
-            label4.Text = "Referencia";
-            // 
-            // panel2
-            // 
-            panel2.BackColor = Color.FromArgb(0, 0, 192);
-            panel2.BorderStyle = BorderStyle.FixedSingle;
-            panel2.Controls.Add(label3);
-            panel2.Location = new Point(0, 0);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(206, 43);
-            panel2.TabIndex = 7;
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label3.ForeColor = SystemColors.ButtonHighlight;
-            label3.Location = new Point(8, 6);
-            label3.Name = "label3";
-            label3.Size = new Size(186, 25);
-            label3.TabIndex = 8;
-            label3.Text = "Registrar Movimieno";
-            label3.Click += label3_Click;
+            textBox9.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            textBox9.Location = new Point(118, 173);
+            textBox9.Name = "textBox9";
+            textBox9.Size = new Size(190, 27);
+            textBox9.TabIndex = 14;
             // 
             // Caja
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(255, 223, 96);
             ClientSize = new Size(975, 527);
             Controls.Add(panel1);
             Controls.Add(groupBox4);
@@ -358,10 +442,6 @@
         private TextBox textBox1;
         private GroupBox groupBox2;
         private DataGridView dataGridView1;
-        private DataGridViewTextBoxColumn Column1;
-        private DataGridViewTextBoxColumn Column2;
-        private DataGridViewTextBoxColumn Column3;
-        private DataGridViewTextBoxColumn Column4;
         private GroupBox groupBox3;
         private GroupBox groupBox4;
         private Panel panel1;
@@ -380,5 +460,14 @@
         private TextBox textBox5;
         private TextBox textBox4;
         private TextBox textBox3;
+        private DataGridViewTextBoxColumn Column1;
+        private DataGridViewTextBoxColumn Column2;
+        private DataGridViewTextBoxColumn Column3;
+        private DataGridViewTextBoxColumn Column4;
+        private Button button1;
+        private TextBox textBox9;
+        private TextBox textBox8;
+        private TextBox textBox7;
+        private ComboBox comboBox1;
     }
 }

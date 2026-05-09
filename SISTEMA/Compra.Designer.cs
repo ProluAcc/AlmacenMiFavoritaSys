@@ -54,6 +54,7 @@
             button6 = new Button();
             button5 = new Button();
             button4 = new Button();
+            btnInicio = new Button();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
@@ -287,6 +288,7 @@
             // 
             panel11.BackColor = Color.FromArgb(69, 69, 210);
             panel11.BorderStyle = BorderStyle.FixedSingle;
+            panel11.Controls.Add(btnInicio);
             panel11.Controls.Add(button6);
             panel11.Controls.Add(button5);
             panel11.Controls.Add(button4);
@@ -325,12 +327,24 @@
             button4.BackColor = SystemColors.ControlLight;
             button4.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
             button4.ForeColor = Color.FromArgb(69, 69, 210);
-            button4.Location = new Point(522, 12);
+            button4.Location = new Point(533, 12);
             button4.Name = "button4";
             button4.Size = new Size(140, 34);
             button4.TabIndex = 0;
             button4.Text = "Guardar compra";
             button4.UseVisualStyleBackColor = false;
+            // 
+            // btnInicio
+            // 
+            btnInicio.BackColor = SystemColors.ControlLight;
+            btnInicio.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            btnInicio.ForeColor = Color.FromArgb(69, 69, 210);
+            btnInicio.Location = new Point(8, 12);
+            btnInicio.Name = "btnInicio";
+            btnInicio.Size = new Size(97, 34);
+            btnInicio.TabIndex = 3;
+            btnInicio.Text = "Inicio";
+            btnInicio.UseVisualStyleBackColor = false;
             // 
             // Compra
             // 
@@ -384,5 +398,6 @@
         private Button button6;
         private Button button5;
         private Button button4;
+        private Button btnInicio;
     }
 }

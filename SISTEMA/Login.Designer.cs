@@ -45,6 +45,7 @@
             // 
             // pictureBox1
             // 
+            pictureBox1.BorderStyle = BorderStyle.FixedSingle;
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
             pictureBox1.Location = new Point(12, 27);
             pictureBox1.Name = "pictureBox1";
@@ -55,7 +56,8 @@
             // 
             // panel2
             // 
-            panel2.BackColor = Color.FromArgb(222, 72, 72);
+            panel2.BackColor = Color.FromArgb(200, 56, 56);
+            panel2.BorderStyle = BorderStyle.FixedSingle;
             panel2.Controls.Add(btnRecuperar);
             panel2.Controls.Add(label4);
             panel2.Controls.Add(splitter2);
@@ -71,7 +73,7 @@
             // 
             // btnRecuperar
             // 
-            btnRecuperar.BackColor = Color.FromArgb(69, 69, 255);
+            btnRecuperar.BackColor = Color.FromArgb(69, 69, 210);
             btnRecuperar.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnRecuperar.ForeColor = Color.White;
             btnRecuperar.Location = new Point(99, 233);
@@ -95,10 +97,11 @@
             // 
             // splitter2
             // 
+            splitter2.BorderStyle = BorderStyle.FixedSingle;
             splitter2.Dock = DockStyle.Bottom;
-            splitter2.Location = new Point(0, 216);
+            splitter2.Location = new Point(0, 214);
             splitter2.Name = "splitter2";
-            splitter2.Size = new Size(300, 65);
+            splitter2.Size = new Size(298, 65);
             splitter2.TabIndex = 13;
             splitter2.TabStop = false;
             // 
@@ -123,7 +126,7 @@
             // 
             // btnEntrar
             // 
-            btnEntrar.BackColor = Color.FromArgb(69, 69, 255);
+            btnEntrar.BackColor = Color.FromArgb(69, 69, 210);
             btnEntrar.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnEntrar.ForeColor = Color.White;
             btnEntrar.Location = new Point(100, 153);
@@ -156,7 +159,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.Gold;
+            BackColor = Color.FromArgb(255, 223, 96);
             ClientSize = new Size(685, 331);
             Controls.Add(panel2);
             Controls.Add(pictureBox1);

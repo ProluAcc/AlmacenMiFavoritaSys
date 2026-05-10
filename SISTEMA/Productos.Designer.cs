@@ -32,6 +32,16 @@
             button2 = new Button();
             button7 = new Button();
             dataGridView1 = new DataGridView();
+            Column1 = new DataGridViewTextBoxColumn();
+            Column2 = new DataGridViewTextBoxColumn();
+            Column3 = new DataGridViewTextBoxColumn();
+            Column4 = new DataGridViewTextBoxColumn();
+            Column5 = new DataGridViewTextBoxColumn();
+            Column6 = new DataGridViewTextBoxColumn();
+            Column7 = new DataGridViewTextBoxColumn();
+            Column8 = new DataGridViewTextBoxColumn();
+            Column9 = new DataGridViewTextBoxColumn();
+            Column10 = new DataGridViewTextBoxColumn();
             textBox5 = new TextBox();
             textBox4 = new TextBox();
             textBox3 = new TextBox();
@@ -52,16 +62,6 @@
             label2 = new Label();
             button1 = new Button();
             comboBox5 = new ComboBox();
-            Column1 = new DataGridViewTextBoxColumn();
-            Column2 = new DataGridViewTextBoxColumn();
-            Column3 = new DataGridViewTextBoxColumn();
-            Column4 = new DataGridViewTextBoxColumn();
-            Column5 = new DataGridViewTextBoxColumn();
-            Column6 = new DataGridViewTextBoxColumn();
-            Column7 = new DataGridViewTextBoxColumn();
-            Column8 = new DataGridViewTextBoxColumn();
-            Column9 = new DataGridViewTextBoxColumn();
-            Column10 = new DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -109,6 +109,59 @@
             dataGridView1.Name = "dataGridView1";
             dataGridView1.Size = new Size(956, 303);
             dataGridView1.TabIndex = 100;
+            // 
+            // Column1
+            // 
+            Column1.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            Column1.HeaderText = "Código";
+            Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            Column2.HeaderText = "Nombre del Producto";
+            Column2.Name = "Column2";
+            // 
+            // Column3
+            // 
+            Column3.HeaderText = "Categoría";
+            Column3.Name = "Column3";
+            // 
+            // Column4
+            // 
+            Column4.HeaderText = "Medida";
+            Column4.Name = "Column4";
+            // 
+            // Column5
+            // 
+            Column5.HeaderText = "Marca";
+            Column5.Name = "Column5";
+            // 
+            // Column6
+            // 
+            Column6.HeaderText = "Stock";
+            Column6.Name = "Column6";
+            Column6.Width = 60;
+            // 
+            // Column7
+            // 
+            Column7.HeaderText = "Disponibilidad";
+            Column7.Name = "Column7";
+            // 
+            // Column8
+            // 
+            Column8.HeaderText = "Precio Venta";
+            Column8.Name = "Column8";
+            // 
+            // Column9
+            // 
+            Column9.HeaderText = "Estado";
+            Column9.Name = "Column9";
+            Column9.Width = 80;
+            // 
+            // Column10
+            // 
+            Column10.HeaderText = "Editar";
+            Column10.Name = "Column10";
             // 
             // textBox5
             // 
@@ -291,7 +344,7 @@
             button1.Enabled = false;
             button1.Location = new Point(-1, 0);
             button1.Name = "button1";
-            button1.Size = new Size(1005, 61);
+            button1.Size = new Size(976, 61);
             button1.TabIndex = 99;
             button1.UseVisualStyleBackColor = false;
             // 
@@ -303,59 +356,6 @@
             comboBox5.Name = "comboBox5";
             comboBox5.Size = new Size(124, 28);
             comboBox5.TabIndex = 105;
-            // 
-            // Column1
-            // 
-            Column1.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            Column1.HeaderText = "Código";
-            Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            Column2.HeaderText = "Nombre del Producto";
-            Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            Column3.HeaderText = "Categoría";
-            Column3.Name = "Column3";
-            // 
-            // Column4
-            // 
-            Column4.HeaderText = "Medida";
-            Column4.Name = "Column4";
-            // 
-            // Column5
-            // 
-            Column5.HeaderText = "Marca";
-            Column5.Name = "Column5";
-            // 
-            // Column6
-            // 
-            Column6.HeaderText = "Stock";
-            Column6.Name = "Column6";
-            Column6.Width = 60;
-            // 
-            // Column7
-            // 
-            Column7.HeaderText = "Disponibilidad";
-            Column7.Name = "Column7";
-            // 
-            // Column8
-            // 
-            Column8.HeaderText = "Precio Venta";
-            Column8.Name = "Column8";
-            // 
-            // Column9
-            // 
-            Column9.HeaderText = "Estado";
-            Column9.Name = "Column9";
-            Column9.Width = 80;
-            // 
-            // Column10
-            // 
-            Column10.HeaderText = "Editar";
-            Column10.Name = "Column10";
             // 
             // Productos
             // 

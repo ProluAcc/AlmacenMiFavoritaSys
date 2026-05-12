@@ -96,5 +96,15 @@ namespace SISTEMA
         {
 
         }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            Login obj = new Login(); obj.Show(); this.Hide();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

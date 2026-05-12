@@ -75,11 +75,11 @@
             groupBox1.Controls.Add(label2);
             groupBox1.Controls.Add(label1);
             groupBox1.Controls.Add(textBox1);
-            groupBox1.Location = new Point(13, 12);
+            groupBox1.Location = new Point(1, 2);
             groupBox1.Margin = new Padding(4, 3, 4, 3);
             groupBox1.Name = "groupBox1";
             groupBox1.Padding = new Padding(4, 3, 4, 3);
-            groupBox1.Size = new Size(949, 62);
+            groupBox1.Size = new Size(977, 62);
             groupBox1.TabIndex = 0;
             groupBox1.TabStop = false;
             groupBox1.Enter += groupBox1_Enter;
@@ -263,11 +263,11 @@
             groupBox5.Controls.Add(button4);
             groupBox5.Controls.Add(button3);
             groupBox5.Controls.Add(button2);
-            groupBox5.Location = new Point(13, 437);
+            groupBox5.Location = new Point(1, 450);
             groupBox5.Margin = new Padding(4, 3, 4, 3);
             groupBox5.Name = "groupBox5";
             groupBox5.Padding = new Padding(4, 3, 4, 3);
-            groupBox5.Size = new Size(949, 78);
+            groupBox5.Size = new Size(977, 78);
             groupBox5.TabIndex = 7;
             groupBox5.TabStop = false;
             // 
@@ -276,7 +276,7 @@
             button5.BackColor = SystemColors.ControlLight;
             button5.Font = new Font("Segoe UI Black", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button5.ForeColor = Color.FromArgb(69, 69, 210);
-            button5.Location = new Point(836, 18);
+            button5.Location = new Point(865, 18);
             button5.Margin = new Padding(4, 3, 4, 3);
             button5.Name = "button5";
             button5.Size = new Size(96, 46);

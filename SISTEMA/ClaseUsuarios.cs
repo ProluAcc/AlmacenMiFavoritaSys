@@ -20,6 +20,7 @@ namespace SISTEMA
 
         private int _id_usuario;
         private string _nombre;
+        private string _username;
         private string _correo;
         private string _estado;
         private string _contrasena;
@@ -45,7 +46,17 @@ namespace SISTEMA
             set
             {
                 _nombre = value;
-                if (_nombre == "") MessageBox.Show("El campo 'Cédula' no puede ir vacio.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                if (_nombre == "") MessageBox.Show("El campo 'Nombre' no puede ir vacio.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        public string username
+        {
+            get { return _username; }
+            set
+            {
+                _username = value;
+                if (_username == "") MessageBox.Show("El campo 'Username' no puede ir vacio.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

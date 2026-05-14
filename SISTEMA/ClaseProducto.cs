@@ -36,5 +36,21 @@ namespace SISTEMA
             {
             }
         }
+
+        internal Clase_detalle_venta_producto Clase_detalle_venta_producto1
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
+        internal ClaseInventario ClaseInventario
+        {
+            get => default;
+            set
+            {
+            }
+        }
     }
 }

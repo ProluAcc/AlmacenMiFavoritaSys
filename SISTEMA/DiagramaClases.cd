@@ -27,13 +27,14 @@
   <Class Name="SISTEMA.ClaseCompra" Collapsed="true">
     <Position X="7.75" Y="2.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAABAEEAAAAAAAABAAAAAAAgAAAAAgAAAAZAAAAAA=</HashCode>
+      <HashCode>AAAAABAEEAAAAAQAABAAAAAAAgAAAAAgAAAAZAAAAAA=</HashCode>
       <FileName>ClaseCompra.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Property Name="ClaseProveedor" />
       <Property Name="ClaseProducto" />
       <Property Name="Clase_detalle_compra" />
+      <Property Name="ClaseCaja" />
     </ShowAsAssociation>
   </Class>
   <Class Name="SISTEMA.ClaseCredito" Collapsed="true">
@@ -60,14 +61,31 @@
         <Position X="0.027" Y="0.31" />
       </MemberNameLabel>
     </AssociationLine>
+    <AssociationLine Name="Clase_detalle_venta_producto1" Type="SISTEMA.Clase_detalle_venta_producto" ManuallyRouted="true">
+      <Path>
+        <Point X="5.5" Y="4.375" />
+        <Point X="4.799" Y="4.375" />
+        <Point X="4.799" Y="4.503" />
+        <Point X="4.247" Y="4.503" Type="JumpStart" />
+        <Point X="4.081" Y="4.503" Type="JumpEnd" />
+        <Point X="3.945" Y="4.503" Type="JumpStart" />
+        <Point X="3.778" Y="4.503" Type="JumpEnd" />
+        <Point X="3.642" Y="4.503" Type="JumpStart" />
+        <Point X="3.475" Y="4.503" Type="JumpEnd" />
+        <Point X="3.377" Y="4.503" />
+        <Point X="3.377" Y="7" />
+      </Path>
+    </AssociationLine>
     <TypeIdentifier>
-      <HashCode>AAAgAAAEAAAQAAAAAAAAEAAAAAAggAAAAAAAAAIAAAA=</HashCode>
+      <HashCode>AABgAIAEAAAQAAAAAAAAEAAAAAAggAAAAAAAAAIAAAA=</HashCode>
       <FileName>ClaseProducto.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Property Name="Clase_detalle_producto" />
       <Property Name="Clase_detalle_compra" />
       <Property Name="Clase_detalle_venta_producto" />
+      <Property Name="Clase_detalle_venta_producto1" />
+      <Property Name="ClaseInventario" />
     </ShowAsAssociation>
   </Class>
   <Class Name="SISTEMA.ClaseProveedor" Collapsed="true">
@@ -80,7 +98,7 @@
   <Class Name="SISTEMA.ClaseUsuarios" Collapsed="true">
     <Position X="5.25" Y="1.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAADAACIAgAgACAABCCIQACIgAAAACAAAAAAAIAAAA=</HashCode>
+      <HashCode>AAAADAACIAgAgACAABCCIQECIgAAAACAAAIAAAIAAAA=</HashCode>
       <FileName>ClaseUsuarios.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -138,7 +156,7 @@
       </MemberNameLabel>
     </AssociationLine>
     <TypeIdentifier>
-      <HashCode>CIAAQAAAAAAAAAAAAAAAAAAAAAggAACAAAAAQAAAAAA=</HashCode>
+      <HashCode>CIAAQAAAAAAAAAAAAAAAAAAAAAggAACAAAAAQAIAAAA=</HashCode>
       <FileName>Clase_detalle_venta_producto.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -157,6 +175,13 @@
     <TypeIdentifier>
       <HashCode>AAABAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAQEAAAAA=</HashCode>
       <FileName>Clase_devolucion_ventas.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SISTEMA.ClaseInventario" Collapsed="true">
+    <Position X="4.75" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAIAAAAQAAAAAAgAAgAAAAAAAAAAAAEAA=</HashCode>
+      <FileName>ClaseInventario.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />

@@ -38,5 +38,13 @@ namespace SISTEMA
             {
             }
         }
+
+        internal ClaseCaja ClaseCaja
+        {
+            get => default;
+            set
+            {
+            }
+        }
     }
 }

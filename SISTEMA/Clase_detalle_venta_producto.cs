@@ -11,6 +11,7 @@ namespace SISTEMA
         private int _id_venta_producto;
         private double _subtotal;
         private double _descuento;
+        private double _descuento_porcentaje;
         private double _total;
         private int _id_producto;
         private int _id_venta;

@@ -85,7 +85,7 @@
             // btnInicio
             // 
             btnInicio.BackColor = SystemColors.ControlLight;
-            btnInicio.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            btnInicio.Font = new Font("Segoe UI Black", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnInicio.ForeColor = Color.FromArgb(69, 69, 210);
             btnInicio.Location = new Point(860, 17);
             btnInicio.Name = "btnInicio";

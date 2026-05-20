@@ -50,6 +50,9 @@
             label3 = new Label();
             label2 = new Label();
             button7 = new Button();
+            textBox1 = new TextBox();
+            label1 = new Label();
+            button1 = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -64,6 +67,7 @@
             button8.TabIndex = 83;
             button8.Text = "Inicio";
             button8.UseVisualStyleBackColor = false;
+            button8.Click += button8_Click;
             // 
             // dataGridView1
             // 
@@ -113,7 +117,7 @@
             // txtBuscar
             // 
             txtBuscar.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            txtBuscar.Location = new Point(543, 194);
+            txtBuscar.Location = new Point(170, 185);
             txtBuscar.Name = "txtBuscar";
             txtBuscar.Size = new Size(154, 27);
             txtBuscar.TabIndex = 79;
@@ -122,7 +126,7 @@
             // 
             cbBuscar.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
             cbBuscar.FormattingEnabled = true;
-            cbBuscar.Location = new Point(452, 193);
+            cbBuscar.Location = new Point(79, 184);
             cbBuscar.Name = "cbBuscar";
             cbBuscar.Size = new Size(85, 28);
             cbBuscar.TabIndex = 78;
@@ -132,7 +136,7 @@
             label7.AutoSize = true;
             label7.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
             label7.ForeColor = Color.Black;
-            label7.Location = new Point(385, 196);
+            label7.Location = new Point(12, 187);
             label7.Name = "label7";
             label7.Size = new Size(61, 20);
             label7.TabIndex = 77;
@@ -144,7 +148,7 @@
             btnCancelar.BackColor = SystemColors.ControlLight;
             btnCancelar.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
             btnCancelar.ForeColor = Color.FromArgb(69, 69, 210);
-            btnCancelar.Location = new Point(728, 165);
+            btnCancelar.Location = new Point(828, 176);
             btnCancelar.Name = "btnCancelar";
             btnCancelar.Size = new Size(123, 42);
             btnCancelar.TabIndex = 76;
@@ -156,7 +160,7 @@
             btnGuardar.BackColor = Color.FromArgb(69, 69, 210);
             btnGuardar.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
             btnGuardar.ForeColor = Color.White;
-            btnGuardar.Location = new Point(728, 117);
+            btnGuardar.Location = new Point(690, 177);
             btnGuardar.Name = "btnGuardar";
             btnGuardar.Size = new Size(123, 42);
             btnGuardar.TabIndex = 75;
@@ -167,7 +171,7 @@
             // 
             cbEstado.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
             cbEstado.FormattingEnabled = true;
-            cbEstado.Location = new Point(582, 117);
+            cbEstado.Location = new Point(792, 116);
             cbEstado.Name = "cbEstado";
             cbEstado.Size = new Size(114, 28);
             cbEstado.TabIndex = 74;
@@ -193,7 +197,7 @@
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
             label6.ForeColor = Color.Black;
-            label6.Location = new Point(582, 97);
+            label6.Location = new Point(792, 96);
             label6.Name = "label6";
             label6.Size = new Size(60, 20);
             label6.TabIndex = 71;
@@ -206,9 +210,9 @@
             label5.ForeColor = Color.Black;
             label5.Location = new Point(372, 97);
             label5.Name = "label5";
-            label5.Size = new Size(100, 20);
+            label5.Size = new Size(78, 20);
             label5.TabIndex = 70;
-            label5.Text = "Código RUC :";
+            label5.Text = "Dirección:";
             // 
             // txtNombre
             // 
@@ -261,6 +265,38 @@
             button7.Size = new Size(977, 79);
             button7.TabIndex = 82;
             button7.UseVisualStyleBackColor = false;
+            button7.Click += button7_Click;
+            // 
+            // textBox1
+            // 
+            textBox1.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            textBox1.Location = new Point(582, 117);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(204, 27);
+            textBox1.TabIndex = 86;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            label1.ForeColor = Color.Black;
+            label1.Location = new Point(582, 97);
+            label1.Name = "label1";
+            label1.Size = new Size(60, 20);
+            label1.TabIndex = 84;
+            label1.Text = "Correo:";
+            // 
+            // button1
+            // 
+            button1.BackColor = Color.FromArgb(69, 69, 210);
+            button1.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            button1.ForeColor = Color.White;
+            button1.Location = new Point(330, 176);
+            button1.Name = "button1";
+            button1.Size = new Size(123, 42);
+            button1.TabIndex = 87;
+            button1.Text = "🔍Buscar";
+            button1.UseVisualStyleBackColor = false;
             // 
             // Clientes
             // 
@@ -268,6 +304,9 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(255, 223, 96);
             ClientSize = new Size(975, 527);
+            Controls.Add(button1);
+            Controls.Add(textBox1);
+            Controls.Add(label1);
             Controls.Add(button8);
             Controls.Add(dataGridView1);
             Controls.Add(txtBuscar);
@@ -317,5 +356,8 @@
         private Label label3;
         private Label label2;
         private Button button7;
+        private TextBox textBox1;
+        private Label label1;
+        private Button button1;
     }
 }

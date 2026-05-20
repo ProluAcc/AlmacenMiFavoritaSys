@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             groupBox1 = new GroupBox();
+            btnInicio = new Button();
             btnBuscarCliente = new Button();
             cbCliente = new ComboBox();
             label4 = new Label();
@@ -45,6 +46,13 @@
             txtSubtotal = new TextBox();
             label16 = new Label();
             label14 = new Label();
+            dataGridView1 = new DataGridView();
+            Column1 = new DataGridViewTextBoxColumn();
+            Column2 = new DataGridViewTextBoxColumn();
+            Column3 = new DataGridViewTextBoxColumn();
+            Column4 = new DataGridViewTextBoxColumn();
+            Column5 = new DataGridViewTextBoxColumn();
+            Column6 = new DataGridViewTextBoxColumn();
             panel7 = new Panel();
             cbVencimiento = new ComboBox();
             comboBox2 = new ComboBox();
@@ -57,8 +65,8 @@
             label19 = new Label();
             panel10 = new Panel();
             label21 = new Label();
-            label22 = new Label();
             panel11 = new Panel();
+            label22 = new Label();
             panel1 = new Panel();
             label13 = new Label();
             label12 = new Label();
@@ -71,25 +79,17 @@
             panel3 = new Panel();
             label7 = new Label();
             label6 = new Label();
-            label5 = new Label();
             panel2 = new Panel();
-            dataGridView1 = new DataGridView();
-            Column1 = new DataGridViewTextBoxColumn();
-            Column2 = new DataGridViewTextBoxColumn();
-            Column3 = new DataGridViewTextBoxColumn();
-            Column4 = new DataGridViewTextBoxColumn();
-            Column5 = new DataGridViewTextBoxColumn();
-            Column6 = new DataGridViewTextBoxColumn();
+            label5 = new Label();
             btnValidarCredito = new Button();
             btnRegistrarVenta = new Button();
-            btnInicio = new Button();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             panel7.SuspendLayout();
             panel11.SuspendLayout();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // groupBox1
@@ -109,6 +109,19 @@
             groupBox1.Size = new Size(973, 61);
             groupBox1.TabIndex = 0;
             groupBox1.TabStop = false;
+            // 
+            // btnInicio
+            // 
+            btnInicio.BackColor = SystemColors.ControlLight;
+            btnInicio.Font = new Font("Segoe UI Black", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnInicio.ForeColor = Color.FromArgb(69, 69, 210);
+            btnInicio.Location = new Point(883, 17);
+            btnInicio.Name = "btnInicio";
+            btnInicio.Size = new Size(78, 35);
+            btnInicio.TabIndex = 6;
+            btnInicio.Text = "Inicio";
+            btnInicio.UseVisualStyleBackColor = false;
+            btnInicio.Click += btnInicio_Click;
             // 
             // btnBuscarCliente
             // 
@@ -266,6 +279,45 @@
             label14.TabIndex = 10;
             label14.Text = "Subtotal:";
             // 
+            // dataGridView1
+            // 
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3, Column4, Column5, Column6 });
+            dataGridView1.Location = new Point(6, 20);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.Size = new Size(645, 194);
+            dataGridView1.TabIndex = 0;
+            // 
+            // Column1
+            // 
+            Column1.HeaderText = "Código";
+            Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            Column2.HeaderText = "Producto";
+            Column2.Name = "Column2";
+            // 
+            // Column3
+            // 
+            Column3.HeaderText = "Cantidad";
+            Column3.Name = "Column3";
+            // 
+            // Column4
+            // 
+            Column4.HeaderText = "Precio";
+            Column4.Name = "Column4";
+            // 
+            // Column5
+            // 
+            Column5.HeaderText = "IVA";
+            Column5.Name = "Column5";
+            // 
+            // Column6
+            // 
+            Column6.HeaderText = "Subtotal";
+            Column6.Name = "Column6";
+            // 
             // panel7
             // 
             panel7.BackColor = SystemColors.ControlLight;
@@ -390,6 +442,17 @@
             label21.TabIndex = 6;
             label21.Text = "Plazo:";
             // 
+            // panel11
+            // 
+            panel11.BackColor = Color.FromArgb(69, 69, 210);
+            panel11.BorderStyle = BorderStyle.FixedSingle;
+            panel11.Controls.Add(label22);
+            panel11.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            panel11.Location = new Point(-1, -1);
+            panel11.Name = "panel11";
+            panel11.Size = new Size(294, 33);
+            panel11.TabIndex = 0;
+            // 
             // label22
             // 
             label22.AutoSize = true;
@@ -401,17 +464,6 @@
             label22.Size = new Size(173, 20);
             label22.TabIndex = 0;
             label22.Text = "Condiciones del Crédito";
-            // 
-            // panel11
-            // 
-            panel11.BackColor = Color.FromArgb(69, 69, 210);
-            panel11.BorderStyle = BorderStyle.FixedSingle;
-            panel11.Controls.Add(label22);
-            panel11.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            panel11.Location = new Point(-1, -1);
-            panel11.Name = "panel11";
-            panel11.Size = new Size(294, 33);
-            panel11.TabIndex = 0;
             // 
             // panel1
             // 
@@ -544,18 +596,6 @@
             label6.TabIndex = 6;
             label6.Text = "Limite:";
             // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.BackColor = Color.FromArgb(69, 69, 210);
-            label5.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            label5.ForeColor = Color.White;
-            label5.Location = new Point(34, 8);
-            label5.Name = "label5";
-            label5.Size = new Size(241, 20);
-            label5.TabIndex = 0;
-            label5.Text = "Información Crediticia del Cliente";
-            // 
             // panel2
             // 
             panel2.BackColor = Color.FromArgb(69, 69, 210);
@@ -567,44 +607,17 @@
             panel2.Size = new Size(294, 38);
             panel2.TabIndex = 0;
             // 
-            // dataGridView1
+            // label5
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3, Column4, Column5, Column6 });
-            dataGridView1.Location = new Point(6, 20);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(645, 194);
-            dataGridView1.TabIndex = 0;
-            // 
-            // Column1
-            // 
-            Column1.HeaderText = "Código";
-            Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            Column2.HeaderText = "Producto";
-            Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            Column3.HeaderText = "Cantidad";
-            Column3.Name = "Column3";
-            // 
-            // Column4
-            // 
-            Column4.HeaderText = "Precio";
-            Column4.Name = "Column4";
-            // 
-            // Column5
-            // 
-            Column5.HeaderText = "IVA";
-            Column5.Name = "Column5";
-            // 
-            // Column6
-            // 
-            Column6.HeaderText = "Subtotal";
-            Column6.Name = "Column6";
+            label5.AutoSize = true;
+            label5.BackColor = Color.FromArgb(69, 69, 210);
+            label5.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            label5.ForeColor = Color.White;
+            label5.Location = new Point(34, 8);
+            label5.Name = "label5";
+            label5.Size = new Size(241, 20);
+            label5.TabIndex = 0;
+            label5.Text = "Información Crediticia del Cliente";
             // 
             // btnValidarCredito
             // 
@@ -630,18 +643,6 @@
             btnRegistrarVenta.Text = "Registrar Venta a Crédito";
             btnRegistrarVenta.UseVisualStyleBackColor = false;
             // 
-            // btnInicio
-            // 
-            btnInicio.BackColor = SystemColors.ControlLight;
-            btnInicio.Font = new Font("Segoe UI Black", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnInicio.ForeColor = Color.FromArgb(69, 69, 210);
-            btnInicio.Location = new Point(883, 17);
-            btnInicio.Name = "btnInicio";
-            btnInicio.Size = new Size(78, 35);
-            btnInicio.TabIndex = 6;
-            btnInicio.Text = "Inicio";
-            btnInicio.UseVisualStyleBackColor = false;
-            // 
             // Credito
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -663,6 +664,7 @@
             groupBox1.PerformLayout();
             groupBox2.ResumeLayout(false);
             groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             panel7.ResumeLayout(false);
             panel7.PerformLayout();
             panel11.ResumeLayout(false);
@@ -671,7 +673,6 @@
             panel1.PerformLayout();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
         }
 

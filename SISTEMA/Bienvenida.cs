@@ -21,11 +21,6 @@ namespace SISTEMA
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Login obj = new Login(); obj.Show(); this.Hide();
-        }
-
         private void button2_Click(object sender, EventArgs e)
         {
             AbrirForm(new Compra());

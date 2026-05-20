@@ -1,3 +1,5 @@
+using SISTEMA;
+
 namespace caja
 {
     public partial class Caja : Form
@@ -20,6 +22,21 @@ namespace caja
         private void label8_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {            
+            Bienvenida obj = new Bienvenida(); obj.Show(); this.Hide();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            ArqueoCaja obj = new ArqueoCaja(); obj.Show(); 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            CierreCaja obj = new CierreCaja(); obj.Show(); 
         }
     }
 }

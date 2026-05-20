@@ -51,10 +51,10 @@
             label9 = new Label();
             label8 = new Label();
             panel11 = new Panel();
+            btnInicio = new Button();
             button6 = new Button();
             button5 = new Button();
             button4 = new Button();
-            btnInicio = new Button();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
@@ -298,6 +298,19 @@
             panel11.TabIndex = 6;
             panel11.Paint += panel11_Paint;
             // 
+            // btnInicio
+            // 
+            btnInicio.BackColor = SystemColors.ControlLight;
+            btnInicio.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            btnInicio.ForeColor = Color.FromArgb(69, 69, 210);
+            btnInicio.Location = new Point(8, 12);
+            btnInicio.Name = "btnInicio";
+            btnInicio.Size = new Size(97, 34);
+            btnInicio.TabIndex = 3;
+            btnInicio.Text = "Inicio";
+            btnInicio.UseVisualStyleBackColor = false;
+            btnInicio.Click += btnInicio_Click;
+            // 
             // button6
             // 
             button6.BackColor = Color.FromArgb(69, 69, 210);
@@ -333,18 +346,6 @@
             button4.TabIndex = 0;
             button4.Text = "Guardar compra";
             button4.UseVisualStyleBackColor = false;
-            // 
-            // btnInicio
-            // 
-            btnInicio.BackColor = SystemColors.ControlLight;
-            btnInicio.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            btnInicio.ForeColor = Color.FromArgb(69, 69, 210);
-            btnInicio.Location = new Point(8, 12);
-            btnInicio.Name = "btnInicio";
-            btnInicio.Size = new Size(97, 34);
-            btnInicio.TabIndex = 3;
-            btnInicio.Text = "Inicio";
-            btnInicio.UseVisualStyleBackColor = false;
             // 
             // Compra
             // 

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SISTEMA;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -70,6 +71,11 @@ namespace Pantalla_de_devolución
         private void button3_Click_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Bienvenida obj = new Bienvenida(); obj.Show(); this.Hide();
         }
     }
 }

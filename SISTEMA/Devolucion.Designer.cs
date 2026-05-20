@@ -283,6 +283,7 @@
             button5.TabIndex = 10;
             button5.Text = "Inicio";
             button5.UseVisualStyleBackColor = false;
+            button5.Click += button5_Click;
             // 
             // button4
             // 

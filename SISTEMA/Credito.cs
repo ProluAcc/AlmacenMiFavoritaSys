@@ -51,5 +51,10 @@ namespace SISTEMA
         {
 
         }
+
+        private void btnInicio_Click(object sender, EventArgs e)
+        {
+            Bienvenida obj = new Bienvenida(); obj.Show(); this.Hide();
+        }
     }
 }

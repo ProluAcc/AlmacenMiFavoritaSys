@@ -4,7 +4,6 @@ namespace Pantalla_ventas
 {
     public partial class Ventas : Form
     {
-        AbrirFormulario abrirFormulario = new AbrirFormulario();
         public Ventas()
         {
             InitializeComponent();
@@ -67,7 +66,7 @@ namespace Pantalla_ventas
 
         private void btnInicio_Click(object sender, EventArgs e)
         {
-           
+           Bienvenida obj = new Bienvenida(); obj.Show(); this.Hide();
         }
     }
 }

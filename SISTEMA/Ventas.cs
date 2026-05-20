@@ -1,3 +1,5 @@
+using SISTEMA;
+
 namespace Pantalla_ventas
 {
     public partial class Ventas : Form
@@ -60,6 +62,11 @@ namespace Pantalla_ventas
         private void label10_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnInicio_Click(object sender, EventArgs e)
+        {
+           Bienvenida obj = new Bienvenida(); obj.Show(); this.Hide();
         }
     }
 }

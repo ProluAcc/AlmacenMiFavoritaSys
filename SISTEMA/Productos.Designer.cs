@@ -32,16 +32,6 @@
             button2 = new Button();
             button7 = new Button();
             dataGridView1 = new DataGridView();
-            Column1 = new DataGridViewTextBoxColumn();
-            Column2 = new DataGridViewTextBoxColumn();
-            Column3 = new DataGridViewTextBoxColumn();
-            Column4 = new DataGridViewTextBoxColumn();
-            Column5 = new DataGridViewTextBoxColumn();
-            Column6 = new DataGridViewTextBoxColumn();
-            Column7 = new DataGridViewTextBoxColumn();
-            Column8 = new DataGridViewTextBoxColumn();
-            Column9 = new DataGridViewTextBoxColumn();
-            Column10 = new DataGridViewTextBoxColumn();
             textBox5 = new TextBox();
             textBox4 = new TextBox();
             textBox3 = new TextBox();
@@ -61,7 +51,21 @@
             label3 = new Label();
             label2 = new Label();
             button1 = new Button();
+            textBox2 = new TextBox();
+            Column1 = new DataGridViewTextBoxColumn();
+            Column2 = new DataGridViewTextBoxColumn();
+            Column3 = new DataGridViewTextBoxColumn();
+            Column4 = new DataGridViewTextBoxColumn();
+            Column5 = new DataGridViewTextBoxColumn();
+            Column7 = new DataGridViewTextBoxColumn();
+            Column6 = new DataGridViewTextBoxColumn();
+            Column8 = new DataGridViewTextBoxColumn();
+            Column9 = new DataGridViewTextBoxColumn();
+            Column10 = new DataGridViewTextBoxColumn();
+            label1 = new Label();
             comboBox5 = new ComboBox();
+            textBox6 = new TextBox();
+            button3 = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -76,6 +80,7 @@
             button8.TabIndex = 104;
             button8.Text = "Inicio";
             button8.UseVisualStyleBackColor = false;
+            button8.Click += button8_Click;
             // 
             // button2
             // 
@@ -104,69 +109,16 @@
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3, Column4, Column5, Column6, Column7, Column8, Column9, Column10 });
-            dataGridView1.Location = new Point(7, 212);
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3, Column4, Column5, Column7, Column6, Column8, Column9, Column10 });
+            dataGridView1.Location = new Point(7, 259);
             dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(956, 303);
+            dataGridView1.Size = new Size(956, 256);
             dataGridView1.TabIndex = 100;
-            // 
-            // Column1
-            // 
-            Column1.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            Column1.HeaderText = "Código";
-            Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            Column2.HeaderText = "Nombre del Producto";
-            Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            Column3.HeaderText = "Categoría";
-            Column3.Name = "Column3";
-            // 
-            // Column4
-            // 
-            Column4.HeaderText = "Medida";
-            Column4.Name = "Column4";
-            // 
-            // Column5
-            // 
-            Column5.HeaderText = "Marca";
-            Column5.Name = "Column5";
-            // 
-            // Column6
-            // 
-            Column6.HeaderText = "Stock";
-            Column6.Name = "Column6";
-            Column6.Width = 60;
-            // 
-            // Column7
-            // 
-            Column7.HeaderText = "Disponibilidad";
-            Column7.Name = "Column7";
-            // 
-            // Column8
-            // 
-            Column8.HeaderText = "Precio Venta";
-            Column8.Name = "Column8";
-            // 
-            // Column9
-            // 
-            Column9.HeaderText = "Estado";
-            Column9.Name = "Column9";
-            Column9.Width = 80;
-            // 
-            // Column10
-            // 
-            Column10.HeaderText = "Editar";
-            Column10.Name = "Column10";
             // 
             // textBox5
             // 
             textBox5.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            textBox5.Location = new Point(265, 159);
+            textBox5.Location = new Point(401, 160);
             textBox5.Name = "textBox5";
             textBox5.Size = new Size(115, 27);
             textBox5.TabIndex = 98;
@@ -182,7 +134,7 @@
             // textBox3
             // 
             textBox3.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            textBox3.Location = new Point(147, 160);
+            textBox3.Location = new Point(283, 161);
             textBox3.Name = "textBox3";
             textBox3.Size = new Size(100, 27);
             textBox3.TabIndex = 96;
@@ -220,7 +172,7 @@
             comboBox2.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
             comboBox2.FormattingEnabled = true;
             comboBox2.Items.AddRange(new object[] { "Activo" });
-            comboBox2.Location = new Point(392, 157);
+            comboBox2.Location = new Point(528, 158);
             comboBox2.Name = "comboBox2";
             comboBox2.Size = new Size(98, 28);
             comboBox2.TabIndex = 91;
@@ -269,17 +221,17 @@
             // 
             label8.AutoSize = true;
             label8.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            label8.Location = new Point(394, 133);
+            label8.Location = new Point(530, 134);
             label8.Name = "label8";
-            label8.Size = new Size(56, 20);
+            label8.Size = new Size(109, 20);
             label8.TabIndex = 86;
-            label8.Text = "Estado";
+            label8.Text = "Disponibilidad";
             // 
             // label7
             // 
             label7.AutoSize = true;
             label7.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            label7.Location = new Point(265, 135);
+            label7.Location = new Point(401, 136);
             label7.Name = "label7";
             label7.Size = new Size(96, 20);
             label7.TabIndex = 85;
@@ -289,7 +241,7 @@
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            label6.Location = new Point(147, 135);
+            label6.Location = new Point(283, 136);
             label6.Name = "label6";
             label6.Size = new Size(96, 20);
             label6.TabIndex = 84;
@@ -312,9 +264,9 @@
             label4.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
             label4.Location = new Point(16, 135);
             label4.Name = "label4";
-            label4.Size = new Size(109, 20);
+            label4.Size = new Size(90, 20);
             label4.TabIndex = 82;
-            label4.Text = "Disponibilidad";
+            label4.Text = "Descripción";
             // 
             // label3
             // 
@@ -348,14 +300,105 @@
             button1.TabIndex = 99;
             button1.UseVisualStyleBackColor = false;
             // 
+            // textBox2
+            // 
+            textBox2.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            textBox2.Location = new Point(16, 161);
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(261, 27);
+            textBox2.TabIndex = 105;
+            // 
+            // Column1
+            // 
+            Column1.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            Column1.HeaderText = "Código";
+            Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            Column2.HeaderText = "Nombre del Producto";
+            Column2.Name = "Column2";
+            // 
+            // Column3
+            // 
+            Column3.HeaderText = "Categoría";
+            Column3.Name = "Column3";
+            // 
+            // Column4
+            // 
+            Column4.HeaderText = "Medida";
+            Column4.Name = "Column4";
+            // 
+            // Column5
+            // 
+            Column5.HeaderText = "Marca";
+            Column5.Name = "Column5";
+            // 
+            // Column7
+            // 
+            Column7.HeaderText = "Descripción";
+            Column7.Name = "Column7";
+            // 
+            // Column6
+            // 
+            Column6.HeaderText = "Stock";
+            Column6.Name = "Column6";
+            Column6.Width = 60;
+            // 
+            // Column8
+            // 
+            Column8.HeaderText = "Precio Venta";
+            Column8.Name = "Column8";
+            // 
+            // Column9
+            // 
+            Column9.HeaderText = "Disponibilidad";
+            Column9.Name = "Column9";
+            // 
+            // Column10
+            // 
+            Column10.HeaderText = "Editar";
+            Column10.Name = "Column10";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            label1.Location = new Point(16, 216);
+            label1.Name = "label1";
+            label1.Size = new Size(89, 20);
+            label1.TabIndex = 106;
+            label1.Text = "Buscar por:";
+            // 
             // comboBox5
             // 
             comboBox5.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
             comboBox5.FormattingEnabled = true;
-            comboBox5.Location = new Point(16, 160);
+            comboBox5.Items.AddRange(new object[] { "Azulejos" });
+            comboBox5.Location = new Point(111, 213);
             comboBox5.Name = "comboBox5";
-            comboBox5.Size = new Size(124, 28);
-            comboBox5.TabIndex = 105;
+            comboBox5.Size = new Size(137, 28);
+            comboBox5.TabIndex = 107;
+            // 
+            // textBox6
+            // 
+            textBox6.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            textBox6.Location = new Point(263, 213);
+            textBox6.Name = "textBox6";
+            textBox6.Size = new Size(225, 27);
+            textBox6.TabIndex = 108;
+            // 
+            // button3
+            // 
+            button3.BackColor = Color.FromArgb(69, 69, 210);
+            button3.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            button3.ForeColor = Color.White;
+            button3.Location = new Point(498, 209);
+            button3.Name = "button3";
+            button3.Size = new Size(128, 35);
+            button3.TabIndex = 109;
+            button3.Text = "🔍BUSCAR";
+            button3.UseVisualStyleBackColor = false;
             // 
             // Productos
             // 
@@ -363,7 +406,11 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(255, 223, 96);
             ClientSize = new Size(975, 527);
+            Controls.Add(button3);
+            Controls.Add(textBox6);
             Controls.Add(comboBox5);
+            Controls.Add(label1);
+            Controls.Add(textBox2);
             Controls.Add(button8);
             Controls.Add(button2);
             Controls.Add(button7);
@@ -420,16 +467,20 @@
         private Label label3;
         private Label label2;
         private Button button1;
-        private ComboBox comboBox5;
         private DataGridViewTextBoxColumn Column1;
         private DataGridViewTextBoxColumn Column2;
         private DataGridViewTextBoxColumn Column3;
         private DataGridViewTextBoxColumn Column4;
         private DataGridViewTextBoxColumn Column5;
-        private DataGridViewTextBoxColumn Column6;
         private DataGridViewTextBoxColumn Column7;
+        private DataGridViewTextBoxColumn Column6;
         private DataGridViewTextBoxColumn Column8;
         private DataGridViewTextBoxColumn Column9;
         private DataGridViewTextBoxColumn Column10;
+        private TextBox textBox2;
+        private Label label1;
+        private ComboBox comboBox5;
+        private TextBox textBox6;
+        private Button button3;
     }
 }

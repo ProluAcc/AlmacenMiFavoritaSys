@@ -10,19 +10,14 @@ using System.Windows.Forms;
 
 namespace SISTEMA
 {
-    public partial class Proveedores : Form
+    public partial class CierreCaja : Form
     {
-        public Proveedores()
+        public CierreCaja()
         {
             InitializeComponent();
         }
 
-        private void button7_Click(object sender, EventArgs e)
-        {
-            Bienvenida obj = new Bienvenida(); obj.Show(); this.Hide();
-        }
-
-        private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
+        private void CierreCaja_Load(object sender, EventArgs e)
         {
 
         }

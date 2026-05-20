@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             groupBox1 = new GroupBox();
+            btnInicio = new Button();
             textBox3 = new TextBox();
             textBox2 = new TextBox();
             textBox1 = new TextBox();
@@ -45,6 +46,12 @@
             label5 = new Label();
             label4 = new Label();
             dataGridView1 = new DataGridView();
+            Column1 = new DataGridViewTextBoxColumn();
+            Column2 = new DataGridViewTextBoxColumn();
+            Column3 = new DataGridViewTextBoxColumn();
+            Column4 = new DataGridViewTextBoxColumn();
+            Column5 = new DataGridViewTextBoxColumn();
+            Column6 = new DataGridViewTextBoxColumn();
             label7 = new Label();
             label8 = new Label();
             label9 = new Label();
@@ -52,15 +59,7 @@
             label10 = new Label();
             textBox6 = new TextBox();
             textBox7 = new TextBox();
-            textBox8 = new TextBox();
             groupBox3 = new GroupBox();
-            btnInicio = new Button();
-            Column1 = new DataGridViewTextBoxColumn();
-            Column2 = new DataGridViewTextBoxColumn();
-            Column3 = new DataGridViewTextBoxColumn();
-            Column4 = new DataGridViewTextBoxColumn();
-            Column5 = new DataGridViewTextBoxColumn();
-            Column6 = new DataGridViewTextBoxColumn();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
@@ -82,6 +81,19 @@
             groupBox1.Size = new Size(973, 67);
             groupBox1.TabIndex = 0;
             groupBox1.TabStop = false;
+            // 
+            // btnInicio
+            // 
+            btnInicio.BackColor = SystemColors.ControlLight;
+            btnInicio.Font = new Font("Segoe UI Black", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnInicio.ForeColor = Color.FromArgb(69, 69, 210);
+            btnInicio.Location = new Point(860, 17);
+            btnInicio.Name = "btnInicio";
+            btnInicio.Size = new Size(101, 35);
+            btnInicio.TabIndex = 11;
+            btnInicio.Text = "Inicio";
+            btnInicio.UseVisualStyleBackColor = false;
+            btnInicio.Click += btnInicio_Click;
             // 
             // textBox3
             // 
@@ -248,6 +260,42 @@
             dataGridView1.Size = new Size(945, 268);
             dataGridView1.TabIndex = 2;
             // 
+            // Column1
+            // 
+            Column1.HeaderText = "Nombre";
+            Column1.Name = "Column1";
+            Column1.Width = 150;
+            // 
+            // Column2
+            // 
+            Column2.HeaderText = "No. de factura";
+            Column2.Name = "Column2";
+            Column2.Width = 150;
+            // 
+            // Column3
+            // 
+            Column3.HeaderText = "Fecha:";
+            Column3.Name = "Column3";
+            Column3.Width = 150;
+            // 
+            // Column4
+            // 
+            Column4.HeaderText = "Productos";
+            Column4.Name = "Column4";
+            Column4.Width = 150;
+            // 
+            // Column5
+            // 
+            Column5.HeaderText = "Cantidad";
+            Column5.Name = "Column5";
+            Column5.Width = 150;
+            // 
+            // Column6
+            // 
+            Column6.HeaderText = "Precio";
+            Column6.Name = "Column6";
+            Column6.Width = 150;
+            // 
             // label7
             // 
             label7.AutoSize = true;
@@ -317,19 +365,10 @@
             textBox7.Size = new Size(132, 23);
             textBox7.TabIndex = 9;
             // 
-            // textBox8
-            // 
-            textBox8.Location = new Point(312, 22);
-            textBox8.Name = "textBox8";
-            textBox8.Size = new Size(126, 23);
-            textBox8.TabIndex = 10;
-            textBox8.TextChanged += textBox8_TextChanged;
-            // 
             // groupBox3
             // 
             groupBox3.BackColor = Color.FromArgb(69, 69, 210);
             groupBox3.Controls.Add(label7);
-            groupBox3.Controls.Add(textBox8);
             groupBox3.Controls.Add(label8);
             groupBox3.Controls.Add(textBox7);
             groupBox3.Controls.Add(label9);
@@ -341,54 +380,6 @@
             groupBox3.Size = new Size(973, 63);
             groupBox3.TabIndex = 8;
             groupBox3.TabStop = false;
-            // 
-            // btnInicio
-            // 
-            btnInicio.BackColor = SystemColors.ControlLight;
-            btnInicio.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            btnInicio.ForeColor = Color.FromArgb(69, 69, 210);
-            btnInicio.Location = new Point(860, 17);
-            btnInicio.Name = "btnInicio";
-            btnInicio.Size = new Size(101, 35);
-            btnInicio.TabIndex = 11;
-            btnInicio.Text = "Inicio";
-            btnInicio.UseVisualStyleBackColor = false;
-            // 
-            // Column1
-            // 
-            Column1.HeaderText = "Nombre";
-            Column1.Name = "Column1";
-            Column1.Width = 150;
-            // 
-            // Column2
-            // 
-            Column2.HeaderText = "No. de factura";
-            Column2.Name = "Column2";
-            Column2.Width = 150;
-            // 
-            // Column3
-            // 
-            Column3.HeaderText = "Fecha:";
-            Column3.Name = "Column3";
-            Column3.Width = 150;
-            // 
-            // Column4
-            // 
-            Column4.HeaderText = "Productos";
-            Column4.Name = "Column4";
-            Column4.Width = 150;
-            // 
-            // Column5
-            // 
-            Column5.HeaderText = "Cantidad";
-            Column5.Name = "Column5";
-            Column5.Width = 150;
-            // 
-            // Column6
-            // 
-            Column6.HeaderText = "Precio";
-            Column6.Name = "Column6";
-            Column6.Width = 150;
             // 
             // Ventas
             // 
@@ -440,7 +431,6 @@
         private Label label10;
         private TextBox textBox6;
         private TextBox textBox7;
-        private TextBox textBox8;
         private GroupBox groupBox3;
         private Button btnInicio;
         private DataGridViewTextBoxColumn Column1;

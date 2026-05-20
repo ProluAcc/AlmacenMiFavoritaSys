@@ -1,3 +1,5 @@
+using SISTEMA;
+
 namespace Registro_de_compra
 {
     public partial class Compra : Form
@@ -30,6 +32,11 @@ namespace Registro_de_compra
         private void panel11_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void btnInicio_Click(object sender, EventArgs e)
+        {
+            Bienvenida obj = new Bienvenida(); obj.Show(); this.Hide();
         }
     }
 }

@@ -34,6 +34,10 @@
             button3 = new Button();
             button2 = new Button();
             panel1 = new Panel();
+            btnNivelacionInventario = new Button();
+            btnInventario = new Button();
+            panel3 = new Panel();
+            label5 = new Label();
             label4 = new Label();
             button6 = new Button();
             panel2 = new Panel();
@@ -108,6 +112,10 @@
             // 
             panel1.BackColor = Color.FromArgb(200, 56, 56);
             panel1.BorderStyle = BorderStyle.FixedSingle;
+            panel1.Controls.Add(btnNivelacionInventario);
+            panel1.Controls.Add(btnInventario);
+            panel1.Controls.Add(panel3);
+            panel1.Controls.Add(label5);
             panel1.Controls.Add(label4);
             panel1.Controls.Add(button6);
             panel1.Controls.Add(panel2);
@@ -122,9 +130,54 @@
             panel1.Controls.Add(btnProveedor);
             panel1.Location = new Point(1, 1);
             panel1.Name = "panel1";
-            panel1.Size = new Size(166, 527);
+            panel1.Size = new Size(166, 686);
             panel1.TabIndex = 82;
             panel1.Paint += panel1_Paint;
+            // 
+            // btnNivelacionInventario
+            // 
+            btnNivelacionInventario.BackColor = Color.FromArgb(69, 69, 210);
+            btnNivelacionInventario.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            btnNivelacionInventario.ForeColor = Color.White;
+            btnNivelacionInventario.Location = new Point(3, 609);
+            btnNivelacionInventario.Name = "btnNivelacionInventario";
+            btnNivelacionInventario.Size = new Size(156, 52);
+            btnNivelacionInventario.TabIndex = 87;
+            btnNivelacionInventario.Text = "Nivelación de Inventario ->";
+            btnNivelacionInventario.UseVisualStyleBackColor = false;
+            btnNivelacionInventario.Click += btnNivelacionInventario_Click;
+            // 
+            // btnInventario
+            // 
+            btnInventario.BackColor = Color.FromArgb(69, 69, 210);
+            btnInventario.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            btnInventario.ForeColor = Color.White;
+            btnInventario.Location = new Point(3, 564);
+            btnInventario.Name = "btnInventario";
+            btnInventario.Size = new Size(156, 40);
+            btnInventario.TabIndex = 86;
+            btnInventario.Text = "Inventario ->";
+            btnInventario.UseVisualStyleBackColor = false;
+            btnInventario.Click += btnInventario_Click;
+            // 
+            // panel3
+            // 
+            panel3.BorderStyle = BorderStyle.FixedSingle;
+            panel3.Location = new Point(2, 525);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(160, 1);
+            panel3.TabIndex = 7;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI Black", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label5.ForeColor = Color.White;
+            label5.Location = new Point(5, 529);
+            label5.Name = "label5";
+            label5.Size = new Size(154, 32);
+            label5.TabIndex = 85;
+            label5.Text = "Administrar";
             // 
             // label4
             // 
@@ -233,7 +286,7 @@
             panelContenedor.Controls.Add(button1);
             panelContenedor.Location = new Point(167, 1);
             panelContenedor.Name = "panelContenedor";
-            panelContenedor.Size = new Size(975, 527);
+            panelContenedor.Size = new Size(975, 727);
             panelContenedor.TabIndex = 83;
             panelContenedor.Paint += panelContenedor_Paint;
             // 
@@ -286,7 +339,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Gold;
-            ClientSize = new Size(1142, 528);
+            ClientSize = new Size(1142, 688);
             Controls.Add(panelContenedor);
             Controls.Add(panel1);
             Name = "Bienvenida";
@@ -320,5 +373,9 @@
         private Label label1;
         private PictureBox pictureBox1;
         private Button button1;
+        private Button btnNivelacionInventario;
+        private Button btnInventario;
+        private Panel panel3;
+        private Label label5;
     }
 }

@@ -40,7 +40,6 @@
             button2 = new Button();
             button1 = new Button();
             textBox5 = new TextBox();
-            textBox4 = new TextBox();
             comboBox1 = new ComboBox();
             label6 = new Label();
             label5 = new Label();
@@ -60,10 +59,29 @@
             textBox6 = new TextBox();
             textBox7 = new TextBox();
             groupBox3 = new GroupBox();
+            numericUpDown1 = new NumericUpDown();
+            textBox4 = new TextBox();
+            groupBox4 = new GroupBox();
+            comboBox2 = new ComboBox();
+            label11 = new Label();
+            textBox8 = new TextBox();
+            button4 = new Button();
+            dataGridView2 = new DataGridView();
+            Column7 = new DataGridViewTextBoxColumn();
+            Column8 = new DataGridViewTextBoxColumn();
+            Column9 = new DataGridViewTextBoxColumn();
+            Column10 = new DataGridViewTextBoxColumn();
+            Column11 = new DataGridViewTextBoxColumn();
+            Column12 = new DataGridViewTextBoxColumn();
+            Column13 = new DataGridViewTextBoxColumn();
+            Column14 = new DataGridViewTextBoxColumn();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
+            groupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
             SuspendLayout();
             // 
             // groupBox1
@@ -153,10 +171,10 @@
             // groupBox2
             // 
             groupBox2.BackColor = Color.FromArgb(200, 56, 56);
+            groupBox2.Controls.Add(numericUpDown1);
             groupBox2.Controls.Add(button2);
             groupBox2.Controls.Add(button1);
             groupBox2.Controls.Add(textBox5);
-            groupBox2.Controls.Add(textBox4);
             groupBox2.Controls.Add(comboBox1);
             groupBox2.Controls.Add(label6);
             groupBox2.Controls.Add(label5);
@@ -199,13 +217,6 @@
             textBox5.Name = "textBox5";
             textBox5.Size = new Size(101, 23);
             textBox5.TabIndex = 5;
-            // 
-            // textBox4
-            // 
-            textBox4.Location = new Point(367, 21);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(81, 23);
-            textBox4.TabIndex = 4;
             // 
             // comboBox1
             // 
@@ -257,7 +268,7 @@
             dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3, Column4, Column5, Column6 });
             dataGridView1.Location = new Point(2, 189);
             dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(945, 268);
+            dataGridView1.Size = new Size(945, 196);
             dataGridView1.TabIndex = 2;
             // 
             // Column1
@@ -368,6 +379,7 @@
             // groupBox3
             // 
             groupBox3.BackColor = Color.FromArgb(69, 69, 210);
+            groupBox3.Controls.Add(textBox4);
             groupBox3.Controls.Add(label7);
             groupBox3.Controls.Add(label8);
             groupBox3.Controls.Add(textBox7);
@@ -375,18 +387,142 @@
             groupBox3.Controls.Add(textBox6);
             groupBox3.Controls.Add(button3);
             groupBox3.Controls.Add(label10);
-            groupBox3.Location = new Point(2, 463);
+            groupBox3.Location = new Point(2, 400);
             groupBox3.Name = "groupBox3";
             groupBox3.Size = new Size(973, 63);
             groupBox3.TabIndex = 8;
             groupBox3.TabStop = false;
+            // 
+            // numericUpDown1
+            // 
+            numericUpDown1.Location = new Point(367, 20);
+            numericUpDown1.Name = "numericUpDown1";
+            numericUpDown1.Size = new Size(87, 23);
+            numericUpDown1.TabIndex = 8;
+            // 
+            // textBox4
+            // 
+            textBox4.Location = new Point(305, 22);
+            textBox4.Name = "textBox4";
+            textBox4.Size = new Size(134, 23);
+            textBox4.TabIndex = 10;
+            // 
+            // groupBox4
+            // 
+            groupBox4.BackColor = Color.FromArgb(200, 56, 56);
+            groupBox4.Controls.Add(dataGridView2);
+            groupBox4.Controls.Add(button4);
+            groupBox4.Controls.Add(textBox8);
+            groupBox4.Controls.Add(comboBox2);
+            groupBox4.Controls.Add(label11);
+            groupBox4.Location = new Point(2, 469);
+            groupBox4.Name = "groupBox4";
+            groupBox4.Size = new Size(973, 259);
+            groupBox4.TabIndex = 9;
+            groupBox4.TabStop = false;
+            groupBox4.Text = "Historial de Ventas";
+            // 
+            // comboBox2
+            // 
+            comboBox2.FormattingEnabled = true;
+            comboBox2.Location = new Point(100, 24);
+            comboBox2.Name = "comboBox2";
+            comboBox2.Size = new Size(165, 23);
+            comboBox2.TabIndex = 10;
+            // 
+            // label11
+            // 
+            label11.AutoSize = true;
+            label11.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            label11.ForeColor = Color.White;
+            label11.Location = new Point(6, 22);
+            label11.Name = "label11";
+            label11.Size = new Size(89, 20);
+            label11.TabIndex = 9;
+            label11.Text = "Buscar por:";
+            // 
+            // textBox8
+            // 
+            textBox8.Location = new Point(271, 24);
+            textBox8.Name = "textBox8";
+            textBox8.Size = new Size(183, 23);
+            textBox8.TabIndex = 11;
+            // 
+            // button4
+            // 
+            button4.BackColor = SystemColors.ControlLight;
+            button4.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            button4.ForeColor = Color.FromArgb(69, 69, 210);
+            button4.Location = new Point(460, 15);
+            button4.Name = "button4";
+            button4.Size = new Size(92, 35);
+            button4.TabIndex = 11;
+            button4.Text = "🔍Buscar";
+            button4.UseVisualStyleBackColor = false;
+            // 
+            // dataGridView2
+            // 
+            dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView2.Columns.AddRange(new DataGridViewColumn[] { Column7, Column8, Column9, Column10, Column11, Column12, Column13, Column14 });
+            dataGridView2.Location = new Point(6, 53);
+            dataGridView2.Name = "dataGridView2";
+            dataGridView2.Size = new Size(961, 200);
+            dataGridView2.TabIndex = 12;
+            // 
+            // Column7
+            // 
+            Column7.HeaderText = "No. Venta";
+            Column7.Name = "Column7";
+            Column7.Width = 120;
+            // 
+            // Column8
+            // 
+            Column8.HeaderText = "Fecha";
+            Column8.Name = "Column8";
+            Column8.Width = 120;
+            // 
+            // Column9
+            // 
+            Column9.HeaderText = "Cliente";
+            Column9.Name = "Column9";
+            Column9.Width = 120;
+            // 
+            // Column10
+            // 
+            Column10.HeaderText = "Vendedor";
+            Column10.Name = "Column10";
+            Column10.Width = 120;
+            // 
+            // Column11
+            // 
+            Column11.HeaderText = "Total";
+            Column11.Name = "Column11";
+            Column11.Width = 120;
+            // 
+            // Column12
+            // 
+            Column12.HeaderText = "Pagado";
+            Column12.Name = "Column12";
+            Column12.Width = 120;
+            // 
+            // Column13
+            // 
+            Column13.HeaderText = "Estado";
+            Column13.Name = "Column13";
+            Column13.Width = 110;
+            // 
+            // Column14
+            // 
+            Column14.HeaderText = "Acciones";
+            Column14.Name = "Column14";
             // 
             // Ventas
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(255, 223, 96);
-            ClientSize = new Size(975, 527);
+            ClientSize = new Size(975, 727);
+            Controls.Add(groupBox4);
             Controls.Add(groupBox3);
             Controls.Add(dataGridView1);
             Controls.Add(groupBox2);
@@ -402,6 +538,10 @@
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             groupBox3.ResumeLayout(false);
             groupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
+            groupBox4.ResumeLayout(false);
+            groupBox4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
             ResumeLayout(false);
         }
 
@@ -422,7 +562,6 @@
         private Button button2;
         private Button button1;
         private TextBox textBox5;
-        private TextBox textBox4;
         private DataGridView dataGridView1;
         private Label label7;
         private Label label8;
@@ -439,5 +578,21 @@
         private DataGridViewTextBoxColumn Column4;
         private DataGridViewTextBoxColumn Column5;
         private DataGridViewTextBoxColumn Column6;
+        private NumericUpDown numericUpDown1;
+        private TextBox textBox4;
+        private GroupBox groupBox4;
+        private ComboBox comboBox2;
+        private Label label11;
+        private DataGridView dataGridView2;
+        private Button button4;
+        private TextBox textBox8;
+        private DataGridViewTextBoxColumn Column7;
+        private DataGridViewTextBoxColumn Column8;
+        private DataGridViewTextBoxColumn Column9;
+        private DataGridViewTextBoxColumn Column10;
+        private DataGridViewTextBoxColumn Column11;
+        private DataGridViewTextBoxColumn Column12;
+        private DataGridViewTextBoxColumn Column13;
+        private DataGridViewTextBoxColumn Column14;
     }
 }

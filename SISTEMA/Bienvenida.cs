@@ -11,6 +11,7 @@ using caja;
 using Pantalla_de_devolución;
 using Registro_de_compra;
 using Pantalla_ventas;
+using Inventario;
 
 namespace SISTEMA
 {
@@ -100,6 +101,16 @@ namespace SISTEMA
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void btnInventario_Click(object sender, EventArgs e)
+        {
+            AbrirForm(new Form2());
+        }
+
+        private void btnNivelacionInventario_Click(object sender, EventArgs e)
+        {
+            AbrirForm(new NivelacionInventario());
         }
     }
 }

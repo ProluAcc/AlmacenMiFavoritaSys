@@ -146,6 +146,7 @@
             // 
             // panel2
             // 
+            panel2.BackColor = Color.FromArgb(200, 56, 56);
             panel2.BorderStyle = BorderStyle.FixedSingle;
             panel2.Controls.Add(dataGridView1);
             panel2.Location = new Point(3, 64);

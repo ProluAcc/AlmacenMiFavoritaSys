@@ -39,13 +39,6 @@ namespace SISTEMA
             }
         }
 
-        internal ClaseDevolucion ClaseDevolucion
-        {
-            get => default;
-            set
-            {
-            }
-        }
 
         internal Clase_detalle_venta_producto Clase_detalle_venta_producto
         {

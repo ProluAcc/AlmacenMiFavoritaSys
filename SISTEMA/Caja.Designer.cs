@@ -53,16 +53,13 @@
             groupBox4 = new GroupBox();
             button4 = new Button();
             button2 = new Button();
-            dataGridView2 = new DataGridView();
             panel1 = new Panel();
-            textBox9 = new TextBox();
             textBox8 = new TextBox();
             textBox7 = new TextBox();
             comboBox1 = new ComboBox();
             label7 = new Label();
             label6 = new Label();
             label5 = new Label();
-            label4 = new Label();
             panel2 = new Panel();
             label3 = new Label();
             groupBox1.SuspendLayout();
@@ -70,7 +67,6 @@
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             groupBox3.SuspendLayout();
             groupBox4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             SuspendLayout();
@@ -100,7 +96,6 @@
             // groupBox1
             // 
             groupBox1.BackColor = Color.FromArgb(69, 69, 210);
-            groupBox1.Controls.Add(button3);
             groupBox1.Controls.Add(button1);
             groupBox1.Controls.Add(textBox2);
             groupBox1.Controls.Add(textBox1);
@@ -114,10 +109,10 @@
             // 
             // button3
             // 
-            button3.BackColor = SystemColors.ControlLight;
-            button3.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            button3.ForeColor = Color.FromArgb(69, 69, 210);
-            button3.Location = new Point(685, 14);
+            button3.BackColor = Color.FromArgb(69, 69, 210);
+            button3.Font = new Font("Segoe UI Black", 11F, FontStyle.Bold);
+            button3.ForeColor = Color.White;
+            button3.Location = new Point(212, 160);
             button3.Name = "button3";
             button3.Size = new Size(97, 36);
             button3.TabIndex = 5;
@@ -291,22 +286,21 @@
             groupBox4.BackColor = Color.FromArgb(69, 69, 210);
             groupBox4.Controls.Add(button4);
             groupBox4.Controls.Add(button2);
-            groupBox4.Controls.Add(dataGridView2);
             groupBox4.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
             groupBox4.ForeColor = Color.White;
-            groupBox4.Location = new Point(468, 354);
+            groupBox4.Location = new Point(451, 354);
             groupBox4.Name = "groupBox4";
-            groupBox4.Size = new Size(495, 161);
+            groupBox4.Size = new Size(258, 94);
             groupBox4.TabIndex = 5;
             groupBox4.TabStop = false;
-            groupBox4.Text = "Tipos de Caja";
+            groupBox4.Text = "Opciones de Caja";
             // 
             // button4
             // 
             button4.BackColor = SystemColors.ControlLight;
             button4.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
             button4.ForeColor = Color.FromArgb(69, 69, 210);
-            button4.Location = new Point(371, 20);
+            button4.Location = new Point(24, 24);
             button4.Name = "button4";
             button4.Size = new Size(95, 56);
             button4.TabIndex = 6;
@@ -319,7 +313,7 @@
             button2.BackColor = SystemColors.ControlLight;
             button2.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
             button2.ForeColor = Color.FromArgb(69, 69, 210);
-            button2.Location = new Point(371, 87);
+            button2.Location = new Point(140, 24);
             button2.Name = "button2";
             button2.Size = new Size(95, 56);
             button2.TabIndex = 5;
@@ -327,44 +321,27 @@
             button2.UseVisualStyleBackColor = false;
             button2.Click += button2_Click;
             // 
-            // dataGridView2
-            // 
-            dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView2.Location = new Point(17, 22);
-            dataGridView2.Name = "dataGridView2";
-            dataGridView2.Size = new Size(293, 133);
-            dataGridView2.TabIndex = 0;
-            // 
             // panel1
             // 
             panel1.BackColor = SystemColors.ControlLight;
             panel1.BorderStyle = BorderStyle.FixedSingle;
-            panel1.Controls.Add(textBox9);
+            panel1.Controls.Add(button3);
             panel1.Controls.Add(textBox8);
             panel1.Controls.Add(textBox7);
             panel1.Controls.Add(comboBox1);
             panel1.Controls.Add(label7);
             panel1.Controls.Add(label6);
             panel1.Controls.Add(label5);
-            panel1.Controls.Add(label4);
             panel1.Controls.Add(panel2);
             panel1.Location = new Point(566, 82);
             panel1.Name = "panel1";
-            panel1.Size = new Size(324, 223);
+            panel1.Size = new Size(324, 209);
             panel1.TabIndex = 6;
-            // 
-            // textBox9
-            // 
-            textBox9.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            textBox9.Location = new Point(118, 173);
-            textBox9.Name = "textBox9";
-            textBox9.Size = new Size(190, 27);
-            textBox9.TabIndex = 14;
             // 
             // textBox8
             // 
             textBox8.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            textBox8.Location = new Point(118, 131);
+            textBox8.Location = new Point(119, 91);
             textBox8.Name = "textBox8";
             textBox8.Size = new Size(190, 27);
             textBox8.TabIndex = 13;
@@ -372,7 +349,7 @@
             // textBox7
             // 
             textBox7.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            textBox7.Location = new Point(119, 93);
+            textBox7.Location = new Point(119, 127);
             textBox7.Name = "textBox7";
             textBox7.Size = new Size(190, 27);
             textBox7.TabIndex = 5;
@@ -381,9 +358,9 @@
             // 
             comboBox1.Font = new Font("Segoe UI", 11F);
             comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(188, 55);
+            comboBox1.Location = new Point(119, 55);
             comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(121, 28);
+            comboBox1.Size = new Size(190, 28);
             comboBox1.TabIndex = 12;
             // 
             // label7
@@ -400,7 +377,7 @@
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            label6.Location = new Point(9, 134);
+            label6.Location = new Point(9, 94);
             label6.Name = "label6";
             label6.Size = new Size(56, 20);
             label6.TabIndex = 10;
@@ -410,21 +387,11 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            label5.Location = new Point(8, 96);
+            label5.Location = new Point(8, 130);
             label5.Name = "label5";
             label5.Size = new Size(75, 20);
             label5.TabIndex = 9;
             label5.Text = "Concepto";
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            label4.Location = new Point(9, 176);
-            label4.Name = "label4";
-            label4.Size = new Size(83, 20);
-            label4.TabIndex = 8;
-            label4.Text = "Referencia";
             // 
             // panel2
             // 
@@ -470,7 +437,6 @@
             groupBox3.ResumeLayout(false);
             groupBox3.PerformLayout();
             groupBox4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             panel2.ResumeLayout(false);
@@ -495,12 +461,10 @@
         private Label label7;
         private Label label6;
         private Label label5;
-        private Label label4;
         private Label label11;
         private Label label10;
         private Label label9;
         private Label label8;
-        private DataGridView dataGridView2;
         private TextBox textBox6;
         private TextBox textBox5;
         private TextBox textBox4;
@@ -510,7 +474,6 @@
         private DataGridViewTextBoxColumn Column3;
         private DataGridViewTextBoxColumn Column4;
         private Button button1;
-        private TextBox textBox9;
         private TextBox textBox8;
         private TextBox textBox7;
         private ComboBox comboBox1;

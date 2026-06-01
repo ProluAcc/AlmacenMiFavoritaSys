@@ -66,7 +66,12 @@ namespace Pantalla_ventas
 
         private void btnInicio_Click(object sender, EventArgs e)
         {
-           Bienvenida obj = new Bienvenida(); obj.Show(); this.Hide();
+            Bienvenida obj = new Bienvenida(); obj.Show(); this.Hide();
+        }
+
+        private void groupBox3_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

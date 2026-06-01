@@ -12,5 +12,13 @@ namespace SISTEMA
         private string _fecha;
         private string _motivo;
         private int _id_venta_producto;
+
+        internal Clase_detalle_venta_producto Clase_detalle_venta_producto
+        {
+            get => default;
+            set
+            {
+            }
+        }
     }
 }

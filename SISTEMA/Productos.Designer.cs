@@ -37,7 +37,6 @@
             textBox3 = new TextBox();
             textBox1 = new TextBox();
             comboBox4 = new ComboBox();
-            comboBox3 = new ComboBox();
             comboBox2 = new ComboBox();
             comboBox1 = new ComboBox();
             label11 = new Label();
@@ -52,6 +51,11 @@
             label2 = new Label();
             button1 = new Button();
             textBox2 = new TextBox();
+            label1 = new Label();
+            comboBox5 = new ComboBox();
+            textBox6 = new TextBox();
+            button3 = new Button();
+            textBox7 = new TextBox();
             Column1 = new DataGridViewTextBoxColumn();
             Column2 = new DataGridViewTextBoxColumn();
             Column3 = new DataGridViewTextBoxColumn();
@@ -61,11 +65,10 @@
             Column6 = new DataGridViewTextBoxColumn();
             Column8 = new DataGridViewTextBoxColumn();
             Column9 = new DataGridViewTextBoxColumn();
-            Column10 = new DataGridViewTextBoxColumn();
-            label1 = new Label();
-            comboBox5 = new ComboBox();
-            textBox6 = new TextBox();
-            button3 = new Button();
+            textBox8 = new TextBox();
+            label12 = new Label();
+            textBox9 = new TextBox();
+            label13 = new Label();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -87,7 +90,7 @@
             button2.BackColor = Color.Transparent;
             button2.Font = new Font("Segoe UI Black", 11F, FontStyle.Bold);
             button2.ForeColor = Color.FromArgb(69, 69, 210);
-            button2.Location = new Point(835, 153);
+            button2.Location = new Point(832, 209);
             button2.Name = "button2";
             button2.Size = new Size(128, 35);
             button2.TabIndex = 103;
@@ -99,7 +102,7 @@
             button7.BackColor = Color.FromArgb(69, 69, 210);
             button7.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
             button7.ForeColor = Color.White;
-            button7.Location = new Point(701, 153);
+            button7.Location = new Point(698, 209);
             button7.Name = "button7";
             button7.Size = new Size(128, 35);
             button7.TabIndex = 102;
@@ -109,7 +112,7 @@
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3, Column4, Column5, Column7, Column6, Column8, Column9, Column10 });
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3, Column4, Column5, Column7, Column6, Column8, Column9 });
             dataGridView1.Location = new Point(7, 259);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.Size = new Size(956, 256);
@@ -126,7 +129,7 @@
             // textBox4
             // 
             textBox4.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            textBox4.Location = new Point(146, 92);
+            textBox4.Location = new Point(138, 91);
             textBox4.Name = "textBox4";
             textBox4.Size = new Size(225, 27);
             textBox4.TabIndex = 97;
@@ -157,22 +160,12 @@
             comboBox4.Size = new Size(137, 28);
             comboBox4.TabIndex = 93;
             // 
-            // comboBox3
-            // 
-            comboBox3.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            comboBox3.FormattingEnabled = true;
-            comboBox3.Items.AddRange(new object[] { "Trupper" });
-            comboBox3.Location = new Point(671, 92);
-            comboBox3.Name = "comboBox3";
-            comboBox3.Size = new Size(114, 28);
-            comboBox3.TabIndex = 92;
-            // 
             // comboBox2
             // 
             comboBox2.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
             comboBox2.FormattingEnabled = true;
             comboBox2.Items.AddRange(new object[] { "Activo" });
-            comboBox2.Location = new Point(528, 158);
+            comboBox2.Location = new Point(810, 159);
             comboBox2.Name = "comboBox2";
             comboBox2.Size = new Size(98, 28);
             comboBox2.TabIndex = 91;
@@ -191,7 +184,7 @@
             // 
             label11.AutoSize = true;
             label11.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            label11.Location = new Point(671, 74);
+            label11.Location = new Point(673, 71);
             label11.Name = "label11";
             label11.Size = new Size(52, 20);
             label11.TabIndex = 89;
@@ -201,7 +194,7 @@
             // 
             label10.AutoSize = true;
             label10.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            label10.Location = new Point(545, 74);
+            label10.Location = new Point(548, 70);
             label10.Name = "label10";
             label10.Size = new Size(61, 20);
             label10.TabIndex = 88;
@@ -211,7 +204,7 @@
             // 
             label9.AutoSize = true;
             label9.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            label9.Location = new Point(392, 74);
+            label9.Location = new Point(392, 71);
             label9.Name = "label9";
             label9.Size = new Size(76, 20);
             label9.TabIndex = 87;
@@ -221,7 +214,7 @@
             // 
             label8.AutoSize = true;
             label8.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            label8.Location = new Point(530, 134);
+            label8.Location = new Point(807, 135);
             label8.Name = "label8";
             label8.Size = new Size(109, 20);
             label8.TabIndex = 86;
@@ -233,9 +226,9 @@
             label7.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
             label7.Location = new Point(401, 136);
             label7.Name = "label7";
-            label7.Size = new Size(96, 20);
+            label7.Size = new Size(111, 20);
             label7.TabIndex = 85;
-            label7.Text = "Precio Venta";
+            label7.Text = "Precio Compra";
             // 
             // label6
             // 
@@ -245,14 +238,14 @@
             label6.Name = "label6";
             label6.Size = new Size(96, 20);
             label6.TabIndex = 84;
-            label6.Text = "Stock Actual";
+            label6.Text = "Precio Venta";
             label6.Click += label6_Click;
             // 
             // label5
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            label5.Location = new Point(146, 74);
+            label5.Location = new Point(138, 70);
             label5.Name = "label5";
             label5.Size = new Size(160, 20);
             label5.TabIndex = 83;
@@ -308,6 +301,54 @@
             textBox2.Size = new Size(261, 27);
             textBox2.TabIndex = 105;
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            label1.Location = new Point(16, 216);
+            label1.Name = "label1";
+            label1.Size = new Size(89, 20);
+            label1.TabIndex = 106;
+            label1.Text = "Buscar por:";
+            // 
+            // comboBox5
+            // 
+            comboBox5.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            comboBox5.FormattingEnabled = true;
+            comboBox5.Items.AddRange(new object[] { "Azulejos" });
+            comboBox5.Location = new Point(111, 213);
+            comboBox5.Name = "comboBox5";
+            comboBox5.Size = new Size(137, 28);
+            comboBox5.TabIndex = 107;
+            // 
+            // textBox6
+            // 
+            textBox6.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            textBox6.Location = new Point(263, 213);
+            textBox6.Name = "textBox6";
+            textBox6.Size = new Size(225, 27);
+            textBox6.TabIndex = 108;
+            // 
+            // button3
+            // 
+            button3.BackColor = Color.FromArgb(69, 69, 210);
+            button3.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            button3.ForeColor = Color.White;
+            button3.Location = new Point(498, 209);
+            button3.Name = "button3";
+            button3.Size = new Size(128, 35);
+            button3.TabIndex = 109;
+            button3.Text = "🔍BUSCAR";
+            button3.UseVisualStyleBackColor = false;
+            // 
+            // textBox7
+            // 
+            textBox7.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            textBox7.Location = new Point(671, 93);
+            textBox7.Name = "textBox7";
+            textBox7.Size = new Size(115, 27);
+            textBox7.TabIndex = 110;
+            // 
             // Column1
             // 
             Column1.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
@@ -355,50 +396,41 @@
             Column9.HeaderText = "Disponibilidad";
             Column9.Name = "Column9";
             // 
-            // Column10
+            // textBox8
             // 
-            Column10.HeaderText = "Editar";
-            Column10.Name = "Column10";
+            textBox8.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            textBox8.Location = new Point(539, 160);
+            textBox8.Name = "textBox8";
+            textBox8.Size = new Size(115, 27);
+            textBox8.TabIndex = 112;
             // 
-            // label1
+            // label12
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            label1.Location = new Point(16, 216);
-            label1.Name = "label1";
-            label1.Size = new Size(89, 20);
-            label1.TabIndex = 106;
-            label1.Text = "Buscar por:";
+            label12.AutoSize = true;
+            label12.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            label12.Location = new Point(539, 136);
+            label12.Name = "label12";
+            label12.Size = new Size(108, 20);
+            label12.TabIndex = 111;
+            label12.Text = "Stock Máximo";
             // 
-            // comboBox5
+            // textBox9
             // 
-            comboBox5.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            comboBox5.FormattingEnabled = true;
-            comboBox5.Items.AddRange(new object[] { "Azulejos" });
-            comboBox5.Location = new Point(111, 213);
-            comboBox5.Name = "comboBox5";
-            comboBox5.Size = new Size(137, 28);
-            comboBox5.TabIndex = 107;
+            textBox9.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            textBox9.Location = new Point(675, 160);
+            textBox9.Name = "textBox9";
+            textBox9.Size = new Size(115, 27);
+            textBox9.TabIndex = 114;
             // 
-            // textBox6
+            // label13
             // 
-            textBox6.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            textBox6.Location = new Point(263, 213);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(225, 27);
-            textBox6.TabIndex = 108;
-            // 
-            // button3
-            // 
-            button3.BackColor = Color.FromArgb(69, 69, 210);
-            button3.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            button3.ForeColor = Color.White;
-            button3.Location = new Point(498, 209);
-            button3.Name = "button3";
-            button3.Size = new Size(128, 35);
-            button3.TabIndex = 109;
-            button3.Text = "🔍BUSCAR";
-            button3.UseVisualStyleBackColor = false;
+            label13.AutoSize = true;
+            label13.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            label13.Location = new Point(675, 136);
+            label13.Name = "label13";
+            label13.Size = new Size(105, 20);
+            label13.TabIndex = 113;
+            label13.Text = "Stock Mínimo";
             // 
             // Productos
             // 
@@ -406,6 +438,11 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(255, 223, 96);
             ClientSize = new Size(975, 527);
+            Controls.Add(textBox9);
+            Controls.Add(label13);
+            Controls.Add(textBox8);
+            Controls.Add(label12);
+            Controls.Add(textBox7);
             Controls.Add(button3);
             Controls.Add(textBox6);
             Controls.Add(comboBox5);
@@ -420,7 +457,6 @@
             Controls.Add(textBox3);
             Controls.Add(textBox1);
             Controls.Add(comboBox4);
-            Controls.Add(comboBox3);
             Controls.Add(comboBox2);
             Controls.Add(comboBox1);
             Controls.Add(label11);
@@ -453,7 +489,6 @@
         private TextBox textBox3;
         private TextBox textBox1;
         private ComboBox comboBox4;
-        private ComboBox comboBox3;
         private ComboBox comboBox2;
         private ComboBox comboBox1;
         private Label label11;
@@ -467,6 +502,12 @@
         private Label label3;
         private Label label2;
         private Button button1;
+        private TextBox textBox2;
+        private Label label1;
+        private ComboBox comboBox5;
+        private TextBox textBox6;
+        private Button button3;
+        private TextBox textBox7;
         private DataGridViewTextBoxColumn Column1;
         private DataGridViewTextBoxColumn Column2;
         private DataGridViewTextBoxColumn Column3;
@@ -476,11 +517,9 @@
         private DataGridViewTextBoxColumn Column6;
         private DataGridViewTextBoxColumn Column8;
         private DataGridViewTextBoxColumn Column9;
-        private DataGridViewTextBoxColumn Column10;
-        private TextBox textBox2;
-        private Label label1;
-        private ComboBox comboBox5;
-        private TextBox textBox6;
-        private Button button3;
+        private TextBox textBox8;
+        private Label label12;
+        private TextBox textBox9;
+        private Label label13;
     }
 }

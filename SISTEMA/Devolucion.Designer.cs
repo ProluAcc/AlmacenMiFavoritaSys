@@ -30,16 +30,13 @@
         {
             groupBox1 = new GroupBox();
             button1 = new Button();
-            comboBox1 = new ComboBox();
             label3 = new Label();
             textBox2 = new TextBox();
             label2 = new Label();
             label1 = new Label();
             textBox1 = new TextBox();
             groupBox3 = new GroupBox();
-            radioButton3 = new RadioButton();
             radioButton2 = new RadioButton();
-            radioButton1 = new RadioButton();
             dataGridView2 = new DataGridView();
             Column1 = new DataGridViewTextBoxColumn();
             Column2 = new DataGridViewTextBoxColumn();
@@ -50,26 +47,39 @@
             button4 = new Button();
             button3 = new Button();
             button2 = new Button();
-            dataGridView1 = new DataGridView();
-            Producto = new DataGridViewTextBoxColumn();
-            Cantidadvendida = new DataGridViewTextBoxColumn();
-            CantidadDevolver = new DataGridViewTextBoxColumn();
-            Mótivo = new DataGridViewTextBoxColumn();
-            Estado = new DataGridViewTextBoxColumn();
             groupBox4 = new GroupBox();
+            textBox3 = new TextBox();
+            panel1 = new Panel();
+            groupBox2 = new GroupBox();
+            label4 = new Label();
+            textBox5 = new TextBox();
+            label5 = new Label();
+            comboBox1 = new ComboBox();
+            dataGridView1 = new DataGridView();
+            Column9 = new DataGridViewTextBoxColumn();
+            Column5 = new DataGridViewTextBoxColumn();
+            Column6 = new DataGridViewTextBoxColumn();
+            Column7 = new DataGridViewTextBoxColumn();
+            Column8 = new DataGridViewTextBoxColumn();
+            Column10 = new DataGridViewTextBoxColumn();
+            textBox4 = new TextBox();
+            label6 = new Label();
             groupBox1.SuspendLayout();
             groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
             groupBox5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             groupBox4.SuspendLayout();
+            panel1.SuspendLayout();
+            groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // groupBox1
             // 
             groupBox1.BackColor = Color.FromArgb(69, 69, 210);
+            groupBox1.Controls.Add(button5);
+            groupBox1.Controls.Add(textBox3);
             groupBox1.Controls.Add(button1);
-            groupBox1.Controls.Add(comboBox1);
             groupBox1.Controls.Add(label3);
             groupBox1.Controls.Add(textBox2);
             groupBox1.Controls.Add(label2);
@@ -89,23 +99,13 @@
             button1.BackColor = SystemColors.ControlLight;
             button1.Font = new Font("Segoe UI Black", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button1.ForeColor = Color.FromArgb(69, 69, 210);
-            button1.Location = new Point(799, 13);
+            button1.Location = new Point(734, 13);
             button1.Margin = new Padding(4, 3, 4, 3);
             button1.Name = "button1";
             button1.Size = new Size(133, 39);
             button1.TabIndex = 6;
             button1.Text = "🔍Buscar venta";
             button1.UseVisualStyleBackColor = false;
-            // 
-            // comboBox1
-            // 
-            comboBox1.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(579, 19);
-            comboBox1.Margin = new Padding(4, 3, 4, 3);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(140, 28);
-            comboBox1.TabIndex = 5;
             // 
             // label3
             // 
@@ -166,41 +166,24 @@
             // 
             // groupBox3
             // 
-            groupBox3.BackColor = Color.FromArgb(200, 56, 56);
-            groupBox3.Controls.Add(radioButton3);
+            groupBox3.BackColor = Color.FromArgb(69, 69, 210);
             groupBox3.Controls.Add(radioButton2);
-            groupBox3.Controls.Add(radioButton1);
             groupBox3.ForeColor = Color.White;
-            groupBox3.Location = new Point(13, 223);
+            groupBox3.Location = new Point(642, 74);
             groupBox3.Margin = new Padding(4, 3, 4, 3);
             groupBox3.Name = "groupBox3";
             groupBox3.Padding = new Padding(4, 3, 4, 3);
-            groupBox3.Size = new Size(568, 57);
+            groupBox3.Size = new Size(328, 58);
             groupBox3.TabIndex = 2;
             groupBox3.TabStop = false;
             groupBox3.Text = "Tipo de devolución";
-            // 
-            // radioButton3
-            // 
-            radioButton3.AutoSize = true;
-            radioButton3.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            radioButton3.ForeColor = Color.White;
-            radioButton3.Location = new Point(414, 22);
-            radioButton3.Margin = new Padding(4, 3, 4, 3);
-            radioButton3.Name = "radioButton3";
-            radioButton3.Size = new Size(136, 24);
-            radioButton3.TabIndex = 2;
-            radioButton3.TabStop = true;
-            radioButton3.Text = "Nota de crédito";
-            radioButton3.UseVisualStyleBackColor = true;
-            radioButton3.CheckedChanged += radioButton3_CheckedChanged;
             // 
             // radioButton2
             // 
             radioButton2.AutoSize = true;
             radioButton2.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
             radioButton2.ForeColor = Color.White;
-            radioButton2.Location = new Point(175, 22);
+            radioButton2.Location = new Point(17, 22);
             radioButton2.Margin = new Padding(4, 3, 4, 3);
             radioButton2.Name = "radioButton2";
             radioButton2.Size = new Size(169, 24);
@@ -209,26 +192,11 @@
             radioButton2.Text = "Cambio de producto";
             radioButton2.UseVisualStyleBackColor = true;
             // 
-            // radioButton1
-            // 
-            radioButton1.AutoSize = true;
-            radioButton1.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            radioButton1.ForeColor = Color.White;
-            radioButton1.Location = new Point(17, 22);
-            radioButton1.Margin = new Padding(4, 3, 4, 3);
-            radioButton1.Name = "radioButton1";
-            radioButton1.Size = new Size(105, 24);
-            radioButton1.TabIndex = 0;
-            radioButton1.TabStop = true;
-            radioButton1.Text = "Reembolso";
-            radioButton1.UseVisualStyleBackColor = true;
-            radioButton1.CheckedChanged += radioButton1_CheckedChanged;
-            // 
             // dataGridView2
             // 
             dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView2.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3, Column4 });
-            dataGridView2.Location = new Point(8, 22);
+            dataGridView2.Location = new Point(4, 3);
             dataGridView2.Margin = new Padding(4, 3, 4, 3);
             dataGridView2.Name = "dataGridView2";
             dataGridView2.Size = new Size(620, 113);
@@ -258,10 +226,8 @@
             // 
             // groupBox5
             // 
-            groupBox5.BackColor = Color.FromArgb(200, 56, 56);
-            groupBox5.Controls.Add(button5);
+            groupBox5.BackColor = Color.FromArgb(69, 69, 210);
             groupBox5.Controls.Add(button4);
-            groupBox5.Controls.Add(button3);
             groupBox5.Controls.Add(button2);
             groupBox5.Location = new Point(1, 450);
             groupBox5.Margin = new Padding(4, 3, 4, 3);
@@ -276,10 +242,10 @@
             button5.BackColor = SystemColors.ControlLight;
             button5.Font = new Font("Segoe UI Black", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button5.ForeColor = Color.FromArgb(69, 69, 210);
-            button5.Location = new Point(865, 18);
+            button5.Location = new Point(895, 15);
             button5.Margin = new Padding(4, 3, 4, 3);
             button5.Name = "button5";
-            button5.Size = new Size(96, 46);
+            button5.Size = new Size(74, 36);
             button5.TabIndex = 10;
             button5.Text = "Inicio";
             button5.UseVisualStyleBackColor = false;
@@ -287,10 +253,10 @@
             // 
             // button4
             // 
-            button4.BackColor = Color.FromArgb(69, 69, 210);
+            button4.BackColor = SystemColors.ControlLight;
             button4.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            button4.ForeColor = Color.White;
-            button4.Location = new Point(391, 18);
+            button4.ForeColor = Color.FromArgb(69, 69, 210);
+            button4.Location = new Point(195, 18);
             button4.Margin = new Padding(4, 3, 4, 3);
             button4.Name = "button4";
             button4.Size = new Size(124, 50);
@@ -300,10 +266,10 @@
             // 
             // button3
             // 
-            button3.BackColor = Color.FromArgb(69, 69, 210);
+            button3.BackColor = SystemColors.ControlLight;
             button3.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            button3.ForeColor = Color.White;
-            button3.Location = new Point(212, 18);
+            button3.ForeColor = Color.FromArgb(69, 69, 210);
+            button3.Location = new Point(166, 133);
             button3.Margin = new Padding(4, 3, 4, 3);
             button3.Name = "button3";
             button3.Size = new Size(131, 50);
@@ -314,69 +280,173 @@
             // 
             // button2
             // 
-            button2.BackColor = Color.FromArgb(69, 69, 210);
+            button2.BackColor = SystemColors.ControlLight;
             button2.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            button2.ForeColor = Color.White;
+            button2.ForeColor = Color.FromArgb(69, 69, 210);
             button2.Location = new Point(35, 18);
             button2.Margin = new Padding(4, 3, 4, 3);
             button2.Name = "button2";
             button2.Size = new Size(135, 50);
             button2.TabIndex = 7;
-            button2.Text = "✅Validar devolución";
+            button2.Text = "✅Guardar devolución";
             button2.UseVisualStyleBackColor = false;
             button2.Click += button2_Click_1;
+            // 
+            // groupBox4
+            // 
+            groupBox4.BackColor = Color.FromArgb(200, 56, 56);
+            groupBox4.Controls.Add(dataGridView1);
+            groupBox4.ForeColor = Color.White;
+            groupBox4.Location = new Point(1, 209);
+            groupBox4.Margin = new Padding(4, 3, 4, 3);
+            groupBox4.Name = "groupBox4";
+            groupBox4.Padding = new Padding(4, 3, 4, 3);
+            groupBox4.Size = new Size(634, 144);
+            groupBox4.TabIndex = 3;
+            groupBox4.TabStop = false;
+            groupBox4.Text = "Nuevo producto";
+            // 
+            // textBox3
+            // 
+            textBox3.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            textBox3.Location = new Point(579, 19);
+            textBox3.Margin = new Padding(4, 3, 4, 3);
+            textBox3.Name = "textBox3";
+            textBox3.Size = new Size(138, 27);
+            textBox3.TabIndex = 7;
+            // 
+            // panel1
+            // 
+            panel1.BackColor = Color.FromArgb(200, 56, 56);
+            panel1.BorderStyle = BorderStyle.FixedSingle;
+            panel1.Controls.Add(dataGridView2);
+            panel1.Location = new Point(1, 70);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(634, 133);
+            panel1.TabIndex = 8;
+            // 
+            // groupBox2
+            // 
+            groupBox2.BackColor = Color.FromArgb(69, 69, 210);
+            groupBox2.Controls.Add(textBox4);
+            groupBox2.Controls.Add(button3);
+            groupBox2.Controls.Add(label6);
+            groupBox2.Controls.Add(comboBox1);
+            groupBox2.Controls.Add(textBox5);
+            groupBox2.Controls.Add(label5);
+            groupBox2.Controls.Add(label4);
+            groupBox2.ForeColor = Color.White;
+            groupBox2.Location = new Point(643, 138);
+            groupBox2.Margin = new Padding(4, 3, 4, 3);
+            groupBox2.Name = "groupBox2";
+            groupBox2.Padding = new Padding(4, 3, 4, 3);
+            groupBox2.Size = new Size(328, 216);
+            groupBox2.TabIndex = 3;
+            groupBox2.TabStop = false;
+            groupBox2.Text = "Cambio de Producto";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            label4.ForeColor = Color.White;
+            label4.Location = new Point(8, 19);
+            label4.Margin = new Padding(4, 0, 4, 0);
+            label4.Name = "label4";
+            label4.Size = new Size(127, 20);
+            label4.TabIndex = 11;
+            label4.Text = "Producto Nuevo:";
+            // 
+            // textBox5
+            // 
+            textBox5.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            textBox5.Location = new Point(133, 55);
+            textBox5.Margin = new Padding(4, 3, 4, 3);
+            textBox5.Name = "textBox5";
+            textBox5.Size = new Size(186, 27);
+            textBox5.TabIndex = 14;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            label5.ForeColor = Color.White;
+            label5.Location = new Point(60, 58);
+            label5.Margin = new Padding(4, 0, 4, 0);
+            label5.Name = "label5";
+            label5.Size = new Size(75, 20);
+            label5.TabIndex = 13;
+            label5.Text = "Cantidad:";
+            // 
+            // comboBox1
+            // 
+            comboBox1.Font = new Font("Segoe UI", 11F);
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Location = new Point(133, 16);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(187, 28);
+            comboBox1.TabIndex = 15;
             // 
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Producto, Cantidadvendida, CantidadDevolver, Mótivo, Estado });
-            dataGridView1.Location = new Point(13, 80);
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Column9, Column5, Column6, Column7, Column8, Column10 });
+            dataGridView1.Location = new Point(6, 22);
             dataGridView1.Margin = new Padding(4, 3, 4, 3);
             dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(774, 137);
-            dataGridView1.TabIndex = 0;
+            dataGridView1.Size = new Size(620, 113);
+            dataGridView1.TabIndex = 1;
             // 
-            // Producto
+            // Column9
             // 
-            Producto.HeaderText = "Producto";
-            Producto.Name = "Producto";
-            Producto.Width = 140;
+            Column9.HeaderText = "Fecha Devolución";
+            Column9.Name = "Column9";
             // 
-            // Cantidadvendida
+            // Column5
             // 
-            Cantidadvendida.HeaderText = "Cant. Vendida";
-            Cantidadvendida.Name = "Cantidadvendida";
+            Column5.HeaderText = "Producto Anterior";
+            Column5.Name = "Column5";
             // 
-            // CantidadDevolver
+            // Column6
             // 
-            CantidadDevolver.HeaderText = "Cant. Devolver";
-            CantidadDevolver.Name = "CantidadDevolver";
+            Column6.HeaderText = "Cantidad";
+            Column6.Name = "Column6";
             // 
-            // Mótivo
+            // Column7
             // 
-            Mótivo.HeaderText = "Mótivo";
-            Mótivo.Name = "Mótivo";
-            Mótivo.Width = 140;
+            Column7.HeaderText = "Producto Nuevo";
+            Column7.Name = "Column7";
             // 
-            // Estado
+            // Column8
             // 
-            Estado.HeaderText = "Estado";
-            Estado.Name = "Estado";
-            Estado.Width = 140;
+            Column8.HeaderText = "Cantidad";
+            Column8.Name = "Column8";
             // 
-            // groupBox4
+            // Column10
             // 
-            groupBox4.BackColor = Color.FromArgb(69, 69, 210);
-            groupBox4.Controls.Add(dataGridView2);
-            groupBox4.ForeColor = Color.White;
-            groupBox4.Location = new Point(13, 286);
-            groupBox4.Margin = new Padding(4, 3, 4, 3);
-            groupBox4.Name = "groupBox4";
-            groupBox4.Padding = new Padding(4, 3, 4, 3);
-            groupBox4.Size = new Size(645, 145);
-            groupBox4.TabIndex = 3;
-            groupBox4.TabStop = false;
-            groupBox4.Text = "Nuevo producto";
+            Column10.HeaderText = "Motivo";
+            Column10.Name = "Column10";
+            // 
+            // textBox4
+            // 
+            textBox4.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            textBox4.Location = new Point(133, 90);
+            textBox4.Margin = new Padding(4, 3, 4, 3);
+            textBox4.Name = "textBox4";
+            textBox4.Size = new Size(186, 27);
+            textBox4.TabIndex = 17;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            label6.ForeColor = Color.White;
+            label6.Location = new Point(71, 93);
+            label6.Margin = new Padding(4, 0, 4, 0);
+            label6.Name = "label6";
+            label6.Size = new Size(63, 20);
+            label6.TabIndex = 16;
+            label6.Text = "Motivo:";
             // 
             // Devolución
             // 
@@ -384,7 +454,8 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(255, 223, 96);
             ClientSize = new Size(975, 527);
-            Controls.Add(dataGridView1);
+            Controls.Add(groupBox2);
+            Controls.Add(panel1);
             Controls.Add(groupBox5);
             Controls.Add(groupBox4);
             Controls.Add(groupBox3);
@@ -400,8 +471,11 @@
             groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
             groupBox5.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             groupBox4.ResumeLayout(false);
+            panel1.ResumeLayout(false);
+            groupBox2.ResumeLayout(false);
+            groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
 
         }
@@ -413,13 +487,10 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.RadioButton radioButton3;
         private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
@@ -430,12 +501,22 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button5;
-        private DataGridView dataGridView1;
-        private DataGridViewTextBoxColumn Producto;
-        private DataGridViewTextBoxColumn Cantidadvendida;
-        private DataGridViewTextBoxColumn CantidadDevolver;
-        private DataGridViewTextBoxColumn Mótivo;
-        private DataGridViewTextBoxColumn Estado;
         private GroupBox groupBox4;
+        private TextBox textBox3;
+        private Panel panel1;
+        private GroupBox groupBox2;
+        private Label label4;
+        private TextBox textBox5;
+        private Label label5;
+        private DataGridView dataGridView1;
+        private DataGridViewTextBoxColumn Column9;
+        private DataGridViewTextBoxColumn Column5;
+        private DataGridViewTextBoxColumn Column6;
+        private DataGridViewTextBoxColumn Column7;
+        private DataGridViewTextBoxColumn Column8;
+        private DataGridViewTextBoxColumn Column10;
+        private TextBox textBox4;
+        private Label label6;
+        private ComboBox comboBox1;
     }
 }

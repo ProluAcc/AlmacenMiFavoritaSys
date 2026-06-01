@@ -30,11 +30,6 @@
         {
             button8 = new Button();
             dataGridView1 = new DataGridView();
-            Column1 = new DataGridViewTextBoxColumn();
-            Column2 = new DataGridViewTextBoxColumn();
-            Column3 = new DataGridViewTextBoxColumn();
-            Column4 = new DataGridViewTextBoxColumn();
-            Column5 = new DataGridViewTextBoxColumn();
             txtBuscar = new TextBox();
             cbBuscar = new ComboBox();
             label7 = new Label();
@@ -53,6 +48,11 @@
             textBox1 = new TextBox();
             label1 = new Label();
             button1 = new Button();
+            Column1 = new DataGridViewTextBoxColumn();
+            Column2 = new DataGridViewTextBoxColumn();
+            Column3 = new DataGridViewTextBoxColumn();
+            Column6 = new DataGridViewTextBoxColumn();
+            Column4 = new DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -72,52 +72,17 @@
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3, Column4, Column5 });
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3, Column6, Column4 });
             dataGridView1.Location = new Point(12, 226);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(751, 289);
+            dataGridView1.Size = new Size(814, 289);
             dataGridView1.TabIndex = 80;
-            // 
-            // Column1
-            // 
-            Column1.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            Column1.HeaderText = "Nombre de Cliente";
-            Column1.MinimumWidth = 6;
-            Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            Column2.HeaderText = "Teléfono";
-            Column2.MinimumWidth = 6;
-            Column2.Name = "Column2";
-            Column2.Width = 125;
-            // 
-            // Column3
-            // 
-            Column3.HeaderText = "Código RUC";
-            Column3.MinimumWidth = 6;
-            Column3.Name = "Column3";
-            Column3.Width = 125;
-            // 
-            // Column4
-            // 
-            Column4.HeaderText = "Estado";
-            Column4.MinimumWidth = 6;
-            Column4.Name = "Column4";
-            Column4.Width = 125;
-            // 
-            // Column5
-            // 
-            Column5.HeaderText = "Editar";
-            Column5.MinimumWidth = 6;
-            Column5.Name = "Column5";
-            Column5.Width = 125;
             // 
             // txtBuscar
             // 
             txtBuscar.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            txtBuscar.Location = new Point(170, 185);
+            txtBuscar.Location = new Point(227, 184);
             txtBuscar.Name = "txtBuscar";
             txtBuscar.Size = new Size(154, 27);
             txtBuscar.TabIndex = 79;
@@ -128,7 +93,7 @@
             cbBuscar.FormattingEnabled = true;
             cbBuscar.Location = new Point(79, 184);
             cbBuscar.Name = "cbBuscar";
-            cbBuscar.Size = new Size(85, 28);
+            cbBuscar.Size = new Size(142, 28);
             cbBuscar.TabIndex = 78;
             // 
             // label7
@@ -291,12 +256,45 @@
             button1.BackColor = Color.FromArgb(69, 69, 210);
             button1.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
             button1.ForeColor = Color.White;
-            button1.Location = new Point(330, 176);
+            button1.Location = new Point(387, 175);
             button1.Name = "button1";
             button1.Size = new Size(123, 42);
             button1.TabIndex = 87;
             button1.Text = "🔍Buscar";
             button1.UseVisualStyleBackColor = false;
+            // 
+            // Column1
+            // 
+            Column1.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            Column1.HeaderText = "Nombre de Cliente";
+            Column1.MinimumWidth = 6;
+            Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            Column2.HeaderText = "Teléfono";
+            Column2.MinimumWidth = 6;
+            Column2.Name = "Column2";
+            Column2.Width = 125;
+            // 
+            // Column3
+            // 
+            Column3.HeaderText = "Dirección";
+            Column3.MinimumWidth = 6;
+            Column3.Name = "Column3";
+            Column3.Width = 125;
+            // 
+            // Column6
+            // 
+            Column6.HeaderText = "Correo";
+            Column6.Name = "Column6";
+            // 
+            // Column4
+            // 
+            Column4.HeaderText = "Estado";
+            Column4.MinimumWidth = 6;
+            Column4.Name = "Column4";
+            Column4.Width = 125;
             // 
             // Clientes
             // 
@@ -336,11 +334,6 @@
 
         private Button button8;
         private DataGridView dataGridView1;
-        private DataGridViewTextBoxColumn Column1;
-        private DataGridViewTextBoxColumn Column2;
-        private DataGridViewTextBoxColumn Column3;
-        private DataGridViewTextBoxColumn Column4;
-        private DataGridViewTextBoxColumn Column5;
         private TextBox txtBuscar;
         private ComboBox cbBuscar;
         private Label label7;
@@ -359,5 +352,10 @@
         private TextBox textBox1;
         private Label label1;
         private Button button1;
+        private DataGridViewTextBoxColumn Column1;
+        private DataGridViewTextBoxColumn Column2;
+        private DataGridViewTextBoxColumn Column3;
+        private DataGridViewTextBoxColumn Column6;
+        private DataGridViewTextBoxColumn Column4;
     }
 }

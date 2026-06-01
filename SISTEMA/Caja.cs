@@ -31,12 +31,12 @@ namespace caja
 
         private void button4_Click(object sender, EventArgs e)
         {
-            ArqueoCaja obj = new ArqueoCaja(); obj.Show(); 
+            ArqueoCaja obj = new ArqueoCaja(); obj.ShowDialog(); 
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            CierreCaja obj = new CierreCaja(); obj.Show(); 
+            CierreCaja obj = new CierreCaja(); obj.ShowDialog(); 
         }
     }
 }

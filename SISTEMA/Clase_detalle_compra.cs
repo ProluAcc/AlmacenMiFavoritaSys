@@ -15,7 +15,15 @@ namespace SISTEMA
         private int _id_producto;
         private int _id_compra;
 
-        internal Clase_devolucion_compra Clase_devolucion_compra
+        internal ClaseProducto ClaseProducto
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
+        internal ClaseCompra ClaseCompra
         {
             get => default;
             set

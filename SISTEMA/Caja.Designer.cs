@@ -31,10 +31,10 @@
             label1 = new Label();
             label2 = new Label();
             groupBox1 = new GroupBox();
-            button3 = new Button();
             button1 = new Button();
             textBox2 = new TextBox();
             textBox1 = new TextBox();
+            button3 = new Button();
             groupBox2 = new GroupBox();
             dataGridView1 = new DataGridView();
             Column1 = new DataGridViewTextBoxColumn();
@@ -107,18 +107,6 @@
             groupBox1.TabIndex = 2;
             groupBox1.TabStop = false;
             // 
-            // button3
-            // 
-            button3.BackColor = Color.FromArgb(69, 69, 210);
-            button3.Font = new Font("Segoe UI Black", 11F, FontStyle.Bold);
-            button3.ForeColor = Color.White;
-            button3.Location = new Point(212, 160);
-            button3.Name = "button3";
-            button3.Size = new Size(97, 36);
-            button3.TabIndex = 5;
-            button3.Text = "Abrir Caja";
-            button3.UseVisualStyleBackColor = false;
-            // 
             // button1
             // 
             button1.BackColor = SystemColors.ControlLight;
@@ -147,6 +135,18 @@
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(235, 27);
             textBox1.TabIndex = 2;
+            // 
+            // button3
+            // 
+            button3.BackColor = Color.FromArgb(69, 69, 210);
+            button3.Font = new Font("Segoe UI Black", 11F, FontStyle.Bold);
+            button3.ForeColor = Color.White;
+            button3.Location = new Point(212, 160);
+            button3.Name = "button3";
+            button3.Size = new Size(97, 36);
+            button3.TabIndex = 5;
+            button3.Text = "Abrir Caja";
+            button3.UseVisualStyleBackColor = false;
             // 
             // groupBox2
             // 
@@ -419,7 +419,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(255, 223, 96);
+            BackColor = SystemColors.ControlLight;
             ClientSize = new Size(975, 527);
             Controls.Add(panel1);
             Controls.Add(groupBox4);

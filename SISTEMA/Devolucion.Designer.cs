@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             groupBox1 = new GroupBox();
+            button5 = new Button();
+            textBox3 = new TextBox();
             button1 = new Button();
             label3 = new Label();
             textBox2 = new TextBox();
@@ -43,18 +45,10 @@
             Column3 = new DataGridViewTextBoxColumn();
             Column4 = new DataGridViewTextBoxColumn();
             groupBox5 = new GroupBox();
-            button5 = new Button();
             button4 = new Button();
-            button3 = new Button();
             button2 = new Button();
+            button3 = new Button();
             groupBox4 = new GroupBox();
-            textBox3 = new TextBox();
-            panel1 = new Panel();
-            groupBox2 = new GroupBox();
-            label4 = new Label();
-            textBox5 = new TextBox();
-            label5 = new Label();
-            comboBox1 = new ComboBox();
             dataGridView1 = new DataGridView();
             Column9 = new DataGridViewTextBoxColumn();
             Column5 = new DataGridViewTextBoxColumn();
@@ -62,16 +56,22 @@
             Column7 = new DataGridViewTextBoxColumn();
             Column8 = new DataGridViewTextBoxColumn();
             Column10 = new DataGridViewTextBoxColumn();
+            panel1 = new Panel();
+            groupBox2 = new GroupBox();
             textBox4 = new TextBox();
             label6 = new Label();
+            comboBox1 = new ComboBox();
+            textBox5 = new TextBox();
+            label5 = new Label();
+            label4 = new Label();
             groupBox1.SuspendLayout();
             groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
             groupBox5.SuspendLayout();
             groupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             panel1.SuspendLayout();
             groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // groupBox1
@@ -93,6 +93,29 @@
             groupBox1.TabIndex = 0;
             groupBox1.TabStop = false;
             groupBox1.Enter += groupBox1_Enter;
+            // 
+            // button5
+            // 
+            button5.BackColor = SystemColors.ControlLight;
+            button5.Font = new Font("Segoe UI Black", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button5.ForeColor = Color.FromArgb(69, 69, 210);
+            button5.Location = new Point(895, 15);
+            button5.Margin = new Padding(4, 3, 4, 3);
+            button5.Name = "button5";
+            button5.Size = new Size(74, 36);
+            button5.TabIndex = 10;
+            button5.Text = "Inicio";
+            button5.UseVisualStyleBackColor = false;
+            button5.Click += button5_Click;
+            // 
+            // textBox3
+            // 
+            textBox3.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            textBox3.Location = new Point(579, 19);
+            textBox3.Margin = new Padding(4, 3, 4, 3);
+            textBox3.Name = "textBox3";
+            textBox3.Size = new Size(138, 27);
+            textBox3.TabIndex = 7;
             // 
             // button1
             // 
@@ -237,20 +260,6 @@
             groupBox5.TabIndex = 7;
             groupBox5.TabStop = false;
             // 
-            // button5
-            // 
-            button5.BackColor = SystemColors.ControlLight;
-            button5.Font = new Font("Segoe UI Black", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button5.ForeColor = Color.FromArgb(69, 69, 210);
-            button5.Location = new Point(895, 15);
-            button5.Margin = new Padding(4, 3, 4, 3);
-            button5.Name = "button5";
-            button5.Size = new Size(74, 36);
-            button5.TabIndex = 10;
-            button5.Text = "Inicio";
-            button5.UseVisualStyleBackColor = false;
-            button5.Click += button5_Click;
-            // 
             // button4
             // 
             button4.BackColor = SystemColors.ControlLight;
@@ -263,20 +272,6 @@
             button4.TabIndex = 9;
             button4.Text = "\U0001f9feImprimir comprobante";
             button4.UseVisualStyleBackColor = false;
-            // 
-            // button3
-            // 
-            button3.BackColor = SystemColors.ControlLight;
-            button3.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            button3.ForeColor = Color.FromArgb(69, 69, 210);
-            button3.Location = new Point(166, 133);
-            button3.Margin = new Padding(4, 3, 4, 3);
-            button3.Name = "button3";
-            button3.Size = new Size(131, 50);
-            button3.TabIndex = 8;
-            button3.Text = "🔃Procesar devolución";
-            button3.UseVisualStyleBackColor = false;
-            button3.Click += button3_Click_1;
             // 
             // button2
             // 
@@ -292,6 +287,20 @@
             button2.UseVisualStyleBackColor = false;
             button2.Click += button2_Click_1;
             // 
+            // button3
+            // 
+            button3.BackColor = SystemColors.ControlLight;
+            button3.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            button3.ForeColor = Color.FromArgb(69, 69, 210);
+            button3.Location = new Point(166, 133);
+            button3.Margin = new Padding(4, 3, 4, 3);
+            button3.Name = "button3";
+            button3.Size = new Size(131, 50);
+            button3.TabIndex = 8;
+            button3.Text = "🔃Procesar devolución";
+            button3.UseVisualStyleBackColor = false;
+            button3.Click += button3_Click_1;
+            // 
             // groupBox4
             // 
             groupBox4.BackColor = Color.FromArgb(200, 56, 56);
@@ -305,87 +314,6 @@
             groupBox4.TabIndex = 3;
             groupBox4.TabStop = false;
             groupBox4.Text = "Nuevo producto";
-            // 
-            // textBox3
-            // 
-            textBox3.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            textBox3.Location = new Point(579, 19);
-            textBox3.Margin = new Padding(4, 3, 4, 3);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(138, 27);
-            textBox3.TabIndex = 7;
-            // 
-            // panel1
-            // 
-            panel1.BackColor = Color.FromArgb(200, 56, 56);
-            panel1.BorderStyle = BorderStyle.FixedSingle;
-            panel1.Controls.Add(dataGridView2);
-            panel1.Location = new Point(1, 70);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(634, 133);
-            panel1.TabIndex = 8;
-            // 
-            // groupBox2
-            // 
-            groupBox2.BackColor = Color.FromArgb(69, 69, 210);
-            groupBox2.Controls.Add(textBox4);
-            groupBox2.Controls.Add(button3);
-            groupBox2.Controls.Add(label6);
-            groupBox2.Controls.Add(comboBox1);
-            groupBox2.Controls.Add(textBox5);
-            groupBox2.Controls.Add(label5);
-            groupBox2.Controls.Add(label4);
-            groupBox2.ForeColor = Color.White;
-            groupBox2.Location = new Point(643, 138);
-            groupBox2.Margin = new Padding(4, 3, 4, 3);
-            groupBox2.Name = "groupBox2";
-            groupBox2.Padding = new Padding(4, 3, 4, 3);
-            groupBox2.Size = new Size(328, 216);
-            groupBox2.TabIndex = 3;
-            groupBox2.TabStop = false;
-            groupBox2.Text = "Cambio de Producto";
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            label4.ForeColor = Color.White;
-            label4.Location = new Point(8, 19);
-            label4.Margin = new Padding(4, 0, 4, 0);
-            label4.Name = "label4";
-            label4.Size = new Size(127, 20);
-            label4.TabIndex = 11;
-            label4.Text = "Producto Nuevo:";
-            // 
-            // textBox5
-            // 
-            textBox5.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            textBox5.Location = new Point(133, 55);
-            textBox5.Margin = new Padding(4, 3, 4, 3);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(186, 27);
-            textBox5.TabIndex = 14;
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            label5.ForeColor = Color.White;
-            label5.Location = new Point(60, 58);
-            label5.Margin = new Padding(4, 0, 4, 0);
-            label5.Name = "label5";
-            label5.Size = new Size(75, 20);
-            label5.TabIndex = 13;
-            label5.Text = "Cantidad:";
-            // 
-            // comboBox1
-            // 
-            comboBox1.Font = new Font("Segoe UI", 11F);
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(133, 16);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(187, 28);
-            comboBox1.TabIndex = 15;
             // 
             // dataGridView1
             // 
@@ -427,6 +355,36 @@
             Column10.HeaderText = "Motivo";
             Column10.Name = "Column10";
             // 
+            // panel1
+            // 
+            panel1.BackColor = Color.FromArgb(200, 56, 56);
+            panel1.BorderStyle = BorderStyle.FixedSingle;
+            panel1.Controls.Add(dataGridView2);
+            panel1.Location = new Point(1, 70);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(634, 133);
+            panel1.TabIndex = 8;
+            // 
+            // groupBox2
+            // 
+            groupBox2.BackColor = Color.FromArgb(69, 69, 210);
+            groupBox2.Controls.Add(textBox4);
+            groupBox2.Controls.Add(button3);
+            groupBox2.Controls.Add(label6);
+            groupBox2.Controls.Add(comboBox1);
+            groupBox2.Controls.Add(textBox5);
+            groupBox2.Controls.Add(label5);
+            groupBox2.Controls.Add(label4);
+            groupBox2.ForeColor = Color.White;
+            groupBox2.Location = new Point(643, 138);
+            groupBox2.Margin = new Padding(4, 3, 4, 3);
+            groupBox2.Name = "groupBox2";
+            groupBox2.Padding = new Padding(4, 3, 4, 3);
+            groupBox2.Size = new Size(328, 216);
+            groupBox2.TabIndex = 3;
+            groupBox2.TabStop = false;
+            groupBox2.Text = "Cambio de Producto";
+            // 
             // textBox4
             // 
             textBox4.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
@@ -448,11 +406,53 @@
             label6.TabIndex = 16;
             label6.Text = "Motivo:";
             // 
+            // comboBox1
+            // 
+            comboBox1.Font = new Font("Segoe UI", 11F);
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Location = new Point(133, 16);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(187, 28);
+            comboBox1.TabIndex = 15;
+            // 
+            // textBox5
+            // 
+            textBox5.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            textBox5.Location = new Point(133, 55);
+            textBox5.Margin = new Padding(4, 3, 4, 3);
+            textBox5.Name = "textBox5";
+            textBox5.Size = new Size(186, 27);
+            textBox5.TabIndex = 14;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            label5.ForeColor = Color.White;
+            label5.Location = new Point(60, 58);
+            label5.Margin = new Padding(4, 0, 4, 0);
+            label5.Name = "label5";
+            label5.Size = new Size(75, 20);
+            label5.TabIndex = 13;
+            label5.Text = "Cantidad:";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            label4.ForeColor = Color.White;
+            label4.Location = new Point(8, 19);
+            label4.Margin = new Padding(4, 0, 4, 0);
+            label4.Name = "label4";
+            label4.Size = new Size(127, 20);
+            label4.TabIndex = 11;
+            label4.Text = "Producto Nuevo:";
+            // 
             // Devolución
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(255, 223, 96);
+            BackColor = SystemColors.ControlLight;
             ClientSize = new Size(975, 527);
             Controls.Add(groupBox2);
             Controls.Add(panel1);
@@ -472,10 +472,10 @@
             ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
             groupBox5.ResumeLayout(false);
             groupBox4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             panel1.ResumeLayout(false);
             groupBox2.ResumeLayout(false);
             groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
 
         }

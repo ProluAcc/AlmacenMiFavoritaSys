@@ -32,6 +32,15 @@
             button2 = new Button();
             button7 = new Button();
             dataGridView1 = new DataGridView();
+            Column1 = new DataGridViewTextBoxColumn();
+            Column2 = new DataGridViewTextBoxColumn();
+            Column3 = new DataGridViewTextBoxColumn();
+            Column4 = new DataGridViewTextBoxColumn();
+            Column5 = new DataGridViewTextBoxColumn();
+            Column7 = new DataGridViewTextBoxColumn();
+            Column6 = new DataGridViewTextBoxColumn();
+            Column8 = new DataGridViewTextBoxColumn();
+            Column9 = new DataGridViewTextBoxColumn();
             textBox5 = new TextBox();
             textBox4 = new TextBox();
             textBox3 = new TextBox();
@@ -56,19 +65,12 @@
             textBox6 = new TextBox();
             button3 = new Button();
             textBox7 = new TextBox();
-            Column1 = new DataGridViewTextBoxColumn();
-            Column2 = new DataGridViewTextBoxColumn();
-            Column3 = new DataGridViewTextBoxColumn();
-            Column4 = new DataGridViewTextBoxColumn();
-            Column5 = new DataGridViewTextBoxColumn();
-            Column7 = new DataGridViewTextBoxColumn();
-            Column6 = new DataGridViewTextBoxColumn();
-            Column8 = new DataGridViewTextBoxColumn();
-            Column9 = new DataGridViewTextBoxColumn();
             textBox8 = new TextBox();
             label12 = new Label();
             textBox9 = new TextBox();
             label13 = new Label();
+            button4 = new Button();
+            button5 = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -117,6 +119,53 @@
             dataGridView1.Name = "dataGridView1";
             dataGridView1.Size = new Size(956, 256);
             dataGridView1.TabIndex = 100;
+            // 
+            // Column1
+            // 
+            Column1.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            Column1.HeaderText = "Código";
+            Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            Column2.HeaderText = "Nombre del Producto";
+            Column2.Name = "Column2";
+            // 
+            // Column3
+            // 
+            Column3.HeaderText = "Categoría";
+            Column3.Name = "Column3";
+            // 
+            // Column4
+            // 
+            Column4.HeaderText = "Medida";
+            Column4.Name = "Column4";
+            // 
+            // Column5
+            // 
+            Column5.HeaderText = "Marca";
+            Column5.Name = "Column5";
+            // 
+            // Column7
+            // 
+            Column7.HeaderText = "Descripción";
+            Column7.Name = "Column7";
+            // 
+            // Column6
+            // 
+            Column6.HeaderText = "Stock";
+            Column6.Name = "Column6";
+            Column6.Width = 60;
+            // 
+            // Column8
+            // 
+            Column8.HeaderText = "Precio Venta";
+            Column8.Name = "Column8";
+            // 
+            // Column9
+            // 
+            Column9.HeaderText = "Disponibilidad";
+            Column9.Name = "Column9";
             // 
             // textBox5
             // 
@@ -318,13 +367,13 @@
             comboBox5.Items.AddRange(new object[] { "Azulejos" });
             comboBox5.Location = new Point(111, 213);
             comboBox5.Name = "comboBox5";
-            comboBox5.Size = new Size(137, 28);
+            comboBox5.Size = new Size(90, 28);
             comboBox5.TabIndex = 107;
             // 
             // textBox6
             // 
             textBox6.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            textBox6.Location = new Point(263, 213);
+            textBox6.Location = new Point(207, 213);
             textBox6.Name = "textBox6";
             textBox6.Size = new Size(225, 27);
             textBox6.TabIndex = 108;
@@ -334,7 +383,7 @@
             button3.BackColor = Color.FromArgb(69, 69, 210);
             button3.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
             button3.ForeColor = Color.White;
-            button3.Location = new Point(498, 209);
+            button3.Location = new Point(438, 209);
             button3.Name = "button3";
             button3.Size = new Size(128, 35);
             button3.TabIndex = 109;
@@ -348,53 +397,6 @@
             textBox7.Name = "textBox7";
             textBox7.Size = new Size(115, 27);
             textBox7.TabIndex = 110;
-            // 
-            // Column1
-            // 
-            Column1.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            Column1.HeaderText = "Código";
-            Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            Column2.HeaderText = "Nombre del Producto";
-            Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            Column3.HeaderText = "Categoría";
-            Column3.Name = "Column3";
-            // 
-            // Column4
-            // 
-            Column4.HeaderText = "Medida";
-            Column4.Name = "Column4";
-            // 
-            // Column5
-            // 
-            Column5.HeaderText = "Marca";
-            Column5.Name = "Column5";
-            // 
-            // Column7
-            // 
-            Column7.HeaderText = "Descripción";
-            Column7.Name = "Column7";
-            // 
-            // Column6
-            // 
-            Column6.HeaderText = "Stock";
-            Column6.Name = "Column6";
-            Column6.Width = 60;
-            // 
-            // Column8
-            // 
-            Column8.HeaderText = "Precio Venta";
-            Column8.Name = "Column8";
-            // 
-            // Column9
-            // 
-            Column9.HeaderText = "Disponibilidad";
-            Column9.Name = "Column9";
             // 
             // textBox8
             // 
@@ -432,12 +434,38 @@
             label13.TabIndex = 113;
             label13.Text = "Stock Mínimo";
             // 
+            // button4
+            // 
+            button4.BackColor = Color.FromArgb(69, 69, 210);
+            button4.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            button4.ForeColor = Color.White;
+            button4.Location = new Point(807, 87);
+            button4.Name = "button4";
+            button4.Size = new Size(128, 35);
+            button4.TabIndex = 115;
+            button4.Text = "⬇️INGRESAR";
+            button4.UseVisualStyleBackColor = false;
+            // 
+            // button5
+            // 
+            button5.BackColor = Color.FromArgb(69, 69, 210);
+            button5.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            button5.ForeColor = Color.White;
+            button5.Location = new Point(587, 209);
+            button5.Name = "button5";
+            button5.Size = new Size(105, 35);
+            button5.TabIndex = 116;
+            button5.Text = "✏️EDITAR";
+            button5.UseVisualStyleBackColor = false;
+            // 
             // Productos
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(255, 223, 96);
+            BackColor = SystemColors.ControlLight;
             ClientSize = new Size(975, 527);
+            Controls.Add(button5);
+            Controls.Add(button4);
             Controls.Add(textBox9);
             Controls.Add(label13);
             Controls.Add(textBox8);
@@ -521,5 +549,7 @@
         private Label label12;
         private TextBox textBox9;
         private Label label13;
+        private Button button4;
+        private Button button5;
     }
 }

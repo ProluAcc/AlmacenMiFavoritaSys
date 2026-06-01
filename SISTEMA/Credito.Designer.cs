@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             groupBox1 = new GroupBox();
-            btnInicio = new Button();
             btnBuscarCliente = new Button();
+            btnInicio = new Button();
             cbCliente = new ComboBox();
             label4 = new Label();
             txtFecha = new TextBox();
@@ -46,7 +46,15 @@
             label16 = new Label();
             label14 = new Label();
             dataGridView1 = new DataGridView();
+            Column1 = new DataGridViewTextBoxColumn();
+            Column2 = new DataGridViewTextBoxColumn();
+            Column3 = new DataGridViewTextBoxColumn();
+            Column4 = new DataGridViewTextBoxColumn();
+            Column5 = new DataGridViewTextBoxColumn();
+            Column6 = new DataGridViewTextBoxColumn();
+            Column7 = new DataGridViewTextBoxColumn();
             panel7 = new Panel();
+            btnRegistrarVenta = new Button();
             cbVencimiento = new ComboBox();
             comboBox2 = new ComboBox();
             cbPlazo = new ComboBox();
@@ -71,14 +79,6 @@
             label6 = new Label();
             panel2 = new Panel();
             label5 = new Label();
-            btnRegistrarVenta = new Button();
-            Column1 = new DataGridViewTextBoxColumn();
-            Column2 = new DataGridViewTextBoxColumn();
-            Column3 = new DataGridViewTextBoxColumn();
-            Column4 = new DataGridViewTextBoxColumn();
-            Column5 = new DataGridViewTextBoxColumn();
-            Column6 = new DataGridViewTextBoxColumn();
-            Column7 = new DataGridViewTextBoxColumn();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
@@ -106,19 +106,6 @@
             groupBox1.TabIndex = 0;
             groupBox1.TabStop = false;
             // 
-            // btnInicio
-            // 
-            btnInicio.BackColor = SystemColors.ControlLight;
-            btnInicio.Font = new Font("Segoe UI Black", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnInicio.ForeColor = Color.FromArgb(69, 69, 210);
-            btnInicio.Location = new Point(883, 17);
-            btnInicio.Name = "btnInicio";
-            btnInicio.Size = new Size(78, 35);
-            btnInicio.TabIndex = 6;
-            btnInicio.Text = "Inicio";
-            btnInicio.UseVisualStyleBackColor = false;
-            btnInicio.Click += btnInicio_Click;
-            // 
             // btnBuscarCliente
             // 
             btnBuscarCliente.BackColor = SystemColors.ControlLight;
@@ -131,6 +118,19 @@
             btnBuscarCliente.Text = "Aceptar";
             btnBuscarCliente.UseVisualStyleBackColor = false;
             btnBuscarCliente.Click += btnBuscarCliente_Click;
+            // 
+            // btnInicio
+            // 
+            btnInicio.BackColor = SystemColors.ControlLight;
+            btnInicio.Font = new Font("Segoe UI Black", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnInicio.ForeColor = Color.FromArgb(69, 69, 210);
+            btnInicio.Location = new Point(883, 17);
+            btnInicio.Name = "btnInicio";
+            btnInicio.Size = new Size(78, 35);
+            btnInicio.TabIndex = 6;
+            btnInicio.Text = "Inicio";
+            btnInicio.UseVisualStyleBackColor = false;
+            btnInicio.Click += btnInicio_Click;
             // 
             // cbCliente
             // 
@@ -272,6 +272,41 @@
             dataGridView1.Size = new Size(645, 194);
             dataGridView1.TabIndex = 0;
             // 
+            // Column1
+            // 
+            Column1.HeaderText = "Código";
+            Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            Column2.HeaderText = "Producto";
+            Column2.Name = "Column2";
+            // 
+            // Column3
+            // 
+            Column3.HeaderText = "Cantidad";
+            Column3.Name = "Column3";
+            // 
+            // Column4
+            // 
+            Column4.HeaderText = "Precio";
+            Column4.Name = "Column4";
+            // 
+            // Column5
+            // 
+            Column5.HeaderText = "IVA";
+            Column5.Name = "Column5";
+            // 
+            // Column6
+            // 
+            Column6.HeaderText = "Subtotal";
+            Column6.Name = "Column6";
+            // 
+            // Column7
+            // 
+            Column7.HeaderText = "Total";
+            Column7.Name = "Column7";
+            // 
             // panel7
             // 
             panel7.BackColor = SystemColors.ControlLight;
@@ -294,6 +329,18 @@
             panel7.Size = new Size(295, 244);
             panel7.TabIndex = 15;
             panel7.Paint += panel7_Paint;
+            // 
+            // btnRegistrarVenta
+            // 
+            btnRegistrarVenta.BackColor = Color.FromArgb(69, 69, 210);
+            btnRegistrarVenta.Font = new Font("Segoe UI Black", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnRegistrarVenta.ForeColor = Color.White;
+            btnRegistrarVenta.Location = new Point(46, 184);
+            btnRegistrarVenta.Name = "btnRegistrarVenta";
+            btnRegistrarVenta.Size = new Size(206, 51);
+            btnRegistrarVenta.TabIndex = 7;
+            btnRegistrarVenta.Text = "Registrar Venta a Crédito";
+            btnRegistrarVenta.UseVisualStyleBackColor = false;
             // 
             // cbVencimiento
             // 
@@ -542,58 +589,11 @@
             label5.TabIndex = 0;
             label5.Text = "Información Crediticia del Cliente";
             // 
-            // btnRegistrarVenta
-            // 
-            btnRegistrarVenta.BackColor = Color.FromArgb(69, 69, 210);
-            btnRegistrarVenta.Font = new Font("Segoe UI Black", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnRegistrarVenta.ForeColor = Color.White;
-            btnRegistrarVenta.Location = new Point(46, 196);
-            btnRegistrarVenta.Name = "btnRegistrarVenta";
-            btnRegistrarVenta.Size = new Size(206, 39);
-            btnRegistrarVenta.TabIndex = 7;
-            btnRegistrarVenta.Text = "Registrar Venta a Crédito";
-            btnRegistrarVenta.UseVisualStyleBackColor = false;
-            // 
-            // Column1
-            // 
-            Column1.HeaderText = "Código";
-            Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            Column2.HeaderText = "Producto";
-            Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            Column3.HeaderText = "Cantidad";
-            Column3.Name = "Column3";
-            // 
-            // Column4
-            // 
-            Column4.HeaderText = "Precio";
-            Column4.Name = "Column4";
-            // 
-            // Column5
-            // 
-            Column5.HeaderText = "IVA";
-            Column5.Name = "Column5";
-            // 
-            // Column6
-            // 
-            Column6.HeaderText = "Subtotal";
-            Column6.Name = "Column6";
-            // 
-            // Column7
-            // 
-            Column7.HeaderText = "Total";
-            Column7.Name = "Column7";
-            // 
             // Credito
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(255, 223, 96);
+            BackColor = SystemColors.ControlLight;
             ClientSize = new Size(975, 527);
             Controls.Add(groupBox2);
             Controls.Add(groupBox1);

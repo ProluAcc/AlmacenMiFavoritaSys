@@ -8,4 +8,8 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="Clase_detalle_venta_producto.cs~RF390098d5.TMP" />
+  </ItemGroup>
+
 </Project>

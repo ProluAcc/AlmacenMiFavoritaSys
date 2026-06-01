@@ -3,7 +3,7 @@
   <Class Name="SISTEMA.ClaseRol" Collapsed="true">
     <Position X="5.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAACABgAAAAEAAACAAAAAAAAAAQAAAAAAAAAgAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAACEAAEAAAAAAAAAAAAAAAAAYAICgAA=</HashCode>
       <FileName>ClaseRol.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -11,9 +11,9 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="SISTEMA.ClaseCaja" Collapsed="true">
-    <Position X="5.5" Y="3.5" Width="1.5" />
+    <Position X="5.5" Y="3.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAIAABAAABAAAAAAAAAAAgAAABAAA=</HashCode>
+      <HashCode>AIAACBQAAAAAAAAAABABAAEAAAAAAAAAAAAgAEAAAAA=</HashCode>
       <FileName>ClaseCaja.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -27,7 +27,7 @@
   <Class Name="SISTEMA.ClaseCompra" Collapsed="true">
     <Position X="7.75" Y="2.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAABAEEAAAAAQAABAAAAAAAgAAAAAgAAAAZAAAAAA=</HashCode>
+      <HashCode>AAAAABAEEAAAAAQABAAAABAAAgAAAAAAAAAAZAAAgAA=</HashCode>
       <FileName>ClaseCompra.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -35,56 +35,29 @@
       <Property Name="ClaseProducto" />
       <Property Name="Clase_detalle_compra" />
       <Property Name="ClaseCaja" />
+      <Property Name="ClaseUsuarios" />
     </ShowAsAssociation>
   </Class>
   <Class Name="SISTEMA.ClaseCredito" Collapsed="true">
-    <Position X="1" Y="5.5" Width="1.5" />
+    <Position X="1" Y="4.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AIAAAAAAAAEAAAAAAAAABAEAAAAAAAAIAAAAAAAAAAA=</HashCode>
+      <HashCode>AIAACAAAAAEAAAAAAAAABAEAAQAAAAAIAAAAAAAAAAA=</HashCode>
       <FileName>ClaseCredito.cs</FileName>
     </TypeIdentifier>
-  </Class>
-  <Class Name="SISTEMA.ClaseDevolucion" Collapsed="true">
-    <Position X="1" Y="4.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAABCAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAA=</HashCode>
-      <FileName>ClaseDevolucion.cs</FileName>
-    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="ClaseVenta1" />
+    </ShowAsAssociation>
   </Class>
   <Class Name="SISTEMA.ClaseProducto" Collapsed="true">
-    <Position X="5.5" Y="4.25" Width="1.5" />
+    <Position X="5.5" Y="4" Width="1.5" />
     <Compartments>
       <Compartment Name="Fields" Collapsed="true" />
     </Compartments>
-    <AssociationLine Name="Clase_detalle_venta_producto" Type="SISTEMA.Clase_detalle_venta_producto">
-      <MemberNameLabel ManuallyPlaced="true">
-        <Position X="0.027" Y="0.31" />
-      </MemberNameLabel>
-    </AssociationLine>
-    <AssociationLine Name="Clase_detalle_venta_producto1" Type="SISTEMA.Clase_detalle_venta_producto" ManuallyRouted="true">
-      <Path>
-        <Point X="5.5" Y="4.375" />
-        <Point X="4.799" Y="4.375" />
-        <Point X="4.799" Y="4.503" />
-        <Point X="4.247" Y="4.503" Type="JumpStart" />
-        <Point X="4.081" Y="4.503" Type="JumpEnd" />
-        <Point X="3.945" Y="4.503" Type="JumpStart" />
-        <Point X="3.778" Y="4.503" Type="JumpEnd" />
-        <Point X="3.642" Y="4.503" Type="JumpStart" />
-        <Point X="3.475" Y="4.503" Type="JumpEnd" />
-        <Point X="3.377" Y="4.503" />
-        <Point X="3.377" Y="7" />
-      </Path>
-    </AssociationLine>
     <TypeIdentifier>
-      <HashCode>AABgAIAEAAAQAAAAAAAAEAAAAAAggAAAAAAAAAIAAAA=</HashCode>
+      <HashCode>AABAAAAAAAAQAAAAAAAAAAAAAAAgAAAAAAAAAAIAAAA=</HashCode>
       <FileName>ClaseProducto.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
-      <Property Name="Clase_detalle_producto" />
-      <Property Name="Clase_detalle_compra" />
-      <Property Name="Clase_detalle_venta_producto" />
-      <Property Name="Clase_detalle_venta_producto1" />
       <Property Name="ClaseInventario" />
     </ShowAsAssociation>
   </Class>
@@ -98,89 +71,83 @@
   <Class Name="SISTEMA.ClaseUsuarios" Collapsed="true">
     <Position X="5.25" Y="1.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAADAACIAgAgACAABCCIQECIgAAAACAAAIAAAIAAAA=</HashCode>
+      <HashCode>AAAADAAAABgAgACAABCCIQEAIgAAAACAAAIAAAICAAQ=</HashCode>
       <FileName>ClaseUsuarios.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Property Name="ClaseVenta" />
       <Property Name="ClaseCompra" />
+      <Property Name="ClaseRol" />
     </ShowAsAssociation>
   </Class>
   <Class Name="SISTEMA.ClaseVenta" Collapsed="true">
     <Position X="3" Y="2.5" Width="1.5" />
+    <AssociationLine Name="ClaseProducto" Type="SISTEMA.ClaseProducto">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.089" Y="0.393" />
+      </MemberNameLabel>
+    </AssociationLine>
     <AssociationLine Name="Clase_detalle_venta_producto" Type="SISTEMA.Clase_detalle_venta_producto">
       <MemberNameLabel ManuallyPlaced="true">
         <Position X="-2.046" Y="0.237" />
       </MemberNameLabel>
     </AssociationLine>
     <TypeIdentifier>
-      <HashCode>AIAgAAAAEAAAAAQAABAAEAAAAAACDAAgAAAAIgAAAAA=</HashCode>
+      <HashCode>AIAgAAAAEAAAAAQAABAAEAAAAAAADAAgAAAAIgAAAAA=</HashCode>
       <FileName>ClaseVenta.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Property Name="ClaseCaja" />
       <Property Name="ClaseProducto" />
       <Property Name="ClaseClientes" />
-      <Property Name="ClaseDevolucion" />
-      <Property Name="ClaseCredito" />
       <Property Name="Clase_detalle_venta_producto" />
     </ShowAsAssociation>
   </Class>
   <Class Name="SISTEMA.Clase_detalle_compra" Collapsed="true">
-    <Position X="5.5" Y="6" Width="1.75" />
-    <AssociationLine Name="Clase_devolucion_compra" Type="SISTEMA.Clase_devolucion_compra">
-      <MemberNameLabel ManuallyPlaced="true">
-        <Position X="-1.854" Y="0.203" />
-      </MemberNameLabel>
-    </AssociationLine>
+    <Position X="6" Y="6.25" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>AAAAQBAAAAAAAgAAAAAAAAAAAgggAAAAAAAAIAAAAAA=</HashCode>
+      <HashCode>AAAAQBAAAAAAAAAAAAAAAQAAAgggAAAAAAAAIAAAAAA=</HashCode>
       <FileName>Clase_detalle_compra.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
-      <Property Name="Clase_devolucion_compra" />
+      <Property Name="ClaseProducto" />
+      <Property Name="ClaseCompra" />
     </ShowAsAssociation>
   </Class>
   <Class Name="SISTEMA.Clase_detalle_producto" Collapsed="true">
     <Position X="5.5" Y="5.25" Width="2" />
     <TypeIdentifier>
-      <HashCode>EAAAAAAAIAACAAAEAAAAAAAAAAAAgAAAAAIAAAAAAAQ=</HashCode>
+      <HashCode>EAAAAAAAIAACAAAEAAAAAAAAAAAggAAAAAIAIAAAAAQ=</HashCode>
       <FileName>Clase_detalle_producto.cs</FileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="ClaseProducto" />
+    </ShowAsAssociation>
   </Class>
   <Class Name="SISTEMA.Clase_detalle_venta_producto" Collapsed="true">
-    <Position X="1.25" Y="7" Width="2.25" />
-    <AssociationLine Name="Clase_devolucion_ventas" Type="SISTEMA.Clase_devolucion_ventas">
-      <MemberNameLabel ManuallyPlaced="true">
-        <Position X="-1.95" Y="0.187" />
-      </MemberNameLabel>
-    </AssociationLine>
+    <Position X="1.25" Y="5.75" Width="2.25" />
     <TypeIdentifier>
-      <HashCode>CIAAQAAAAAAAAAAAAAAAAAAAAAggAACAAAAAQAIAAAA=</HashCode>
+      <HashCode>AIAASAAAAAAAAAAAAAAAAAAAAgggAACAAAAAYAIAAAA=</HashCode>
       <FileName>Clase_detalle_venta_producto.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
-      <Property Name="Clase_devolucion_ventas" />
+      <Property Name="ClaseProducto" />
     </ShowAsAssociation>
   </Class>
-  <Class Name="SISTEMA.Clase_devolucion_compra" Collapsed="true">
-    <Position X="5.5" Y="7.25" Width="2" />
-    <TypeIdentifier>
-      <HashCode>AAABAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAIEAAAAA=</HashCode>
-      <FileName>Clase_devolucion_compra.cs</FileName>
-    </TypeIdentifier>
-  </Class>
   <Class Name="SISTEMA.Clase_devolucion_ventas" Collapsed="true">
-    <Position X="1.5" Y="8.25" Width="2" />
+    <Position X="1.5" Y="7" Width="2" />
     <TypeIdentifier>
-      <HashCode>AAABAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAQEAAAAA=</HashCode>
+      <HashCode>AAABAAAAAAAAAAAAAACAEAAAAAAAAAAAAAAAQEAAAAA=</HashCode>
       <FileName>Clase_devolucion_ventas.cs</FileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Clase_detalle_venta_producto" />
+    </ShowAsAssociation>
   </Class>
   <Class Name="SISTEMA.ClaseInventario" Collapsed="true">
-    <Position X="4.75" Y="8.25" Width="1.5" />
+    <Position X="3.75" Y="7" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAIAAAAQAAAAAAgAAgAAAAAAAAAAAAEAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAIAAAAQAAAAAAgAAgAAAAAAAAIAAAEAA=</HashCode>
       <FileName>ClaseInventario.cs</FileName>
     </TypeIdentifier>
   </Class>

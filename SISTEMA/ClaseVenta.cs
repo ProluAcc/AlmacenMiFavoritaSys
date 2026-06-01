@@ -47,14 +47,6 @@ namespace SISTEMA
             }
         }
 
-        internal ClaseCredito ClaseCredito
-        {
-            get => default;
-            set
-            {
-            }
-        }
-
         internal Clase_detalle_venta_producto Clase_detalle_venta_producto
         {
             get => default;

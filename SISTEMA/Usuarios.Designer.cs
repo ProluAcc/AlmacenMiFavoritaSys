@@ -29,22 +29,12 @@
         private void InitializeComponent()
         {
             dataGridView1 = new DataGridView();
-            Column1 = new DataGridViewTextBoxColumn();
-            Column2 = new DataGridViewTextBoxColumn();
-            Column3 = new DataGridViewTextBoxColumn();
-            Column4 = new DataGridViewTextBoxColumn();
-            Column5 = new DataGridViewTextBoxColumn();
-            Column6 = new DataGridViewTextBoxColumn();
-            Column7 = new DataGridViewTextBoxColumn();
-            Column8 = new DataGridViewTextBoxColumn();
             textBox7 = new TextBox();
             comboBox3 = new ComboBox();
             label10 = new Label();
             comboBox2 = new ComboBox();
             label9 = new Label();
             button2 = new Button();
-            textBox6 = new TextBox();
-            label8 = new Label();
             button1 = new Button();
             comboBox1 = new ComboBox();
             label7 = new Label();
@@ -64,6 +54,13 @@
             textBox1 = new TextBox();
             label11 = new Label();
             textBox8 = new TextBox();
+            Column1 = new DataGridViewTextBoxColumn();
+            Column2 = new DataGridViewTextBoxColumn();
+            Column4 = new DataGridViewTextBoxColumn();
+            Column5 = new DataGridViewTextBoxColumn();
+            Column6 = new DataGridViewTextBoxColumn();
+            Column7 = new DataGridViewTextBoxColumn();
+            Column8 = new DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             panel2.SuspendLayout();
             SuspendLayout();
@@ -71,51 +68,11 @@
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3, Column4, Column5, Column6, Column7, Column8 });
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column4, Column5, Column6, Column7, Column8 });
             dataGridView1.Location = new Point(7, 306);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.Size = new Size(844, 209);
             dataGridView1.TabIndex = 99;
-            // 
-            // Column1
-            // 
-            Column1.HeaderText = "Cédula ";
-            Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            Column2.HeaderText = "Nombre Completo ";
-            Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            Column3.HeaderText = "Telefono ";
-            Column3.Name = "Column3";
-            // 
-            // Column4
-            // 
-            Column4.HeaderText = "Rol ";
-            Column4.Name = "Column4";
-            // 
-            // Column5
-            // 
-            Column5.HeaderText = "Correo Electronico ";
-            Column5.Name = "Column5";
-            // 
-            // Column6
-            // 
-            Column6.HeaderText = "Usuario ";
-            Column6.Name = "Column6";
-            // 
-            // Column7
-            // 
-            Column7.HeaderText = "Estado ";
-            Column7.Name = "Column7";
-            // 
-            // Column8
-            // 
-            Column8.HeaderText = "Editar ";
-            Column8.Name = "Column8";
             // 
             // textBox7
             // 
@@ -148,7 +105,7 @@
             // 
             comboBox2.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
             comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(174, 189);
+            comboBox2.Location = new Point(16, 179);
             comboBox2.Name = "comboBox2";
             comboBox2.Size = new Size(92, 28);
             comboBox2.TabIndex = 95;
@@ -157,7 +114,7 @@
             // 
             label9.AutoSize = true;
             label9.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            label9.Location = new Point(174, 166);
+            label9.Location = new Point(16, 156);
             label9.Name = "label9";
             label9.Size = new Size(60, 20);
             label9.TabIndex = 94;
@@ -168,37 +125,19 @@
             button2.BackColor = Color.White;
             button2.Font = new Font("Segoe UI Black", 11F, FontStyle.Bold);
             button2.ForeColor = Color.FromArgb(69, 69, 210);
-            button2.Location = new Point(541, 179);
+            button2.Location = new Point(379, 171);
             button2.Name = "button2";
             button2.Size = new Size(126, 36);
             button2.TabIndex = 93;
             button2.Text = "❌Cancelar ";
             button2.UseVisualStyleBackColor = false;
             // 
-            // textBox6
-            // 
-            textBox6.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            textBox6.Location = new Point(16, 189);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(152, 27);
-            textBox6.TabIndex = 92;
-            // 
-            // label8
-            // 
-            label8.AutoSize = true;
-            label8.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            label8.Location = new Point(16, 166);
-            label8.Name = "label8";
-            label8.Size = new Size(74, 20);
-            label8.TabIndex = 91;
-            label8.Text = "Telefono:";
-            // 
             // button1
             // 
             button1.BackColor = Color.FromArgb(69, 69, 210);
             button1.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
             button1.ForeColor = Color.WhiteSmoke;
-            button1.Location = new Point(411, 179);
+            button1.Location = new Point(249, 171);
             button1.Name = "button1";
             button1.Size = new Size(118, 36);
             button1.TabIndex = 90;
@@ -209,7 +148,7 @@
             // 
             comboBox1.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
             comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(272, 189);
+            comboBox1.Location = new Point(114, 179);
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(92, 28);
             comboBox1.TabIndex = 89;
@@ -218,7 +157,7 @@
             // 
             label7.AutoSize = true;
             label7.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            label7.Location = new Point(274, 164);
+            label7.Location = new Point(116, 154);
             label7.Name = "label7";
             label7.Size = new Size(36, 20);
             label7.TabIndex = 88;
@@ -264,7 +203,7 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            label4.Location = new Point(166, 86);
+            label4.Location = new Point(166, 89);
             label4.Name = "label4";
             label4.Size = new Size(67, 20);
             label4.TabIndex = 83;
@@ -304,9 +243,9 @@
             label1.ForeColor = Color.White;
             label1.Location = new Point(7, 19);
             label1.Name = "label1";
-            label1.Size = new Size(224, 32);
+            label1.Size = new Size(216, 32);
             label1.TabIndex = 77;
-            label1.Text = "NUEVO USUARIO:";
+            label1.Text = "NUEVO USUARIO";
             // 
             // panel2
             // 
@@ -379,6 +318,41 @@
             textBox8.Size = new Size(141, 27);
             textBox8.TabIndex = 105;
             // 
+            // Column1
+            // 
+            Column1.HeaderText = "Cédula ";
+            Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            Column2.HeaderText = "Nombre Completo ";
+            Column2.Name = "Column2";
+            // 
+            // Column4
+            // 
+            Column4.HeaderText = "Rol ";
+            Column4.Name = "Column4";
+            // 
+            // Column5
+            // 
+            Column5.HeaderText = "Correo Electronico ";
+            Column5.Name = "Column5";
+            // 
+            // Column6
+            // 
+            Column6.HeaderText = "Usuario ";
+            Column6.Name = "Column6";
+            // 
+            // Column7
+            // 
+            Column7.HeaderText = "Estado ";
+            Column7.Name = "Column7";
+            // 
+            // Column8
+            // 
+            Column8.HeaderText = "Editar ";
+            Column8.Name = "Column8";
+            // 
             // Usuarios
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -397,8 +371,6 @@
             Controls.Add(comboBox2);
             Controls.Add(label9);
             Controls.Add(button2);
-            Controls.Add(textBox6);
-            Controls.Add(label8);
             Controls.Add(button1);
             Controls.Add(comboBox1);
             Controls.Add(label7);
@@ -424,22 +396,12 @@
 
         #endregion
         private DataGridView dataGridView1;
-        private DataGridViewTextBoxColumn Column1;
-        private DataGridViewTextBoxColumn Column2;
-        private DataGridViewTextBoxColumn Column3;
-        private DataGridViewTextBoxColumn Column4;
-        private DataGridViewTextBoxColumn Column5;
-        private DataGridViewTextBoxColumn Column6;
-        private DataGridViewTextBoxColumn Column7;
-        private DataGridViewTextBoxColumn Column8;
         private TextBox textBox7;
         private ComboBox comboBox3;
         private Label label10;
         private ComboBox comboBox2;
         private Label label9;
         private Button button2;
-        private TextBox textBox6;
-        private Label label8;
         private Button button1;
         private ComboBox comboBox1;
         private Label label7;
@@ -459,5 +421,12 @@
         private TextBox textBox1;
         private Label label11;
         private TextBox textBox8;
+        private DataGridViewTextBoxColumn Column1;
+        private DataGridViewTextBoxColumn Column2;
+        private DataGridViewTextBoxColumn Column4;
+        private DataGridViewTextBoxColumn Column5;
+        private DataGridViewTextBoxColumn Column6;
+        private DataGridViewTextBoxColumn Column7;
+        private DataGridViewTextBoxColumn Column8;
     }
 }

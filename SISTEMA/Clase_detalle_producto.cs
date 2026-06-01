@@ -15,5 +15,14 @@ namespace SISTEMA
         private string _descripcion;
         private double _precio_venta;
         private double _precio_compra;
+        private int _id_producto;
+
+        internal ClaseProducto ClaseProducto
+        {
+            get => default;
+            set
+            {
+            }
+        }
     }
 }

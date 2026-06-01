@@ -37,7 +37,6 @@
             label3 = new Label();
             txtFactura = new TextBox();
             label2 = new Label();
-            btnRegistrarCliente = new Button();
             groupBox2 = new GroupBox();
             txtiva = new TextBox();
             txtTotal = new TextBox();
@@ -47,12 +46,6 @@
             label16 = new Label();
             label14 = new Label();
             dataGridView1 = new DataGridView();
-            Column1 = new DataGridViewTextBoxColumn();
-            Column2 = new DataGridViewTextBoxColumn();
-            Column3 = new DataGridViewTextBoxColumn();
-            Column4 = new DataGridViewTextBoxColumn();
-            Column5 = new DataGridViewTextBoxColumn();
-            Column6 = new DataGridViewTextBoxColumn();
             panel7 = new Panel();
             cbVencimiento = new ComboBox();
             comboBox2 = new ComboBox();
@@ -70,9 +63,6 @@
             panel1 = new Panel();
             label13 = new Label();
             label12 = new Label();
-            panel6 = new Panel();
-            label11 = new Label();
-            label10 = new Label();
             panel5 = new Panel();
             label9 = new Label();
             label8 = new Label();
@@ -81,8 +71,14 @@
             label6 = new Label();
             panel2 = new Panel();
             label5 = new Label();
-            btnValidarCredito = new Button();
             btnRegistrarVenta = new Button();
+            Column1 = new DataGridViewTextBoxColumn();
+            Column2 = new DataGridViewTextBoxColumn();
+            Column3 = new DataGridViewTextBoxColumn();
+            Column4 = new DataGridViewTextBoxColumn();
+            Column5 = new DataGridViewTextBoxColumn();
+            Column6 = new DataGridViewTextBoxColumn();
+            Column7 = new DataGridViewTextBoxColumn();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
@@ -95,8 +91,8 @@
             // groupBox1
             // 
             groupBox1.BackColor = Color.FromArgb(69, 69, 210);
-            groupBox1.Controls.Add(btnInicio);
             groupBox1.Controls.Add(btnBuscarCliente);
+            groupBox1.Controls.Add(btnInicio);
             groupBox1.Controls.Add(cbCliente);
             groupBox1.Controls.Add(label4);
             groupBox1.Controls.Add(txtFecha);
@@ -128,11 +124,11 @@
             btnBuscarCliente.BackColor = SystemColors.ControlLight;
             btnBuscarCliente.Font = new Font("Segoe UI Black", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnBuscarCliente.ForeColor = Color.FromArgb(69, 69, 210);
-            btnBuscarCliente.Location = new Point(750, 17);
+            btnBuscarCliente.Location = new Point(741, 16);
             btnBuscarCliente.Name = "btnBuscarCliente";
-            btnBuscarCliente.Size = new Size(120, 35);
+            btnBuscarCliente.Size = new Size(88, 35);
             btnBuscarCliente.TabIndex = 5;
-            btnBuscarCliente.Text = "Buscar Cliente";
+            btnBuscarCliente.Text = "Aceptar";
             btnBuscarCliente.UseVisualStyleBackColor = false;
             btnBuscarCliente.Click += btnBuscarCliente_Click;
             // 
@@ -188,18 +184,6 @@
             label2.TabIndex = 5;
             label2.Text = "No. Factura:";
             // 
-            // btnRegistrarCliente
-            // 
-            btnRegistrarCliente.BackColor = SystemColors.ControlLight;
-            btnRegistrarCliente.Font = new Font("Segoe UI Black", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnRegistrarCliente.ForeColor = Color.FromArgb(69, 69, 210);
-            btnRegistrarCliente.Location = new Point(750, 476);
-            btnRegistrarCliente.Name = "btnRegistrarCliente";
-            btnRegistrarCliente.Size = new Size(195, 39);
-            btnRegistrarCliente.TabIndex = 2;
-            btnRegistrarCliente.Text = "Registrar Cliente Nuevo";
-            btnRegistrarCliente.UseVisualStyleBackColor = false;
-            // 
             // groupBox2
             // 
             groupBox2.BackColor = Color.FromArgb(200, 56, 56);
@@ -212,7 +196,7 @@
             groupBox2.Controls.Add(label14);
             groupBox2.Controls.Add(dataGridView1);
             groupBox2.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            groupBox2.Location = new Point(3, 59);
+            groupBox2.Location = new Point(3, 70);
             groupBox2.Name = "groupBox2";
             groupBox2.Size = new Size(659, 344);
             groupBox2.TabIndex = 5;
@@ -282,46 +266,17 @@
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3, Column4, Column5, Column6 });
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3, Column4, Column5, Column6, Column7 });
             dataGridView1.Location = new Point(6, 20);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.Size = new Size(645, 194);
             dataGridView1.TabIndex = 0;
             // 
-            // Column1
-            // 
-            Column1.HeaderText = "Código";
-            Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            Column2.HeaderText = "Producto";
-            Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            Column3.HeaderText = "Cantidad";
-            Column3.Name = "Column3";
-            // 
-            // Column4
-            // 
-            Column4.HeaderText = "Precio";
-            Column4.Name = "Column4";
-            // 
-            // Column5
-            // 
-            Column5.HeaderText = "IVA";
-            Column5.Name = "Column5";
-            // 
-            // Column6
-            // 
-            Column6.HeaderText = "Subtotal";
-            Column6.Name = "Column6";
-            // 
             // panel7
             // 
             panel7.BackColor = SystemColors.ControlLight;
             panel7.BorderStyle = BorderStyle.FixedSingle;
+            panel7.Controls.Add(btnRegistrarVenta);
             panel7.Controls.Add(cbVencimiento);
             panel7.Controls.Add(comboBox2);
             panel7.Controls.Add(cbPlazo);
@@ -334,9 +289,9 @@
             panel7.Controls.Add(panel10);
             panel7.Controls.Add(label21);
             panel7.Controls.Add(panel11);
-            panel7.Location = new Point(669, 234);
+            panel7.Location = new Point(668, 208);
             panel7.Name = "panel7";
-            panel7.Size = new Size(295, 191);
+            panel7.Size = new Size(295, 244);
             panel7.TabIndex = 15;
             panel7.Paint += panel7_Paint;
             // 
@@ -471,9 +426,6 @@
             panel1.BorderStyle = BorderStyle.FixedSingle;
             panel1.Controls.Add(label13);
             panel1.Controls.Add(label12);
-            panel1.Controls.Add(panel6);
-            panel1.Controls.Add(label11);
-            panel1.Controls.Add(label10);
             panel1.Controls.Add(panel5);
             panel1.Controls.Add(label9);
             panel1.Controls.Add(label8);
@@ -483,7 +435,7 @@
             panel1.Controls.Add(panel2);
             panel1.Location = new Point(669, 70);
             panel1.Name = "panel1";
-            panel1.Size = new Size(294, 158);
+            panel1.Size = new Size(294, 132);
             panel1.TabIndex = 1;
             panel1.Paint += panel1_Paint;
             // 
@@ -493,7 +445,7 @@
             label13.BackColor = Color.Lime;
             label13.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
             label13.ForeColor = Color.White;
-            label13.Location = new Point(194, 127);
+            label13.Location = new Point(175, 100);
             label13.Name = "label13";
             label13.Size = new Size(79, 20);
             label13.TabIndex = 14;
@@ -503,40 +455,11 @@
             // 
             label12.AutoSize = true;
             label12.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            label12.Location = new Point(9, 128);
+            label12.Location = new Point(28, 98);
             label12.Name = "label12";
             label12.Size = new Size(60, 20);
             label12.TabIndex = 13;
             label12.Text = "Estado:";
-            // 
-            // panel6
-            // 
-            panel6.BorderStyle = BorderStyle.FixedSingle;
-            panel6.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            panel6.Location = new Point(6, 120);
-            panel6.Name = "panel6";
-            panel6.Size = new Size(283, 1);
-            panel6.TabIndex = 10;
-            // 
-            // label11
-            // 
-            label11.AutoSize = true;
-            label11.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            label11.Location = new Point(167, 95);
-            label11.Name = "label11";
-            label11.Size = new Size(112, 20);
-            label11.TabIndex = 12;
-            label11.Text = "C$ 000000000";
-            // 
-            // label10
-            // 
-            label10.AutoSize = true;
-            label10.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            label10.Location = new Point(5, 95);
-            label10.Name = "label10";
-            label10.Size = new Size(87, 20);
-            label10.TabIndex = 11;
-            label10.Text = "Disponible:";
             // 
             // panel5
             // 
@@ -553,9 +476,9 @@
             label9.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
             label9.Location = new Point(166, 68);
             label9.Name = "label9";
-            label9.Size = new Size(112, 20);
+            label9.Size = new Size(40, 20);
             label9.TabIndex = 10;
-            label9.Text = "C$ 000000000";
+            label9.Text = "C$ 0";
             // 
             // label8
             // 
@@ -582,15 +505,15 @@
             label7.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
             label7.Location = new Point(166, 42);
             label7.Name = "label7";
-            label7.Size = new Size(112, 20);
+            label7.Size = new Size(40, 20);
             label7.TabIndex = 7;
-            label7.Text = "C$ 000000000";
+            label7.Text = "C$ 0";
             // 
             // label6
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            label6.Location = new Point(8, 42);
+            label6.Location = new Point(31, 42);
             label6.Name = "label6";
             label6.Size = new Size(57, 20);
             label6.TabIndex = 6;
@@ -619,29 +542,52 @@
             label5.TabIndex = 0;
             label5.Text = "Información Crediticia del Cliente";
             // 
-            // btnValidarCredito
-            // 
-            btnValidarCredito.BackColor = Color.FromArgb(69, 69, 210);
-            btnValidarCredito.Font = new Font("Segoe UI Black", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnValidarCredito.ForeColor = Color.White;
-            btnValidarCredito.Location = new Point(391, 476);
-            btnValidarCredito.Name = "btnValidarCredito";
-            btnValidarCredito.Size = new Size(141, 39);
-            btnValidarCredito.TabIndex = 6;
-            btnValidarCredito.Text = "Validar Crédito";
-            btnValidarCredito.UseVisualStyleBackColor = false;
-            // 
             // btnRegistrarVenta
             // 
             btnRegistrarVenta.BackColor = Color.FromArgb(69, 69, 210);
             btnRegistrarVenta.Font = new Font("Segoe UI Black", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnRegistrarVenta.ForeColor = Color.White;
-            btnRegistrarVenta.Location = new Point(538, 476);
+            btnRegistrarVenta.Location = new Point(46, 196);
             btnRegistrarVenta.Name = "btnRegistrarVenta";
             btnRegistrarVenta.Size = new Size(206, 39);
             btnRegistrarVenta.TabIndex = 7;
             btnRegistrarVenta.Text = "Registrar Venta a Crédito";
             btnRegistrarVenta.UseVisualStyleBackColor = false;
+            // 
+            // Column1
+            // 
+            Column1.HeaderText = "Código";
+            Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            Column2.HeaderText = "Producto";
+            Column2.Name = "Column2";
+            // 
+            // Column3
+            // 
+            Column3.HeaderText = "Cantidad";
+            Column3.Name = "Column3";
+            // 
+            // Column4
+            // 
+            Column4.HeaderText = "Precio";
+            Column4.Name = "Column4";
+            // 
+            // Column5
+            // 
+            Column5.HeaderText = "IVA";
+            Column5.Name = "Column5";
+            // 
+            // Column6
+            // 
+            Column6.HeaderText = "Subtotal";
+            Column6.Name = "Column6";
+            // 
+            // Column7
+            // 
+            Column7.HeaderText = "Total";
+            Column7.Name = "Column7";
             // 
             // Credito
             // 
@@ -649,10 +595,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(255, 223, 96);
             ClientSize = new Size(975, 527);
-            Controls.Add(btnRegistrarVenta);
-            Controls.Add(btnValidarCredito);
             Controls.Add(groupBox2);
-            Controls.Add(btnRegistrarCliente);
             Controls.Add(groupBox1);
             Controls.Add(panel1);
             Controls.Add(panel7);
@@ -684,7 +627,6 @@
         private TextBox txtFactura;
         private Label label2;
         private Label label1;
-        private Button btnRegistrarCliente;
         private TextBox textBox1;
         private ComboBox comboBox1;
         private Button btnBuscarCliente;
@@ -692,12 +634,6 @@
         private Label label4;
         private GroupBox groupBox2;
         private DataGridView dataGridView1;
-        private DataGridViewTextBoxColumn Column1;
-        private DataGridViewTextBoxColumn Column2;
-        private DataGridViewTextBoxColumn Column3;
-        private DataGridViewTextBoxColumn Column4;
-        private DataGridViewTextBoxColumn Column5;
-        private DataGridViewTextBoxColumn Column6;
         private Panel panel1;
         private Panel panel2;
         private Panel panel3;
@@ -706,9 +642,6 @@
         private Label label5;
         private Label label13;
         private Label label12;
-        private Panel panel6;
-        private Label label11;
-        private Label label10;
         private Panel panel5;
         private Label label9;
         private Label label8;
@@ -733,9 +666,15 @@
         private Label label14;
         private ComboBox cbVencimiento;
         private TextBox txtTotal;
-        private Button btnValidarCredito;
         private Button btnRegistrarVenta;
         private TextBox txtiva;
         private Button btnInicio;
+        private DataGridViewTextBoxColumn Column1;
+        private DataGridViewTextBoxColumn Column2;
+        private DataGridViewTextBoxColumn Column3;
+        private DataGridViewTextBoxColumn Column4;
+        private DataGridViewTextBoxColumn Column5;
+        private DataGridViewTextBoxColumn Column6;
+        private DataGridViewTextBoxColumn Column7;
     }
 }

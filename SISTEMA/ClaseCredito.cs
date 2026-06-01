@@ -13,5 +13,21 @@ namespace SISTEMA
         private string _fecha_vencimiento;
         private double _monto;
         private int _id_venta;
+
+        internal ClaseVenta ClaseVenta
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
+        internal ClaseVenta ClaseVenta1
+        {
+            get => default;
+            set
+            {
+            }
+        }
     }
 }

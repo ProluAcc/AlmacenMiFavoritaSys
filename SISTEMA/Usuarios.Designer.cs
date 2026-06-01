@@ -29,6 +29,13 @@
         private void InitializeComponent()
         {
             dataGridView1 = new DataGridView();
+            Column1 = new DataGridViewTextBoxColumn();
+            Column2 = new DataGridViewTextBoxColumn();
+            Column4 = new DataGridViewTextBoxColumn();
+            Column5 = new DataGridViewTextBoxColumn();
+            Column6 = new DataGridViewTextBoxColumn();
+            Column7 = new DataGridViewTextBoxColumn();
+            Column8 = new DataGridViewTextBoxColumn();
             textBox7 = new TextBox();
             comboBox3 = new ComboBox();
             label10 = new Label();
@@ -54,13 +61,8 @@
             textBox1 = new TextBox();
             label11 = new Label();
             textBox8 = new TextBox();
-            Column1 = new DataGridViewTextBoxColumn();
-            Column2 = new DataGridViewTextBoxColumn();
-            Column4 = new DataGridViewTextBoxColumn();
-            Column5 = new DataGridViewTextBoxColumn();
-            Column6 = new DataGridViewTextBoxColumn();
-            Column7 = new DataGridViewTextBoxColumn();
-            Column8 = new DataGridViewTextBoxColumn();
+            button4 = new Button();
+            button5 = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             panel2.SuspendLayout();
             SuspendLayout();
@@ -73,6 +75,41 @@
             dataGridView1.Name = "dataGridView1";
             dataGridView1.Size = new Size(844, 209);
             dataGridView1.TabIndex = 99;
+            // 
+            // Column1
+            // 
+            Column1.HeaderText = "Cédula ";
+            Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            Column2.HeaderText = "Nombre Completo ";
+            Column2.Name = "Column2";
+            // 
+            // Column4
+            // 
+            Column4.HeaderText = "Rol ";
+            Column4.Name = "Column4";
+            // 
+            // Column5
+            // 
+            Column5.HeaderText = "Correo Electronico ";
+            Column5.Name = "Column5";
+            // 
+            // Column6
+            // 
+            Column6.HeaderText = "Usuario ";
+            Column6.Name = "Column6";
+            // 
+            // Column7
+            // 
+            Column7.HeaderText = "Estado ";
+            Column7.Name = "Column7";
+            // 
+            // Column8
+            // 
+            Column8.HeaderText = "Editar ";
+            Column8.Name = "Column8";
             // 
             // textBox7
             // 
@@ -125,11 +162,11 @@
             button2.BackColor = Color.White;
             button2.Font = new Font("Segoe UI Black", 11F, FontStyle.Bold);
             button2.ForeColor = Color.FromArgb(69, 69, 210);
-            button2.Location = new Point(379, 171);
+            button2.Location = new Point(400, 171);
             button2.Name = "button2";
             button2.Size = new Size(126, 36);
             button2.TabIndex = 93;
-            button2.Text = "❌Cancelar ";
+            button2.Text = "❌CANCELAR";
             button2.UseVisualStyleBackColor = false;
             // 
             // button1
@@ -137,11 +174,11 @@
             button1.BackColor = Color.FromArgb(69, 69, 210);
             button1.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
             button1.ForeColor = Color.WhiteSmoke;
-            button1.Location = new Point(249, 171);
+            button1.Location = new Point(675, 171);
             button1.Name = "button1";
             button1.Size = new Size(118, 36);
             button1.TabIndex = 90;
-            button1.Text = "💾Guardar";
+            button1.Text = "💾GUARDAR";
             button1.UseVisualStyleBackColor = false;
             // 
             // comboBox1
@@ -279,7 +316,7 @@
             button3.Name = "button3";
             button3.Size = new Size(118, 36);
             button3.TabIndex = 102;
-            button3.Text = "🔍 Buscar";
+            button3.Text = "🔍 BUSCAR";
             button3.UseVisualStyleBackColor = false;
             // 
             // label2
@@ -318,47 +355,38 @@
             textBox8.Size = new Size(141, 27);
             textBox8.TabIndex = 105;
             // 
-            // Column1
+            // button4
             // 
-            Column1.HeaderText = "Cédula ";
-            Column1.Name = "Column1";
+            button4.BackColor = Color.FromArgb(69, 69, 210);
+            button4.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            button4.ForeColor = Color.WhiteSmoke;
+            button4.Location = new Point(257, 171);
+            button4.Name = "button4";
+            button4.Size = new Size(118, 36);
+            button4.TabIndex = 107;
+            button4.Text = "⬇️INGRESAR";
+            button4.UseVisualStyleBackColor = false;
             // 
-            // Column2
+            // button5
             // 
-            Column2.HeaderText = "Nombre Completo ";
-            Column2.Name = "Column2";
-            // 
-            // Column4
-            // 
-            Column4.HeaderText = "Rol ";
-            Column4.Name = "Column4";
-            // 
-            // Column5
-            // 
-            Column5.HeaderText = "Correo Electronico ";
-            Column5.Name = "Column5";
-            // 
-            // Column6
-            // 
-            Column6.HeaderText = "Usuario ";
-            Column6.Name = "Column6";
-            // 
-            // Column7
-            // 
-            Column7.HeaderText = "Estado ";
-            Column7.Name = "Column7";
-            // 
-            // Column8
-            // 
-            Column8.HeaderText = "Editar ";
-            Column8.Name = "Column8";
+            button5.BackColor = Color.FromArgb(69, 69, 210);
+            button5.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            button5.ForeColor = Color.White;
+            button5.Location = new Point(549, 172);
+            button5.Name = "button5";
+            button5.Size = new Size(105, 35);
+            button5.TabIndex = 117;
+            button5.Text = "✏️EDITAR";
+            button5.UseVisualStyleBackColor = false;
             // 
             // Usuarios
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(255, 223, 96);
+            BackColor = SystemColors.ControlLight;
             ClientSize = new Size(975, 527);
+            Controls.Add(button5);
+            Controls.Add(button4);
             Controls.Add(label11);
             Controls.Add(textBox8);
             Controls.Add(label2);
@@ -428,5 +456,7 @@
         private DataGridViewTextBoxColumn Column6;
         private DataGridViewTextBoxColumn Column7;
         private DataGridViewTextBoxColumn Column8;
+        private Button button4;
+        private Button button5;
     }
 }

@@ -30,6 +30,11 @@
         {
             button8 = new Button();
             dataGridView1 = new DataGridView();
+            Column1 = new DataGridViewTextBoxColumn();
+            Column2 = new DataGridViewTextBoxColumn();
+            Column3 = new DataGridViewTextBoxColumn();
+            Column6 = new DataGridViewTextBoxColumn();
+            Column4 = new DataGridViewTextBoxColumn();
             txtBuscar = new TextBox();
             cbBuscar = new ComboBox();
             label7 = new Label();
@@ -48,11 +53,8 @@
             textBox1 = new TextBox();
             label1 = new Label();
             button1 = new Button();
-            Column1 = new DataGridViewTextBoxColumn();
-            Column2 = new DataGridViewTextBoxColumn();
-            Column3 = new DataGridViewTextBoxColumn();
-            Column6 = new DataGridViewTextBoxColumn();
-            Column4 = new DataGridViewTextBoxColumn();
+            button2 = new Button();
+            button5 = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -78,6 +80,39 @@
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.Size = new Size(814, 289);
             dataGridView1.TabIndex = 80;
+            // 
+            // Column1
+            // 
+            Column1.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            Column1.HeaderText = "Nombre de Cliente";
+            Column1.MinimumWidth = 6;
+            Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            Column2.HeaderText = "Teléfono";
+            Column2.MinimumWidth = 6;
+            Column2.Name = "Column2";
+            Column2.Width = 125;
+            // 
+            // Column3
+            // 
+            Column3.HeaderText = "Dirección";
+            Column3.MinimumWidth = 6;
+            Column3.Name = "Column3";
+            Column3.Width = 125;
+            // 
+            // Column6
+            // 
+            Column6.HeaderText = "Correo";
+            Column6.Name = "Column6";
+            // 
+            // Column4
+            // 
+            Column4.HeaderText = "Estado";
+            Column4.MinimumWidth = 6;
+            Column4.Name = "Column4";
+            Column4.Width = 125;
             // 
             // txtBuscar
             // 
@@ -113,11 +148,11 @@
             btnCancelar.BackColor = SystemColors.ControlLight;
             btnCancelar.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
             btnCancelar.ForeColor = Color.FromArgb(69, 69, 210);
-            btnCancelar.Location = new Point(828, 176);
+            btnCancelar.Location = new Point(676, 180);
             btnCancelar.Name = "btnCancelar";
-            btnCancelar.Size = new Size(123, 42);
+            btnCancelar.Size = new Size(124, 34);
             btnCancelar.TabIndex = 76;
-            btnCancelar.Text = "🚫Cancelar";
+            btnCancelar.Text = "🚫CANCELAR";
             btnCancelar.UseVisualStyleBackColor = false;
             // 
             // btnGuardar
@@ -125,11 +160,11 @@
             btnGuardar.BackColor = Color.FromArgb(69, 69, 210);
             btnGuardar.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
             btnGuardar.ForeColor = Color.White;
-            btnGuardar.Location = new Point(690, 177);
+            btnGuardar.Location = new Point(840, 267);
             btnGuardar.Name = "btnGuardar";
-            btnGuardar.Size = new Size(123, 42);
+            btnGuardar.Size = new Size(123, 39);
             btnGuardar.TabIndex = 75;
-            btnGuardar.Text = "💾 Guardar";
+            btnGuardar.Text = "💾 GUARDAR";
             btnGuardar.UseVisualStyleBackColor = false;
             // 
             // cbEstado
@@ -253,55 +288,47 @@
             // 
             // button1
             // 
-            button1.BackColor = Color.FromArgb(69, 69, 210);
             button1.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            button1.ForeColor = Color.White;
-            button1.Location = new Point(387, 175);
+            button1.ForeColor = Color.FromArgb(69, 69, 210);
+            button1.Location = new Point(387, 181);
             button1.Name = "button1";
-            button1.Size = new Size(123, 42);
+            button1.Size = new Size(113, 33);
             button1.TabIndex = 87;
-            button1.Text = "🔍Buscar";
+            button1.Text = "🔍BUSCAR";
             button1.UseVisualStyleBackColor = false;
             // 
-            // Column1
+            // button2
             // 
-            Column1.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            Column1.HeaderText = "Nombre de Cliente";
-            Column1.MinimumWidth = 6;
-            Column1.Name = "Column1";
+            button2.BackColor = Color.FromArgb(69, 69, 210);
+            button2.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            button2.ForeColor = Color.White;
+            button2.Location = new Point(558, 180);
+            button2.Name = "button2";
+            button2.Size = new Size(112, 34);
+            button2.TabIndex = 88;
+            button2.Text = "⬇️INGRESAR";
+            button2.UseVisualStyleBackColor = false;
             // 
-            // Column2
+            // button5
             // 
-            Column2.HeaderText = "Teléfono";
-            Column2.MinimumWidth = 6;
-            Column2.Name = "Column2";
-            Column2.Width = 125;
-            // 
-            // Column3
-            // 
-            Column3.HeaderText = "Dirección";
-            Column3.MinimumWidth = 6;
-            Column3.Name = "Column3";
-            Column3.Width = 125;
-            // 
-            // Column6
-            // 
-            Column6.HeaderText = "Correo";
-            Column6.Name = "Column6";
-            // 
-            // Column4
-            // 
-            Column4.HeaderText = "Estado";
-            Column4.MinimumWidth = 6;
-            Column4.Name = "Column4";
-            Column4.Width = 125;
+            button5.BackColor = Color.FromArgb(69, 69, 210);
+            button5.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            button5.ForeColor = Color.White;
+            button5.Location = new Point(849, 226);
+            button5.Name = "button5";
+            button5.Size = new Size(105, 35);
+            button5.TabIndex = 117;
+            button5.Text = "✏️EDITAR";
+            button5.UseVisualStyleBackColor = false;
             // 
             // Clientes
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(255, 223, 96);
+            BackColor = SystemColors.ControlLight;
             ClientSize = new Size(975, 527);
+            Controls.Add(button5);
+            Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(textBox1);
             Controls.Add(label1);
@@ -357,5 +384,7 @@
         private DataGridViewTextBoxColumn Column3;
         private DataGridViewTextBoxColumn Column6;
         private DataGridViewTextBoxColumn Column4;
+        private Button button2;
+        private Button button5;
     }
 }

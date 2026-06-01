@@ -278,13 +278,13 @@
             // 
             // panelContenedor
             // 
-            panelContenedor.BackColor = Color.FromArgb(255, 223, 96);
+            panelContenedor.BackColor = SystemColors.ControlLight;
             panelContenedor.BorderStyle = BorderStyle.FixedSingle;
             panelContenedor.Controls.Add(label2);
             panelContenedor.Controls.Add(label1);
             panelContenedor.Controls.Add(pictureBox1);
             panelContenedor.Controls.Add(button1);
-            panelContenedor.Location = new Point(167, 1);
+            panelContenedor.Location = new Point(167, 2);
             panelContenedor.Name = "panelContenedor";
             panelContenedor.Size = new Size(975, 727);
             panelContenedor.TabIndex = 83;
@@ -338,7 +338,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.Gold;
+            BackColor = SystemColors.ControlLight;
             ClientSize = new Size(1142, 688);
             Controls.Add(panelContenedor);
             Controls.Add(panel1);

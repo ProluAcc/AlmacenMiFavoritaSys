@@ -29,42 +29,16 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
+            textBox4 = new TextBox();
+            comboBox2 = new ComboBox();
+            label2 = new Label();
+            label3 = new Label();
+            btnInicio = new Button();
             button1 = new Button();
             textBox1 = new TextBox();
             label1 = new Label();
             panel2 = new Panel();
             dataGridView1 = new DataGridView();
-            panel8 = new Panel();
-            textBox8 = new TextBox();
-            textBox7 = new TextBox();
-            textBox5 = new TextBox();
-            label10 = new Label();
-            label9 = new Label();
-            label8 = new Label();
-            panel11 = new Panel();
-            btnInicio = new Button();
-            button6 = new Button();
-            button5 = new Button();
-            button4 = new Button();
-            label3 = new Label();
-            comboBox2 = new ComboBox();
-            panel3 = new Panel();
-            button3 = new Button();
-            label5 = new Label();
-            textBox2 = new TextBox();
-            label6 = new Label();
-            textBox3 = new TextBox();
-            textBox4 = new TextBox();
-            label2 = new Label();
-            textBox6 = new TextBox();
-            label4 = new Label();
-            label7 = new Label();
-            comboBox1 = new ComboBox();
-            textBox9 = new TextBox();
-            label11 = new Label();
-            textBox10 = new TextBox();
-            label12 = new Label();
-            Column1 = new DataGridViewTextBoxColumn();
             Column2 = new DataGridViewTextBoxColumn();
             Column3 = new DataGridViewTextBoxColumn();
             Column4 = new DataGridViewTextBoxColumn();
@@ -74,6 +48,31 @@
             Column8 = new DataGridViewTextBoxColumn();
             Column9 = new DataGridViewTextBoxColumn();
             Column10 = new DataGridViewTextBoxColumn();
+            panel8 = new Panel();
+            textBox8 = new TextBox();
+            textBox7 = new TextBox();
+            textBox5 = new TextBox();
+            label10 = new Label();
+            label9 = new Label();
+            label8 = new Label();
+            panel11 = new Panel();
+            button6 = new Button();
+            button4 = new Button();
+            button5 = new Button();
+            panel3 = new Panel();
+            button3 = new Button();
+            textBox10 = new TextBox();
+            label12 = new Label();
+            textBox9 = new TextBox();
+            label11 = new Label();
+            comboBox1 = new ComboBox();
+            label7 = new Label();
+            textBox6 = new TextBox();
+            label4 = new Label();
+            textBox3 = new TextBox();
+            label5 = new Label();
+            textBox2 = new TextBox();
+            label6 = new Label();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
@@ -98,6 +97,58 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(974, 50);
             panel1.TabIndex = 0;
+            // 
+            // textBox4
+            // 
+            textBox4.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            textBox4.Location = new Point(274, 12);
+            textBox4.Name = "textBox4";
+            textBox4.Size = new Size(139, 27);
+            textBox4.TabIndex = 7;
+            // 
+            // comboBox2
+            // 
+            comboBox2.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            comboBox2.FormattingEnabled = true;
+            comboBox2.Location = new Point(512, 11);
+            comboBox2.Name = "comboBox2";
+            comboBox2.Size = new Size(200, 28);
+            comboBox2.TabIndex = 6;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            label2.ForeColor = Color.White;
+            label2.Location = new Point(201, 15);
+            label2.Name = "label2";
+            label2.Size = new Size(67, 20);
+            label2.TabIndex = 6;
+            label2.Text = "Usuario:";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            label3.ForeColor = Color.White;
+            label3.Location = new Point(422, 15);
+            label3.Name = "label3";
+            label3.Size = new Size(86, 20);
+            label3.TabIndex = 5;
+            label3.Text = "Proveedor:";
+            // 
+            // btnInicio
+            // 
+            btnInicio.BackColor = SystemColors.ControlLight;
+            btnInicio.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            btnInicio.ForeColor = Color.FromArgb(69, 69, 210);
+            btnInicio.Location = new Point(876, 6);
+            btnInicio.Name = "btnInicio";
+            btnInicio.Size = new Size(86, 34);
+            btnInicio.TabIndex = 3;
+            btnInicio.Text = "Inicio";
+            btnInicio.UseVisualStyleBackColor = false;
+            btnInicio.Click += btnInicio_Click;
             // 
             // button1
             // 
@@ -144,13 +195,58 @@
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3, Column4, Column5, Column6, Column7, Column8, Column9, Column10 });
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Column2, Column3, Column4, Column5, Column6, Column7, Column8, Column9, Column10 });
             dataGridView1.Location = new Point(0, 14);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 62;
             dataGridView1.Size = new Size(964, 164);
             dataGridView1.TabIndex = 0;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
+            // 
+            // Column2
+            // 
+            Column2.HeaderText = "No. Factura";
+            Column2.Name = "Column2";
+            // 
+            // Column3
+            // 
+            Column3.HeaderText = "Fecha de Compra";
+            Column3.Name = "Column3";
+            // 
+            // Column4
+            // 
+            Column4.HeaderText = "Fecha de Entrega";
+            Column4.Name = "Column4";
+            // 
+            // Column5
+            // 
+            Column5.HeaderText = "Producto";
+            Column5.Name = "Column5";
+            // 
+            // Column6
+            // 
+            Column6.HeaderText = "Cantidad";
+            Column6.Name = "Column6";
+            // 
+            // Column7
+            // 
+            Column7.HeaderText = "Precio de Compra";
+            Column7.Name = "Column7";
+            // 
+            // Column8
+            // 
+            Column8.HeaderText = "Subtotal";
+            Column8.Name = "Column8";
+            // 
+            // Column9
+            // 
+            Column9.HeaderText = "IVA";
+            Column9.Name = "Column9";
+            // 
+            // Column10
+            // 
+            Column10.HeaderText = "Total";
+            Column10.Name = "Column10";
             // 
             // panel8
             // 
@@ -239,19 +335,6 @@
             panel11.TabIndex = 6;
             panel11.Paint += panel11_Paint;
             // 
-            // btnInicio
-            // 
-            btnInicio.BackColor = SystemColors.ControlLight;
-            btnInicio.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            btnInicio.ForeColor = Color.FromArgb(69, 69, 210);
-            btnInicio.Location = new Point(876, 6);
-            btnInicio.Name = "btnInicio";
-            btnInicio.Size = new Size(86, 34);
-            btnInicio.TabIndex = 3;
-            btnInicio.Text = "Inicio";
-            btnInicio.UseVisualStyleBackColor = false;
-            btnInicio.Click += btnInicio_Click;
-            // 
             // button6
             // 
             button6.BackColor = SystemColors.ControlLight;
@@ -263,18 +346,6 @@
             button6.TabIndex = 2;
             button6.Text = "Imprimir Comprobante";
             button6.UseVisualStyleBackColor = false;
-            // 
-            // button5
-            // 
-            button5.BackColor = SystemColors.ControlLight;
-            button5.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            button5.ForeColor = Color.FromArgb(69, 69, 210);
-            button5.Location = new Point(765, 93);
-            button5.Name = "button5";
-            button5.Size = new Size(97, 34);
-            button5.TabIndex = 1;
-            button5.Text = "Cancelar";
-            button5.UseVisualStyleBackColor = false;
             // 
             // button4
             // 
@@ -288,25 +359,17 @@
             button4.Text = "Guardar compra";
             button4.UseVisualStyleBackColor = false;
             // 
-            // label3
+            // button5
             // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            label3.ForeColor = Color.White;
-            label3.Location = new Point(422, 15);
-            label3.Name = "label3";
-            label3.Size = new Size(86, 20);
-            label3.TabIndex = 5;
-            label3.Text = "Proveedor:";
-            // 
-            // comboBox2
-            // 
-            comboBox2.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(512, 11);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(200, 28);
-            comboBox2.TabIndex = 6;
+            button5.BackColor = SystemColors.ControlLight;
+            button5.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            button5.ForeColor = Color.FromArgb(69, 69, 210);
+            button5.Location = new Point(765, 93);
+            button5.Name = "button5";
+            button5.Size = new Size(97, 34);
+            button5.TabIndex = 1;
+            button5.Text = "Cancelar";
+            button5.UseVisualStyleBackColor = false;
             // 
             // panel3
             // 
@@ -343,6 +406,91 @@
             button3.Text = "Ingresar";
             button3.UseVisualStyleBackColor = false;
             // 
+            // textBox10
+            // 
+            textBox10.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            textBox10.Location = new Point(721, 51);
+            textBox10.Name = "textBox10";
+            textBox10.Size = new Size(139, 27);
+            textBox10.TabIndex = 12;
+            // 
+            // label12
+            // 
+            label12.AutoSize = true;
+            label12.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            label12.ForeColor = Color.White;
+            label12.Location = new Point(581, 54);
+            label12.Name = "label12";
+            label12.Size = new Size(134, 20);
+            label12.TabIndex = 11;
+            label12.Text = "Precio de compra:";
+            // 
+            // textBox9
+            // 
+            textBox9.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            textBox9.Location = new Point(422, 52);
+            textBox9.Name = "textBox9";
+            textBox9.Size = new Size(139, 27);
+            textBox9.TabIndex = 10;
+            // 
+            // label11
+            // 
+            label11.AutoSize = true;
+            label11.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            label11.ForeColor = Color.White;
+            label11.Location = new Point(344, 54);
+            label11.Name = "label11";
+            label11.Size = new Size(75, 20);
+            label11.TabIndex = 9;
+            label11.Text = "Cantidad:";
+            // 
+            // comboBox1
+            // 
+            comboBox1.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Location = new Point(138, 49);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(145, 28);
+            comboBox1.TabIndex = 8;
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            label7.ForeColor = Color.White;
+            label7.Location = new Point(54, 52);
+            label7.Name = "label7";
+            label7.Size = new Size(77, 20);
+            label7.TabIndex = 8;
+            label7.Text = "Producto:";
+            // 
+            // textBox6
+            // 
+            textBox6.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            textBox6.Location = new Point(721, 11);
+            textBox6.Name = "textBox6";
+            textBox6.Size = new Size(139, 27);
+            textBox6.TabIndex = 7;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            label4.ForeColor = Color.White;
+            label4.Location = new Point(567, 15);
+            label4.Name = "label4";
+            label4.Size = new Size(148, 20);
+            label4.TabIndex = 6;
+            label4.Text = "Número de Factura:";
+            // 
+            // textBox3
+            // 
+            textBox3.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            textBox3.Location = new Point(422, 11);
+            textBox3.Name = "textBox3";
+            textBox3.Size = new Size(139, 27);
+            textBox3.TabIndex = 5;
+            // 
             // label5
             // 
             label5.AutoSize = true;
@@ -373,165 +521,11 @@
             label6.TabIndex = 0;
             label6.Text = "Fecha de Compra:";
             // 
-            // textBox3
-            // 
-            textBox3.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            textBox3.Location = new Point(422, 11);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(139, 27);
-            textBox3.TabIndex = 5;
-            // 
-            // textBox4
-            // 
-            textBox4.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            textBox4.Location = new Point(274, 12);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(139, 27);
-            textBox4.TabIndex = 7;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            label2.ForeColor = Color.White;
-            label2.Location = new Point(201, 15);
-            label2.Name = "label2";
-            label2.Size = new Size(67, 20);
-            label2.TabIndex = 6;
-            label2.Text = "Usuario:";
-            // 
-            // textBox6
-            // 
-            textBox6.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            textBox6.Location = new Point(721, 11);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(139, 27);
-            textBox6.TabIndex = 7;
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            label4.ForeColor = Color.White;
-            label4.Location = new Point(567, 15);
-            label4.Name = "label4";
-            label4.Size = new Size(148, 20);
-            label4.TabIndex = 6;
-            label4.Text = "Número de Factura:";
-            // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            label7.ForeColor = Color.White;
-            label7.Location = new Point(54, 52);
-            label7.Name = "label7";
-            label7.Size = new Size(77, 20);
-            label7.TabIndex = 8;
-            label7.Text = "Producto:";
-            // 
-            // comboBox1
-            // 
-            comboBox1.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(138, 49);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(145, 28);
-            comboBox1.TabIndex = 8;
-            // 
-            // textBox9
-            // 
-            textBox9.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            textBox9.Location = new Point(422, 52);
-            textBox9.Name = "textBox9";
-            textBox9.Size = new Size(139, 27);
-            textBox9.TabIndex = 10;
-            // 
-            // label11
-            // 
-            label11.AutoSize = true;
-            label11.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            label11.ForeColor = Color.White;
-            label11.Location = new Point(344, 54);
-            label11.Name = "label11";
-            label11.Size = new Size(75, 20);
-            label11.TabIndex = 9;
-            label11.Text = "Cantidad:";
-            // 
-            // textBox10
-            // 
-            textBox10.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            textBox10.Location = new Point(721, 51);
-            textBox10.Name = "textBox10";
-            textBox10.Size = new Size(139, 27);
-            textBox10.TabIndex = 12;
-            // 
-            // label12
-            // 
-            label12.AutoSize = true;
-            label12.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            label12.ForeColor = Color.White;
-            label12.Location = new Point(581, 54);
-            label12.Name = "label12";
-            label12.Size = new Size(134, 20);
-            label12.TabIndex = 11;
-            label12.Text = "Precio de compra:";
-            // 
-            // Column1
-            // 
-            Column1.HeaderText = "No. Compra";
-            Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            Column2.HeaderText = "No. Factura";
-            Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            Column3.HeaderText = "Fecha de Compra";
-            Column3.Name = "Column3";
-            // 
-            // Column4
-            // 
-            Column4.HeaderText = "Fecha de Entrega";
-            Column4.Name = "Column4";
-            // 
-            // Column5
-            // 
-            Column5.HeaderText = "Producto";
-            Column5.Name = "Column5";
-            // 
-            // Column6
-            // 
-            Column6.HeaderText = "Cantidad";
-            Column6.Name = "Column6";
-            // 
-            // Column7
-            // 
-            Column7.HeaderText = "Precio de Compra";
-            Column7.Name = "Column7";
-            // 
-            // Column8
-            // 
-            Column8.HeaderText = "Subtotal";
-            Column8.Name = "Column8";
-            // 
-            // Column9
-            // 
-            Column9.HeaderText = "IVA";
-            Column9.Name = "Column9";
-            // 
-            // Column10
-            // 
-            Column10.HeaderText = "Total";
-            Column10.Name = "Column10";
-            // 
             // Compra
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(255, 223, 96);
+            BackColor = SystemColors.ControlLight;
             ClientSize = new Size(975, 527);
             Controls.Add(panel3);
             Controls.Add(panel11);
@@ -592,7 +586,6 @@
         private Label label11;
         private ComboBox comboBox1;
         private Label label7;
-        private DataGridViewTextBoxColumn Column1;
         private DataGridViewTextBoxColumn Column2;
         private DataGridViewTextBoxColumn Column3;
         private DataGridViewTextBoxColumn Column4;

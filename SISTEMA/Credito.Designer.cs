@@ -90,7 +90,7 @@
             // 
             // groupBox1
             // 
-            groupBox1.BackColor = Color.FromArgb(69, 69, 210);
+            groupBox1.BackColor = SystemColors.Control;
             groupBox1.Controls.Add(btnBuscarCliente);
             groupBox1.Controls.Add(btnInicio);
             groupBox1.Controls.Add(cbCliente);
@@ -143,7 +143,7 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.ForeColor = Color.White;
+            label4.ForeColor = Color.Black;
             label4.Location = new Point(406, 22);
             label4.Name = "label4";
             label4.Size = new Size(61, 20);
@@ -152,6 +152,7 @@
             // 
             // txtFecha
             // 
+            txtFecha.ForeColor = Color.Black;
             txtFecha.Location = new Point(281, 20);
             txtFecha.Name = "txtFecha";
             txtFecha.Size = new Size(121, 27);
@@ -160,7 +161,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.ForeColor = Color.White;
+            label3.ForeColor = Color.Black;
             label3.Location = new Point(225, 23);
             label3.Name = "label3";
             label3.Size = new Size(53, 20);
@@ -169,6 +170,7 @@
             // 
             // txtFactura
             // 
+            txtFactura.ForeColor = Color.Black;
             txtFactura.Location = new Point(103, 19);
             txtFactura.Name = "txtFactura";
             txtFactura.Size = new Size(111, 27);
@@ -177,7 +179,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.ForeColor = Color.White;
+            label2.ForeColor = Color.Black;
             label2.Location = new Point(6, 22);
             label2.Name = "label2";
             label2.Size = new Size(94, 20);
@@ -186,7 +188,7 @@
             // 
             // groupBox2
             // 
-            groupBox2.BackColor = Color.FromArgb(200, 56, 56);
+            groupBox2.BackColor = SystemColors.Control;
             groupBox2.Controls.Add(txtiva);
             groupBox2.Controls.Add(txtTotal);
             groupBox2.Controls.Add(label18);
@@ -220,7 +222,7 @@
             // label18
             // 
             label18.AutoSize = true;
-            label18.ForeColor = Color.White;
+            label18.ForeColor = Color.Black;
             label18.Location = new Point(463, 299);
             label18.Name = "label18";
             label18.Size = new Size(48, 20);
@@ -231,6 +233,7 @@
             // 
             panel4.BackColor = Color.Black;
             panel4.BorderStyle = BorderStyle.FixedSingle;
+            panel4.ForeColor = Color.Black;
             panel4.Location = new Point(429, 289);
             panel4.Name = "panel4";
             panel4.Size = new Size(223, 1);
@@ -246,7 +249,7 @@
             // label16
             // 
             label16.AutoSize = true;
-            label16.ForeColor = Color.White;
+            label16.ForeColor = Color.Black;
             label16.Location = new Point(469, 261);
             label16.Name = "label16";
             label16.Size = new Size(38, 20);
@@ -256,7 +259,7 @@
             // label14
             // 
             label14.AutoSize = true;
-            label14.ForeColor = Color.White;
+            label14.ForeColor = Color.Black;
             label14.Location = new Point(440, 229);
             label14.Name = "label14";
             label14.Size = new Size(72, 20);
@@ -309,7 +312,7 @@
             // 
             // panel7
             // 
-            panel7.BackColor = SystemColors.ControlLight;
+            panel7.BackColor = SystemColors.Control;
             panel7.BorderStyle = BorderStyle.FixedSingle;
             panel7.Controls.Add(btnRegistrarVenta);
             panel7.Controls.Add(cbVencimiento);
@@ -326,7 +329,7 @@
             panel7.Controls.Add(panel11);
             panel7.Location = new Point(668, 208);
             panel7.Name = "panel7";
-            panel7.Size = new Size(295, 244);
+            panel7.Size = new Size(295, 250);
             panel7.TabIndex = 15;
             panel7.Paint += panel7_Paint;
             // 
@@ -335,9 +338,9 @@
             btnRegistrarVenta.BackColor = Color.FromArgb(69, 69, 210);
             btnRegistrarVenta.Font = new Font("Segoe UI Black", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnRegistrarVenta.ForeColor = Color.White;
-            btnRegistrarVenta.Location = new Point(46, 184);
+            btnRegistrarVenta.Location = new Point(48, 194);
             btnRegistrarVenta.Name = "btnRegistrarVenta";
-            btnRegistrarVenta.Size = new Size(206, 51);
+            btnRegistrarVenta.Size = new Size(216, 42);
             btnRegistrarVenta.TabIndex = 7;
             btnRegistrarVenta.Text = "Registrar Venta a Crédito";
             btnRegistrarVenta.UseVisualStyleBackColor = false;
@@ -469,7 +472,7 @@
             // 
             // panel1
             // 
-            panel1.BackColor = SystemColors.ControlLight;
+            panel1.BackColor = SystemColors.Control;
             panel1.BorderStyle = BorderStyle.FixedSingle;
             panel1.Controls.Add(label13);
             panel1.Controls.Add(label12);
@@ -593,7 +596,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = SystemColors.ControlLight;
+            BackColor = Color.Gainsboro;
             ClientSize = new Size(975, 527);
             Controls.Add(groupBox2);
             Controls.Add(groupBox1);

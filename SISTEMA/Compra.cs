@@ -38,5 +38,10 @@ namespace Registro_de_compra
         {
             Bienvenida obj = new Bienvenida(); obj.Show(); this.Hide();
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

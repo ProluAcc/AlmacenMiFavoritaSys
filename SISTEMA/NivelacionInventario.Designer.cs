@@ -66,7 +66,6 @@
             Column7 = new DataGridViewTextBoxColumn();
             Column8 = new DataGridViewTextBoxColumn();
             panel2 = new Panel();
-            btnInicio = new Button();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             groupBox3.SuspendLayout();
@@ -78,16 +77,16 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI Black", 18F, FontStyle.Bold);
-            label1.ForeColor = Color.White;
+            label1.ForeColor = Color.Black;
             label1.Location = new Point(3, 6);
             label1.Name = "label1";
-            label1.Size = new Size(305, 32);
+            label1.Size = new Size(358, 32);
             label1.TabIndex = 0;
-            label1.Text = " Nivelacion de Inventario";
+            label1.Text = "NIVELACIÓN DE INVENTARIO";
             // 
             // groupBox1
             // 
-            groupBox1.BackColor = Color.FromArgb(200, 56, 56);
+            groupBox1.BackColor = SystemColors.Control;
             groupBox1.Controls.Add(textBox6);
             groupBox1.Controls.Add(label9);
             groupBox1.Controls.Add(textBox5);
@@ -101,7 +100,7 @@
             groupBox1.Controls.Add(button1);
             groupBox1.Controls.Add(textBox1);
             groupBox1.Controls.Add(label3);
-            groupBox1.ForeColor = Color.White;
+            groupBox1.ForeColor = Color.Black;
             groupBox1.Location = new Point(2, 57);
             groupBox1.Name = "groupBox1";
             groupBox1.Size = new Size(904, 69);
@@ -209,9 +208,9 @@
             // 
             // button1
             // 
-            button1.BackColor = Color.FromArgb(69, 69, 210);
+            button1.BackColor = SystemColors.ButtonFace;
             button1.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            button1.ForeColor = Color.White;
+            button1.ForeColor = Color.FromArgb(69, 69, 210);
             button1.Location = new Point(171, 34);
             button1.Name = "button1";
             button1.Size = new Size(41, 28);
@@ -242,7 +241,7 @@
             // 
             // groupBox2
             // 
-            groupBox2.BackColor = Color.FromArgb(69, 69, 210);
+            groupBox2.BackColor = SystemColors.Control;
             groupBox2.Controls.Add(button4);
             groupBox2.Controls.Add(button3);
             groupBox2.Controls.Add(button2);
@@ -254,7 +253,7 @@
             groupBox2.Controls.Add(label13);
             groupBox2.Controls.Add(label14);
             groupBox2.Controls.Add(label16);
-            groupBox2.ForeColor = Color.White;
+            groupBox2.ForeColor = Color.Black;
             groupBox2.Location = new Point(5, 131);
             groupBox2.Name = "groupBox2";
             groupBox2.Size = new Size(866, 175);
@@ -265,6 +264,7 @@
             // 
             // button4
             // 
+            button4.BackColor = SystemColors.ButtonFace;
             button4.Font = new Font("Segoe UI Black", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button4.ForeColor = Color.FromArgb(69, 69, 210);
             button4.Location = new Point(308, 129);
@@ -272,11 +272,11 @@
             button4.Size = new Size(144, 35);
             button4.TabIndex = 4;
             button4.Text = "Generar Reporte";
-            button4.UseVisualStyleBackColor = true;
+            button4.UseVisualStyleBackColor = false;
             // 
             // button3
             // 
-            button3.BackColor = SystemColors.ControlLight;
+            button3.BackColor = SystemColors.ButtonFace;
             button3.Font = new Font("Segoe UI Black", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button3.ForeColor = Color.FromArgb(69, 69, 210);
             button3.Location = new Point(178, 129);
@@ -288,7 +288,7 @@
             // 
             // button2
             // 
-            button2.BackColor = SystemColors.ControlLight;
+            button2.BackColor = SystemColors.ButtonFace;
             button2.Font = new Font("Segoe UI Black", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button2.ForeColor = Color.FromArgb(69, 69, 210);
             button2.Location = new Point(6, 129);
@@ -379,7 +379,7 @@
             // 
             // groupBox3
             // 
-            groupBox3.BackColor = Color.FromArgb(200, 56, 56);
+            groupBox3.BackColor = SystemColors.Control;
             groupBox3.Controls.Add(dataGridView1);
             groupBox3.Location = new Point(7, 312);
             groupBox3.Name = "groupBox3";
@@ -439,33 +439,19 @@
             // 
             // panel2
             // 
-            panel2.BackColor = Color.FromArgb(69, 69, 210);
+            panel2.BackColor = SystemColors.Control;
             panel2.BorderStyle = BorderStyle.FixedSingle;
-            panel2.Controls.Add(btnInicio);
             panel2.Controls.Add(label1);
             panel2.Location = new Point(2, 1);
             panel2.Name = "panel2";
             panel2.Size = new Size(972, 50);
             panel2.TabIndex = 5;
             // 
-            // btnInicio
-            // 
-            btnInicio.BackColor = SystemColors.ControlLight;
-            btnInicio.Font = new Font("Segoe UI Black", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnInicio.ForeColor = Color.FromArgb(69, 69, 210);
-            btnInicio.Location = new Point(887, 5);
-            btnInicio.Name = "btnInicio";
-            btnInicio.Size = new Size(76, 35);
-            btnInicio.TabIndex = 20;
-            btnInicio.Text = "Inicio";
-            btnInicio.UseVisualStyleBackColor = false;
-            btnInicio.Click += btnInicio_Click;
-            // 
             // NivelacionInventario
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(255, 223, 96);
+            BackColor = Color.Gainsboro;
             ClientSize = new Size(975, 527);
             Controls.Add(panel2);
             Controls.Add(groupBox3);
@@ -526,6 +512,5 @@
         private DataGridViewTextBoxColumn Column7;
         private DataGridViewTextBoxColumn Column8;
         private Panel panel2;
-        private Button btnInicio;
     }
 }

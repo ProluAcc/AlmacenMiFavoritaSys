@@ -34,7 +34,7 @@ namespace SISTEMA
                 {
                     MessageBox.Show($"¡Bienvenido al sistema {cu.username}!", "Bienvenido(a)", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     Bienvenida obj = new Bienvenida(); obj.Show(); this.Hide();
-                }                                                      
+                }
             }
             catch (Exception x)
             {
@@ -46,6 +46,11 @@ namespace SISTEMA
         private void btnRecuperar_Click(object sender, EventArgs e)
         {
             Recuperacion obj = new Recuperacion(); obj.Show(); this.Hide();
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

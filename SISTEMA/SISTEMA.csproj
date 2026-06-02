@@ -10,6 +10,7 @@
 
   <ItemGroup>
     <None Remove="Clase_detalle_venta_producto.cs~RF390098d5.TMP" />
+    <None Remove="Inventario.cs~RF430e1601.TMP" />
   </ItemGroup>
 
 </Project>

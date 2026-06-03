@@ -31,6 +31,14 @@
             textBox4 = new TextBox();
             textBox3 = new TextBox();
             dataGridView1 = new DataGridView();
+            Column1 = new DataGridViewTextBoxColumn();
+            Column2 = new DataGridViewTextBoxColumn();
+            Column3 = new DataGridViewTextBoxColumn();
+            Column4 = new DataGridViewTextBoxColumn();
+            Column5 = new DataGridViewTextBoxColumn();
+            Column6 = new DataGridViewTextBoxColumn();
+            Column7 = new DataGridViewTextBoxColumn();
+            Column8 = new DataGridViewTextBoxColumn();
             panel2 = new Panel();
             label7 = new Label();
             groupBox1 = new GroupBox();
@@ -44,14 +52,6 @@
             comboBox1 = new ComboBox();
             textBox2 = new TextBox();
             textBox1 = new TextBox();
-            Column1 = new DataGridViewTextBoxColumn();
-            Column2 = new DataGridViewTextBoxColumn();
-            Column3 = new DataGridViewTextBoxColumn();
-            Column4 = new DataGridViewTextBoxColumn();
-            Column5 = new DataGridViewTextBoxColumn();
-            Column6 = new DataGridViewTextBoxColumn();
-            Column7 = new DataGridViewTextBoxColumn();
-            Column8 = new DataGridViewTextBoxColumn();
             label3 = new Label();
             label4 = new Label();
             button4 = new Button();
@@ -86,6 +86,62 @@
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.Size = new Size(972, 260);
             dataGridView1.TabIndex = 29;
+            // 
+            // Column1
+            // 
+            Column1.HeaderText = "n° de compra";
+            Column1.MinimumWidth = 6;
+            Column1.Name = "Column1";
+            Column1.Width = 80;
+            // 
+            // Column2
+            // 
+            Column2.HeaderText = "Fecha";
+            Column2.MinimumWidth = 6;
+            Column2.Name = "Column2";
+            Column2.Width = 125;
+            // 
+            // Column3
+            // 
+            Column3.HeaderText = "Proveedor";
+            Column3.MinimumWidth = 6;
+            Column3.Name = "Column3";
+            Column3.Width = 125;
+            // 
+            // Column4
+            // 
+            Column4.HeaderText = "Producto";
+            Column4.MinimumWidth = 6;
+            Column4.Name = "Column4";
+            Column4.Width = 125;
+            // 
+            // Column5
+            // 
+            Column5.HeaderText = "Cantidad";
+            Column5.MinimumWidth = 6;
+            Column5.Name = "Column5";
+            Column5.Width = 125;
+            // 
+            // Column6
+            // 
+            Column6.HeaderText = "Precio unitario";
+            Column6.MinimumWidth = 6;
+            Column6.Name = "Column6";
+            Column6.Width = 110;
+            // 
+            // Column7
+            // 
+            Column7.HeaderText = "Subtotal";
+            Column7.MinimumWidth = 6;
+            Column7.Name = "Column7";
+            Column7.Width = 125;
+            // 
+            // Column8
+            // 
+            Column8.HeaderText = "Total";
+            Column8.MinimumWidth = 6;
+            Column8.Name = "Column8";
+            Column8.Width = 125;
             // 
             // panel2
             // 
@@ -233,62 +289,6 @@
             textBox1.Size = new Size(114, 23);
             textBox1.TabIndex = 44;
             // 
-            // Column1
-            // 
-            Column1.HeaderText = "n° de compra";
-            Column1.MinimumWidth = 6;
-            Column1.Name = "Column1";
-            Column1.Width = 80;
-            // 
-            // Column2
-            // 
-            Column2.HeaderText = "Fecha";
-            Column2.MinimumWidth = 6;
-            Column2.Name = "Column2";
-            Column2.Width = 125;
-            // 
-            // Column3
-            // 
-            Column3.HeaderText = "Proveedor";
-            Column3.MinimumWidth = 6;
-            Column3.Name = "Column3";
-            Column3.Width = 125;
-            // 
-            // Column4
-            // 
-            Column4.HeaderText = "Producto";
-            Column4.MinimumWidth = 6;
-            Column4.Name = "Column4";
-            Column4.Width = 125;
-            // 
-            // Column5
-            // 
-            Column5.HeaderText = "Cantidad";
-            Column5.MinimumWidth = 6;
-            Column5.Name = "Column5";
-            Column5.Width = 125;
-            // 
-            // Column6
-            // 
-            Column6.HeaderText = "Precio unitario";
-            Column6.MinimumWidth = 6;
-            Column6.Name = "Column6";
-            Column6.Width = 110;
-            // 
-            // Column7
-            // 
-            Column7.HeaderText = "Subtotal";
-            Column7.MinimumWidth = 6;
-            Column7.Name = "Column7";
-            Column7.Width = 125;
-            // 
-            // Column8
-            // 
-            Column8.HeaderText = "Total";
-            Column8.MinimumWidth = 6;
-            Column8.Name = "Column8";
-            Column8.Width = 125;
-            // 
             // label3
             // 
             label3.AutoSize = true;
@@ -314,9 +314,9 @@
             button4.BackColor = SystemColors.ButtonFace;
             button4.Font = new Font("Segoe UI Black", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button4.ForeColor = Color.FromArgb(69, 69, 210);
-            button4.Location = new Point(856, 577);
+            button4.Location = new Point(878, 576);
             button4.Name = "button4";
-            button4.Size = new Size(109, 33);
+            button4.Size = new Size(96, 33);
             button4.TabIndex = 57;
             button4.Text = "Cerrar";
             button4.UseVisualStyleBackColor = false;

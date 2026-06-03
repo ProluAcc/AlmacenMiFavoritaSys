@@ -19,7 +19,9 @@ namespace SISTEMA
     {
         public Bienvenida()
         {
+            ClaseUsuarios u = new ClaseUsuarios();
             InitializeComponent();
+            lblBienvenida.Text = $"¡Bienvenido, Usuario!";
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -111,6 +113,11 @@ namespace SISTEMA
         private void btnNivelacionInventario_Click(object sender, EventArgs e)
         {
             AbrirForm(new NivelacionInventario());
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            AbrirForm(new Bienvenida());    
         }
     }
 }

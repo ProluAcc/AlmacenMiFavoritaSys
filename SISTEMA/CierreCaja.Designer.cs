@@ -63,7 +63,6 @@
             panel3 = new Panel();
             label1 = new Label();
             panel9 = new Panel();
-            button2 = new Button();
             button1 = new Button();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
@@ -73,7 +72,7 @@
             // 
             // panel1
             // 
-            panel1.BackColor = Color.FromArgb(69, 69, 210);
+            panel1.BackColor = SystemColors.Control;
             panel1.BorderStyle = BorderStyle.FixedSingle;
             panel1.Controls.Add(label6);
             panel1.Location = new Point(1, 0);
@@ -85,7 +84,7 @@
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI Black", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label6.ForeColor = Color.White;
+            label6.ForeColor = Color.Black;
             label6.Location = new Point(9, 7);
             label6.Name = "label6";
             label6.Size = new Size(203, 32);
@@ -94,7 +93,7 @@
             // 
             // panel2
             // 
-            panel2.BackColor = SystemColors.ControlLight;
+            panel2.BackColor = SystemColors.Control;
             panel2.BorderStyle = BorderStyle.FixedSingle;
             panel2.Controls.Add(label24);
             panel2.Controls.Add(label23);
@@ -428,44 +427,31 @@
             // 
             // panel9
             // 
-            panel9.BackColor = Color.FromArgb(200, 56, 56);
+            panel9.BackColor = SystemColors.Control;
             panel9.BorderStyle = BorderStyle.FixedSingle;
-            panel9.Controls.Add(button2);
             panel9.Controls.Add(button1);
             panel9.Location = new Point(1, 447);
             panel9.Name = "panel9";
             panel9.Size = new Size(542, 55);
             panel9.TabIndex = 12;
             // 
-            // button2
-            // 
-            button2.BackColor = SystemColors.ControlLight;
-            button2.Font = new Font("Segoe UI Black", 11F, FontStyle.Bold);
-            button2.ForeColor = Color.FromArgb(69, 69, 210);
-            button2.Location = new Point(144, 7);
-            button2.Name = "button2";
-            button2.Size = new Size(90, 38);
-            button2.TabIndex = 14;
-            button2.Text = "Cancelar";
-            button2.UseVisualStyleBackColor = false;
-            // 
             // button1
             // 
-            button1.BackColor = SystemColors.ControlLight;
+            button1.BackColor = SystemColors.ButtonFace;
             button1.Font = new Font("Segoe UI Black", 11F, FontStyle.Bold);
             button1.ForeColor = Color.FromArgb(69, 69, 210);
-            button1.Location = new Point(271, 7);
+            button1.Location = new Point(208, 7);
             button1.Name = "button1";
-            button1.Size = new Size(90, 38);
+            button1.Size = new Size(116, 38);
             button1.TabIndex = 13;
-            button1.Text = "Guardar";
+            button1.Text = "💾GUARDAR";
             button1.UseVisualStyleBackColor = false;
             // 
             // CierreCaja
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = SystemColors.ControlLight;
+            BackColor = Color.Gainsboro;
             ClientSize = new Size(543, 503);
             Controls.Add(panel9);
             Controls.Add(panel2);
@@ -520,7 +506,6 @@
         private Panel panel7;
         private Panel panel8;
         private Panel panel9;
-        private Button button2;
         private Button button1;
     }
 }

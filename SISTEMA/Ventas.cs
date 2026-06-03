@@ -1,3 +1,4 @@
+using Pantalla_de_devolución;
 using SISTEMA;
 
 namespace Pantalla_ventas
@@ -72,6 +73,11 @@ namespace Pantalla_ventas
         private void groupBox3_Enter(object sender, EventArgs e)
         {
 
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            Devolución obj = new Devolución(); obj.ShowDialog();
         }
     }
 }

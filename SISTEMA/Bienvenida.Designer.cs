@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Bienvenida));
-            button5 = new Button();
             button4 = new Button();
             button3 = new Button();
             button2 = new Button();
@@ -38,9 +37,7 @@
             btnInventario = new Button();
             panel3 = new Panel();
             label5 = new Label();
-            label4 = new Label();
             button6 = new Button();
-            panel2 = new Panel();
             label3 = new Label();
             btnUsuario = new Button();
             btnClientes = new Button();
@@ -48,33 +45,23 @@
             btnProveedor = new Button();
             panelContenedor = new Panel();
             label2 = new Label();
-            label1 = new Label();
+            lblBienvenida = new Label();
             pictureBox1 = new PictureBox();
             button1 = new Button();
+            panel2 = new Panel();
+            pictureBox2 = new PictureBox();
             panel1.SuspendLayout();
             panelContenedor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
-            // 
-            // button5
-            // 
-            button5.BackColor = Color.FromArgb(69, 69, 210);
-            button5.Font = new Font("Segoe UI Black", 11F, FontStyle.Bold);
-            button5.ForeColor = Color.White;
-            button5.Location = new Point(3, 150);
-            button5.Name = "button5";
-            button5.Size = new Size(156, 43);
-            button5.TabIndex = 23;
-            button5.Text = "Devoluciones ->";
-            button5.UseVisualStyleBackColor = false;
-            button5.Click += button5_Click;
             // 
             // button4
             // 
-            button4.BackColor = Color.FromArgb(69, 69, 210);
+            button4.BackColor = SystemColors.ButtonFace;
             button4.Font = new Font("Segoe UI Black", 11F, FontStyle.Bold);
-            button4.ForeColor = Color.White;
-            button4.Location = new Point(3, 199);
+            button4.ForeColor = Color.FromArgb(69, 69, 210);
+            button4.Location = new Point(4, 382);
             button4.Name = "button4";
             button4.Size = new Size(158, 43);
             button4.TabIndex = 22;
@@ -84,10 +71,10 @@
             // 
             // button3
             // 
-            button3.BackColor = Color.FromArgb(69, 69, 210);
+            button3.BackColor = SystemColors.ButtonFace;
             button3.Font = new Font("Segoe UI Black", 11F, FontStyle.Bold);
-            button3.ForeColor = Color.White;
-            button3.Location = new Point(3, 101);
+            button3.ForeColor = Color.FromArgb(69, 69, 210);
+            button3.Location = new Point(4, 284);
             button3.Name = "button3";
             button3.Size = new Size(156, 43);
             button3.TabIndex = 21;
@@ -97,10 +84,10 @@
             // 
             // button2
             // 
-            button2.BackColor = Color.FromArgb(69, 69, 210);
+            button2.BackColor = SystemColors.ButtonFace;
             button2.Font = new Font("Segoe UI Black", 11F, FontStyle.Bold);
-            button2.ForeColor = Color.White;
-            button2.Location = new Point(3, 52);
+            button2.ForeColor = Color.FromArgb(69, 69, 210);
+            button2.Location = new Point(4, 333);
             button2.Name = "button2";
             button2.Size = new Size(156, 43);
             button2.TabIndex = 20;
@@ -110,17 +97,16 @@
             // 
             // panel1
             // 
-            panel1.BackColor = Color.FromArgb(200, 56, 56);
+            panel1.BackColor = SystemColors.Control;
             panel1.BorderStyle = BorderStyle.FixedSingle;
+            panel1.Controls.Add(pictureBox2);
+            panel1.Controls.Add(panel2);
             panel1.Controls.Add(btnNivelacionInventario);
             panel1.Controls.Add(btnInventario);
             panel1.Controls.Add(panel3);
             panel1.Controls.Add(label5);
-            panel1.Controls.Add(label4);
             panel1.Controls.Add(button6);
-            panel1.Controls.Add(panel2);
             panel1.Controls.Add(button4);
-            panel1.Controls.Add(button5);
             panel1.Controls.Add(label3);
             panel1.Controls.Add(btnUsuario);
             panel1.Controls.Add(button3);
@@ -136,9 +122,9 @@
             // 
             // btnNivelacionInventario
             // 
-            btnNivelacionInventario.BackColor = Color.FromArgb(69, 69, 210);
-            btnNivelacionInventario.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            btnNivelacionInventario.ForeColor = Color.White;
+            btnNivelacionInventario.BackColor = SystemColors.ButtonFace;
+            btnNivelacionInventario.Font = new Font("Segoe UI Black", 11F, FontStyle.Bold);
+            btnNivelacionInventario.ForeColor = Color.FromArgb(69, 69, 210);
             btnNivelacionInventario.Location = new Point(3, 609);
             btnNivelacionInventario.Name = "btnNivelacionInventario";
             btnNivelacionInventario.Size = new Size(156, 52);
@@ -149,9 +135,9 @@
             // 
             // btnInventario
             // 
-            btnInventario.BackColor = Color.FromArgb(69, 69, 210);
-            btnInventario.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            btnInventario.ForeColor = Color.White;
+            btnInventario.BackColor = SystemColors.ButtonFace;
+            btnInventario.Font = new Font("Segoe UI Black", 11F, FontStyle.Bold);
+            btnInventario.ForeColor = Color.FromArgb(69, 69, 210);
             btnInventario.Location = new Point(3, 564);
             btnInventario.Name = "btnInventario";
             btnInventario.Size = new Size(156, 40);
@@ -162,7 +148,9 @@
             // 
             // panel3
             // 
+            panel3.BackColor = SystemColors.ButtonFace;
             panel3.BorderStyle = BorderStyle.FixedSingle;
+            panel3.ForeColor = Color.Black;
             panel3.Location = new Point(2, 525);
             panel3.Name = "panel3";
             panel3.Size = new Size(160, 1);
@@ -171,31 +159,21 @@
             // label5
             // 
             label5.AutoSize = true;
+            label5.BackColor = SystemColors.ButtonFace;
             label5.Font = new Font("Segoe UI Black", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label5.ForeColor = Color.White;
+            label5.ForeColor = Color.Black;
             label5.Location = new Point(3, 529);
             label5.Name = "label5";
             label5.Size = new Size(154, 32);
             label5.TabIndex = 85;
             label5.Text = "Administrar";
             // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI Black", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label4.ForeColor = Color.White;
-            label4.Location = new Point(23, 305);
-            label4.Name = "label4";
-            label4.Size = new Size(112, 32);
-            label4.TabIndex = 84;
-            label4.Text = "Registro";
-            // 
             // button6
             // 
-            button6.BackColor = Color.FromArgb(69, 69, 210);
+            button6.BackColor = SystemColors.ButtonFace;
             button6.Font = new Font("Segoe UI Black", 11F, FontStyle.Bold);
-            button6.ForeColor = Color.White;
-            button6.Location = new Point(3, 244);
+            button6.ForeColor = Color.FromArgb(69, 69, 210);
+            button6.Location = new Point(3, 106);
             button6.Name = "button6";
             button6.Size = new Size(156, 44);
             button6.TabIndex = 83;
@@ -203,20 +181,12 @@
             button6.UseVisualStyleBackColor = false;
             button6.Click += button6_Click;
             // 
-            // panel2
-            // 
-            panel2.BorderStyle = BorderStyle.FixedSingle;
-            panel2.Location = new Point(3, 298);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(160, 1);
-            panel2.TabIndex = 6;
-            // 
             // label3
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI Black", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.ForeColor = Color.White;
-            label3.Location = new Point(19, 15);
+            label3.ForeColor = Color.Black;
+            label3.Location = new Point(21, 249);
             label3.Name = "label3";
             label3.Size = new Size(117, 32);
             label3.TabIndex = 5;
@@ -224,9 +194,9 @@
             // 
             // btnUsuario
             // 
-            btnUsuario.BackColor = Color.FromArgb(69, 69, 210);
-            btnUsuario.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            btnUsuario.ForeColor = Color.White;
+            btnUsuario.BackColor = SystemColors.ButtonFace;
+            btnUsuario.Font = new Font("Segoe UI Black", 11F, FontStyle.Bold);
+            btnUsuario.ForeColor = Color.FromArgb(69, 69, 210);
             btnUsuario.Location = new Point(3, 474);
             btnUsuario.Name = "btnUsuario";
             btnUsuario.Size = new Size(156, 40);
@@ -237,9 +207,9 @@
             // 
             // btnClientes
             // 
-            btnClientes.BackColor = Color.FromArgb(69, 69, 210);
-            btnClientes.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            btnClientes.ForeColor = Color.White;
+            btnClientes.BackColor = SystemColors.ButtonFace;
+            btnClientes.Font = new Font("Segoe UI Black", 11F, FontStyle.Bold);
+            btnClientes.ForeColor = Color.FromArgb(69, 69, 210);
             btnClientes.Location = new Point(3, 431);
             btnClientes.Name = "btnClientes";
             btnClientes.Size = new Size(156, 37);
@@ -250,10 +220,10 @@
             // 
             // btnProducto
             // 
-            btnProducto.BackColor = Color.FromArgb(69, 69, 210);
-            btnProducto.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            btnProducto.ForeColor = Color.White;
-            btnProducto.Location = new Point(3, 386);
+            btnProducto.BackColor = SystemColors.ButtonFace;
+            btnProducto.Font = new Font("Segoe UI Black", 11F, FontStyle.Bold);
+            btnProducto.ForeColor = Color.FromArgb(69, 69, 210);
+            btnProducto.Location = new Point(2, 156);
             btnProducto.Name = "btnProducto";
             btnProducto.Size = new Size(156, 39);
             btnProducto.TabIndex = 2;
@@ -263,12 +233,12 @@
             // 
             // btnProveedor
             // 
-            btnProveedor.BackColor = Color.FromArgb(69, 69, 210);
+            btnProveedor.BackColor = SystemColors.ButtonFace;
             btnProveedor.FlatAppearance.BorderColor = Color.FromArgb(222, 72, 72);
             btnProveedor.FlatAppearance.BorderSize = 0;
-            btnProveedor.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            btnProveedor.ForeColor = Color.White;
-            btnProveedor.Location = new Point(3, 343);
+            btnProveedor.Font = new Font("Segoe UI Black", 11F, FontStyle.Bold);
+            btnProveedor.ForeColor = Color.FromArgb(69, 69, 210);
+            btnProveedor.Location = new Point(2, 201);
             btnProveedor.Name = "btnProveedor";
             btnProveedor.Size = new Size(158, 37);
             btnProveedor.TabIndex = 1;
@@ -278,10 +248,10 @@
             // 
             // panelContenedor
             // 
-            panelContenedor.BackColor = SystemColors.ControlLight;
+            panelContenedor.BackColor = Color.Gainsboro;
             panelContenedor.BorderStyle = BorderStyle.FixedSingle;
             panelContenedor.Controls.Add(label2);
-            panelContenedor.Controls.Add(label1);
+            panelContenedor.Controls.Add(lblBienvenida);
             panelContenedor.Controls.Add(pictureBox1);
             panelContenedor.Controls.Add(button1);
             panelContenedor.Location = new Point(167, 2);
@@ -294,29 +264,30 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.Location = new Point(361, 138);
+            label2.Location = new Point(383, 139);
             label2.Name = "label2";
             label2.Size = new Size(223, 32);
             label2.TabIndex = 23;
             label2.Text = "¿Qué desea hacer?";
             // 
-            // label1
+            // lblBienvenida
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(342, 84);
-            label1.Name = "label1";
-            label1.Size = new Size(260, 32);
-            label1.TabIndex = 22;
-            label1.Text = "¡Bienvenido, Usuario!";
+            lblBienvenida.AutoSize = true;
+            lblBienvenida.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblBienvenida.Location = new Point(364, 85);
+            lblBienvenida.Name = "lblBienvenida";
+            lblBienvenida.Size = new Size(260, 32);
+            lblBienvenida.TabIndex = 22;
+            lblBienvenida.Text = "¡Bienvenido, Usuario!";
             // 
             // pictureBox1
             // 
+            pictureBox1.BackColor = Color.White;
             pictureBox1.BorderStyle = BorderStyle.FixedSingle;
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(277, 186);
+            pictureBox1.Location = new Point(296, 185);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(399, 282);
+            pictureBox1.Size = new Size(399, 306);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 21;
             pictureBox1.TabStop = false;
@@ -326,13 +297,36 @@
             button1.BackColor = Color.White;
             button1.Font = new Font("Segoe UI Black", 11F, FontStyle.Bold);
             button1.ForeColor = Color.FromArgb(69, 69, 255);
-            button1.Location = new Point(425, 474);
+            button1.Location = new Point(432, 497);
             button1.Name = "button1";
-            button1.Size = new Size(108, 41);
+            button1.Size = new Size(117, 51);
             button1.TabIndex = 20;
-            button1.Text = "<- Regresar";
+            button1.Text = "<- REGRESAR";
             button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click_1;
+            // 
+            // panel2
+            // 
+            panel2.BackColor = SystemColors.ButtonFace;
+            panel2.BorderStyle = BorderStyle.FixedSingle;
+            panel2.ForeColor = Color.Black;
+            panel2.Location = new Point(2, 249);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(160, 1);
+            panel2.TabIndex = 8;
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.BackColor = Color.White;
+            pictureBox2.BorderStyle = BorderStyle.FixedSingle;
+            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
+            pictureBox2.Location = new Point(-1, -1);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(166, 101);
+            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox2.TabIndex = 24;
+            pictureBox2.TabStop = false;
+            pictureBox2.Click += pictureBox2_Click;
             // 
             // Bienvenida
             // 
@@ -350,32 +344,31 @@
             panelContenedor.ResumeLayout(false);
             panelContenedor.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
-
-        private Button button5;
         private Button button4;
         private Button button3;
         private Button button2;
         private Panel panel1;
-        private Panel panel2;
         private Label label3;
         private Button btnUsuario;
         private Button btnClientes;
         private Button btnProducto;
         private Button btnProveedor;
         private Button button6;
-        private Label label4;
         private Panel panelContenedor;
         private Label label2;
-        private Label label1;
+        private Label lblBienvenida;
         private PictureBox pictureBox1;
         private Button button1;
         private Button btnNivelacionInventario;
         private Button btnInventario;
         private Panel panel3;
         private Label label5;
+        private PictureBox pictureBox2;
+        private Panel panel2;
     }
 }

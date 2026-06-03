@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             groupBox1 = new GroupBox();
-            button5 = new Button();
             textBox3 = new TextBox();
             button1 = new Button();
             label3 = new Label();
@@ -38,6 +37,7 @@
             label1 = new Label();
             textBox1 = new TextBox();
             groupBox3 = new GroupBox();
+            radioButton1 = new RadioButton();
             radioButton2 = new RadioButton();
             dataGridView2 = new DataGridView();
             Column1 = new DataGridViewTextBoxColumn();
@@ -76,8 +76,7 @@
             // 
             // groupBox1
             // 
-            groupBox1.BackColor = Color.FromArgb(69, 69, 210);
-            groupBox1.Controls.Add(button5);
+            groupBox1.BackColor = SystemColors.Control;
             groupBox1.Controls.Add(textBox3);
             groupBox1.Controls.Add(button1);
             groupBox1.Controls.Add(label3);
@@ -93,20 +92,6 @@
             groupBox1.TabIndex = 0;
             groupBox1.TabStop = false;
             groupBox1.Enter += groupBox1_Enter;
-            // 
-            // button5
-            // 
-            button5.BackColor = SystemColors.ControlLight;
-            button5.Font = new Font("Segoe UI Black", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button5.ForeColor = Color.FromArgb(69, 69, 210);
-            button5.Location = new Point(895, 15);
-            button5.Margin = new Padding(4, 3, 4, 3);
-            button5.Name = "button5";
-            button5.Size = new Size(74, 36);
-            button5.TabIndex = 10;
-            button5.Text = "Inicio";
-            button5.UseVisualStyleBackColor = false;
-            button5.Click += button5_Click;
             // 
             // textBox3
             // 
@@ -125,16 +110,16 @@
             button1.Location = new Point(734, 13);
             button1.Margin = new Padding(4, 3, 4, 3);
             button1.Name = "button1";
-            button1.Size = new Size(133, 39);
+            button1.Size = new Size(101, 39);
             button1.TabIndex = 6;
-            button1.Text = "🔍Buscar venta";
+            button1.Text = "🔍BUSCAR";
             button1.UseVisualStyleBackColor = false;
             // 
             // label3
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            label3.ForeColor = Color.White;
+            label3.ForeColor = Color.Black;
             label3.Location = new Point(454, 22);
             label3.Margin = new Padding(4, 0, 4, 0);
             label3.Name = "label3";
@@ -146,6 +131,7 @@
             // textBox2
             // 
             textBox2.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            textBox2.ForeColor = Color.Black;
             textBox2.Location = new Point(308, 19);
             textBox2.Margin = new Padding(4, 3, 4, 3);
             textBox2.Name = "textBox2";
@@ -156,7 +142,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            label2.ForeColor = Color.White;
+            label2.ForeColor = Color.Black;
             label2.Location = new Point(244, 22);
             label2.Margin = new Padding(4, 0, 4, 0);
             label2.Name = "label2";
@@ -169,7 +155,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            label1.ForeColor = Color.White;
+            label1.ForeColor = Color.Black;
             label1.Location = new Point(11, 22);
             label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
@@ -180,6 +166,7 @@
             // textBox1
             // 
             textBox1.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            textBox1.ForeColor = Color.Black;
             textBox1.Location = new Point(113, 19);
             textBox1.Margin = new Padding(4, 3, 4, 3);
             textBox1.Name = "textBox1";
@@ -189,9 +176,10 @@
             // 
             // groupBox3
             // 
-            groupBox3.BackColor = Color.FromArgb(69, 69, 210);
+            groupBox3.BackColor = SystemColors.Control;
+            groupBox3.Controls.Add(radioButton1);
             groupBox3.Controls.Add(radioButton2);
-            groupBox3.ForeColor = Color.White;
+            groupBox3.ForeColor = Color.Black;
             groupBox3.Location = new Point(642, 74);
             groupBox3.Margin = new Padding(4, 3, 4, 3);
             groupBox3.Name = "groupBox3";
@@ -201,19 +189,35 @@
             groupBox3.TabStop = false;
             groupBox3.Text = "Tipo de devolución";
             // 
+            // radioButton1
+            // 
+            radioButton1.AutoSize = true;
+            radioButton1.BackColor = SystemColors.Control;
+            radioButton1.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            radioButton1.ForeColor = Color.Black;
+            radioButton1.Location = new Point(192, 23);
+            radioButton1.Margin = new Padding(4, 3, 4, 3);
+            radioButton1.Name = "radioButton1";
+            radioButton1.Size = new Size(105, 24);
+            radioButton1.TabIndex = 2;
+            radioButton1.TabStop = true;
+            radioButton1.Text = "Reembolso";
+            radioButton1.UseVisualStyleBackColor = false;
+            // 
             // radioButton2
             // 
             radioButton2.AutoSize = true;
+            radioButton2.BackColor = SystemColors.Control;
             radioButton2.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            radioButton2.ForeColor = Color.White;
-            radioButton2.Location = new Point(17, 22);
+            radioButton2.ForeColor = Color.Black;
+            radioButton2.Location = new Point(11, 22);
             radioButton2.Margin = new Padding(4, 3, 4, 3);
             radioButton2.Name = "radioButton2";
             radioButton2.Size = new Size(169, 24);
             radioButton2.TabIndex = 1;
             radioButton2.TabStop = true;
             radioButton2.Text = "Cambio de producto";
-            radioButton2.UseVisualStyleBackColor = true;
+            radioButton2.UseVisualStyleBackColor = false;
             // 
             // dataGridView2
             // 
@@ -249,10 +253,10 @@
             // 
             // groupBox5
             // 
-            groupBox5.BackColor = Color.FromArgb(69, 69, 210);
+            groupBox5.BackColor = SystemColors.Control;
             groupBox5.Controls.Add(button4);
             groupBox5.Controls.Add(button2);
-            groupBox5.Location = new Point(1, 450);
+            groupBox5.Location = new Point(0, 361);
             groupBox5.Margin = new Padding(4, 3, 4, 3);
             groupBox5.Name = "groupBox5";
             groupBox5.Padding = new Padding(4, 3, 4, 3);
@@ -262,20 +266,20 @@
             // 
             // button4
             // 
-            button4.BackColor = SystemColors.ControlLight;
+            button4.BackColor = SystemColors.ButtonFace;
             button4.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
             button4.ForeColor = Color.FromArgb(69, 69, 210);
-            button4.Location = new Point(195, 18);
+            button4.Location = new Point(182, 18);
             button4.Margin = new Padding(4, 3, 4, 3);
             button4.Name = "button4";
             button4.Size = new Size(124, 50);
             button4.TabIndex = 9;
-            button4.Text = "\U0001f9feImprimir comprobante";
+            button4.Text = "🖨IMPRIMIR ";
             button4.UseVisualStyleBackColor = false;
             // 
             // button2
             // 
-            button2.BackColor = SystemColors.ControlLight;
+            button2.BackColor = SystemColors.ButtonFace;
             button2.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
             button2.ForeColor = Color.FromArgb(69, 69, 210);
             button2.Location = new Point(35, 18);
@@ -283,13 +287,13 @@
             button2.Name = "button2";
             button2.Size = new Size(135, 50);
             button2.TabIndex = 7;
-            button2.Text = "✅Guardar devolución";
+            button2.Text = "💾GUARDAR DEVOLUCIÓN";
             button2.UseVisualStyleBackColor = false;
             button2.Click += button2_Click_1;
             // 
             // button3
             // 
-            button3.BackColor = SystemColors.ControlLight;
+            button3.BackColor = SystemColors.ButtonFace;
             button3.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
             button3.ForeColor = Color.FromArgb(69, 69, 210);
             button3.Location = new Point(166, 133);
@@ -297,15 +301,15 @@
             button3.Name = "button3";
             button3.Size = new Size(131, 50);
             button3.TabIndex = 8;
-            button3.Text = "🔃Procesar devolución";
+            button3.Text = "🔃PROCESAR DEVOLUCIÓN";
             button3.UseVisualStyleBackColor = false;
             button3.Click += button3_Click_1;
             // 
             // groupBox4
             // 
-            groupBox4.BackColor = Color.FromArgb(200, 56, 56);
+            groupBox4.BackColor = SystemColors.Control;
             groupBox4.Controls.Add(dataGridView1);
-            groupBox4.ForeColor = Color.White;
+            groupBox4.ForeColor = Color.Black;
             groupBox4.Location = new Point(1, 209);
             groupBox4.Margin = new Padding(4, 3, 4, 3);
             groupBox4.Name = "groupBox4";
@@ -357,7 +361,7 @@
             // 
             // panel1
             // 
-            panel1.BackColor = Color.FromArgb(200, 56, 56);
+            panel1.BackColor = SystemColors.Control;
             panel1.BorderStyle = BorderStyle.FixedSingle;
             panel1.Controls.Add(dataGridView2);
             panel1.Location = new Point(1, 70);
@@ -367,7 +371,7 @@
             // 
             // groupBox2
             // 
-            groupBox2.BackColor = Color.FromArgb(69, 69, 210);
+            groupBox2.BackColor = SystemColors.Control;
             groupBox2.Controls.Add(textBox4);
             groupBox2.Controls.Add(button3);
             groupBox2.Controls.Add(label6);
@@ -375,12 +379,12 @@
             groupBox2.Controls.Add(textBox5);
             groupBox2.Controls.Add(label5);
             groupBox2.Controls.Add(label4);
-            groupBox2.ForeColor = Color.White;
-            groupBox2.Location = new Point(643, 138);
+            groupBox2.ForeColor = Color.Black;
+            groupBox2.Location = new Point(643, 142);
             groupBox2.Margin = new Padding(4, 3, 4, 3);
             groupBox2.Name = "groupBox2";
             groupBox2.Padding = new Padding(4, 3, 4, 3);
-            groupBox2.Size = new Size(328, 216);
+            groupBox2.Size = new Size(328, 192);
             groupBox2.TabIndex = 3;
             groupBox2.TabStop = false;
             groupBox2.Text = "Cambio de Producto";
@@ -398,7 +402,7 @@
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            label6.ForeColor = Color.White;
+            label6.ForeColor = Color.Black;
             label6.Location = new Point(71, 93);
             label6.Margin = new Padding(4, 0, 4, 0);
             label6.Name = "label6";
@@ -428,7 +432,7 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            label5.ForeColor = Color.White;
+            label5.ForeColor = Color.Black;
             label5.Location = new Point(60, 58);
             label5.Margin = new Padding(4, 0, 4, 0);
             label5.Name = "label5";
@@ -440,7 +444,7 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            label4.ForeColor = Color.White;
+            label4.ForeColor = Color.Black;
             label4.Location = new Point(8, 19);
             label4.Margin = new Padding(4, 0, 4, 0);
             label4.Name = "label4";
@@ -452,15 +456,15 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = SystemColors.ControlLight;
-            ClientSize = new Size(975, 527);
+            BackColor = Color.Gainsboro;
+            ClientSize = new Size(975, 442);
             Controls.Add(groupBox2);
             Controls.Add(panel1);
             Controls.Add(groupBox5);
             Controls.Add(groupBox4);
             Controls.Add(groupBox3);
             Controls.Add(groupBox1);
-            FormBorderStyle = FormBorderStyle.None;
+            FormBorderStyle = FormBorderStyle.FixedDialog;
             Margin = new Padding(4, 3, 4, 3);
             Name = "Devolución";
             Text = "Devolución";
@@ -500,7 +504,6 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button5;
         private GroupBox groupBox4;
         private TextBox textBox3;
         private Panel panel1;
@@ -518,5 +521,6 @@
         private TextBox textBox4;
         private Label label6;
         private ComboBox comboBox1;
+        private RadioButton radioButton1;
     }
 }

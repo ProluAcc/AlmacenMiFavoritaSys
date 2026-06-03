@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            button8 = new Button();
             dataGridView1 = new DataGridView();
             Column1 = new DataGridViewTextBoxColumn();
             Column2 = new DataGridViewTextBoxColumn();
@@ -57,19 +56,6 @@
             button5 = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
-            // 
-            // button8
-            // 
-            button8.BackColor = Color.White;
-            button8.Font = new Font("Segoe UI Black", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button8.ForeColor = Color.FromArgb(23, 23, 255);
-            button8.Location = new Point(883, 20);
-            button8.Name = "button8";
-            button8.Size = new Size(80, 36);
-            button8.TabIndex = 83;
-            button8.Text = "Inicio";
-            button8.UseVisualStyleBackColor = false;
-            button8.Click += button8_Click;
             // 
             // dataGridView1
             // 
@@ -145,21 +131,21 @@
             // 
             // btnCancelar
             // 
-            btnCancelar.BackColor = SystemColors.ControlLight;
+            btnCancelar.BackColor = SystemColors.ButtonFace;
             btnCancelar.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
             btnCancelar.ForeColor = Color.FromArgb(69, 69, 210);
             btnCancelar.Location = new Point(676, 180);
             btnCancelar.Name = "btnCancelar";
             btnCancelar.Size = new Size(124, 34);
             btnCancelar.TabIndex = 76;
-            btnCancelar.Text = "🚫CANCELAR";
+            btnCancelar.Text = "🗑LIMPIAR";
             btnCancelar.UseVisualStyleBackColor = false;
             // 
             // btnGuardar
             // 
-            btnGuardar.BackColor = Color.FromArgb(69, 69, 210);
+            btnGuardar.BackColor = SystemColors.ButtonFace;
             btnGuardar.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            btnGuardar.ForeColor = Color.White;
+            btnGuardar.ForeColor = Color.FromArgb(69, 69, 210);
             btnGuardar.Location = new Point(840, 267);
             btnGuardar.Name = "btnGuardar";
             btnGuardar.Size = new Size(123, 39);
@@ -247,18 +233,18 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.BackColor = Color.FromArgb(69, 69, 210);
+            label2.BackColor = SystemColors.Control;
             label2.Font = new Font("Segoe UI Black", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.ForeColor = Color.White;
-            label2.Location = new Point(12, 17);
+            label2.ForeColor = Color.Black;
+            label2.Location = new Point(12, 21);
             label2.Name = "label2";
-            label2.Size = new Size(177, 32);
+            label2.Size = new Size(202, 32);
             label2.TabIndex = 66;
-            label2.Text = "Nuevo Cliente";
+            label2.Text = "NUEVO CLIENTE";
             // 
             // button7
             // 
-            button7.BackColor = Color.FromArgb(69, 69, 210);
+            button7.BackColor = SystemColors.Control;
             button7.Enabled = false;
             button7.Location = new Point(-1, -1);
             button7.Name = "button7";
@@ -288,6 +274,7 @@
             // 
             // button1
             // 
+            button1.BackColor = SystemColors.ButtonFace;
             button1.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
             button1.ForeColor = Color.FromArgb(69, 69, 210);
             button1.Location = new Point(387, 181);
@@ -299,9 +286,9 @@
             // 
             // button2
             // 
-            button2.BackColor = Color.FromArgb(69, 69, 210);
+            button2.BackColor = SystemColors.ButtonFace;
             button2.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            button2.ForeColor = Color.White;
+            button2.ForeColor = Color.FromArgb(69, 69, 210);
             button2.Location = new Point(558, 180);
             button2.Name = "button2";
             button2.Size = new Size(112, 34);
@@ -311,9 +298,9 @@
             // 
             // button5
             // 
-            button5.BackColor = Color.FromArgb(69, 69, 210);
+            button5.BackColor = SystemColors.ButtonFace;
             button5.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            button5.ForeColor = Color.White;
+            button5.ForeColor = Color.FromArgb(69, 69, 210);
             button5.Location = new Point(849, 226);
             button5.Name = "button5";
             button5.Size = new Size(105, 35);
@@ -325,14 +312,13 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = SystemColors.ControlLight;
+            BackColor = Color.Gainsboro;
             ClientSize = new Size(975, 527);
             Controls.Add(button5);
             Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(textBox1);
             Controls.Add(label1);
-            Controls.Add(button8);
             Controls.Add(dataGridView1);
             Controls.Add(txtBuscar);
             Controls.Add(cbBuscar);
@@ -358,8 +344,6 @@
         }
 
         #endregion
-
-        private Button button8;
         private DataGridView dataGridView1;
         private TextBox txtBuscar;
         private ComboBox cbBuscar;

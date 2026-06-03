@@ -26,5 +26,10 @@ namespace SISTEMA
         {
             Bienvenida obj = new Bienvenida(); obj.Show(); this.Hide();
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

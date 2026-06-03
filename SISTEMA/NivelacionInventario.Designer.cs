@@ -57,7 +57,7 @@
             label16 = new Label();
             groupBox3 = new GroupBox();
             dataGridView1 = new DataGridView();
-            Column1 = new DataGridViewTextBoxColumn();
+            panel2 = new Panel();
             Column2 = new DataGridViewTextBoxColumn();
             Column3 = new DataGridViewTextBoxColumn();
             Column4 = new DataGridViewTextBoxColumn();
@@ -65,7 +65,6 @@
             Column6 = new DataGridViewTextBoxColumn();
             Column7 = new DataGridViewTextBoxColumn();
             Column8 = new DataGridViewTextBoxColumn();
-            panel2 = new Panel();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             groupBox3.SuspendLayout();
@@ -391,16 +390,21 @@
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3, Column4, Column5, Column6, Column7, Column8 });
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Column2, Column3, Column4, Column5, Column6, Column7, Column8 });
             dataGridView1.Location = new Point(9, 22);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.Size = new Size(843, 175);
             dataGridView1.TabIndex = 2;
             // 
-            // Column1
+            // panel2
             // 
-            Column1.HeaderText = "Fecha";
-            Column1.Name = "Column1";
+            panel2.BackColor = SystemColors.Control;
+            panel2.BorderStyle = BorderStyle.FixedSingle;
+            panel2.Controls.Add(label1);
+            panel2.Location = new Point(2, 1);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(972, 50);
+            panel2.TabIndex = 5;
             // 
             // Column2
             // 
@@ -436,16 +440,6 @@
             // 
             Column8.HeaderText = "Observaciones";
             Column8.Name = "Column8";
-            // 
-            // panel2
-            // 
-            panel2.BackColor = SystemColors.Control;
-            panel2.BorderStyle = BorderStyle.FixedSingle;
-            panel2.Controls.Add(label1);
-            panel2.Location = new Point(2, 1);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(972, 50);
-            panel2.TabIndex = 5;
             // 
             // NivelacionInventario
             // 
@@ -503,7 +497,7 @@
         private Button button2;
         private GroupBox groupBox3;
         private DataGridView dataGridView1;
-        private DataGridViewTextBoxColumn Column1;
+        private Panel panel2;
         private DataGridViewTextBoxColumn Column2;
         private DataGridViewTextBoxColumn Column3;
         private DataGridViewTextBoxColumn Column4;
@@ -511,6 +505,5 @@
         private DataGridViewTextBoxColumn Column6;
         private DataGridViewTextBoxColumn Column7;
         private DataGridViewTextBoxColumn Column8;
-        private Panel panel2;
     }
 }

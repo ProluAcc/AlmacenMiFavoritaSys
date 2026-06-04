@@ -33,6 +33,8 @@
             button3 = new Button();
             button2 = new Button();
             panel1 = new Panel();
+            pictureBox2 = new PictureBox();
+            panel2 = new Panel();
             btnNivelacionInventario = new Button();
             btnInventario = new Button();
             panel3 = new Panel();
@@ -48,12 +50,10 @@
             lblBienvenida = new Label();
             pictureBox1 = new PictureBox();
             button1 = new Button();
-            panel2 = new Panel();
-            pictureBox2 = new PictureBox();
             panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             panelContenedor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
             // 
             // button4
@@ -119,6 +119,29 @@
             panel1.Size = new Size(166, 686);
             panel1.TabIndex = 82;
             panel1.Paint += panel1_Paint;
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.BackColor = Color.White;
+            pictureBox2.BorderStyle = BorderStyle.FixedSingle;
+            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
+            pictureBox2.Location = new Point(-1, -1);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(166, 101);
+            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox2.TabIndex = 24;
+            pictureBox2.TabStop = false;
+            pictureBox2.Click += pictureBox2_Click;
+            // 
+            // panel2
+            // 
+            panel2.BackColor = SystemColors.ButtonFace;
+            panel2.BorderStyle = BorderStyle.FixedSingle;
+            panel2.ForeColor = Color.Black;
+            panel2.Location = new Point(2, 249);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(160, 1);
+            panel2.TabIndex = 8;
             // 
             // btnNivelacionInventario
             // 
@@ -305,29 +328,6 @@
             button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click_1;
             // 
-            // panel2
-            // 
-            panel2.BackColor = SystemColors.ButtonFace;
-            panel2.BorderStyle = BorderStyle.FixedSingle;
-            panel2.ForeColor = Color.Black;
-            panel2.Location = new Point(2, 249);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(160, 1);
-            panel2.TabIndex = 8;
-            // 
-            // pictureBox2
-            // 
-            pictureBox2.BackColor = Color.White;
-            pictureBox2.BorderStyle = BorderStyle.FixedSingle;
-            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(-1, -1);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(166, 101);
-            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox2.TabIndex = 24;
-            pictureBox2.TabStop = false;
-            pictureBox2.Click += pictureBox2_Click;
-            // 
             // Bienvenida
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -341,10 +341,10 @@
             Load += Bienvenida_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             panelContenedor.ResumeLayout(false);
             panelContenedor.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ResumeLayout(false);
         }
 

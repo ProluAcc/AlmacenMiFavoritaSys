@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
-            pictureBox1 = new PictureBox();
             panel2 = new Panel();
             btnRecuperar = new Button();
             label4 = new Label();
@@ -39,21 +37,10 @@
             btnEntrar = new Button();
             label6 = new Label();
             txtUsuario = new TextBox();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            pictureBox1 = new PictureBox();
             panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
-            // 
-            // pictureBox1
-            // 
-            pictureBox1.BackColor = Color.White;
-            pictureBox1.BorderStyle = BorderStyle.FixedSingle;
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(12, 27);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(334, 281);
-            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox1.TabIndex = 6;
-            pictureBox1.TabStop = false;
             // 
             // panel2
             // 
@@ -161,25 +148,34 @@
             txtUsuario.Size = new Size(214, 27);
             txtUsuario.TabIndex = 8;
             // 
+            // pictureBox1
+            // 
+            pictureBox1.BorderStyle = BorderStyle.FixedSingle;
+            pictureBox1.Image = Properties.Resources.Logo;
+            pictureBox1.Location = new Point(12, 27);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(354, 281);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 8;
+            pictureBox1.TabStop = false;
+            // 
             // Login
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ControlLight;
             ClientSize = new Size(685, 331);
-            Controls.Add(panel2);
             Controls.Add(pictureBox1);
+            Controls.Add(panel2);
             Name = "Login";
             Text = "Login";
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
-
-        private PictureBox pictureBox1;
         private Panel panel2;
         private Button btnRecuperar;
         private Label label4;
@@ -189,5 +185,6 @@
         private Button btnEntrar;
         private Label label6;
         private TextBox txtUsuario;
+        private PictureBox pictureBox1;
     }
 }

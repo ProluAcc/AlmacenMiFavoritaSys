@@ -42,8 +42,13 @@
             label3 = new Label();
             groupBox2 = new GroupBox();
             dataGridView1 = new DataGridView();
+            groupBox3 = new GroupBox();
+            button7 = new Button();
+            button4 = new Button();
+            panel1 = new Panel();
             Column1 = new DataGridViewTextBoxColumn();
             Column2 = new DataGridViewTextBoxColumn();
+            Column10 = new DataGridViewTextBoxColumn();
             Column3 = new DataGridViewTextBoxColumn();
             Column4 = new DataGridViewTextBoxColumn();
             Column5 = new DataGridViewTextBoxColumn();
@@ -51,12 +56,6 @@
             Column7 = new DataGridViewTextBoxColumn();
             Column8 = new DataGridViewTextBoxColumn();
             Column9 = new DataGridViewTextBoxColumn();
-            groupBox3 = new GroupBox();
-            button7 = new Button();
-            button4 = new Button();
-            button5 = new Button();
-            button6 = new Button();
-            panel1 = new Panel();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
@@ -207,7 +206,7 @@
             groupBox2.Controls.Add(dataGridView1);
             groupBox2.Location = new Point(3, 152);
             groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(955, 273);
+            groupBox2.Size = new Size(970, 273);
             groupBox2.TabIndex = 4;
             groupBox2.TabStop = false;
             groupBox2.Text = "Lista de Productos de Inventario";
@@ -215,11 +214,56 @@
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3, Column4, Column5, Column6, Column7, Column8, Column9 });
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column10, Column3, Column4, Column5, Column6, Column7, Column8, Column9 });
             dataGridView1.Location = new Point(5, 22);
             dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(943, 245);
+            dataGridView1.Size = new Size(959, 245);
             dataGridView1.TabIndex = 2;
+            // 
+            // groupBox3
+            // 
+            groupBox3.BackColor = SystemColors.Control;
+            groupBox3.Controls.Add(button7);
+            groupBox3.Controls.Add(button4);
+            groupBox3.ForeColor = Color.Black;
+            groupBox3.Location = new Point(3, 431);
+            groupBox3.Name = "groupBox3";
+            groupBox3.Size = new Size(302, 84);
+            groupBox3.TabIndex = 5;
+            groupBox3.TabStop = false;
+            groupBox3.Text = "Acciones";
+            // 
+            // button7
+            // 
+            button7.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            button7.ForeColor = Color.FromArgb(69, 69, 210);
+            button7.Location = new Point(150, 22);
+            button7.Name = "button7";
+            button7.Size = new Size(138, 38);
+            button7.TabIndex = 19;
+            button7.Text = "Imprimir reporte";
+            button7.UseVisualStyleBackColor = true;
+            // 
+            // button4
+            // 
+            button4.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            button4.ForeColor = Color.FromArgb(69, 69, 210);
+            button4.Location = new Point(9, 22);
+            button4.Name = "button4";
+            button4.Size = new Size(135, 38);
+            button4.TabIndex = 18;
+            button4.Text = "Exportar a Excel";
+            button4.UseVisualStyleBackColor = true;
+            // 
+            // panel1
+            // 
+            panel1.BackColor = SystemColors.Control;
+            panel1.BorderStyle = BorderStyle.FixedSingle;
+            panel1.Controls.Add(label1);
+            panel1.Location = new Point(3, 1);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(970, 46);
+            panel1.TabIndex = 6;
             // 
             // Column1
             // 
@@ -230,6 +274,11 @@
             // 
             Column2.HeaderText = "Producto";
             Column2.Name = "Column2";
+            // 
+            // Column10
+            // 
+            Column10.HeaderText = "Stock Máximo";
+            Column10.Name = "Column10";
             // 
             // Column3
             // 
@@ -243,7 +292,7 @@
             // 
             // Column5
             // 
-            Column5.HeaderText = "Unidad";
+            Column5.HeaderText = "Medida";
             Column5.Name = "Column5";
             // 
             // Column6
@@ -265,75 +314,6 @@
             // 
             Column9.HeaderText = "Acciones";
             Column9.Name = "Column9";
-            // 
-            // groupBox3
-            // 
-            groupBox3.BackColor = SystemColors.Control;
-            groupBox3.Controls.Add(button7);
-            groupBox3.Controls.Add(button4);
-            groupBox3.Controls.Add(button5);
-            groupBox3.Controls.Add(button6);
-            groupBox3.ForeColor = Color.Black;
-            groupBox3.Location = new Point(3, 431);
-            groupBox3.Name = "groupBox3";
-            groupBox3.Size = new Size(578, 84);
-            groupBox3.TabIndex = 5;
-            groupBox3.TabStop = false;
-            groupBox3.Text = "Filtros de Búsqueda";
-            // 
-            // button7
-            // 
-            button7.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            button7.ForeColor = Color.FromArgb(69, 69, 210);
-            button7.Location = new Point(429, 31);
-            button7.Name = "button7";
-            button7.Size = new Size(138, 38);
-            button7.TabIndex = 19;
-            button7.Text = "Imprimir reporte";
-            button7.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            button4.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            button4.ForeColor = Color.FromArgb(69, 69, 210);
-            button4.Location = new Point(288, 31);
-            button4.Name = "button4";
-            button4.Size = new Size(135, 38);
-            button4.TabIndex = 18;
-            button4.Text = "Exportar a Excel";
-            button4.UseVisualStyleBackColor = true;
-            // 
-            // button5
-            // 
-            button5.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            button5.ForeColor = Color.FromArgb(69, 69, 210);
-            button5.Location = new Point(161, 31);
-            button5.Name = "button5";
-            button5.Size = new Size(121, 38);
-            button5.TabIndex = 17;
-            button5.Text = "Ajustar Stock";
-            button5.UseVisualStyleBackColor = true;
-            // 
-            // button6
-            // 
-            button6.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            button6.ForeColor = Color.FromArgb(69, 69, 210);
-            button6.Location = new Point(9, 31);
-            button6.Name = "button6";
-            button6.Size = new Size(146, 38);
-            button6.TabIndex = 3;
-            button6.Text = "Ver Movimientos";
-            button6.UseVisualStyleBackColor = true;
-            // 
-            // panel1
-            // 
-            panel1.BackColor = SystemColors.Control;
-            panel1.BorderStyle = BorderStyle.FixedSingle;
-            panel1.Controls.Add(label1);
-            panel1.Location = new Point(3, 1);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(970, 46);
-            panel1.TabIndex = 6;
             // 
             // Form2
             // 
@@ -375,8 +355,13 @@
         private Button button3;
         private GroupBox groupBox2;
         private DataGridView dataGridView1;
+        private GroupBox groupBox3;
+        private Button button4;
+        private Button button7;
+        private Panel panel1;
         private DataGridViewTextBoxColumn Column1;
         private DataGridViewTextBoxColumn Column2;
+        private DataGridViewTextBoxColumn Column10;
         private DataGridViewTextBoxColumn Column3;
         private DataGridViewTextBoxColumn Column4;
         private DataGridViewTextBoxColumn Column5;
@@ -384,11 +369,5 @@
         private DataGridViewTextBoxColumn Column7;
         private DataGridViewTextBoxColumn Column8;
         private DataGridViewTextBoxColumn Column9;
-        private GroupBox groupBox3;
-        private Button button4;
-        private Button button5;
-        private Button button6;
-        private Button button7;
-        private Panel panel1;
     }
 }

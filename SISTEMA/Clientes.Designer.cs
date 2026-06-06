@@ -54,6 +54,7 @@
             button1 = new Button();
             button2 = new Button();
             button5 = new Button();
+            button3 = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -308,12 +309,25 @@
             button5.Text = "✏️EDITAR";
             button5.UseVisualStyleBackColor = false;
             // 
+            // button3
+            // 
+            button3.BackColor = SystemColors.ButtonFace;
+            button3.Font = new Font("Segoe UI Black", 11F, FontStyle.Bold);
+            button3.ForeColor = Color.FromArgb(69, 69, 210);
+            button3.Location = new Point(890, 24);
+            button3.Name = "button3";
+            button3.Size = new Size(73, 35);
+            button3.TabIndex = 118;
+            button3.Text = "AYUDA";
+            button3.UseVisualStyleBackColor = false;
+            // 
             // Clientes
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Gainsboro;
             ClientSize = new Size(975, 527);
+            Controls.Add(button3);
             Controls.Add(button5);
             Controls.Add(button2);
             Controls.Add(button1);
@@ -370,5 +384,6 @@
         private DataGridViewTextBoxColumn Column4;
         private Button button2;
         private Button button5;
+        private Button button3;
     }
 }

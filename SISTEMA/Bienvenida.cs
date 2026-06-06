@@ -117,7 +117,7 @@ namespace SISTEMA
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            AbrirForm(new Bienvenida());    
+            AbrirForm(new Bienvenida());
         }
     }
 }

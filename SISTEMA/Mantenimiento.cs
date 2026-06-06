@@ -10,19 +10,14 @@ using System.Windows.Forms;
 
 namespace SISTEMA
 {
-    public partial class ArqueoCaja : Form
+    public partial class Mantenimiento : Form
     {
-        public ArqueoCaja()
+        public Mantenimiento()
         {
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
+        private void groupBox2_Enter(object sender, EventArgs e)
         {
 
         }

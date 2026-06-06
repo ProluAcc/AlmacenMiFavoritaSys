@@ -33,6 +33,9 @@
             txtfecha = new TextBox();
             txtfactura = new TextBox();
             txtcliente = new TextBox();
+            textBox3 = new TextBox();
+            textBox2 = new TextBox();
+            textBox1 = new TextBox();
             label3 = new Label();
             label2 = new Label();
             label1 = new Label();
@@ -83,6 +86,7 @@
             comboBox2 = new ComboBox();
             label11 = new Label();
             vScrollBar1 = new VScrollBar();
+            button5 = new Button();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)numericant).BeginInit();
@@ -122,6 +126,7 @@
             btnaceptar.Click += btnaceptar_Click;
             // 
             // txtfecha
+            // textBox3
             // 
             txtfecha.ForeColor = Color.Black;
             txtfecha.Location = new Point(299, 19);
@@ -618,6 +623,18 @@
             vScrollBar1.TabIndex = 10;
             vScrollBar1.Scroll += vScrollBar1_Scroll;
             // 
+            // button5
+            // 
+            button5.BackColor = SystemColors.ButtonFace;
+            button5.Font = new Font("Segoe UI Black", 11F, FontStyle.Bold);
+            button5.ForeColor = Color.FromArgb(69, 69, 210);
+            button5.Location = new Point(895, 15);
+            button5.Name = "button5";
+            button5.Size = new Size(73, 35);
+            button5.TabIndex = 17;
+            button5.Text = "AYUDA";
+            button5.UseVisualStyleBackColor = false;
+            // 
             // Ventas
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -703,7 +720,10 @@
         private Button btnaceptar;
         private Button btnlimpiar;
         private Button btningresar;
+        private Button button2;
+        private Button button1;
         private Button button6;
         private Button button3;
+        private Button button5;
     }
 }

@@ -31,8 +31,8 @@
             label1 = new Label();
             label2 = new Label();
             groupBox1 = new GroupBox();
-            comboBox2 = new ComboBox();
-            textBox1 = new TextBox();
+            label4 = new Label();
+            dateTimePicker1 = new DateTimePicker();
             button3 = new Button();
             groupBox2 = new GroupBox();
             dataGridView1 = new DataGridView();
@@ -53,14 +53,15 @@
             button4 = new Button();
             button2 = new Button();
             panel1 = new Panel();
+            button5 = new Button();
+            button1 = new Button();
             textBox8 = new TextBox();
             textBox7 = new TextBox();
-            comboBox1 = new ComboBox();
-            label7 = new Label();
             label6 = new Label();
             label5 = new Label();
             panel2 = new Panel();
             label3 = new Label();
+            button6 = new Button();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
@@ -86,7 +87,7 @@
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
             label2.ForeColor = Color.Black;
-            label2.Location = new Point(333, 20);
+            label2.Location = new Point(190, 20);
             label2.Name = "label2";
             label2.Size = new Size(63, 20);
             label2.TabIndex = 1;
@@ -95,8 +96,10 @@
             // groupBox1
             // 
             groupBox1.BackColor = SystemColors.Control;
-            groupBox1.Controls.Add(comboBox2);
-            groupBox1.Controls.Add(textBox1);
+            groupBox1.Controls.Add(button6);
+            groupBox1.Controls.Add(label4);
+            groupBox1.Controls.Add(dateTimePicker1);
+            groupBox1.Controls.Add(button3);
             groupBox1.Controls.Add(label1);
             groupBox1.Controls.Add(label2);
             groupBox1.ForeColor = Color.Black;
@@ -106,35 +109,38 @@
             groupBox1.TabIndex = 2;
             groupBox1.TabStop = false;
             // 
-            // comboBox2
+            // label4
             // 
-            comboBox2.Font = new Font("Segoe UI", 11F);
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(402, 18);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(190, 28);
-            comboBox2.TabIndex = 14;
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            label4.ForeColor = Color.Black;
+            label4.Location = new Point(615, 21);
+            label4.Name = "label4";
+            label4.Size = new Size(173, 20);
+            label4.TabIndex = 16;
+            label4.Text = "Cambio de Dólar: $1 ->";
             // 
-            // textBox1
+            // dateTimePicker1
             // 
-            textBox1.Font = new Font("Segoe UI", 11F);
-            textBox1.ForeColor = Color.Black;
-            textBox1.Location = new Point(70, 18);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(235, 27);
-            textBox1.TabIndex = 2;
+            dateTimePicker1.CalendarFont = new Font("Segoe UI", 11F);
+            dateTimePicker1.Format = DateTimePickerFormat.Short;
+            dateTimePicker1.Location = new Point(67, 19);
+            dateTimePicker1.Name = "dateTimePicker1";
+            dateTimePicker1.Size = new Size(103, 23);
+            dateTimePicker1.TabIndex = 15;
             // 
             // button3
             // 
             button3.BackColor = SystemColors.ButtonFace;
             button3.Font = new Font("Segoe UI Black", 11F, FontStyle.Bold);
             button3.ForeColor = Color.FromArgb(69, 69, 210);
-            button3.Location = new Point(184, 160);
+            button3.Location = new Point(430, 13);
             button3.Name = "button3";
-            button3.Size = new Size(125, 36);
+            button3.Size = new Size(143, 36);
             button3.TabIndex = 5;
             button3.Text = "💰ABRIR CAJA";
             button3.UseVisualStyleBackColor = false;
+            button3.Click += button3_Click;
             // 
             // groupBox2
             // 
@@ -229,7 +235,7 @@
             label11.AutoSize = true;
             label11.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
             label11.ForeColor = Color.Black;
-            label11.Location = new Point(144, 123);
+            label11.Location = new Point(161, 120);
             label11.Name = "label11";
             label11.Size = new Size(84, 20);
             label11.TabIndex = 3;
@@ -251,7 +257,7 @@
             label9.AutoSize = true;
             label9.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
             label9.ForeColor = Color.Black;
-            label9.Location = new Point(144, 53);
+            label9.Location = new Point(145, 53);
             label9.Name = "label9";
             label9.Size = new Size(101, 20);
             label9.TabIndex = 1;
@@ -262,7 +268,7 @@
             label8.AutoSize = true;
             label8.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
             label8.ForeColor = Color.Black;
-            label8.Location = new Point(144, 23);
+            label8.Location = new Point(154, 24);
             label8.Name = "label8";
             label8.Size = new Size(92, 20);
             label8.TabIndex = 0;
@@ -276,7 +282,7 @@
             groupBox4.Controls.Add(button2);
             groupBox4.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
             groupBox4.ForeColor = Color.Black;
-            groupBox4.Location = new Point(451, 354);
+            groupBox4.Location = new Point(567, 283);
             groupBox4.Name = "groupBox4";
             groupBox4.Size = new Size(258, 94);
             groupBox4.TabIndex = 5;
@@ -288,9 +294,9 @@
             button4.BackColor = SystemColors.ControlLight;
             button4.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
             button4.ForeColor = Color.FromArgb(69, 69, 210);
-            button4.Location = new Point(24, 24);
+            button4.Location = new Point(11, 24);
             button4.Name = "button4";
-            button4.Size = new Size(95, 49);
+            button4.Size = new Size(110, 49);
             button4.TabIndex = 6;
             button4.Text = "💲ARQUEO";
             button4.UseVisualStyleBackColor = false;
@@ -303,7 +309,7 @@
             button2.ForeColor = Color.FromArgb(69, 69, 210);
             button2.Location = new Point(140, 24);
             button2.Name = "button2";
-            button2.Size = new Size(95, 49);
+            button2.Size = new Size(101, 49);
             button2.TabIndex = 5;
             button2.Text = "🗄CIERRE";
             button2.UseVisualStyleBackColor = false;
@@ -313,59 +319,64 @@
             // 
             panel1.BackColor = SystemColors.Control;
             panel1.BorderStyle = BorderStyle.FixedSingle;
-            panel1.Controls.Add(button3);
+            panel1.Controls.Add(button5);
+            panel1.Controls.Add(button1);
             panel1.Controls.Add(textBox8);
             panel1.Controls.Add(textBox7);
-            panel1.Controls.Add(comboBox1);
-            panel1.Controls.Add(label7);
             panel1.Controls.Add(label6);
             panel1.Controls.Add(label5);
             panel1.Controls.Add(panel2);
             panel1.Location = new Point(566, 82);
             panel1.Name = "panel1";
-            panel1.Size = new Size(324, 209);
+            panel1.Size = new Size(364, 181);
             panel1.TabIndex = 6;
+            // 
+            // button5
+            // 
+            button5.BackColor = SystemColors.ButtonFace;
+            button5.Font = new Font("Segoe UI Black", 11F, FontStyle.Bold);
+            button5.ForeColor = Color.FromArgb(69, 69, 210);
+            button5.Location = new Point(10, 126);
+            button5.Name = "button5";
+            button5.Size = new Size(192, 36);
+            button5.TabIndex = 16;
+            button5.Text = "🗄CONTROL EGRESOS";
+            button5.UseVisualStyleBackColor = false;
+            button5.Click += button5_Click;
+            // 
+            // button1
+            // 
+            button1.BackColor = SystemColors.ButtonFace;
+            button1.Font = new Font("Segoe UI Black", 11F, FontStyle.Bold);
+            button1.ForeColor = Color.FromArgb(69, 69, 210);
+            button1.Location = new Point(208, 126);
+            button1.Name = "button1";
+            button1.Size = new Size(143, 36);
+            button1.TabIndex = 15;
+            button1.Text = "💾GUARDAR";
+            button1.UseVisualStyleBackColor = false;
             // 
             // textBox8
             // 
             textBox8.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            textBox8.Location = new Point(119, 91);
+            textBox8.Location = new Point(90, 54);
             textBox8.Name = "textBox8";
-            textBox8.Size = new Size(190, 27);
+            textBox8.Size = new Size(132, 27);
             textBox8.TabIndex = 13;
             // 
             // textBox7
             // 
             textBox7.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            textBox7.Location = new Point(119, 127);
+            textBox7.Location = new Point(90, 93);
             textBox7.Name = "textBox7";
-            textBox7.Size = new Size(190, 27);
+            textBox7.Size = new Size(261, 27);
             textBox7.TabIndex = 5;
-            // 
-            // comboBox1
-            // 
-            comboBox1.Font = new Font("Segoe UI", 11F);
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(119, 55);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(190, 28);
-            comboBox1.TabIndex = 12;
-            // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            label7.Location = new Point(9, 56);
-            label7.Name = "label7";
-            label7.Size = new Size(40, 20);
-            label7.TabIndex = 11;
-            label7.Text = "Tipo";
             // 
             // label6
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            label6.Location = new Point(9, 94);
+            label6.Location = new Point(29, 57);
             label6.Name = "label6";
             label6.Size = new Size(56, 20);
             label6.TabIndex = 10;
@@ -375,7 +386,7 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            label5.Location = new Point(8, 130);
+            label5.Location = new Point(11, 93);
             label5.Name = "label5";
             label5.Size = new Size(75, 20);
             label5.TabIndex = 9;
@@ -388,7 +399,7 @@
             panel2.Controls.Add(label3);
             panel2.Location = new Point(0, 0);
             panel2.Name = "panel2";
-            panel2.Size = new Size(323, 43);
+            panel2.Size = new Size(363, 43);
             panel2.TabIndex = 7;
             // 
             // label3
@@ -396,12 +407,24 @@
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 13F, FontStyle.Bold);
             label3.ForeColor = SystemColors.ButtonHighlight;
-            label3.Location = new Point(66, 6);
+            label3.Location = new Point(93, 8);
             label3.Name = "label3";
-            label3.Size = new Size(197, 25);
+            label3.Size = new Size(186, 25);
             label3.TabIndex = 8;
-            label3.Text = "Registrar Movimiento";
+            label3.Text = "Crear Egreso de Caja";
             label3.Click += label3_Click;
+            // 
+            // button6
+            // 
+            button6.BackColor = SystemColors.ButtonFace;
+            button6.Font = new Font("Segoe UI Black", 11F, FontStyle.Bold);
+            button6.ForeColor = Color.FromArgb(69, 69, 210);
+            button6.Location = new Point(891, 14);
+            button6.Name = "button6";
+            button6.Size = new Size(73, 35);
+            button6.TabIndex = 18;
+            button6.Text = "AYUDA";
+            button6.UseVisualStyleBackColor = false;
             // 
             // Caja
             // 
@@ -437,7 +460,6 @@
         private Label label1;
         private Label label2;
         private GroupBox groupBox1;
-        private TextBox textBox1;
         private GroupBox groupBox2;
         private DataGridView dataGridView1;
         private GroupBox groupBox3;
@@ -445,7 +467,6 @@
         private Panel panel1;
         private Panel panel2;
         private Label label3;
-        private Label label7;
         private Label label6;
         private Label label5;
         private Label label11;
@@ -462,10 +483,13 @@
         private DataGridViewTextBoxColumn Column4;
         private TextBox textBox8;
         private TextBox textBox7;
-        private ComboBox comboBox1;
         private Button button3;
         private Button button2;
         private Button button4;
-        private ComboBox comboBox2;
+        private Button button5;
+        private Button button1;
+        private DateTimePicker dateTimePicker1;
+        private Label label4;
+        private Button button6;
     }
 }

@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace SISTEMA
 {
-    public partial class ArqueoCaja : Form
+    public partial class ControlRol : Form
     {
-        public ArqueoCaja()
+        public ControlRol()
         {
             InitializeComponent();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
         }
     }
 }

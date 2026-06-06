@@ -10,19 +10,19 @@ using System.Windows.Forms;
 
 namespace SISTEMA
 {
-    public partial class ArqueoCaja : Form
+    public partial class ReporteProductos : Form
     {
-        public ArqueoCaja()
+        public ReporteProductos()
         {
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void groupBox1_Enter(object sender, EventArgs e)
         {
 
         }
 
-        private void groupBox1_Enter(object sender, EventArgs e)
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

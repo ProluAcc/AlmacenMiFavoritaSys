@@ -33,9 +33,6 @@
             txtfecha = new TextBox();
             txtfactura = new TextBox();
             txtcliente = new TextBox();
-            textBox3 = new TextBox();
-            textBox2 = new TextBox();
-            textBox1 = new TextBox();
             label3 = new Label();
             label2 = new Label();
             label1 = new Label();

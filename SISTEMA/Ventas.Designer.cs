@@ -29,28 +29,28 @@
         private void InitializeComponent()
         {
             groupBox1 = new GroupBox();
-            button5 = new Button();
-            textBox3 = new TextBox();
-            textBox2 = new TextBox();
-            textBox1 = new TextBox();
+            btnaceptar = new Button();
+            txtfecha = new TextBox();
+            txtfactura = new TextBox();
+            txtcliente = new TextBox();
             label3 = new Label();
             label2 = new Label();
             label1 = new Label();
             groupBox2 = new GroupBox();
-            button2 = new Button();
-            button1 = new Button();
+            btnlimpiar = new Button();
+            btningresar = new Button();
             button6 = new Button();
-            comboBox3 = new ComboBox();
+            cmbtipo = new ComboBox();
             label14 = new Label();
-            textBox10 = new TextBox();
+            txtdescuento = new TextBox();
             label13 = new Label();
-            numericUpDown1 = new NumericUpDown();
-            textBox5 = new TextBox();
-            comboBox1 = new ComboBox();
+            numericant = new NumericUpDown();
+            txtprecio = new TextBox();
+            cmbproducto = new ComboBox();
             label6 = new Label();
             label5 = new Label();
             label4 = new Label();
-            dataGridView1 = new DataGridView();
+            dgvventas = new DataGridView();
             Column3 = new DataGridViewTextBoxColumn();
             Column4 = new DataGridViewTextBoxColumn();
             Column5 = new DataGridViewTextBoxColumn();
@@ -85,8 +85,8 @@
             vScrollBar1 = new VScrollBar();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)numericant).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvventas).BeginInit();
             groupBox3.SuspendLayout();
             groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
@@ -95,10 +95,10 @@
             // groupBox1
             // 
             groupBox1.BackColor = SystemColors.Control;
-            groupBox1.Controls.Add(button5);
-            groupBox1.Controls.Add(textBox3);
-            groupBox1.Controls.Add(textBox2);
-            groupBox1.Controls.Add(textBox1);
+            groupBox1.Controls.Add(btnaceptar);
+            groupBox1.Controls.Add(txtfecha);
+            groupBox1.Controls.Add(txtfactura);
+            groupBox1.Controls.Add(txtcliente);
             groupBox1.Controls.Add(label3);
             groupBox1.Controls.Add(label2);
             groupBox1.Controls.Add(label1);
@@ -108,42 +108,43 @@
             groupBox1.TabIndex = 0;
             groupBox1.TabStop = false;
             // 
-            // button5
+            // btnaceptar
             // 
-            button5.BackColor = SystemColors.ButtonFace;
-            button5.Font = new Font("Segoe UI Black", 11F, FontStyle.Bold);
-            button5.ForeColor = Color.FromArgb(69, 69, 210);
-            button5.Location = new Point(780, 17);
-            button5.Name = "button5";
-            button5.Size = new Size(115, 35);
-            button5.TabIndex = 13;
-            button5.Text = "✅ACEPTAR";
-            button5.UseVisualStyleBackColor = false;
+            btnaceptar.BackColor = SystemColors.ButtonFace;
+            btnaceptar.Font = new Font("Segoe UI Black", 11F, FontStyle.Bold);
+            btnaceptar.ForeColor = Color.FromArgb(69, 69, 210);
+            btnaceptar.Location = new Point(780, 17);
+            btnaceptar.Name = "btnaceptar";
+            btnaceptar.Size = new Size(115, 35);
+            btnaceptar.TabIndex = 13;
+            btnaceptar.Text = "✅ACEPTAR";
+            btnaceptar.UseVisualStyleBackColor = false;
+            btnaceptar.Click += btnaceptar_Click;
             // 
-            // textBox3
+            // txtfecha
             // 
-            textBox3.ForeColor = Color.Black;
-            textBox3.Location = new Point(299, 19);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(126, 23);
-            textBox3.TabIndex = 11;
+            txtfecha.ForeColor = Color.Black;
+            txtfecha.Location = new Point(299, 19);
+            txtfecha.Name = "txtfecha";
+            txtfecha.Size = new Size(126, 23);
+            txtfecha.TabIndex = 11;
             // 
-            // textBox2
+            // txtfactura
             // 
-            textBox2.ForeColor = Color.Black;
-            textBox2.Location = new Point(128, 19);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(100, 23);
-            textBox2.TabIndex = 10;
+            txtfactura.ForeColor = Color.Black;
+            txtfactura.Location = new Point(128, 19);
+            txtfactura.Name = "txtfactura";
+            txtfactura.Size = new Size(100, 23);
+            txtfactura.TabIndex = 10;
             // 
-            // textBox1
+            // txtcliente
             // 
-            textBox1.ForeColor = Color.Black;
-            textBox1.Location = new Point(595, 19);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(165, 23);
-            textBox1.TabIndex = 9;
-            textBox1.TextChanged += textBox1_TextChanged;
+            txtcliente.ForeColor = Color.Black;
+            txtcliente.Location = new Point(595, 19);
+            txtcliente.Name = "txtcliente";
+            txtcliente.Size = new Size(165, 23);
+            txtcliente.TabIndex = 9;
+            txtcliente.TextChanged += textBox1_TextChanged;
             // 
             // label3
             // 
@@ -181,16 +182,16 @@
             // groupBox2
             // 
             groupBox2.BackColor = SystemColors.Control;
-            groupBox2.Controls.Add(button2);
-            groupBox2.Controls.Add(button1);
+            groupBox2.Controls.Add(btnlimpiar);
+            groupBox2.Controls.Add(btningresar);
             groupBox2.Controls.Add(button6);
-            groupBox2.Controls.Add(comboBox3);
+            groupBox2.Controls.Add(cmbtipo);
             groupBox2.Controls.Add(label14);
-            groupBox2.Controls.Add(textBox10);
+            groupBox2.Controls.Add(txtdescuento);
             groupBox2.Controls.Add(label13);
-            groupBox2.Controls.Add(numericUpDown1);
-            groupBox2.Controls.Add(textBox5);
-            groupBox2.Controls.Add(comboBox1);
+            groupBox2.Controls.Add(numericant);
+            groupBox2.Controls.Add(txtprecio);
+            groupBox2.Controls.Add(cmbproducto);
             groupBox2.Controls.Add(label6);
             groupBox2.Controls.Add(label5);
             groupBox2.Controls.Add(label4);
@@ -200,29 +201,31 @@
             groupBox2.TabIndex = 1;
             groupBox2.TabStop = false;
             // 
-            // button2
+            // btnlimpiar
             // 
-            button2.BackColor = SystemColors.ButtonFace;
-            button2.Font = new Font("Segoe UI Black", 11F, FontStyle.Bold);
-            button2.ForeColor = Color.FromArgb(69, 69, 210);
-            button2.Location = new Point(810, 58);
-            button2.Name = "button2";
-            button2.Size = new Size(106, 35);
-            button2.TabIndex = 16;
-            button2.Text = "🗑LIMPIAR";
-            button2.UseVisualStyleBackColor = false;
+            btnlimpiar.BackColor = SystemColors.ButtonFace;
+            btnlimpiar.Font = new Font("Segoe UI Black", 11F, FontStyle.Bold);
+            btnlimpiar.ForeColor = Color.FromArgb(69, 69, 210);
+            btnlimpiar.Location = new Point(810, 58);
+            btnlimpiar.Name = "btnlimpiar";
+            btnlimpiar.Size = new Size(106, 35);
+            btnlimpiar.TabIndex = 16;
+            btnlimpiar.Text = "🗑LIMPIAR";
+            btnlimpiar.UseVisualStyleBackColor = false;
+            btnlimpiar.Click += btnlimpiar_Click;
             // 
-            // button1
+            // btningresar
             // 
-            button1.BackColor = SystemColors.ButtonFace;
-            button1.Font = new Font("Segoe UI Black", 11F, FontStyle.Bold);
-            button1.ForeColor = Color.FromArgb(69, 69, 210);
-            button1.Location = new Point(682, 58);
-            button1.Name = "button1";
-            button1.Size = new Size(123, 35);
-            button1.TabIndex = 15;
-            button1.Text = "🔽INGRESAR";
-            button1.UseVisualStyleBackColor = false;
+            btningresar.BackColor = SystemColors.ButtonFace;
+            btningresar.Font = new Font("Segoe UI Black", 11F, FontStyle.Bold);
+            btningresar.ForeColor = Color.FromArgb(69, 69, 210);
+            btningresar.Location = new Point(682, 58);
+            btningresar.Name = "btningresar";
+            btningresar.Size = new Size(123, 35);
+            btningresar.TabIndex = 15;
+            btningresar.Text = "🔽INGRESAR";
+            btningresar.UseVisualStyleBackColor = false;
+            btningresar.Click += btningresar_Click;
             // 
             // button6
             // 
@@ -237,14 +240,15 @@
             button6.UseVisualStyleBackColor = false;
             button6.Click += button6_Click;
             // 
-            // comboBox3
+            // cmbtipo
             // 
-            comboBox3.ForeColor = Color.Black;
-            comboBox3.FormattingEnabled = true;
-            comboBox3.Location = new Point(60, 17);
-            comboBox3.Name = "comboBox3";
-            comboBox3.Size = new Size(72, 23);
-            comboBox3.TabIndex = 12;
+            cmbtipo.ForeColor = Color.Black;
+            cmbtipo.FormattingEnabled = true;
+            cmbtipo.Location = new Point(51, 17);
+            cmbtipo.Name = "cmbtipo";
+            cmbtipo.Size = new Size(72, 23);
+            cmbtipo.TabIndex = 12;
+            cmbtipo.SelectedIndexChanged += cmbtipo_SelectedIndexChanged;
             // 
             // label14
             // 
@@ -257,13 +261,13 @@
             label14.TabIndex = 11;
             label14.Text = "Tipo:";
             // 
-            // textBox10
+            // txtdescuento
             // 
-            textBox10.ForeColor = Color.Black;
-            textBox10.Location = new Point(644, 18);
-            textBox10.Name = "textBox10";
-            textBox10.Size = new Size(101, 23);
-            textBox10.TabIndex = 10;
+            txtdescuento.ForeColor = Color.Black;
+            txtdescuento.Location = new Point(644, 18);
+            txtdescuento.Name = "txtdescuento";
+            txtdescuento.Size = new Size(101, 23);
+            txtdescuento.TabIndex = 10;
             // 
             // label13
             // 
@@ -276,30 +280,30 @@
             label13.TabIndex = 9;
             label13.Text = "Descuento:";
             // 
-            // numericUpDown1
+            // numericant
             // 
-            numericUpDown1.ForeColor = Color.Black;
-            numericUpDown1.Location = new Point(463, 18);
-            numericUpDown1.Name = "numericUpDown1";
-            numericUpDown1.Size = new Size(87, 23);
-            numericUpDown1.TabIndex = 8;
+            numericant.ForeColor = Color.Black;
+            numericant.Location = new Point(459, 20);
+            numericant.Name = "numericant";
+            numericant.Size = new Size(87, 23);
+            numericant.TabIndex = 8;
             // 
-            // textBox5
+            // txtprecio
             // 
-            textBox5.Location = new Point(810, 18);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(101, 23);
-            textBox5.TabIndex = 5;
+            txtprecio.Location = new Point(810, 18);
+            txtprecio.Name = "txtprecio";
+            txtprecio.Size = new Size(101, 23);
+            txtprecio.TabIndex = 5;
             // 
-            // comboBox1
+            // cmbproducto
             // 
-            comboBox1.ForeColor = Color.Black;
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(218, 18);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(160, 23);
-            comboBox1.TabIndex = 3;
-            comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
+            cmbproducto.ForeColor = Color.Black;
+            cmbproducto.FormattingEnabled = true;
+            cmbproducto.Location = new Point(215, 18);
+            cmbproducto.Name = "cmbproducto";
+            cmbproducto.Size = new Size(160, 23);
+            cmbproducto.TabIndex = 3;
+            cmbproducto.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
             // 
             // label6
             // 
@@ -317,7 +321,7 @@
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
             label5.ForeColor = Color.Black;
-            label5.Location = new Point(384, 19);
+            label5.Location = new Point(383, 20);
             label5.Name = "label5";
             label5.Size = new Size(75, 20);
             label5.TabIndex = 1;
@@ -329,21 +333,23 @@
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
             label4.ForeColor = Color.Black;
-            label4.Location = new Point(134, 17);
+            label4.Location = new Point(134, 19);
             label4.Name = "label4";
             label4.Size = new Size(84, 20);
             label4.TabIndex = 0;
             label4.Text = "Productos:";
             label4.Click += label4_Click;
             // 
-            // dataGridView1
+            // dgvventas
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Column3, Column4, Column5, Column15, Column16, Column6 });
-            dataGridView1.Location = new Point(2, 189);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(966, 196);
-            dataGridView1.TabIndex = 2;
+            dgvventas.AllowUserToDeleteRows = false;
+            dgvventas.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvventas.Columns.AddRange(new DataGridViewColumn[] { Column3, Column4, Column5, Column15, Column16, Column6 });
+            dgvventas.Location = new Point(2, 189);
+            dgvventas.Name = "dgvventas";
+            dgvventas.Size = new Size(844, 196);
+            dgvventas.TabIndex = 2;
+            dgvventas.TabStop = false;
             // 
             // Column3
             // 
@@ -610,6 +616,7 @@
             vScrollBar1.Name = "vScrollBar1";
             vScrollBar1.Size = new Size(18, 727);
             vScrollBar1.TabIndex = 10;
+            vScrollBar1.Scroll += vScrollBar1_Scroll;
             // 
             // Ventas
             // 
@@ -620,7 +627,7 @@
             Controls.Add(vScrollBar1);
             Controls.Add(groupBox4);
             Controls.Add(groupBox3);
-            Controls.Add(dataGridView1);
+            Controls.Add(dgvventas);
             Controls.Add(groupBox2);
             Controls.Add(groupBox1);
             FormBorderStyle = FormBorderStyle.None;
@@ -631,8 +638,8 @@
             groupBox1.PerformLayout();
             groupBox2.ResumeLayout(false);
             groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)numericant).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvventas).EndInit();
             groupBox3.ResumeLayout(false);
             groupBox3.PerformLayout();
             groupBox4.ResumeLayout(false);
@@ -644,9 +651,9 @@
         #endregion
 
         private GroupBox groupBox1;
-        private TextBox textBox3;
-        private TextBox textBox2;
-        private TextBox textBox1;
+        private TextBox txtfecha;
+        private TextBox txtfactura;
+        private TextBox txtcliente;
         private Label label3;
         private Label label2;
         private Label label1;
@@ -654,9 +661,9 @@
         private Label label6;
         private Label label5;
         private Label label4;
-        private ComboBox comboBox1;
-        private TextBox textBox5;
-        private DataGridView dataGridView1;
+        private ComboBox cmbproducto;
+        private TextBox txtprecio;
+        private DataGridView dgvventas;
         private Label label7;
         private Label label8;
         private Label label9;
@@ -664,7 +671,7 @@
         private TextBox textBox6;
         private TextBox textBox7;
         private GroupBox groupBox3;
-        private NumericUpDown numericUpDown1;
+        private NumericUpDown numericant;
         private TextBox textBox4;
         private GroupBox groupBox4;
         private ComboBox comboBox2;
@@ -682,9 +689,9 @@
         private DataGridViewTextBoxColumn Column14;
         private Label label12;
         private TextBox textBox9;
-        private ComboBox comboBox3;
+        private ComboBox cmbtipo;
         private Label label14;
-        private TextBox textBox10;
+        private TextBox txtdescuento;
         private Label label13;
         private DataGridViewTextBoxColumn Column3;
         private DataGridViewTextBoxColumn Column4;
@@ -693,9 +700,9 @@
         private DataGridViewTextBoxColumn Column16;
         private DataGridViewTextBoxColumn Column6;
         private VScrollBar vScrollBar1;
-        private Button button5;
-        private Button button2;
-        private Button button1;
+        private Button btnaceptar;
+        private Button btnlimpiar;
+        private Button btningresar;
         private Button button6;
         private Button button3;
     }

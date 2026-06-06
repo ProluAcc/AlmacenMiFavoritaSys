@@ -29,9 +29,15 @@
         private void InitializeComponent()
         {
             groupBox2 = new GroupBox();
+            button4 = new Button();
+            button2 = new Button();
+            button3 = new Button();
+            textBox6 = new TextBox();
+            label1 = new Label();
             dataGridView2 = new DataGridView();
             dataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
             dataGridViewTextBoxColumn2 = new DataGridViewTextBoxColumn();
+            Column1 = new DataGridViewTextBoxColumn();
             button1 = new Button();
             textBox3 = new TextBox();
             label5 = new Label();
@@ -39,9 +45,7 @@
             textBox4 = new TextBox();
             panel1 = new Panel();
             label2 = new Label();
-            button3 = new Button();
-            textBox6 = new TextBox();
-            label1 = new Label();
+            button5 = new Button();
             groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
             panel1.SuspendLayout();
@@ -50,6 +54,8 @@
             // groupBox2
             // 
             groupBox2.BackColor = SystemColors.Control;
+            groupBox2.Controls.Add(button4);
+            groupBox2.Controls.Add(button2);
             groupBox2.Controls.Add(button3);
             groupBox2.Controls.Add(textBox6);
             groupBox2.Controls.Add(label1);
@@ -61,18 +67,72 @@
             groupBox2.Controls.Add(textBox4);
             groupBox2.Location = new Point(4, 54);
             groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(386, 438);
+            groupBox2.Size = new Size(511, 438);
             groupBox2.TabIndex = 3;
             groupBox2.TabStop = false;
             groupBox2.Text = "Medida";
             // 
+            // button4
+            // 
+            button4.BackColor = SystemColors.ButtonFace;
+            button4.Font = new Font("Segoe UI Black", 11F, FontStyle.Bold);
+            button4.ForeColor = Color.FromArgb(69, 69, 210);
+            button4.Location = new Point(264, 90);
+            button4.Name = "button4";
+            button4.Size = new Size(239, 35);
+            button4.TabIndex = 115;
+            button4.Text = "🔓HABILITAR/DESHABILITAR";
+            button4.UseVisualStyleBackColor = false;
+            // 
+            // button2
+            // 
+            button2.BackColor = SystemColors.ButtonFace;
+            button2.Font = new Font("Segoe UI Black", 11F, FontStyle.Bold);
+            button2.ForeColor = Color.FromArgb(69, 69, 210);
+            button2.Location = new Point(147, 90);
+            button2.Name = "button2";
+            button2.Size = new Size(109, 35);
+            button2.TabIndex = 114;
+            button2.Text = "✏EDITAR";
+            button2.UseVisualStyleBackColor = false;
+            // 
+            // button3
+            // 
+            button3.BackColor = SystemColors.ButtonFace;
+            button3.Font = new Font("Segoe UI Black", 11F, FontStyle.Bold);
+            button3.ForeColor = Color.FromArgb(69, 69, 210);
+            button3.Location = new Point(243, 137);
+            button3.Name = "button3";
+            button3.Size = new Size(128, 35);
+            button3.TabIndex = 113;
+            button3.Text = "🔍BUSCAR";
+            button3.UseVisualStyleBackColor = false;
+            // 
+            // textBox6
+            // 
+            textBox6.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            textBox6.Location = new Point(73, 141);
+            textBox6.Name = "textBox6";
+            textBox6.Size = new Size(162, 27);
+            textBox6.TabIndex = 112;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            label1.Location = new Point(11, 143);
+            label1.Name = "label1";
+            label1.Size = new Size(56, 20);
+            label1.TabIndex = 110;
+            label1.Text = "Buscar";
+            // 
             // dataGridView2
             // 
             dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView2.Columns.AddRange(new DataGridViewColumn[] { dataGridViewTextBoxColumn1, dataGridViewTextBoxColumn2 });
-            dataGridView2.Location = new Point(6, 178);
+            dataGridView2.Columns.AddRange(new DataGridViewColumn[] { dataGridViewTextBoxColumn1, dataGridViewTextBoxColumn2, Column1 });
+            dataGridView2.Location = new Point(6, 182);
             dataGridView2.Name = "dataGridView2";
-            dataGridView2.Size = new Size(365, 247);
+            dataGridView2.Size = new Size(497, 247);
             dataGridView2.TabIndex = 105;
             // 
             // dataGridViewTextBoxColumn1
@@ -85,14 +145,19 @@
             // 
             dataGridViewTextBoxColumn2.HeaderText = "Descripción";
             dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            dataGridViewTextBoxColumn2.Width = 200;
+            dataGridViewTextBoxColumn2.Width = 230;
+            // 
+            // Column1
+            // 
+            Column1.HeaderText = "Activo";
+            Column1.Name = "Column1";
             // 
             // button1
             // 
             button1.BackColor = SystemColors.ButtonFace;
             button1.Font = new Font("Segoe UI Black", 11F, FontStyle.Bold);
             button1.ForeColor = Color.FromArgb(69, 69, 210);
-            button1.Location = new Point(243, 90);
+            button1.Location = new Point(11, 90);
             button1.Name = "button1";
             button1.Size = new Size(128, 35);
             button1.TabIndex = 105;
@@ -139,10 +204,11 @@
             // 
             panel1.BackColor = SystemColors.Control;
             panel1.BorderStyle = BorderStyle.FixedSingle;
+            panel1.Controls.Add(button5);
             panel1.Controls.Add(label2);
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(390, 48);
+            panel1.Size = new Size(528, 48);
             panel1.TabIndex = 4;
             // 
             // label2
@@ -157,41 +223,23 @@
             label2.TabIndex = 81;
             label2.Text = "AGREGAR MEDIDA";
             // 
-            // button3
+            // button5
             // 
-            button3.BackColor = SystemColors.ButtonFace;
-            button3.Font = new Font("Segoe UI Black", 11F, FontStyle.Bold);
-            button3.ForeColor = Color.FromArgb(69, 69, 210);
-            button3.Location = new Point(243, 137);
-            button3.Name = "button3";
-            button3.Size = new Size(128, 35);
-            button3.TabIndex = 113;
-            button3.Text = "🔍BUSCAR";
-            button3.UseVisualStyleBackColor = false;
-            // 
-            // textBox6
-            // 
-            textBox6.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            textBox6.Location = new Point(73, 137);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(162, 27);
-            textBox6.TabIndex = 112;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            label1.Location = new Point(11, 137);
-            label1.Name = "label1";
-            label1.Size = new Size(56, 20);
-            label1.TabIndex = 110;
-            label1.Text = "Buscar";
+            button5.BackColor = SystemColors.ButtonFace;
+            button5.Font = new Font("Segoe UI Black", 11F, FontStyle.Bold);
+            button5.ForeColor = Color.FromArgb(69, 69, 210);
+            button5.Location = new Point(449, 5);
+            button5.Name = "button5";
+            button5.Size = new Size(73, 35);
+            button5.TabIndex = 18;
+            button5.Text = "AYUDA";
+            button5.UseVisualStyleBackColor = false;
             // 
             // Medida
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(398, 543);
+            ClientSize = new Size(527, 498);
             Controls.Add(panel1);
             Controls.Add(groupBox2);
             Name = "Medida";
@@ -208,8 +256,6 @@
 
         private GroupBox groupBox2;
         private DataGridView dataGridView2;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private Button button1;
         private TextBox textBox3;
         private Label label5;
@@ -220,5 +266,11 @@
         private Button button3;
         private TextBox textBox6;
         private Label label1;
+        private Button button4;
+        private Button button2;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private DataGridViewTextBoxColumn Column1;
+        private Button button5;
     }
 }

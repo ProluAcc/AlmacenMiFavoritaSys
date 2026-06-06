@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             groupBox1 = new GroupBox();
-            button5 = new Button();
             textBox3 = new TextBox();
             textBox2 = new TextBox();
             textBox1 = new TextBox();
@@ -83,6 +82,7 @@
             comboBox2 = new ComboBox();
             label11 = new Label();
             vScrollBar1 = new VScrollBar();
+            button5 = new Button();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
@@ -107,18 +107,6 @@
             groupBox1.Size = new Size(973, 67);
             groupBox1.TabIndex = 0;
             groupBox1.TabStop = false;
-            // 
-            // button5
-            // 
-            button5.BackColor = SystemColors.ButtonFace;
-            button5.Font = new Font("Segoe UI Black", 11F, FontStyle.Bold);
-            button5.ForeColor = Color.FromArgb(69, 69, 210);
-            button5.Location = new Point(780, 17);
-            button5.Name = "button5";
-            button5.Size = new Size(115, 35);
-            button5.TabIndex = 13;
-            button5.Text = "✅ACEPTAR";
-            button5.UseVisualStyleBackColor = false;
             // 
             // textBox3
             // 
@@ -611,6 +599,18 @@
             vScrollBar1.Size = new Size(18, 727);
             vScrollBar1.TabIndex = 10;
             // 
+            // button5
+            // 
+            button5.BackColor = SystemColors.ButtonFace;
+            button5.Font = new Font("Segoe UI Black", 11F, FontStyle.Bold);
+            button5.ForeColor = Color.FromArgb(69, 69, 210);
+            button5.Location = new Point(895, 15);
+            button5.Name = "button5";
+            button5.Size = new Size(73, 35);
+            button5.TabIndex = 17;
+            button5.Text = "AYUDA";
+            button5.UseVisualStyleBackColor = false;
+            // 
             // Ventas
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -693,10 +693,10 @@
         private DataGridViewTextBoxColumn Column16;
         private DataGridViewTextBoxColumn Column6;
         private VScrollBar vScrollBar1;
-        private Button button5;
         private Button button2;
         private Button button1;
         private Button button6;
         private Button button3;
+        private Button button5;
     }
 }

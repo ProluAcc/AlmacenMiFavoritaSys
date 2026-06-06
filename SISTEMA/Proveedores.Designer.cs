@@ -57,6 +57,7 @@
             label8 = new Label();
             button4 = new Button();
             button5 = new Button();
+            button6 = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             panel3.SuspendLayout();
             SuspendLayout();
@@ -91,7 +92,7 @@
             // textBox4
             // 
             textBox4.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            textBox4.Location = new Point(473, 126);
+            textBox4.Location = new Point(473, 105);
             textBox4.Name = "textBox4";
             textBox4.Size = new Size(218, 27);
             textBox4.TabIndex = 76;
@@ -99,7 +100,7 @@
             // textBox3
             // 
             textBox3.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            textBox3.Location = new Point(191, 126);
+            textBox3.Location = new Point(191, 105);
             textBox3.Name = "textBox3";
             textBox3.Size = new Size(123, 27);
             textBox3.TabIndex = 75;
@@ -107,7 +108,7 @@
             // textBox2
             // 
             textBox2.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            textBox2.Location = new Point(12, 126);
+            textBox2.Location = new Point(12, 105);
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(173, 27);
             textBox2.TabIndex = 74;
@@ -117,9 +118,9 @@
             button2.BackColor = SystemColors.ButtonFace;
             button2.Font = new Font("Segoe UI Black", 11F, FontStyle.Bold);
             button2.ForeColor = Color.FromArgb(69, 69, 210);
-            button2.Location = new Point(794, 187);
+            button2.Location = new Point(840, 146);
             button2.Name = "button2";
-            button2.Size = new Size(121, 34);
+            button2.Size = new Size(109, 37);
             button2.TabIndex = 73;
             button2.Text = "🗑LIMPIAR";
             button2.UseVisualStyleBackColor = false;
@@ -129,9 +130,9 @@
             button1.BackColor = SystemColors.ButtonFace;
             button1.Font = new Font("Segoe UI Black", 11F, FontStyle.Bold);
             button1.ForeColor = Color.FromArgb(69, 69, 210);
-            button1.Location = new Point(845, 280);
+            button1.Location = new Point(845, 242);
             button1.Name = "button1";
-            button1.Size = new Size(118, 37);
+            button1.Size = new Size(118, 42);
             button1.TabIndex = 72;
             button1.Text = "✔️GUARDAR";
             button1.UseVisualStyleBackColor = false;
@@ -140,7 +141,7 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            label5.Location = new Point(855, 99);
+            label5.Location = new Point(855, 78);
             label5.Name = "label5";
             label5.Size = new Size(60, 20);
             label5.TabIndex = 71;
@@ -150,7 +151,7 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            label4.Location = new Point(473, 98);
+            label4.Location = new Point(473, 77);
             label4.Name = "label4";
             label4.Size = new Size(78, 20);
             label4.TabIndex = 70;
@@ -161,7 +162,7 @@
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
             label3.ForeColor = Color.Black;
-            label3.Location = new Point(191, 98);
+            label3.Location = new Point(191, 77);
             label3.Name = "label3";
             label3.Size = new Size(74, 20);
             label3.TabIndex = 69;
@@ -172,7 +173,7 @@
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
             label2.ForeColor = Color.Black;
-            label2.Location = new Point(12, 97);
+            label2.Location = new Point(12, 76);
             label2.Name = "label2";
             label2.Size = new Size(173, 20);
             label2.TabIndex = 68;
@@ -232,7 +233,7 @@
             // 
             comboBox1.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
             comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(845, 125);
+            comboBox1.Location = new Point(845, 104);
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(112, 28);
             comboBox1.TabIndex = 66;
@@ -241,10 +242,11 @@
             // 
             panel3.BackColor = SystemColors.Control;
             panel3.BorderStyle = BorderStyle.FixedSingle;
+            panel3.Controls.Add(button6);
             panel3.Controls.Add(label6);
             panel3.Location = new Point(0, 0);
             panel3.Name = "panel3";
-            panel3.Size = new Size(975, 77);
+            panel3.Size = new Size(975, 64);
             panel3.TabIndex = 81;
             // 
             // label6
@@ -252,7 +254,7 @@
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI Black", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label6.ForeColor = Color.Black;
-            label6.Location = new Point(5, 20);
+            label6.Location = new Point(3, 11);
             label6.Name = "label6";
             label6.Size = new Size(251, 32);
             label6.TabIndex = 10;
@@ -261,7 +263,7 @@
             // textBox1
             // 
             textBox1.Font = new Font("Segoe UI", 11F);
-            textBox1.Location = new Point(697, 126);
+            textBox1.Location = new Point(697, 105);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(142, 27);
             textBox1.TabIndex = 84;
@@ -281,7 +283,7 @@
             // textBox6
             // 
             textBox6.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            textBox6.Location = new Point(320, 126);
+            textBox6.Location = new Point(320, 105);
             textBox6.Name = "textBox6";
             textBox6.Size = new Size(147, 27);
             textBox6.TabIndex = 86;
@@ -291,7 +293,7 @@
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
             label1.ForeColor = Color.Black;
-            label1.Location = new Point(320, 98);
+            label1.Location = new Point(320, 77);
             label1.Name = "label1";
             label1.Size = new Size(60, 20);
             label1.TabIndex = 87;
@@ -301,7 +303,7 @@
             // 
             label8.AutoSize = true;
             label8.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            label8.Location = new Point(697, 98);
+            label8.Location = new Point(697, 77);
             label8.Name = "label8";
             label8.Size = new Size(137, 20);
             label8.TabIndex = 88;
@@ -312,7 +314,7 @@
             button4.BackColor = SystemColors.ButtonFace;
             button4.Font = new Font("Segoe UI Black", 11F, FontStyle.Bold);
             button4.ForeColor = Color.FromArgb(69, 69, 210);
-            button4.Location = new Point(681, 185);
+            button4.Location = new Point(727, 147);
             button4.Name = "button4";
             button4.Size = new Size(107, 37);
             button4.TabIndex = 89;
@@ -324,12 +326,24 @@
             button5.BackColor = SystemColors.ButtonFace;
             button5.Font = new Font("Segoe UI Black", 11F, FontStyle.Bold);
             button5.ForeColor = Color.FromArgb(69, 69, 210);
-            button5.Location = new Point(852, 239);
+            button5.Location = new Point(845, 290);
             button5.Name = "button5";
-            button5.Size = new Size(105, 35);
+            button5.Size = new Size(118, 38);
             button5.TabIndex = 117;
             button5.Text = "✏️EDITAR";
             button5.UseVisualStyleBackColor = false;
+            // 
+            // button6
+            // 
+            button6.BackColor = SystemColors.ButtonFace;
+            button6.Font = new Font("Segoe UI Black", 11F, FontStyle.Bold);
+            button6.ForeColor = Color.FromArgb(69, 69, 210);
+            button6.Location = new Point(889, 15);
+            button6.Name = "button6";
+            button6.Size = new Size(73, 35);
+            button6.TabIndex = 118;
+            button6.Text = "AYUDA";
+            button6.UseVisualStyleBackColor = false;
             // 
             // Proveedores
             // 
@@ -399,5 +413,6 @@
         private Label label8;
         private Button button4;
         private Button button5;
+        private Button button6;
     }
 }

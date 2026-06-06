@@ -64,6 +64,7 @@
             textBox5 = new TextBox();
             label5 = new Label();
             label4 = new Label();
+            button5 = new Button();
             groupBox1.SuspendLayout();
             groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
@@ -77,6 +78,7 @@
             // groupBox1
             // 
             groupBox1.BackColor = SystemColors.Control;
+            groupBox1.Controls.Add(button5);
             groupBox1.Controls.Add(textBox3);
             groupBox1.Controls.Add(button1);
             groupBox1.Controls.Add(label3);
@@ -452,6 +454,18 @@
             label4.TabIndex = 11;
             label4.Text = "Producto Nuevo:";
             // 
+            // button5
+            // 
+            button5.BackColor = SystemColors.ButtonFace;
+            button5.Font = new Font("Segoe UI Black", 11F, FontStyle.Bold);
+            button5.ForeColor = Color.FromArgb(69, 69, 210);
+            button5.Location = new Point(895, 16);
+            button5.Name = "button5";
+            button5.Size = new Size(73, 35);
+            button5.TabIndex = 18;
+            button5.Text = "AYUDA";
+            button5.UseVisualStyleBackColor = false;
+            // 
             // Devolución
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -522,5 +536,6 @@
         private Label label6;
         private ComboBox comboBox1;
         private RadioButton radioButton1;
+        private Button button5;
     }
 }

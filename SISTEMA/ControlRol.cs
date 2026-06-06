@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace SISTEMA
 {
-    public partial class Mantenimiento : Form
+    public partial class ControlRol : Form
     {
-        public Mantenimiento()
+        public ControlRol()
         {
             InitializeComponent();
-        }
-
-        private void groupBox2_Enter(object sender, EventArgs e)
-        {
-
         }
     }
 }

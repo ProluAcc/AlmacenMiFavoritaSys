@@ -71,6 +71,7 @@
             button5 = new Button();
             button6 = new Button();
             button8 = new Button();
+            button9 = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -456,12 +457,25 @@
             button8.Text = "➕";
             button8.UseVisualStyleBackColor = false;
             // 
+            // button9
+            // 
+            button9.BackColor = SystemColors.ButtonFace;
+            button9.Font = new Font("Segoe UI Black", 11F, FontStyle.Bold);
+            button9.ForeColor = Color.FromArgb(69, 69, 210);
+            button9.Location = new Point(890, 12);
+            button9.Name = "button9";
+            button9.Size = new Size(73, 35);
+            button9.TabIndex = 119;
+            button9.Text = "AYUDA";
+            button9.UseVisualStyleBackColor = false;
+            // 
             // Productos
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Gainsboro;
             ClientSize = new Size(975, 527);
+            Controls.Add(button9);
             Controls.Add(button8);
             Controls.Add(button6);
             Controls.Add(button5);
@@ -547,5 +561,6 @@
         private DataGridViewTextBoxColumn Column10;
         private Button button6;
         private Button button8;
+        private Button button9;
     }
 }

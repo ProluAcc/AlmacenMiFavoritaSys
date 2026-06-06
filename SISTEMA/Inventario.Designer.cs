@@ -42,10 +42,6 @@
             label3 = new Label();
             groupBox2 = new GroupBox();
             dataGridView1 = new DataGridView();
-            groupBox3 = new GroupBox();
-            button7 = new Button();
-            button4 = new Button();
-            panel1 = new Panel();
             Column1 = new DataGridViewTextBoxColumn();
             Column2 = new DataGridViewTextBoxColumn();
             Column10 = new DataGridViewTextBoxColumn();
@@ -56,6 +52,11 @@
             Column7 = new DataGridViewTextBoxColumn();
             Column8 = new DataGridViewTextBoxColumn();
             Column9 = new DataGridViewTextBoxColumn();
+            groupBox3 = new GroupBox();
+            button7 = new Button();
+            button4 = new Button();
+            panel1 = new Panel();
+            button5 = new Button();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
@@ -220,51 +221,6 @@
             dataGridView1.Size = new Size(959, 245);
             dataGridView1.TabIndex = 2;
             // 
-            // groupBox3
-            // 
-            groupBox3.BackColor = SystemColors.Control;
-            groupBox3.Controls.Add(button7);
-            groupBox3.Controls.Add(button4);
-            groupBox3.ForeColor = Color.Black;
-            groupBox3.Location = new Point(3, 431);
-            groupBox3.Name = "groupBox3";
-            groupBox3.Size = new Size(302, 84);
-            groupBox3.TabIndex = 5;
-            groupBox3.TabStop = false;
-            groupBox3.Text = "Acciones";
-            // 
-            // button7
-            // 
-            button7.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            button7.ForeColor = Color.FromArgb(69, 69, 210);
-            button7.Location = new Point(150, 22);
-            button7.Name = "button7";
-            button7.Size = new Size(138, 38);
-            button7.TabIndex = 19;
-            button7.Text = "Imprimir reporte";
-            button7.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            button4.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            button4.ForeColor = Color.FromArgb(69, 69, 210);
-            button4.Location = new Point(9, 22);
-            button4.Name = "button4";
-            button4.Size = new Size(135, 38);
-            button4.TabIndex = 18;
-            button4.Text = "Exportar a Excel";
-            button4.UseVisualStyleBackColor = true;
-            // 
-            // panel1
-            // 
-            panel1.BackColor = SystemColors.Control;
-            panel1.BorderStyle = BorderStyle.FixedSingle;
-            panel1.Controls.Add(label1);
-            panel1.Location = new Point(3, 1);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(970, 46);
-            panel1.TabIndex = 6;
-            // 
             // Column1
             // 
             Column1.HeaderText = "Código";
@@ -314,6 +270,64 @@
             // 
             Column9.HeaderText = "Acciones";
             Column9.Name = "Column9";
+            // 
+            // groupBox3
+            // 
+            groupBox3.BackColor = SystemColors.Control;
+            groupBox3.Controls.Add(button7);
+            groupBox3.Controls.Add(button4);
+            groupBox3.ForeColor = Color.Black;
+            groupBox3.Location = new Point(3, 431);
+            groupBox3.Name = "groupBox3";
+            groupBox3.Size = new Size(302, 84);
+            groupBox3.TabIndex = 5;
+            groupBox3.TabStop = false;
+            groupBox3.Text = "Acciones";
+            // 
+            // button7
+            // 
+            button7.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            button7.ForeColor = Color.FromArgb(69, 69, 210);
+            button7.Location = new Point(150, 22);
+            button7.Name = "button7";
+            button7.Size = new Size(138, 38);
+            button7.TabIndex = 19;
+            button7.Text = "Imprimir reporte";
+            button7.UseVisualStyleBackColor = true;
+            // 
+            // button4
+            // 
+            button4.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            button4.ForeColor = Color.FromArgb(69, 69, 210);
+            button4.Location = new Point(9, 22);
+            button4.Name = "button4";
+            button4.Size = new Size(135, 38);
+            button4.TabIndex = 18;
+            button4.Text = "Exportar a Excel";
+            button4.UseVisualStyleBackColor = true;
+            // 
+            // panel1
+            // 
+            panel1.BackColor = SystemColors.Control;
+            panel1.BorderStyle = BorderStyle.FixedSingle;
+            panel1.Controls.Add(button5);
+            panel1.Controls.Add(label1);
+            panel1.Location = new Point(3, 1);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(970, 46);
+            panel1.TabIndex = 6;
+            // 
+            // button5
+            // 
+            button5.BackColor = SystemColors.ButtonFace;
+            button5.Font = new Font("Segoe UI Black", 11F, FontStyle.Bold);
+            button5.ForeColor = Color.FromArgb(69, 69, 210);
+            button5.Location = new Point(889, 4);
+            button5.Name = "button5";
+            button5.Size = new Size(73, 35);
+            button5.TabIndex = 18;
+            button5.Text = "AYUDA";
+            button5.UseVisualStyleBackColor = false;
             // 
             // Form2
             // 
@@ -369,5 +383,6 @@
         private DataGridViewTextBoxColumn Column7;
         private DataGridViewTextBoxColumn Column8;
         private DataGridViewTextBoxColumn Column9;
+        private Button button5;
     }
 }

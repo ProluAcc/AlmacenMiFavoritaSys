@@ -72,6 +72,7 @@
             label5 = new Label();
             textBox2 = new TextBox();
             label6 = new Label();
+            button2 = new Button();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
@@ -84,6 +85,7 @@
             // 
             panel1.BackColor = SystemColors.Control;
             panel1.BorderStyle = BorderStyle.FixedSingle;
+            panel1.Controls.Add(button2);
             panel1.Controls.Add(comboBox3);
             panel1.Controls.Add(comboBox2);
             panel1.Controls.Add(label2);
@@ -513,6 +515,18 @@
             label6.TabIndex = 0;
             label6.Text = "Fecha de Compra:";
             // 
+            // button2
+            // 
+            button2.BackColor = SystemColors.ButtonFace;
+            button2.Font = new Font("Segoe UI Black", 11F, FontStyle.Bold);
+            button2.ForeColor = Color.FromArgb(69, 69, 210);
+            button2.Location = new Point(888, 7);
+            button2.Name = "button2";
+            button2.Size = new Size(73, 35);
+            button2.TabIndex = 18;
+            button2.Text = "AYUDA";
+            button2.UseVisualStyleBackColor = false;
+            // 
             // Compra
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -586,5 +600,6 @@
         private DataGridViewTextBoxColumn Column9;
         private DataGridViewTextBoxColumn Column10;
         private ComboBox comboBox3;
+        private Button button2;
     }
 }

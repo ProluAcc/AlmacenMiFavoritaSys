@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace SISTEMA
 {
-    public partial class Mantenimiento : Form
+    public partial class AperturaCaja : Form
     {
-        public Mantenimiento()
+        public AperturaCaja()
         {
             InitializeComponent();
-        }
-
-        private void groupBox2_Enter(object sender, EventArgs e)
-        {
-
         }
     }
 }

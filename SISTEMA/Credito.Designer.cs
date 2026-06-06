@@ -30,7 +30,6 @@
         {
             groupBox1 = new GroupBox();
             btnBuscarCliente = new Button();
-            btnInicio = new Button();
             cbCliente = new ComboBox();
             label4 = new Label();
             txtFecha = new TextBox();
@@ -79,6 +78,7 @@
             label6 = new Label();
             panel2 = new Panel();
             label5 = new Label();
+            button5 = new Button();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
@@ -91,8 +91,8 @@
             // groupBox1
             // 
             groupBox1.BackColor = SystemColors.Control;
+            groupBox1.Controls.Add(button5);
             groupBox1.Controls.Add(btnBuscarCliente);
-            groupBox1.Controls.Add(btnInicio);
             groupBox1.Controls.Add(cbCliente);
             groupBox1.Controls.Add(label4);
             groupBox1.Controls.Add(txtFecha);
@@ -118,19 +118,6 @@
             btnBuscarCliente.Text = "Aceptar";
             btnBuscarCliente.UseVisualStyleBackColor = false;
             btnBuscarCliente.Click += btnBuscarCliente_Click;
-            // 
-            // btnInicio
-            // 
-            btnInicio.BackColor = SystemColors.ControlLight;
-            btnInicio.Font = new Font("Segoe UI Black", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnInicio.ForeColor = Color.FromArgb(69, 69, 210);
-            btnInicio.Location = new Point(883, 17);
-            btnInicio.Name = "btnInicio";
-            btnInicio.Size = new Size(78, 35);
-            btnInicio.TabIndex = 6;
-            btnInicio.Text = "Inicio";
-            btnInicio.UseVisualStyleBackColor = false;
-            btnInicio.Click += btnInicio_Click;
             // 
             // cbCliente
             // 
@@ -338,9 +325,9 @@
             btnRegistrarVenta.BackColor = Color.FromArgb(69, 69, 210);
             btnRegistrarVenta.Font = new Font("Segoe UI Black", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnRegistrarVenta.ForeColor = Color.White;
-            btnRegistrarVenta.Location = new Point(48, 194);
+            btnRegistrarVenta.Location = new Point(44, 193);
             btnRegistrarVenta.Name = "btnRegistrarVenta";
-            btnRegistrarVenta.Size = new Size(216, 42);
+            btnRegistrarVenta.Size = new Size(229, 42);
             btnRegistrarVenta.TabIndex = 7;
             btnRegistrarVenta.Text = "Registrar Venta a Crédito";
             btnRegistrarVenta.UseVisualStyleBackColor = false;
@@ -592,6 +579,18 @@
             label5.TabIndex = 0;
             label5.Text = "Información Crediticia del Cliente";
             // 
+            // button5
+            // 
+            button5.BackColor = SystemColors.ButtonFace;
+            button5.Font = new Font("Segoe UI Black", 11F, FontStyle.Bold);
+            button5.ForeColor = Color.FromArgb(69, 69, 210);
+            button5.Location = new Point(889, 16);
+            button5.Name = "button5";
+            button5.Size = new Size(73, 35);
+            button5.TabIndex = 18;
+            button5.Text = "AYUDA";
+            button5.UseVisualStyleBackColor = false;
+            // 
             // Credito
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -671,7 +670,6 @@
         private TextBox txtTotal;
         private Button btnRegistrarVenta;
         private TextBox txtiva;
-        private Button btnInicio;
         private DataGridViewTextBoxColumn Column1;
         private DataGridViewTextBoxColumn Column2;
         private DataGridViewTextBoxColumn Column3;
@@ -679,5 +677,6 @@
         private DataGridViewTextBoxColumn Column5;
         private DataGridViewTextBoxColumn Column6;
         private DataGridViewTextBoxColumn Column7;
+        private Button button5;
     }
 }

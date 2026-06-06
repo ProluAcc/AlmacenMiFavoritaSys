@@ -8,21 +8,26 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace SISTEMA
+namespace Control_de_egresos_de_caja
 {
-    public partial class ArqueoCaja : Form
+    public partial class ControlEgresosCaja : Form
     {
-        public ArqueoCaja()
+        public ControlEgresosCaja()
         {
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void label2_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void groupBox1_Enter(object sender, EventArgs e)
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
         {
 
         }

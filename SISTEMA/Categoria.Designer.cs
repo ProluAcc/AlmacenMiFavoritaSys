@@ -31,38 +31,35 @@
             panel1 = new Panel();
             label2 = new Label();
             groupBox1 = new GroupBox();
-            groupBox2 = new GroupBox();
-            textBox1 = new TextBox();
-            label3 = new Label();
-            textBox2 = new TextBox();
-            label1 = new Label();
-            textBox3 = new TextBox();
-            label4 = new Label();
-            textBox4 = new TextBox();
-            label5 = new Label();
-            button7 = new Button();
-            dataGridView1 = new DataGridView();
+            button4 = new Button();
+            button2 = new Button();
             button1 = new Button();
+            button3 = new Button();
+            textBox6 = new TextBox();
+            label4 = new Label();
+            dataGridView1 = new DataGridView();
             Column1 = new DataGridViewTextBoxColumn();
             Column2 = new DataGridViewTextBoxColumn();
-            dataGridView2 = new DataGridView();
-            dataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
-            dataGridViewTextBoxColumn2 = new DataGridViewTextBoxColumn();
+            Column3 = new DataGridViewTextBoxColumn();
+            textBox2 = new TextBox();
+            label1 = new Label();
+            textBox1 = new TextBox();
+            label3 = new Label();
+            button5 = new Button();
             panel1.SuspendLayout();
             groupBox1.SuspendLayout();
-            groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
             SuspendLayout();
             // 
             // panel1
             // 
             panel1.BackColor = SystemColors.Control;
             panel1.BorderStyle = BorderStyle.FixedSingle;
+            panel1.Controls.Add(button5);
             panel1.Controls.Add(label2);
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(801, 48);
+            panel1.Size = new Size(539, 48);
             panel1.TabIndex = 0;
             // 
             // label2
@@ -73,59 +70,122 @@
             label2.ForeColor = Color.Black;
             label2.Location = new Point(3, 7);
             label2.Name = "label2";
-            label2.Size = new Size(405, 32);
+            label2.Size = new Size(274, 32);
             label2.TabIndex = 81;
-            label2.Text = "AGREGAR CATEGORÍA O MEDIDA";
+            label2.Text = "AGREGAR CATEGORÍA";
             // 
             // groupBox1
             // 
             groupBox1.BackColor = SystemColors.Control;
+            groupBox1.Controls.Add(button4);
+            groupBox1.Controls.Add(button2);
+            groupBox1.Controls.Add(button1);
+            groupBox1.Controls.Add(button3);
+            groupBox1.Controls.Add(textBox6);
+            groupBox1.Controls.Add(label4);
             groupBox1.Controls.Add(dataGridView1);
-            groupBox1.Controls.Add(button7);
             groupBox1.Controls.Add(textBox2);
             groupBox1.Controls.Add(label1);
             groupBox1.Controls.Add(textBox1);
             groupBox1.Controls.Add(label3);
             groupBox1.Location = new Point(12, 54);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(377, 384);
+            groupBox1.Size = new Size(515, 432);
             groupBox1.TabIndex = 1;
             groupBox1.TabStop = false;
             groupBox1.Text = "Categoría";
             // 
-            // groupBox2
+            // button4
             // 
-            groupBox2.BackColor = SystemColors.Control;
-            groupBox2.Controls.Add(dataGridView2);
-            groupBox2.Controls.Add(button1);
-            groupBox2.Controls.Add(textBox3);
-            groupBox2.Controls.Add(label5);
-            groupBox2.Controls.Add(label4);
-            groupBox2.Controls.Add(textBox4);
-            groupBox2.Location = new Point(411, 54);
-            groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(377, 384);
-            groupBox2.TabIndex = 2;
-            groupBox2.TabStop = false;
-            groupBox2.Text = "Medida";
+            button4.BackColor = SystemColors.ButtonFace;
+            button4.Font = new Font("Segoe UI Black", 11F, FontStyle.Bold);
+            button4.ForeColor = Color.FromArgb(69, 69, 210);
+            button4.Location = new Point(262, 93);
+            button4.Name = "button4";
+            button4.Size = new Size(239, 35);
+            button4.TabIndex = 119;
+            button4.Text = "🔓HABILITAR/DESHABILITAR";
+            button4.UseVisualStyleBackColor = false;
             // 
-            // textBox1
+            // button2
             // 
-            textBox1.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            textBox1.Location = new Point(83, 22);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(191, 27);
-            textBox1.TabIndex = 96;
+            button2.BackColor = SystemColors.ButtonFace;
+            button2.Font = new Font("Segoe UI Black", 11F, FontStyle.Bold);
+            button2.ForeColor = Color.FromArgb(69, 69, 210);
+            button2.Location = new Point(145, 93);
+            button2.Name = "button2";
+            button2.Size = new Size(109, 35);
+            button2.TabIndex = 118;
+            button2.Text = "✏EDITAR";
+            button2.UseVisualStyleBackColor = false;
             // 
-            // label3
+            // button1
             // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            label3.Location = new Point(6, 25);
-            label3.Name = "label3";
-            label3.Size = new Size(71, 20);
-            label3.TabIndex = 95;
-            label3.Text = "Nombre:";
+            button1.BackColor = SystemColors.ButtonFace;
+            button1.Font = new Font("Segoe UI Black", 11F, FontStyle.Bold);
+            button1.ForeColor = Color.FromArgb(69, 69, 210);
+            button1.Location = new Point(9, 93);
+            button1.Name = "button1";
+            button1.Size = new Size(128, 35);
+            button1.TabIndex = 117;
+            button1.Text = "✔️GUARDAR";
+            button1.UseVisualStyleBackColor = false;
+            // 
+            // button3
+            // 
+            button3.BackColor = SystemColors.ButtonFace;
+            button3.Font = new Font("Segoe UI Black", 11F, FontStyle.Bold);
+            button3.ForeColor = Color.FromArgb(69, 69, 210);
+            button3.Location = new Point(241, 134);
+            button3.Name = "button3";
+            button3.Size = new Size(128, 35);
+            button3.TabIndex = 116;
+            button3.Text = "🔍BUSCAR";
+            button3.UseVisualStyleBackColor = false;
+            // 
+            // textBox6
+            // 
+            textBox6.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            textBox6.Location = new Point(70, 134);
+            textBox6.Name = "textBox6";
+            textBox6.Size = new Size(162, 27);
+            textBox6.TabIndex = 115;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            label4.Location = new Point(8, 137);
+            label4.Name = "label4";
+            label4.Size = new Size(56, 20);
+            label4.TabIndex = 114;
+            label4.Text = "Buscar";
+            // 
+            // dataGridView1
+            // 
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3 });
+            dataGridView1.Location = new Point(6, 176);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.Size = new Size(495, 247);
+            dataGridView1.TabIndex = 104;
+            // 
+            // Column1
+            // 
+            Column1.HeaderText = "Nombre";
+            Column1.Name = "Column1";
+            Column1.Width = 120;
+            // 
+            // Column2
+            // 
+            Column2.HeaderText = "Descripción";
+            Column2.Name = "Column2";
+            Column2.Width = 230;
+            // 
+            // Column3
+            // 
+            Column3.HeaderText = "Activo";
+            Column3.Name = "Column3";
             // 
             // textBox2
             // 
@@ -145,127 +205,51 @@
             label1.TabIndex = 97;
             label1.Text = "Descripción:";
             // 
-            // textBox3
+            // textBox1
             // 
-            textBox3.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            textBox3.Location = new Point(106, 57);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(265, 27);
-            textBox3.TabIndex = 102;
+            textBox1.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            textBox1.Location = new Point(83, 22);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(191, 27);
+            textBox1.TabIndex = 96;
             // 
-            // label4
+            // label3
             // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            label4.Location = new Point(6, 60);
-            label4.Name = "label4";
-            label4.Size = new Size(94, 20);
-            label4.TabIndex = 101;
-            label4.Text = "Descripción:";
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            label3.Location = new Point(6, 25);
+            label3.Name = "label3";
+            label3.Size = new Size(71, 20);
+            label3.TabIndex = 95;
+            label3.Text = "Nombre:";
             // 
-            // textBox4
+            // button5
             // 
-            textBox4.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            textBox4.Location = new Point(83, 22);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(200, 27);
-            textBox4.TabIndex = 100;
+            button5.BackColor = SystemColors.ButtonFace;
+            button5.Font = new Font("Segoe UI Black", 11F, FontStyle.Bold);
+            button5.ForeColor = Color.FromArgb(69, 69, 210);
+            button5.Location = new Point(459, 5);
+            button5.Name = "button5";
+            button5.Size = new Size(73, 35);
+            button5.TabIndex = 18;
+            button5.Text = "AYUDA";
+            button5.UseVisualStyleBackColor = false;
             // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            label5.Location = new Point(6, 25);
-            label5.Name = "label5";
-            label5.Size = new Size(71, 20);
-            label5.TabIndex = 99;
-            label5.Text = "Nombre:";
-            // 
-            // button7
-            // 
-            button7.BackColor = SystemColors.ButtonFace;
-            button7.Font = new Font("Segoe UI Black", 11F, FontStyle.Bold);
-            button7.ForeColor = Color.FromArgb(69, 69, 210);
-            button7.Location = new Point(243, 90);
-            button7.Name = "button7";
-            button7.Size = new Size(128, 35);
-            button7.TabIndex = 103;
-            button7.Text = "✔️GUARDAR";
-            button7.UseVisualStyleBackColor = false;
-            // 
-            // dataGridView1
-            // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2 });
-            dataGridView1.Location = new Point(6, 131);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(365, 247);
-            dataGridView1.TabIndex = 104;
-            // 
-            // button1
-            // 
-            button1.BackColor = SystemColors.ButtonFace;
-            button1.Font = new Font("Segoe UI Black", 11F, FontStyle.Bold);
-            button1.ForeColor = Color.FromArgb(69, 69, 210);
-            button1.Location = new Point(243, 90);
-            button1.Name = "button1";
-            button1.Size = new Size(128, 35);
-            button1.TabIndex = 105;
-            button1.Text = "✔️GUARDAR";
-            button1.UseVisualStyleBackColor = false;
-            // 
-            // Column1
-            // 
-            Column1.HeaderText = "Nombre";
-            Column1.Name = "Column1";
-            Column1.Width = 120;
-            // 
-            // Column2
-            // 
-            Column2.HeaderText = "Descripción";
-            Column2.Name = "Column2";
-            Column2.Width = 200;
-            // 
-            // dataGridView2
-            // 
-            dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView2.Columns.AddRange(new DataGridViewColumn[] { dataGridViewTextBoxColumn1, dataGridViewTextBoxColumn2 });
-            dataGridView2.Location = new Point(6, 131);
-            dataGridView2.Name = "dataGridView2";
-            dataGridView2.Size = new Size(365, 247);
-            dataGridView2.TabIndex = 105;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            dataGridViewTextBoxColumn1.HeaderText = "Nombre";
-            dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            dataGridViewTextBoxColumn1.Width = 120;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            dataGridViewTextBoxColumn2.HeaderText = "Descripción";
-            dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            dataGridViewTextBoxColumn2.Width = 200;
-            // 
-            // CategoriaMedida
+            // Categoria
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Gainsboro;
-            ClientSize = new Size(800, 450);
-            Controls.Add(groupBox2);
+            ClientSize = new Size(539, 489);
             Controls.Add(groupBox1);
             Controls.Add(panel1);
-            Name = "CategoriaMedida";
+            Name = "Categoria";
             Text = "CategoriaMedida";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
-            groupBox2.ResumeLayout(false);
-            groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
             ResumeLayout(false);
         }
 
@@ -274,22 +258,20 @@
         private Panel panel1;
         private Label label2;
         private GroupBox groupBox1;
-        private GroupBox groupBox2;
         private TextBox textBox2;
         private Label label1;
         private TextBox textBox1;
         private Label label3;
-        private TextBox textBox3;
-        private Label label5;
-        private Label label4;
-        private TextBox textBox4;
         private DataGridView dataGridView1;
+        private Button button3;
+        private TextBox textBox6;
+        private Label label4;
+        private Button button4;
+        private Button button2;
+        private Button button1;
         private DataGridViewTextBoxColumn Column1;
         private DataGridViewTextBoxColumn Column2;
-        private Button button7;
-        private DataGridView dataGridView2;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private Button button1;
+        private DataGridViewTextBoxColumn Column3;
+        private Button button5;
     }
 }

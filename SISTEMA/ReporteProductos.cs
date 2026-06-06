@@ -10,14 +10,19 @@ using System.Windows.Forms;
 
 namespace SISTEMA
 {
-    public partial class Mantenimiento : Form
+    public partial class ReporteProductos : Form
     {
-        public Mantenimiento()
+        public ReporteProductos()
         {
             InitializeComponent();
         }
 
-        private void groupBox2_Enter(object sender, EventArgs e)
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

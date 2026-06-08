@@ -6,6 +6,8 @@ namespace Pantalla_ventas
     public partial class Ventas : Form
     {
         int numeroFactura;
+        double subtotal = 0;
+        double total = 0;
 
         Dictionary<string, double> producto = new Dictionary<string, double>()
         {
@@ -88,13 +90,6 @@ namespace Pantalla_ventas
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            cmbtipo.Enabled = false;
-            cmbproducto.Enabled = false;
-            numericant.Enabled = false;
-            txtdescuento.Enabled = false;
-            txtprecio.Enabled = false;
-
-
             txtfecha.Text = DateTime.Now.ToShortDateString();
             txtfecha.ReadOnly = true;
 
@@ -156,50 +151,12 @@ namespace Pantalla_ventas
 
         private void btnaceptar_Click(object sender, EventArgs e)
         {
-            if (txtfactura.Text == "" || txtfecha.Text == "" || txtcliente.Text == "")
-            {
-                MessageBox.Show("Complete todos los datos.");
-                return;
-            }
-            else
-            {
-                txtfactura.Enabled = false;
-                txtfecha.Enabled = false;
-                txtcliente.Enabled = false;
-                btnaceptar.Enabled = false;
 
-                cmbtipo.Enabled = true;
-                cmbproducto.Enabled = true;
-                numericant.Enabled = true;
-                txtdescuento.Enabled = true;
-                txtprecio.Enabled = true;
-            }
         }
 
         private void btningresar_Click(object sender, EventArgs e)
         {
-            string fecha = txtfecha.Text;
-            string producto = cmbproducto.Text;
-            int cantidad = (int)numericant.Value;
 
-            double descuento = Convert.ToDouble(txtdescuento.Text);
-            double precio = Convert.ToDouble(txtprecio.Text);
-            double total = precio * cantidad;
-
-            if (txtdescuento.Text != "")
-            {
-                descuento = Convert.ToDouble(txtdescuento.Text);
-            }
-
-            double porcentaje = (descuento / precio) * 100;
-
-            dgvventas.Rows.Add(fecha, producto, cantidad, descuento, porcentaje.ToString("0.00") + "%", total);
-
-            cmbtipo.SelectedIndex = -1;
-            cmbproducto.SelectedIndex = -1;
-            numericant.Value = 0;
-            txtdescuento.Clear();
-            txtprecio.Clear();
         }
 
         private void cmbtipo_SelectedIndexChanged(object sender, EventArgs e)
@@ -225,14 +182,53 @@ namespace Pantalla_ventas
 
             cmbtipo.SelectedIndex = -1;
             cmbproducto.SelectedIndex = -1;
-            numericant.Value = 0;
-            txtdescuento.Clear();
-            txtprecio.Clear();
+            numericant.Value = 0;            
+            dgvventas.Rows.Clear();
+            subtotal = 0;            
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
             HistorialVentas obj = new HistorialVentas(); obj.ShowDialog();
+        }
+
+        private void buttonIngresar_Click(object sender, EventArgs e)
+        {
+            try
+            {                
+                string producto = cmbproducto.Text;
+                string categoria = cmbtipo.Text;
+                int cantidad = (int)numericant.Value;
+
+                double porcentaje_descuento = Convert.ToDouble(txtdescuento.Text);                
+                double precio = Convert.ToDouble(txtprecio.Text);
+                double descuento = precio * (porcentaje_descuento / 100);
+
+                double valor = precio * cantidad;                
+                subtotal += valor - descuento;
+                total += subtotal;
+
+                if (txtdescuento.Text != "")
+                {
+                    descuento = Convert.ToDouble(txtdescuento.Text);
+                }
+                
+
+                dgvventas.Rows.Add(producto, categoria, "NULL", precio, cantidad, valor, descuento, porcentaje_descuento.ToString() + "%", total);
+
+                cmbtipo.SelectedIndex = -1;
+                cmbproducto.SelectedIndex = -1;
+                numericant.Value = 0;                
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al ingresar la venta: " + ex.Message);
+            }
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            Devolución obj = new Devolución(); obj.ShowDialog();
         }
     }
 }

@@ -40,6 +40,8 @@
             Column3 = new DataGridViewTextBoxColumn();
             Column2 = new DataGridViewTextBoxColumn();
             groupBox3 = new GroupBox();
+            label15 = new Label();
+            label16 = new Label();
             label14 = new Label();
             label13 = new Label();
             label12 = new Label();
@@ -60,8 +62,6 @@
             label5 = new Label();
             panel2 = new Panel();
             label3 = new Label();
-            label15 = new Label();
-            label16 = new Label();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
@@ -193,6 +193,28 @@
             groupBox3.Size = new Size(538, 161);
             groupBox3.TabIndex = 4;
             groupBox3.TabStop = false;
+            // 
+            // label15
+            // 
+            label15.AutoSize = true;
+            label15.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            label15.ForeColor = Color.Black;
+            label15.Location = new Point(117, 83);
+            label15.Name = "label15";
+            label15.Size = new Size(18, 20);
+            label15.TabIndex = 9;
+            label15.Text = "$";
+            // 
+            // label16
+            // 
+            label16.AutoSize = true;
+            label16.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            label16.ForeColor = Color.Black;
+            label16.Location = new Point(6, 83);
+            label16.Name = "label16";
+            label16.Size = new Size(105, 20);
+            label16.TabIndex = 8;
+            label16.Text = "Total Ingreso:";
             // 
             // label14
             // 
@@ -422,28 +444,6 @@
             label3.Text = "Crear Egreso de Caja";
             label3.Click += label3_Click;
             // 
-            // label15
-            // 
-            label15.AutoSize = true;
-            label15.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            label15.ForeColor = Color.Black;
-            label15.Location = new Point(117, 83);
-            label15.Name = "label15";
-            label15.Size = new Size(18, 20);
-            label15.TabIndex = 9;
-            label15.Text = "$";
-            // 
-            // label16
-            // 
-            label16.AutoSize = true;
-            label16.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            label16.ForeColor = Color.Black;
-            label16.Location = new Point(6, 83);
-            label16.Name = "label16";
-            label16.Size = new Size(105, 20);
-            label16.TabIndex = 8;
-            label16.Text = "Total Ingreso:";
-            // 
             // Caja
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -459,7 +459,6 @@
             MaximizeBox = false;
             Name = "Caja";
             Text = "Form1";
-            WindowState = FormWindowState.Maximized;
             Load += Form1_Load;
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();

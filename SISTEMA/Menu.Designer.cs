@@ -242,7 +242,7 @@
             respaldoDeLaBaseDeDatosToolStripMenuItem.Text = "Respaldo de la Base de Datos";
             respaldoDeLaBaseDeDatosToolStripMenuItem.Click += respaldoDeLaBaseDeDatosToolStripMenuItem_Click;
             // 
-            // Bienvenida
+            // Menu
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -251,10 +251,9 @@
             Controls.Add(menuStrip1);
             IsMdiContainer = true;
             MainMenuStrip = menuStrip1;
-            Name = "Bienvenida";
+            Name = "Menu";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Bienvenida";
-            WindowState = FormWindowState.Maximized;
             Load += Bienvenida_Load;
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();

@@ -27,7 +27,7 @@ namespace caja
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Bienvenida obj = new Bienvenida(); obj.Show(); this.Hide();
+            Menu obj = new Menu(); obj.Show(); this.Hide();
         }
 
         private void button4_Click(object sender, EventArgs e)

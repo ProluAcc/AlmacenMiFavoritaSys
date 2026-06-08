@@ -67,7 +67,7 @@ namespace Pantalla_ventas
 
         private void btnInicio_Click(object sender, EventArgs e)
         {
-            Bienvenida obj = new Bienvenida(); obj.Show(); this.Hide();
+            Menu obj = new Menu(); obj.Show(); this.Hide();
         }
 
         private void groupBox3_Enter(object sender, EventArgs e)
@@ -78,6 +78,16 @@ namespace Pantalla_ventas
         private void button6_Click(object sender, EventArgs e)
         {
             Devolución obj = new Devolución(); obj.ShowDialog();
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            HistorialVentas obj = new HistorialVentas(); obj.ShowDialog();
         }
     }
 }

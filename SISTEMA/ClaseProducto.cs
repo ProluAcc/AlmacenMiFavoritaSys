@@ -19,5 +19,21 @@ namespace SISTEMA
             {
             }
         }
+
+        internal ClaseCategoria ClaseCategoria
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
+        internal ClaseMedida ClaseMedida
+        {
+            get => default;
+            set
+            {
+            }
+        }
     }
 }

@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace SISTEMA
 {
-    public partial class Usuarios : Form
+    public partial class HistorialVentas : Form
     {
-        public Usuarios()
+        public HistorialVentas()
         {
             InitializeComponent();
-        }
-
-        private void Usuarios_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button7_Click(object sender, EventArgs e)
-        {
-            Menu obj = new Menu(); obj.Show(); this.Hide();
         }
     }
 }

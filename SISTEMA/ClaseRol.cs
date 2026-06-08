@@ -12,6 +12,8 @@ namespace SISTEMA
         private string _nombre;
         private string _descripcion;
         private bool _activo;
+
+
       
         public string nombre
         {

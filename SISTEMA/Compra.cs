@@ -36,7 +36,7 @@ namespace Registro_de_compra
 
         private void btnInicio_Click(object sender, EventArgs e)
         {
-            Bienvenida obj = new Bienvenida(); obj.Show(); this.Hide();
+            Menu obj = new Menu(); obj.Show(); this.Hide();
         }
 
         private void button6_Click(object sender, EventArgs e)

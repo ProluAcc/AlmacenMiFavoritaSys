@@ -51,9 +51,9 @@
             Column2 = new DataGridViewTextBoxColumn();
             Column3 = new DataGridViewTextBoxColumn();
             panel1 = new Panel();
+            button5 = new Button();
             label2 = new Label();
             groupBox2 = new GroupBox();
-            button5 = new Button();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             panel1.SuspendLayout();
@@ -217,9 +217,9 @@
             button4.BackColor = SystemColors.ButtonFace;
             button4.Font = new Font("Segoe UI Black", 11F, FontStyle.Bold);
             button4.ForeColor = Color.FromArgb(69, 69, 210);
-            button4.Location = new Point(428, 68);
+            button4.Location = new Point(402, 68);
             button4.Name = "button4";
-            button4.Size = new Size(239, 35);
+            button4.Size = new Size(265, 35);
             button4.TabIndex = 119;
             button4.Text = "🔓HABILITAR/DESHABILITAR";
             button4.UseVisualStyleBackColor = false;
@@ -229,7 +229,7 @@
             button2.BackColor = SystemColors.ButtonFace;
             button2.Font = new Font("Segoe UI Black", 11F, FontStyle.Bold);
             button2.ForeColor = Color.FromArgb(69, 69, 210);
-            button2.Location = new Point(311, 68);
+            button2.Location = new Point(287, 68);
             button2.Name = "button2";
             button2.Size = new Size(109, 35);
             button2.TabIndex = 118;
@@ -303,6 +303,18 @@
             panel1.Size = new Size(1095, 48);
             panel1.TabIndex = 3;
             // 
+            // button5
+            // 
+            button5.BackColor = SystemColors.ButtonFace;
+            button5.Font = new Font("Segoe UI Black", 11F, FontStyle.Bold);
+            button5.ForeColor = Color.FromArgb(69, 69, 210);
+            button5.Location = new Point(1009, 5);
+            button5.Name = "button5";
+            button5.Size = new Size(73, 35);
+            button5.TabIndex = 18;
+            button5.Text = "AYUDA";
+            button5.UseVisualStyleBackColor = false;
+            // 
             // label2
             // 
             label2.AutoSize = true;
@@ -330,18 +342,6 @@
             groupBox2.TabIndex = 4;
             groupBox2.TabStop = false;
             groupBox2.Text = "Filtrar";
-            // 
-            // button5
-            // 
-            button5.BackColor = SystemColors.ButtonFace;
-            button5.Font = new Font("Segoe UI Black", 11F, FontStyle.Bold);
-            button5.ForeColor = Color.FromArgb(69, 69, 210);
-            button5.Location = new Point(1009, 5);
-            button5.Name = "button5";
-            button5.Size = new Size(73, 35);
-            button5.TabIndex = 18;
-            button5.Text = "AYUDA";
-            button5.UseVisualStyleBackColor = false;
             // 
             // ControlRol
             // 

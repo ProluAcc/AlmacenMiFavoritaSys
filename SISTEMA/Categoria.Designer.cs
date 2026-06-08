@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
+            button5 = new Button();
             label2 = new Label();
             groupBox1 = new GroupBox();
             button4 = new Button();
@@ -45,7 +46,6 @@
             label1 = new Label();
             textBox1 = new TextBox();
             label3 = new Label();
-            button5 = new Button();
             panel1.SuspendLayout();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
@@ -61,6 +61,18 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(539, 48);
             panel1.TabIndex = 0;
+            // 
+            // button5
+            // 
+            button5.BackColor = SystemColors.ButtonFace;
+            button5.Font = new Font("Segoe UI Black", 11F, FontStyle.Bold);
+            button5.ForeColor = Color.FromArgb(69, 69, 210);
+            button5.Location = new Point(459, 5);
+            button5.Name = "button5";
+            button5.Size = new Size(73, 35);
+            button5.TabIndex = 18;
+            button5.Text = "AYUDA";
+            button5.UseVisualStyleBackColor = false;
             // 
             // label2
             // 
@@ -90,7 +102,7 @@
             groupBox1.Controls.Add(label3);
             groupBox1.Location = new Point(12, 54);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(515, 432);
+            groupBox1.Size = new Size(521, 432);
             groupBox1.TabIndex = 1;
             groupBox1.TabStop = false;
             groupBox1.Text = "Categoría";
@@ -102,7 +114,7 @@
             button4.ForeColor = Color.FromArgb(69, 69, 210);
             button4.Location = new Point(262, 93);
             button4.Name = "button4";
-            button4.Size = new Size(239, 35);
+            button4.Size = new Size(253, 35);
             button4.TabIndex = 119;
             button4.Text = "🔓HABILITAR/DESHABILITAR";
             button4.UseVisualStyleBackColor = false;
@@ -222,18 +234,6 @@
             label3.Size = new Size(71, 20);
             label3.TabIndex = 95;
             label3.Text = "Nombre:";
-            // 
-            // button5
-            // 
-            button5.BackColor = SystemColors.ButtonFace;
-            button5.Font = new Font("Segoe UI Black", 11F, FontStyle.Bold);
-            button5.ForeColor = Color.FromArgb(69, 69, 210);
-            button5.Location = new Point(459, 5);
-            button5.Name = "button5";
-            button5.Size = new Size(73, 35);
-            button5.TabIndex = 18;
-            button5.Text = "AYUDA";
-            button5.UseVisualStyleBackColor = false;
             // 
             // Categoria
             // 

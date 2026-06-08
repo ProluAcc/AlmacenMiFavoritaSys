@@ -54,15 +54,17 @@
       <Compartment Name="Fields" Collapsed="true" />
     </Compartments>
     <TypeIdentifier>
-      <HashCode>AABAAAAAAAAQAAAAAAAAAAAAAAAgAAAAAAAAAAIAAAA=</HashCode>
+      <HashCode>AABAAAAAAAAQAAAAAAEAAAAAAAAgAAAAAAAAAAIAAIA=</HashCode>
       <FileName>ClaseProducto.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Property Name="ClaseInventario" />
+      <Property Name="ClaseCategoria" />
+      <Property Name="ClaseMedida" />
     </ShowAsAssociation>
   </Class>
   <Class Name="SISTEMA.ClaseProveedor" Collapsed="true">
-    <Position X="9.25" Y="3.5" Width="1.5" />
+    <Position X="9.5" Y="3.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAABAAAAAAAAAAAAAAAAAAAIAgAAAAgAAAAAEIAAIA=</HashCode>
       <FileName>ClaseProveedor.cs</FileName>
@@ -93,7 +95,7 @@
       </MemberNameLabel>
     </AssociationLine>
     <TypeIdentifier>
-      <HashCode>AIAgAAAAEAAAAAQAABAAEAAAAAAADAAgAAAAIgAAAAA=</HashCode>
+      <HashCode>AIAgAAAAEAAAAAQAABAAEAAAAAAABAAgAAAAIgAAAAA=</HashCode>
       <FileName>ClaseVenta.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -104,7 +106,7 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="SISTEMA.Clase_detalle_compra" Collapsed="true">
-    <Position X="6" Y="6.25" Width="1.75" />
+    <Position X="7.75" Y="5.25" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAAAQBAAAAAAAAAAAAAAAQAAAgggAAAAAAAAIAAAAAA=</HashCode>
       <FileName>Clase_detalle_compra.cs</FileName>
@@ -149,6 +151,20 @@
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAIAAAAQAAAAAAgAAgAAAAAAAAIAAAEAA=</HashCode>
       <FileName>ClaseInventario.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SISTEMA.ClaseMedida" Collapsed="true">
+    <Position X="5.75" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAAAAAACAAAEAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ClaseMedida.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SISTEMA.ClaseCategoria" Collapsed="true">
+    <Position X="5.75" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAACAAAEAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ClaseCategoria.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />

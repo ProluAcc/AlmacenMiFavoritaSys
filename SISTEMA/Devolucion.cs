@@ -75,7 +75,7 @@ namespace Pantalla_de_devolución
 
         private void button5_Click(object sender, EventArgs e)
         {
-            Bienvenida obj = new Bienvenida(); obj.Show(); this.Hide();
+            Menu obj = new Menu(); obj.Show(); this.Hide();
         }
     }
 }

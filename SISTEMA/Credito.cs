@@ -54,7 +54,22 @@ namespace SISTEMA
 
         private void btnInicio_Click(object sender, EventArgs e)
         {
-            Bienvenida obj = new Bienvenida(); obj.Show(); this.Hide();
+            Menu obj = new Menu(); obj.Show(); this.Hide();
+        }
+
+        private void label14_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Abonos obj = new Abonos(); obj.ShowDialog();
         }
     }
 }

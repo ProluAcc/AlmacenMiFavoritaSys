@@ -33,7 +33,9 @@ namespace SISTEMA
                 else if (cu.contrasena == cu.usersContrasenas[cu.username])
                 {
                     MessageBox.Show($"¡Bienvenido al sistema {cu.username}!", "Bienvenido(a)", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    Bienvenida obj = new Bienvenida(); obj.Show(); this.Hide();
+                    Menu obj = new Menu(); 
+                    
+                    obj.Show(); this.Hide();
                 }
             }
             catch (Exception x)

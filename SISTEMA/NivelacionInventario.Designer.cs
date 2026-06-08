@@ -57,7 +57,6 @@
             label16 = new Label();
             groupBox3 = new GroupBox();
             dataGridView1 = new DataGridView();
-            panel2 = new Panel();
             Column2 = new DataGridViewTextBoxColumn();
             Column3 = new DataGridViewTextBoxColumn();
             Column4 = new DataGridViewTextBoxColumn();
@@ -65,6 +64,8 @@
             Column6 = new DataGridViewTextBoxColumn();
             Column7 = new DataGridViewTextBoxColumn();
             Column8 = new DataGridViewTextBoxColumn();
+            panel2 = new Panel();
+            button5 = new Button();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             groupBox3.SuspendLayout();
@@ -396,16 +397,6 @@
             dataGridView1.Size = new Size(843, 175);
             dataGridView1.TabIndex = 2;
             // 
-            // panel2
-            // 
-            panel2.BackColor = SystemColors.Control;
-            panel2.BorderStyle = BorderStyle.FixedSingle;
-            panel2.Controls.Add(label1);
-            panel2.Location = new Point(2, 1);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(972, 50);
-            panel2.TabIndex = 5;
-            // 
             // Column2
             // 
             Column2.HeaderText = "Código";
@@ -440,6 +431,29 @@
             // 
             Column8.HeaderText = "Observaciones";
             Column8.Name = "Column8";
+            // 
+            // panel2
+            // 
+            panel2.BackColor = SystemColors.Control;
+            panel2.BorderStyle = BorderStyle.FixedSingle;
+            panel2.Controls.Add(button5);
+            panel2.Controls.Add(label1);
+            panel2.Location = new Point(2, 1);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(972, 50);
+            panel2.TabIndex = 5;
+            // 
+            // button5
+            // 
+            button5.BackColor = SystemColors.ButtonFace;
+            button5.Font = new Font("Segoe UI Black", 11F, FontStyle.Bold);
+            button5.ForeColor = Color.FromArgb(69, 69, 210);
+            button5.Location = new Point(887, 5);
+            button5.Name = "button5";
+            button5.Size = new Size(73, 35);
+            button5.TabIndex = 18;
+            button5.Text = "AYUDA";
+            button5.UseVisualStyleBackColor = false;
             // 
             // NivelacionInventario
             // 
@@ -505,5 +519,6 @@
         private DataGridViewTextBoxColumn Column6;
         private DataGridViewTextBoxColumn Column7;
         private DataGridViewTextBoxColumn Column8;
+        private Button button5;
     }
 }

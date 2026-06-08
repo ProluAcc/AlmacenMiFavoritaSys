@@ -31,6 +31,26 @@
             textBox4 = new TextBox();
             textBox3 = new TextBox();
             dataGridView1 = new DataGridView();
+            panel2 = new Panel();
+            button1 = new Button();
+            label7 = new Label();
+            groupBox1 = new GroupBox();
+            dateTimePicker2 = new DateTimePicker();
+            dateTimePicker1 = new DateTimePicker();
+            button6 = new Button();
+            label1 = new Label();
+            label9 = new Label();
+            label2 = new Label();
+            comboBox1 = new ComboBox();
+            label3 = new Label();
+            label4 = new Label();
+            button4 = new Button();
+            groupBox2 = new GroupBox();
+            button5 = new Button();
+            button7 = new Button();
+            button8 = new Button();
+            label5 = new Label();
+            textBox1 = new TextBox();
             Column1 = new DataGridViewTextBoxColumn();
             Column2 = new DataGridViewTextBoxColumn();
             Column3 = new DataGridViewTextBoxColumn();
@@ -39,25 +59,10 @@
             Column6 = new DataGridViewTextBoxColumn();
             Column7 = new DataGridViewTextBoxColumn();
             Column8 = new DataGridViewTextBoxColumn();
-            panel2 = new Panel();
-            label7 = new Label();
-            groupBox1 = new GroupBox();
-            button3 = new Button();
-            button2 = new Button();
-            button1 = new Button();
-            button6 = new Button();
-            label1 = new Label();
-            label9 = new Label();
-            label2 = new Label();
-            comboBox1 = new ComboBox();
-            textBox2 = new TextBox();
-            textBox1 = new TextBox();
-            label3 = new Label();
-            label4 = new Label();
-            button4 = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             panel2.SuspendLayout();
             groupBox1.SuspendLayout();
+            groupBox2.SuspendLayout();
             SuspendLayout();
             // 
             // textBox4
@@ -80,78 +85,36 @@
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3, Column4, Column5, Column6, Column7, Column8 });
-            dataGridView1.Location = new Point(12, 270);
+            dataGridView1.Location = new Point(12, 230);
             dataGridView1.Margin = new Padding(3, 4, 3, 4);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(972, 260);
+            dataGridView1.Size = new Size(951, 284);
             dataGridView1.TabIndex = 29;
-            // 
-            // Column1
-            // 
-            Column1.HeaderText = "n° de compra";
-            Column1.MinimumWidth = 6;
-            Column1.Name = "Column1";
-            Column1.Width = 80;
-            // 
-            // Column2
-            // 
-            Column2.HeaderText = "Fecha";
-            Column2.MinimumWidth = 6;
-            Column2.Name = "Column2";
-            Column2.Width = 125;
-            // 
-            // Column3
-            // 
-            Column3.HeaderText = "Proveedor";
-            Column3.MinimumWidth = 6;
-            Column3.Name = "Column3";
-            Column3.Width = 125;
-            // 
-            // Column4
-            // 
-            Column4.HeaderText = "Producto";
-            Column4.MinimumWidth = 6;
-            Column4.Name = "Column4";
-            Column4.Width = 125;
-            // 
-            // Column5
-            // 
-            Column5.HeaderText = "Cantidad";
-            Column5.MinimumWidth = 6;
-            Column5.Name = "Column5";
-            Column5.Width = 125;
-            // 
-            // Column6
-            // 
-            Column6.HeaderText = "Precio unitario";
-            Column6.MinimumWidth = 6;
-            Column6.Name = "Column6";
-            Column6.Width = 110;
-            // 
-            // Column7
-            // 
-            Column7.HeaderText = "Subtotal";
-            Column7.MinimumWidth = 6;
-            Column7.Name = "Column7";
-            Column7.Width = 125;
-            // 
-            // Column8
-            // 
-            Column8.HeaderText = "Total";
-            Column8.MinimumWidth = 6;
-            Column8.Name = "Column8";
-            Column8.Width = 125;
             // 
             // panel2
             // 
             panel2.BackColor = SystemColors.Control;
             panel2.BorderStyle = BorderStyle.FixedSingle;
+            panel2.Controls.Add(button1);
             panel2.Controls.Add(label7);
-            panel2.Location = new Point(-7, -27);
+            panel2.Location = new Point(-5, -27);
             panel2.Name = "panel2";
-            panel2.Size = new Size(1003, 78);
+            panel2.Size = new Size(980, 75);
             panel2.TabIndex = 35;
+            panel2.Paint += panel2_Paint_1;
+            // 
+            // button1
+            // 
+            button1.BackColor = SystemColors.ButtonFace;
+            button1.Font = new Font("Segoe UI Black", 11F, FontStyle.Bold);
+            button1.ForeColor = Color.FromArgb(69, 69, 210);
+            button1.Location = new Point(902, 32);
+            button1.Name = "button1";
+            button1.Size = new Size(73, 35);
+            button1.TabIndex = 58;
+            button1.Text = "AYUDA";
+            button1.UseVisualStyleBackColor = false;
             // 
             // label7
             // 
@@ -160,85 +123,65 @@
             label7.ForeColor = Color.Black;
             label7.Location = new Point(18, 35);
             label7.Name = "label7";
-            label7.Size = new Size(294, 32);
+            label7.Size = new Size(287, 32);
             label7.TabIndex = 0;
-            label7.Text = "CONTROL DE COMPRAS";
+            label7.Text = "REPORTE DE COMPRAS";
             label7.Click += label7_Click;
             // 
             // groupBox1
             // 
             groupBox1.BackColor = SystemColors.Control;
-            groupBox1.Controls.Add(button3);
-            groupBox1.Controls.Add(button2);
-            groupBox1.Controls.Add(button1);
+            groupBox1.Controls.Add(textBox1);
+            groupBox1.Controls.Add(label5);
+            groupBox1.Controls.Add(dateTimePicker2);
+            groupBox1.Controls.Add(dateTimePicker1);
             groupBox1.Controls.Add(button6);
             groupBox1.Controls.Add(label1);
             groupBox1.Controls.Add(label9);
             groupBox1.Controls.Add(label2);
             groupBox1.Controls.Add(comboBox1);
-            groupBox1.Controls.Add(textBox2);
-            groupBox1.Controls.Add(textBox1);
             groupBox1.ForeColor = Color.Black;
-            groupBox1.Location = new Point(12, 70);
+            groupBox1.Location = new Point(12, 63);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(972, 182);
+            groupBox1.Size = new Size(489, 160);
             groupBox1.TabIndex = 44;
             groupBox1.TabStop = false;
             groupBox1.Text = "Filtro";
+            groupBox1.Enter += groupBox1_Enter;
             // 
-            // button3
+            // dateTimePicker2
             // 
-            button3.BackColor = SystemColors.ButtonFace;
-            button3.Font = new Font("Segoe UI Black", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button3.ForeColor = Color.FromArgb(69, 69, 210);
-            button3.Location = new Point(621, 110);
-            button3.Name = "button3";
-            button3.Size = new Size(109, 33);
-            button3.TabIndex = 54;
-            button3.Text = "Imprimir";
-            button3.UseVisualStyleBackColor = false;
+            dateTimePicker2.Format = DateTimePickerFormat.Short;
+            dateTimePicker2.Location = new Point(342, 27);
+            dateTimePicker2.Name = "dateTimePicker2";
+            dateTimePicker2.Size = new Size(108, 23);
+            dateTimePicker2.TabIndex = 56;
             // 
-            // button2
+            // dateTimePicker1
             // 
-            button2.BackColor = SystemColors.ButtonFace;
-            button2.Font = new Font("Segoe UI Black", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button2.ForeColor = Color.FromArgb(69, 69, 210);
-            button2.Location = new Point(496, 101);
-            button2.Name = "button2";
-            button2.Size = new Size(90, 50);
-            button2.TabIndex = 53;
-            button2.Text = "Exportar PDF";
-            button2.UseVisualStyleBackColor = false;
-            // 
-            // button1
-            // 
-            button1.BackColor = SystemColors.ButtonFace;
-            button1.Font = new Font("Segoe UI Black", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button1.ForeColor = Color.FromArgb(69, 69, 210);
-            button1.Location = new Point(363, 101);
-            button1.Name = "button1";
-            button1.Size = new Size(90, 50);
-            button1.TabIndex = 52;
-            button1.Text = "Reportar Excel";
-            button1.UseVisualStyleBackColor = false;
+            dateTimePicker1.Format = DateTimePickerFormat.Short;
+            dateTimePicker1.Location = new Point(127, 29);
+            dateTimePicker1.Name = "dateTimePicker1";
+            dateTimePicker1.Size = new Size(108, 23);
+            dateTimePicker1.TabIndex = 55;
             // 
             // button6
             // 
             button6.BackColor = SystemColors.ButtonFace;
             button6.Font = new Font("Segoe UI Black", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button6.ForeColor = Color.FromArgb(69, 69, 210);
-            button6.Location = new Point(210, 108);
+            button6.Location = new Point(372, 105);
             button6.Name = "button6";
-            button6.Size = new Size(109, 35);
+            button6.Size = new Size(111, 43);
             button6.TabIndex = 51;
-            button6.Text = "Buscar";
+            button6.Text = "🔍BUSCAR";
             button6.UseVisualStyleBackColor = false;
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            label1.Location = new Point(644, 44);
+            label1.Location = new Point(6, 66);
             label1.Name = "label1";
             label1.Size = new Size(86, 20);
             label1.TabIndex = 50;
@@ -248,7 +191,7 @@
             // 
             label9.AutoSize = true;
             label9.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            label9.Location = new Point(363, 44);
+            label9.Location = new Point(260, 29);
             label9.Name = "label9";
             label9.Size = new Size(76, 20);
             label9.TabIndex = 49;
@@ -258,7 +201,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            label2.Location = new Point(40, 44);
+            label2.Location = new Point(6, 29);
             label2.Name = "label2";
             label2.Size = new Size(115, 20);
             label2.TabIndex = 48;
@@ -267,27 +210,11 @@
             // comboBox1
             // 
             comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(736, 45);
+            comboBox1.Location = new Point(98, 66);
             comboBox1.Margin = new Padding(3, 4, 3, 4);
             comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(156, 23);
+            comboBox1.Size = new Size(152, 23);
             comboBox1.TabIndex = 46;
-            // 
-            // textBox2
-            // 
-            textBox2.Location = new Point(445, 44);
-            textBox2.Margin = new Padding(3, 4, 3, 4);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(114, 23);
-            textBox2.TabIndex = 45;
-            // 
-            // textBox1
-            // 
-            textBox1.Location = new Point(161, 44);
-            textBox1.Margin = new Padding(3, 4, 3, 4);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(114, 23);
-            textBox1.TabIndex = 44;
             // 
             // label3
             // 
@@ -321,11 +248,135 @@
             button4.Text = "Cerrar";
             button4.UseVisualStyleBackColor = false;
             // 
+            // groupBox2
+            // 
+            groupBox2.BackColor = SystemColors.Control;
+            groupBox2.Controls.Add(button5);
+            groupBox2.Controls.Add(button7);
+            groupBox2.Controls.Add(button8);
+            groupBox2.ForeColor = Color.Black;
+            groupBox2.Location = new Point(507, 62);
+            groupBox2.Name = "groupBox2";
+            groupBox2.Size = new Size(369, 87);
+            groupBox2.TabIndex = 57;
+            groupBox2.TabStop = false;
+            groupBox2.Text = "Acciones";
+            // 
+            // button5
+            // 
+            button5.BackColor = SystemColors.ButtonFace;
+            button5.Font = new Font("Segoe UI Black", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button5.ForeColor = Color.FromArgb(69, 69, 210);
+            button5.Location = new Point(248, 22);
+            button5.Name = "button5";
+            button5.Size = new Size(103, 50);
+            button5.TabIndex = 54;
+            button5.Text = "🖨IMPRIMIR";
+            button5.UseVisualStyleBackColor = false;
+            // 
+            // button7
+            // 
+            button7.BackColor = SystemColors.ButtonFace;
+            button7.Font = new Font("Segoe UI Black", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button7.ForeColor = Color.FromArgb(69, 69, 210);
+            button7.Location = new Point(6, 22);
+            button7.Name = "button7";
+            button7.Size = new Size(117, 50);
+            button7.TabIndex = 53;
+            button7.Text = "\U0001f9feExportar PDF";
+            button7.UseVisualStyleBackColor = false;
+            // 
+            // button8
+            // 
+            button8.BackColor = SystemColors.ButtonFace;
+            button8.Font = new Font("Segoe UI Black", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button8.ForeColor = Color.FromArgb(69, 69, 210);
+            button8.Location = new Point(129, 22);
+            button8.Name = "button8";
+            button8.Size = new Size(113, 50);
+            button8.TabIndex = 52;
+            button8.Text = "🗄Exportar Excel";
+            button8.UseVisualStyleBackColor = false;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            label5.Location = new Point(260, 66);
+            label5.Name = "label5";
+            label5.Size = new Size(97, 20);
+            label5.TabIndex = 57;
+            label5.Text = "No. Compra:";
+            // 
+            // textBox1
+            // 
+            textBox1.Font = new Font("Segoe UI", 11F);
+            textBox1.Location = new Point(359, 63);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(124, 27);
+            textBox1.TabIndex = 58;
+            // 
+            // Column1
+            // 
+            Column1.HeaderText = "n° de compra";
+            Column1.MinimumWidth = 6;
+            Column1.Name = "Column1";
+            Column1.Width = 80;
+            // 
+            // Column2
+            // 
+            Column2.HeaderText = "Fecha";
+            Column2.Name = "Column2";
+            // 
+            // Column3
+            // 
+            Column3.HeaderText = "Proveedor";
+            Column3.MinimumWidth = 6;
+            Column3.Name = "Column3";
+            Column3.Width = 125;
+            // 
+            // Column4
+            // 
+            Column4.HeaderText = "Producto";
+            Column4.MinimumWidth = 6;
+            Column4.Name = "Column4";
+            Column4.Width = 125;
+            // 
+            // Column5
+            // 
+            Column5.HeaderText = "Cantidad";
+            Column5.MinimumWidth = 6;
+            Column5.Name = "Column5";
+            Column5.Width = 115;
+            // 
+            // Column6
+            // 
+            Column6.HeaderText = "Precio unitario";
+            Column6.MinimumWidth = 6;
+            Column6.Name = "Column6";
+            Column6.Width = 110;
+            // 
+            // Column7
+            // 
+            Column7.HeaderText = "Subtotal";
+            Column7.MinimumWidth = 6;
+            Column7.Name = "Column7";
+            Column7.Width = 120;
+            // 
+            // Column8
+            // 
+            Column8.HeaderText = "Total";
+            Column8.MinimumWidth = 6;
+            Column8.Name = "Column8";
+            Column8.Width = 120;
+            // 
             // ReportCompras
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1000, 637);
+            BackColor = Color.Gainsboro;
+            ClientSize = new Size(975, 527);
+            Controls.Add(groupBox2);
             Controls.Add(button4);
             Controls.Add(label4);
             Controls.Add(label3);
@@ -334,6 +385,7 @@
             Controls.Add(textBox4);
             Controls.Add(textBox3);
             Controls.Add(dataGridView1);
+            FormBorderStyle = FormBorderStyle.None;
             Name = "ReportCompras";
             Load += ReportCompras_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
@@ -341,6 +393,7 @@
             panel2.PerformLayout();
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
+            groupBox2.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -352,6 +405,22 @@
         private Panel panel2;
         private Label label7;
         private GroupBox groupBox1;
+        private Button button6;
+        private Label label1;
+        private Label label9;
+        private Label label2;
+        private ComboBox comboBox1;
+        private Label label3;
+        private Label label4;
+        private Button button4;
+        private DateTimePicker dateTimePicker1;
+        private DateTimePicker dateTimePicker2;
+        private GroupBox groupBox2;
+        private Button button5;
+        private Button button7;
+        private Button button8;
+        private Button button1;
+        private Label label5;
         private DataGridViewTextBoxColumn Column1;
         private DataGridViewTextBoxColumn Column2;
         private DataGridViewTextBoxColumn Column3;
@@ -360,18 +429,6 @@
         private DataGridViewTextBoxColumn Column6;
         private DataGridViewTextBoxColumn Column7;
         private DataGridViewTextBoxColumn Column8;
-        private Button button3;
-        private Button button2;
-        private Button button1;
-        private Button button6;
-        private Label label1;
-        private Label label9;
-        private Label label2;
-        private ComboBox comboBox1;
-        private TextBox textBox2;
         private TextBox textBox1;
-        private Label label3;
-        private Label label4;
-        private Button button4;
     }
 }

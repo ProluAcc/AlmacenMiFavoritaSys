@@ -24,7 +24,7 @@ namespace SISTEMA
 
         private void button7_Click(object sender, EventArgs e)
         {
-            Bienvenida obj = new Bienvenida(); obj.Show(); this.Hide();
+            Menu obj = new Menu(); obj.Show(); this.Hide();
         }
     }
 }

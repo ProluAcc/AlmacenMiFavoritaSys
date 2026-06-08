@@ -62,7 +62,10 @@
             textBox8 = new TextBox();
             button4 = new Button();
             button5 = new Button();
+            button6 = new Button();
+            button7 = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            panel2.SuspendLayout();
             SuspendLayout();
             // 
             // dataGridView1
@@ -160,7 +163,7 @@
             button2.BackColor = SystemColors.ButtonFace;
             button2.Font = new Font("Segoe UI Black", 11F, FontStyle.Bold);
             button2.ForeColor = Color.FromArgb(69, 69, 210);
-            button2.Location = new Point(400, 171);
+            button2.Location = new Point(475, 171);
             button2.Name = "button2";
             button2.Size = new Size(126, 36);
             button2.TabIndex = 93;
@@ -172,7 +175,7 @@
             button1.BackColor = SystemColors.ButtonFace;
             button1.Font = new Font("Segoe UI Black", 11F, FontStyle.Bold);
             button1.ForeColor = Color.FromArgb(69, 69, 210);
-            button1.Location = new Point(675, 171);
+            button1.Location = new Point(750, 171);
             button1.Name = "button1";
             button1.Size = new Size(118, 36);
             button1.TabIndex = 90;
@@ -286,6 +289,7 @@
             // 
             panel2.BackColor = SystemColors.Control;
             panel2.BorderStyle = BorderStyle.FixedSingle;
+            panel2.Controls.Add(button7);
             panel2.Location = new Point(0, 0);
             panel2.Name = "panel2";
             panel2.Size = new Size(977, 68);
@@ -344,7 +348,7 @@
             button4.BackColor = SystemColors.ButtonFace;
             button4.Font = new Font("Segoe UI Black", 11F, FontStyle.Bold);
             button4.ForeColor = Color.FromArgb(69, 69, 210);
-            button4.Location = new Point(257, 171);
+            button4.Location = new Point(332, 171);
             button4.Name = "button4";
             button4.Size = new Size(118, 36);
             button4.TabIndex = 107;
@@ -356,12 +360,36 @@
             button5.BackColor = SystemColors.ButtonFace;
             button5.Font = new Font("Segoe UI Black", 11F, FontStyle.Bold);
             button5.ForeColor = Color.FromArgb(69, 69, 210);
-            button5.Location = new Point(549, 172);
+            button5.Location = new Point(624, 172);
             button5.Name = "button5";
             button5.Size = new Size(105, 35);
             button5.TabIndex = 117;
             button5.Text = "✏️EDITAR";
             button5.UseVisualStyleBackColor = false;
+            // 
+            // button6
+            // 
+            button6.BackColor = SystemColors.ButtonFace;
+            button6.Font = new Font("Segoe UI Black", 11F, FontStyle.Bold);
+            button6.ForeColor = Color.FromArgb(69, 69, 210);
+            button6.Location = new Point(212, 178);
+            button6.Name = "button6";
+            button6.Size = new Size(37, 29);
+            button6.TabIndex = 118;
+            button6.Text = "➕";
+            button6.UseVisualStyleBackColor = false;
+            // 
+            // button7
+            // 
+            button7.BackColor = SystemColors.ButtonFace;
+            button7.Font = new Font("Segoe UI Black", 11F, FontStyle.Bold);
+            button7.ForeColor = Color.FromArgb(69, 69, 210);
+            button7.Location = new Point(889, 15);
+            button7.Name = "button7";
+            button7.Size = new Size(73, 35);
+            button7.TabIndex = 119;
+            button7.Text = "AYUDA";
+            button7.UseVisualStyleBackColor = false;
             // 
             // Usuarios
             // 
@@ -369,6 +397,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Gainsboro;
             ClientSize = new Size(975, 527);
+            Controls.Add(button6);
             Controls.Add(button5);
             Controls.Add(button4);
             Controls.Add(label11);
@@ -401,6 +430,7 @@
             Text = "Usuarios";
             Load += Usuarios_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            panel2.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -440,5 +470,7 @@
         private DataGridViewTextBoxColumn Column8;
         private Button button4;
         private Button button5;
+        private Button button6;
+        private Button button7;
     }
 }

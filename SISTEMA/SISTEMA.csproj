@@ -9,8 +9,25 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="1uyixys5.lww~" />
+    <None Remove="Caja.Designer.cs~RF8647cb.TMP" />
     <None Remove="Clase_detalle_venta_producto.cs~RF390098d5.TMP" />
     <None Remove="Inventario.cs~RF430e1601.TMP" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
 
 </Project>

@@ -286,7 +286,7 @@
             panel11.BorderStyle = BorderStyle.FixedSingle;
             panel11.Controls.Add(button6);
             panel11.Controls.Add(button4);
-            panel11.Location = new Point(494, 405);
+            panel11.Location = new Point(514, 405);
             panel11.Name = "panel11";
             panel11.Size = new Size(220, 95);
             panel11.TabIndex = 6;
@@ -310,9 +310,9 @@
             button4.BackColor = SystemColors.ButtonFace;
             button4.Font = new Font("Segoe UI Black", 11F, FontStyle.Bold);
             button4.ForeColor = Color.FromArgb(69, 69, 210);
-            button4.Location = new Point(12, 9);
+            button4.Location = new Point(7, 9);
             button4.Name = "button4";
-            button4.Size = new Size(195, 34);
+            button4.Size = new Size(208, 34);
             button4.TabIndex = 0;
             button4.Text = "💾GUARDAR COMPRA";
             button4.UseVisualStyleBackColor = false;

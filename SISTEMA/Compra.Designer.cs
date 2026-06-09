@@ -34,12 +34,18 @@
             comboBox2 = new ComboBox();
             label2 = new Label();
             label3 = new Label();
-            button1 = new Button();
             textBox1 = new TextBox();
             label1 = new Label();
             panel2 = new Panel();
             dataGridView1 = new DataGridView();
+            Column5 = new DataGridViewTextBoxColumn();
+            Column6 = new DataGridViewTextBoxColumn();
+            Column7 = new DataGridViewTextBoxColumn();
+            Column8 = new DataGridViewTextBoxColumn();
+            Column9 = new DataGridViewTextBoxColumn();
+            Column10 = new DataGridViewTextBoxColumn();
             panel8 = new Panel();
+            label13 = new Label();
             label10 = new Label();
             label9 = new Label();
             label8 = new Label();
@@ -48,7 +54,10 @@
             button4 = new Button();
             button5 = new Button();
             panel3 = new Panel();
+            button1 = new Button();
+            dateTimePicker2 = new DateTimePicker();
             button3 = new Button();
+            dateTimePicker1 = new DateTimePicker();
             textBox10 = new TextBox();
             label12 = new Label();
             textBox9 = new TextBox();
@@ -59,15 +68,6 @@
             label4 = new Label();
             label5 = new Label();
             label6 = new Label();
-            dateTimePicker1 = new DateTimePicker();
-            dateTimePicker2 = new DateTimePicker();
-            Column5 = new DataGridViewTextBoxColumn();
-            Column6 = new DataGridViewTextBoxColumn();
-            Column7 = new DataGridViewTextBoxColumn();
-            Column8 = new DataGridViewTextBoxColumn();
-            Column9 = new DataGridViewTextBoxColumn();
-            Column10 = new DataGridViewTextBoxColumn();
-            label13 = new Label();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
@@ -85,7 +85,6 @@
             panel1.Controls.Add(comboBox2);
             panel1.Controls.Add(label2);
             panel1.Controls.Add(label3);
-            panel1.Controls.Add(button1);
             panel1.Controls.Add(textBox1);
             panel1.Controls.Add(label1);
             panel1.Location = new Point(1, 2);
@@ -145,18 +144,6 @@
             label3.TabIndex = 5;
             label3.Text = "Proveedor:";
             // 
-            // button1
-            // 
-            button1.BackColor = SystemColors.ButtonFace;
-            button1.Font = new Font("Segoe UI Black", 11F, FontStyle.Bold);
-            button1.ForeColor = Color.FromArgb(69, 69, 210);
-            button1.Location = new Point(723, 7);
-            button1.Name = "button1";
-            button1.Size = new Size(86, 34);
-            button1.TabIndex = 4;
-            button1.Text = "ACEPTAR ";
-            button1.UseVisualStyleBackColor = false;
-            // 
             // textBox1
             // 
             textBox1.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
@@ -199,6 +186,42 @@
             dataGridView1.TabIndex = 0;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
+            // Column5
+            // 
+            Column5.HeaderText = "Producto";
+            Column5.Name = "Column5";
+            Column5.Width = 150;
+            // 
+            // Column6
+            // 
+            Column6.HeaderText = "Cantidad";
+            Column6.Name = "Column6";
+            Column6.Width = 150;
+            // 
+            // Column7
+            // 
+            Column7.HeaderText = "Precio de Compra";
+            Column7.Name = "Column7";
+            Column7.Width = 150;
+            // 
+            // Column8
+            // 
+            Column8.HeaderText = "Subtotal";
+            Column8.Name = "Column8";
+            Column8.Width = 150;
+            // 
+            // Column9
+            // 
+            Column9.HeaderText = "IVA";
+            Column9.Name = "Column9";
+            Column9.Width = 150;
+            // 
+            // Column10
+            // 
+            Column10.HeaderText = "Total";
+            Column10.Name = "Column10";
+            Column10.Width = 150;
+            // 
             // panel8
             // 
             panel8.BackColor = SystemColors.Control;
@@ -212,6 +235,17 @@
             panel8.Size = new Size(487, 120);
             panel8.TabIndex = 5;
             panel8.Paint += panel8_Paint;
+            // 
+            // label13
+            // 
+            label13.AutoSize = true;
+            label13.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            label13.ForeColor = Color.Black;
+            label13.Location = new Point(289, 9);
+            label13.Name = "label13";
+            label13.Size = new Size(27, 20);
+            label13.TabIndex = 3;
+            label13.Text = "C$";
             // 
             // label10
             // 
@@ -288,7 +322,7 @@
             button5.BackColor = SystemColors.ButtonFace;
             button5.Font = new Font("Segoe UI Black", 11F, FontStyle.Bold);
             button5.ForeColor = Color.FromArgb(69, 69, 210);
-            button5.Location = new Point(743, 93);
+            button5.Location = new Point(593, 96);
             button5.Name = "button5";
             button5.Size = new Size(119, 34);
             button5.TabIndex = 1;
@@ -299,9 +333,10 @@
             // 
             panel3.BackColor = SystemColors.Control;
             panel3.BorderStyle = BorderStyle.FixedSingle;
+            panel3.Controls.Add(button1);
             panel3.Controls.Add(dateTimePicker2);
-            panel3.Controls.Add(dateTimePicker1);
             panel3.Controls.Add(button3);
+            panel3.Controls.Add(dateTimePicker1);
             panel3.Controls.Add(textBox10);
             panel3.Controls.Add(button5);
             panel3.Controls.Add(label12);
@@ -318,25 +353,59 @@
             panel3.Size = new Size(875, 145);
             panel3.TabIndex = 7;
             // 
+            // button1
+            // 
+            button1.BackColor = SystemColors.ButtonFace;
+            button1.Font = new Font("Segoe UI Black", 11F, FontStyle.Bold);
+            button1.ForeColor = Color.FromArgb(69, 69, 210);
+            button1.Location = new Point(718, 96);
+            button1.Name = "button1";
+            button1.Size = new Size(119, 34);
+            button1.TabIndex = 15;
+            button1.Text = "✏️EDITAR";
+            button1.UseVisualStyleBackColor = false;
+            // 
+            // dateTimePicker2
+            // 
+            dateTimePicker2.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            dateTimePicker2.Format = DateTimePickerFormat.Short;
+            dateTimePicker2.Location = new Point(416, 10);
+            dateTimePicker2.Name = "dateTimePicker2";
+            dateTimePicker2.Size = new Size(145, 27);
+            dateTimePicker2.TabIndex = 14;
+            // 
             // button3
             // 
             button3.BackColor = SystemColors.ButtonFace;
             button3.Font = new Font("Segoe UI Black", 11F, FontStyle.Bold);
             button3.ForeColor = Color.FromArgb(69, 69, 210);
-            button3.Location = new Point(621, 93);
+            button3.Location = new Point(471, 96);
             button3.Name = "button3";
             button3.Size = new Size(116, 34);
             button3.TabIndex = 4;
             button3.Text = "🔽INGRESAR";
             button3.UseVisualStyleBackColor = false;
+            button3.Click += button3_Click;
+            // 
+            // dateTimePicker1
+            // 
+            dateTimePicker1.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            dateTimePicker1.Format = DateTimePickerFormat.Short;
+            dateTimePicker1.Location = new Point(138, 12);
+            dateTimePicker1.Name = "dateTimePicker1";
+            dateTimePicker1.Size = new Size(145, 27);
+            dateTimePicker1.TabIndex = 13;
+            dateTimePicker1.ValueChanged += dateTimePicker1_ValueChanged;
             // 
             // textBox10
             // 
             textBox10.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            textBox10.HideSelection = false;
             textBox10.Location = new Point(721, 51);
             textBox10.Name = "textBox10";
             textBox10.Size = new Size(139, 27);
             textBox10.TabIndex = 12;
+            textBox10.TextChanged += textBox10_TextChanged;
             // 
             // label12
             // 
@@ -353,6 +422,7 @@
             // 
             textBox9.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
             textBox9.ForeColor = Color.Black;
+            textBox9.HideSelection = false;
             textBox9.Location = new Point(422, 52);
             textBox9.Name = "textBox9";
             textBox9.Size = new Size(139, 27);
@@ -378,6 +448,7 @@
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(145, 28);
             comboBox1.TabIndex = 8;
+            comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
             // 
             // label7
             // 
@@ -393,10 +464,12 @@
             // textBox6
             // 
             textBox6.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            textBox6.HideSelection = false;
             textBox6.Location = new Point(721, 11);
             textBox6.Name = "textBox6";
             textBox6.Size = new Size(139, 27);
             textBox6.TabIndex = 7;
+            textBox6.TextChanged += textBox6_TextChanged;
             // 
             // label4
             // 
@@ -431,71 +504,6 @@
             label6.TabIndex = 0;
             label6.Text = "Fecha de Compra:";
             // 
-            // dateTimePicker1
-            // 
-            dateTimePicker1.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            dateTimePicker1.Format = DateTimePickerFormat.Short;
-            dateTimePicker1.Location = new Point(138, 12);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(145, 27);
-            dateTimePicker1.TabIndex = 13;
-            // 
-            // dateTimePicker2
-            // 
-            dateTimePicker2.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            dateTimePicker2.Format = DateTimePickerFormat.Short;
-            dateTimePicker2.Location = new Point(416, 10);
-            dateTimePicker2.Name = "dateTimePicker2";
-            dateTimePicker2.Size = new Size(145, 27);
-            dateTimePicker2.TabIndex = 14;
-            // 
-            // Column5
-            // 
-            Column5.HeaderText = "Producto";
-            Column5.Name = "Column5";
-            Column5.Width = 150;
-            // 
-            // Column6
-            // 
-            Column6.HeaderText = "Cantidad";
-            Column6.Name = "Column6";
-            Column6.Width = 150;
-            // 
-            // Column7
-            // 
-            Column7.HeaderText = "Precio de Compra";
-            Column7.Name = "Column7";
-            Column7.Width = 150;
-            // 
-            // Column8
-            // 
-            Column8.HeaderText = "Subtotal";
-            Column8.Name = "Column8";
-            Column8.Width = 150;
-            // 
-            // Column9
-            // 
-            Column9.HeaderText = "IVA";
-            Column9.Name = "Column9";
-            Column9.Width = 150;
-            // 
-            // Column10
-            // 
-            Column10.HeaderText = "Total";
-            Column10.Name = "Column10";
-            Column10.Width = 150;
-            // 
-            // label13
-            // 
-            label13.AutoSize = true;
-            label13.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            label13.ForeColor = Color.Black;
-            label13.Location = new Point(289, 9);
-            label13.Name = "label13";
-            label13.Size = new Size(27, 20);
-            label13.TabIndex = 3;
-            label13.Text = "C$";
-            // 
             // Compra
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -528,7 +536,6 @@
         private Panel panel1;
         private TextBox textBox1;
         private Label label1;
-        private Button button1;
         private Panel panel2;
         private DataGridView dataGridView1;
         private Panel panel8;
@@ -565,5 +572,6 @@
         private DataGridViewTextBoxColumn Column9;
         private DataGridViewTextBoxColumn Column10;
         private Label label13;
+        private Button button1;
     }
 }

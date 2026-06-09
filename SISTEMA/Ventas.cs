@@ -1,5 +1,6 @@
 using Pantalla_de_devolución;
 using SISTEMA;
+using System.Globalization;
 
 namespace Pantalla_ventas
 {
@@ -8,6 +9,8 @@ namespace Pantalla_ventas
         int numeroFactura;
         double subtotal = 0;
         double total = 0;
+
+        public double Cambio { get; set; }
 
         Dictionary<string, double> producto = new Dictionary<string, double>()
         {
@@ -90,12 +93,14 @@ namespace Pantalla_ventas
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            txtfecha.Enabled = false;
             txtfecha.Text = DateTime.Now.ToShortDateString();
-            txtfecha.ReadOnly = true;
 
+            txtfactura.Enabled = false;
 
-            cmbtipo.Items.Add("Ropa Masculina");
-            cmbtipo.Items.Add("Calzado");
+            cmbcategoria.Items.Add("Ropa Masculina");
+            cmbcategoria.Items.Add("Calzado");
+
 
             if (File.Exists("factura.txt"))
             {
@@ -163,7 +168,7 @@ namespace Pantalla_ventas
         {
             cmbproducto.Items.Clear();
 
-            string tiposeleccionado = cmbtipo.Text;
+            string tiposeleccionado = cmbcategoria.Text;
 
             if (tipos.ContainsKey(tiposeleccionado))
             {
@@ -176,15 +181,13 @@ namespace Pantalla_ventas
 
         private void btnlimpiar_Click(object sender, EventArgs e)
         {
-            numeroFactura++;
-            File.WriteAllText("factura.txt", numeroFactura.ToString("D3"));
-            txtfactura.Text = numeroFactura.ToString();
-
-            cmbtipo.SelectedIndex = -1;
+            cmbcategoria.SelectedIndex = -1;
             cmbproducto.SelectedIndex = -1;
-            numericant.Value = 0;            
-            dgvventas.Rows.Clear();
-            subtotal = 0;            
+            numericant.Value = 0;
+            subtotal = 0;
+            txtmedida.Clear();
+            txtprecio.Clear();
+            txtdescuento.Clear();
         }
 
         private void button7_Click(object sender, EventArgs e)
@@ -195,16 +198,17 @@ namespace Pantalla_ventas
         private void buttonIngresar_Click(object sender, EventArgs e)
         {
             try
-            {                
+            {
                 string producto = cmbproducto.Text;
-                string categoria = cmbtipo.Text;
+                string categoria = cmbcategoria.Text;
+                int medida = Convert.ToInt32(txtmedida.Text);
                 int cantidad = (int)numericant.Value;
 
-                double porcentaje_descuento = Convert.ToDouble(txtdescuento.Text);                
+                double porcentaje_descuento = Convert.ToDouble(txtdescuento.Text);
                 double precio = Convert.ToDouble(txtprecio.Text);
                 double descuento = precio * (porcentaje_descuento / 100);
 
-                double valor = precio * cantidad;                
+                double valor = precio * cantidad;
                 subtotal += valor - descuento;
                 total += subtotal;
 
@@ -212,23 +216,56 @@ namespace Pantalla_ventas
                 {
                     descuento = Convert.ToDouble(txtdescuento.Text);
                 }
-                
 
-                dgvventas.Rows.Add(producto, categoria, "NULL", precio, cantidad, valor, descuento, porcentaje_descuento.ToString() + "%", total);
+                dgvventas.Rows.Add(producto, categoria, medida, precio, cantidad, valor, descuento, porcentaje_descuento.ToString() + "%", total);
 
-                cmbtipo.SelectedIndex = -1;
+                cmbcategoria.SelectedIndex = -1;
                 cmbproducto.SelectedIndex = -1;
-                numericant.Value = 0;                
+                numericant.Value = 0;
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error al ingresar la venta: " + ex.Message);
             }
+
+            numeroFactura++;
+            File.WriteAllText("factura.txt", numeroFactura.ToString("D3"));
+            txtfactura.Text = numeroFactura.ToString();
         }
 
         private void button1_Click_1(object sender, EventArgs e)
         {
             Devolución obj = new Devolución(); obj.ShowDialog();
+        }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            foreach (DataGridViewRow fila in dgvventas.Rows)
+            {
+                if (fila.Cells["Valor"].Value != null)
+                {
+                    subtotal += Convert.ToDouble(fila.Cells["Valor"].Value);
+                    txtsubtotal.Text = subtotal.ToString();
+
+                    double iva = subtotal * 0.15;
+                    txtiva.Text = iva.ToString("N2");
+
+                    double total = subtotal + iva;
+                    txttotal.Text = total.ToString("N2");
+
+                    double Total = Convert.ToDouble(txttotal.Text);
+                }
+            }
         }
     }
 }

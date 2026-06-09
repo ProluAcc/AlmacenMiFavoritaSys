@@ -45,6 +45,7 @@ namespace SISTEMA
             get => default;
             set
             {
+                if()
             }
         }
     }

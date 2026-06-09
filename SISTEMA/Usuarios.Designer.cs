@@ -55,6 +55,7 @@
             label3 = new Label();
             label1 = new Label();
             panel2 = new Panel();
+            button7 = new Button();
             button3 = new Button();
             label2 = new Label();
             textBox1 = new TextBox();
@@ -63,7 +64,6 @@
             button4 = new Button();
             button5 = new Button();
             button6 = new Button();
-            button7 = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             panel2.SuspendLayout();
             SuspendLayout();
@@ -175,7 +175,7 @@
             button1.BackColor = SystemColors.ButtonFace;
             button1.Font = new Font("Segoe UI Black", 11F, FontStyle.Bold);
             button1.ForeColor = Color.FromArgb(69, 69, 210);
-            button1.Location = new Point(750, 171);
+            button1.Location = new Point(718, 171);
             button1.Name = "button1";
             button1.Size = new Size(118, 36);
             button1.TabIndex = 90;
@@ -295,6 +295,18 @@
             panel2.Size = new Size(977, 68);
             panel2.TabIndex = 101;
             // 
+            // button7
+            // 
+            button7.BackColor = SystemColors.ButtonFace;
+            button7.Font = new Font("Segoe UI Black", 11F, FontStyle.Bold);
+            button7.ForeColor = Color.FromArgb(69, 69, 210);
+            button7.Location = new Point(889, 15);
+            button7.Name = "button7";
+            button7.Size = new Size(73, 35);
+            button7.TabIndex = 119;
+            button7.Text = "AYUDA";
+            button7.UseVisualStyleBackColor = false;
+            // 
             // button3
             // 
             button3.BackColor = SystemColors.ButtonFace;
@@ -360,7 +372,7 @@
             button5.BackColor = SystemColors.ButtonFace;
             button5.Font = new Font("Segoe UI Black", 11F, FontStyle.Bold);
             button5.ForeColor = Color.FromArgb(69, 69, 210);
-            button5.Location = new Point(624, 172);
+            button5.Location = new Point(607, 172);
             button5.Name = "button5";
             button5.Size = new Size(105, 35);
             button5.TabIndex = 117;
@@ -378,18 +390,6 @@
             button6.TabIndex = 118;
             button6.Text = "➕";
             button6.UseVisualStyleBackColor = false;
-            // 
-            // button7
-            // 
-            button7.BackColor = SystemColors.ButtonFace;
-            button7.Font = new Font("Segoe UI Black", 11F, FontStyle.Bold);
-            button7.ForeColor = Color.FromArgb(69, 69, 210);
-            button7.Location = new Point(889, 15);
-            button7.Name = "button7";
-            button7.Size = new Size(73, 35);
-            button7.TabIndex = 119;
-            button7.Text = "AYUDA";
-            button7.UseVisualStyleBackColor = false;
             // 
             // Usuarios
             // 

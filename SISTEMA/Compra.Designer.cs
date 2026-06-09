@@ -288,7 +288,7 @@
             panel11.Controls.Add(button4);
             panel11.Location = new Point(514, 405);
             panel11.Name = "panel11";
-            panel11.Size = new Size(220, 95);
+            panel11.Size = new Size(228, 95);
             panel11.TabIndex = 6;
             panel11.Paint += panel11_Paint;
             // 

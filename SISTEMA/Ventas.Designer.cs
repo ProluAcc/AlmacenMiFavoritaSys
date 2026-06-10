@@ -37,9 +37,7 @@
             label2 = new Label();
             label1 = new Label();
             groupBox2 = new GroupBox();
-            comboBox1 = new ComboBox();
             label11 = new Label();
-            cmbtipo = new ComboBox();
             txtmedida = new TextBox();
             label11 = new Label();
             cmbcategoria = new ComboBox();
@@ -105,8 +103,6 @@
             groupBox1.Size = new Size(1129, 60);
             groupBox1.TabIndex = 0;
             groupBox1.TabStop = false;
-            groupBox1.Enter += groupBox1_Enter;
-            // 
             // button4
             // 
             button4.BackColor = SystemColors.ButtonFace;
@@ -203,12 +199,6 @@
             // comboBox1
             // txtmedida
             // 
-            comboBox1.ForeColor = Color.Black;
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(300, 20);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(115, 23);
-            comboBox1.TabIndex = 18;
             // 
             // label11
             // 

@@ -186,6 +186,10 @@ namespace Pantalla_ventas
             cmbcategoria.SelectedIndex = -1;
             cmbproducto.SelectedIndex = -1;
             numericant.Value = 0;
+            subtotal = 0;
+            txtmedida.Clear();
+            txtprecio.Clear();
+            txtdescuento.Clear();
             dgvventas.Rows.Clear();
             subtotal = 0;
         }
@@ -203,12 +207,11 @@ namespace Pantalla_ventas
                 string categoria = cmbcategoria.Text;
                 int medida = Convert.ToInt32(txtmedida.Text);
                 int cantidad = (int)numericant.Value;
-
                 double porcentaje_descuento = Convert.ToDouble(txtdescuento.Text);
                 double precio = Convert.ToDouble(txtprecio.Text);
                 double descuento = precio * (porcentaje_descuento / 100);
-
                 double valor = precio * cantidad;
+
                 subtotal += valor - descuento;
                 total += subtotal;
 
@@ -218,7 +221,8 @@ namespace Pantalla_ventas
                 }
 
 
-                dgvventas.Rows.Add(producto, categoria, "NULL", precio, cantidad, valor, descuento, porcentaje_descuento.ToString() + "%", total);
+                dgvventas.Rows.Add(producto, categoria, medida, precio, cantidad, valor, descuento, porcentaje_descuento.ToString() + "%", total);
+                CalcularFactura();
 
                 cmbcategoria.SelectedIndex = -1;
                 cmbproducto.SelectedIndex = -1;
@@ -257,6 +261,47 @@ namespace Pantalla_ventas
         private void button1_Click_1(object sender, EventArgs e)
         {
             Devolución obj = new Devolución(); obj.ShowDialog();
+        }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            if (txtefectivo.Text == "")
+            {
+                MessageBox.Show("Ingrese el monto entregado por el cliente.");
+                return;
+            }
+
+            double monto = Convert.ToDouble(txtefectivo.Text);
+            double total = Convert.ToDouble(txttotal.Text);
+
+            if (monto < total)
+            {
+                MessageBox.Show("El monto es insuficiente para realizar el pago.");
+                return;
+            }
+
+            double cambio = monto - total;
+
+            MessageBox.Show(
+                "Gracias por su compra, su cambio es de C$ " + cambio.ToString("N2"),
+                "Pago realizado",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Information
+            );
+
+            numeroFactura++;
+            File.WriteAllText("factura.txt", numeroFactura.ToString("D3"));
+            txtfactura.Text = numeroFactura.ToString();
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)

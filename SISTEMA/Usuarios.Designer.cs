@@ -29,13 +29,14 @@
         private void InitializeComponent()
         {
             dataGridView1 = new DataGridView();
-            Column1 = new DataGridViewTextBoxColumn();
             Column2 = new DataGridViewTextBoxColumn();
-            Column4 = new DataGridViewTextBoxColumn();
-            Column5 = new DataGridViewTextBoxColumn();
             Column6 = new DataGridViewTextBoxColumn();
+            Column5 = new DataGridViewTextBoxColumn();
+            Column1 = new DataGridViewTextBoxColumn();
+            Column3 = new DataGridViewTextBoxColumn();
+            Column9 = new DataGridViewTextBoxColumn();
+            Column4 = new DataGridViewTextBoxColumn();
             Column7 = new DataGridViewTextBoxColumn();
-            Column8 = new DataGridViewTextBoxColumn();
             textbuscarT = new TextBox();
             cmbBuscarQ = new ComboBox();
             label10 = new Label();
@@ -71,50 +72,55 @@
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column4, Column5, Column6, Column7, Column8 });
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Column2, Column6, Column5, Column1, Column3, Column9, Column4, Column7 });
             dataGridView1.Location = new Point(7, 306);
             dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(844, 209);
+            dataGridView1.Size = new Size(944, 209);
             dataGridView1.TabIndex = 99;
-            // 
-            // Column1
-            // 
-            Column1.HeaderText = "Cédula ";
-            Column1.Name = "Column1";
             // 
             // Column2
             // 
             Column2.HeaderText = "Nombre Completo ";
             Column2.Name = "Column2";
             // 
-            // Column4
+            // Column6
             // 
-            Column4.HeaderText = "Rol ";
-            Column4.Name = "Column4";
+            Column6.HeaderText = "Usuario ";
+            Column6.Name = "Column6";
             // 
             // Column5
             // 
             Column5.HeaderText = "Correo Electronico ";
             Column5.Name = "Column5";
             // 
-            // Column6
+            // Column1
             // 
-            Column6.HeaderText = "Usuario ";
-            Column6.Name = "Column6";
+            Column1.HeaderText = "Contraseña";
+            Column1.Name = "Column1";
+            // 
+            // Column3
+            // 
+            Column3.HeaderText = "Pregunta";
+            Column3.Name = "Column3";
+            // 
+            // Column9
+            // 
+            Column9.HeaderText = "Respuesta";
+            Column9.Name = "Column9";
+            // 
+            // Column4
+            // 
+            Column4.HeaderText = "Rol ";
+            Column4.Name = "Column4";
             // 
             // Column7
             // 
             Column7.HeaderText = "Estado ";
             Column7.Name = "Column7";
             // 
-            // Column8
-            // 
-            Column8.HeaderText = "Editar ";
-            Column8.Name = "Column8";
-            // 
             // textbuscarT
             // 
-            textbuscarT.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            textbuscarT.Font = new Font("Segoe UI", 11F);
             textbuscarT.Location = new Point(622, 263);
             textbuscarT.Name = "textbuscarT";
             textbuscarT.Size = new Size(157, 27);
@@ -122,7 +128,7 @@
             // 
             // cmbBuscarQ
             // 
-            cmbBuscarQ.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            cmbBuscarQ.Font = new Font("Segoe UI", 11F);
             cmbBuscarQ.FormattingEnabled = true;
             cmbBuscarQ.Location = new Point(508, 263);
             cmbBuscarQ.Name = "cmbBuscarQ";
@@ -141,7 +147,7 @@
             // 
             // comboEstadoY
             // 
-            comboEstadoY.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            comboEstadoY.Font = new Font("Segoe UI", 11F);
             comboEstadoY.FormattingEnabled = true;
             comboEstadoY.Location = new Point(16, 179);
             comboEstadoY.Name = "comboEstadoY";
@@ -181,10 +187,11 @@
             btnGuardarH.TabIndex = 90;
             btnGuardarH.Text = "💾GUARDAR";
             btnGuardarH.UseVisualStyleBackColor = false;
+            btnGuardarH.Click += btnGuardarH_Click_1;
             // 
             // comboRolR
             // 
-            comboRolR.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            comboRolR.Font = new Font("Segoe UI", 11F);
             comboRolR.FormattingEnabled = true;
             comboRolR.Location = new Point(114, 179);
             comboRolR.Name = "comboRolR";
@@ -213,7 +220,7 @@
             // 
             // txtNombreT
             // 
-            txtNombreT.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            txtNombreT.Font = new Font("Segoe UI", 11F);
             txtNombreT.Location = new Point(16, 113);
             txtNombreT.Name = "txtNombreT";
             txtNombreT.Size = new Size(141, 27);
@@ -231,7 +238,7 @@
             // 
             // txtEmailU
             // 
-            txtEmailU.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            txtEmailU.Font = new Font("Segoe UI", 11F);
             txtEmailU.Location = new Point(277, 113);
             txtEmailU.Name = "txtEmailU";
             txtEmailU.Size = new Size(141, 27);
@@ -249,7 +256,7 @@
             // 
             // txtUsuarioL
             // 
-            txtUsuarioL.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            txtUsuarioL.Font = new Font("Segoe UI", 11F);
             txtUsuarioL.Location = new Point(166, 114);
             txtUsuarioL.Name = "txtUsuarioL";
             txtUsuarioL.Size = new Size(100, 27);
@@ -257,7 +264,7 @@
             // 
             // textContraseñaJ
             // 
-            textContraseñaJ.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            textContraseñaJ.Font = new Font("Segoe UI", 11F);
             textContraseñaJ.Location = new Point(428, 114);
             textContraseñaJ.Name = "textContraseñaJ";
             textContraseñaJ.Size = new Size(141, 27);
@@ -332,7 +339,7 @@
             // 
             // txtPreguntaL
             // 
-            txtPreguntaL.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            txtPreguntaL.Font = new Font("Segoe UI", 11F);
             txtPreguntaL.Location = new Point(577, 114);
             txtPreguntaL.Name = "txtPreguntaL";
             txtPreguntaL.Size = new Size(141, 27);
@@ -350,7 +357,7 @@
             // 
             // txtRespuestaT
             // 
-            txtRespuestaT.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            txtRespuestaT.Font = new Font("Segoe UI", 11F);
             txtRespuestaT.Location = new Point(724, 114);
             txtRespuestaT.Name = "txtRespuestaT";
             txtRespuestaT.Size = new Size(141, 27);
@@ -361,12 +368,13 @@
             btnIngresarW.BackColor = SystemColors.ButtonFace;
             btnIngresarW.Font = new Font("Segoe UI Black", 11F, FontStyle.Bold);
             btnIngresarW.ForeColor = Color.FromArgb(69, 69, 210);
-            btnIngresarW.Location = new Point(351, 174);
+            btnIngresarW.Location = new Point(351, 171);
             btnIngresarW.Name = "btnIngresarW";
             btnIngresarW.Size = new Size(118, 36);
             btnIngresarW.TabIndex = 107;
             btnIngresarW.Text = "⬇️INGRESAR";
             btnIngresarW.UseVisualStyleBackColor = false;
+            btnIngresarW.Click += btnIngresarW_Click_1;
             // 
             // btnEditarM
             // 
@@ -379,6 +387,7 @@
             btnEditarM.TabIndex = 117;
             btnEditarM.Text = "✏️EDITAR";
             btnEditarM.UseVisualStyleBackColor = false;
+            btnEditarM.Click += btnEditarM_Click_1;
             // 
             // button6
             // 
@@ -391,6 +400,7 @@
             button6.TabIndex = 118;
             button6.Text = "➕";
             button6.UseVisualStyleBackColor = false;
+            button6.Click += button6_Click;
             // 
             // Usuarios
             // 
@@ -462,16 +472,17 @@
         private TextBox txtPreguntaL;
         private Label label11;
         private TextBox txtRespuestaT;
-        private DataGridViewTextBoxColumn Column1;
-        private DataGridViewTextBoxColumn Column2;
-        private DataGridViewTextBoxColumn Column4;
-        private DataGridViewTextBoxColumn Column5;
-        private DataGridViewTextBoxColumn Column6;
-        private DataGridViewTextBoxColumn Column7;
-        private DataGridViewTextBoxColumn Column8;
         private Button btnIngresarW;
         private Button btnEditarM;
         private Button button6;
         private Button button7;
+        private DataGridViewTextBoxColumn Column2;
+        private DataGridViewTextBoxColumn Column6;
+        private DataGridViewTextBoxColumn Column5;
+        private DataGridViewTextBoxColumn Column1;
+        private DataGridViewTextBoxColumn Column3;
+        private DataGridViewTextBoxColumn Column9;
+        private DataGridViewTextBoxColumn Column4;
+        private DataGridViewTextBoxColumn Column7;
     }
 }

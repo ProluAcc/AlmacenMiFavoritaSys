@@ -49,6 +49,8 @@ namespace Pantalla_ventas
             },
         };
 
+
+
         public Ventas()
         {
             InitializeComponent();
@@ -203,14 +205,10 @@ namespace Pantalla_ventas
                 string categoria = cmbcategoria.Text;
                 int medida = Convert.ToInt32(txtmedida.Text);
                 int cantidad = (int)numericant.Value;
-
                 double porcentaje_descuento = Convert.ToDouble(txtdescuento.Text);
                 double precio = Convert.ToDouble(txtprecio.Text);
                 double descuento = precio * (porcentaje_descuento / 100);
-
                 double valor = precio * cantidad;
-                subtotal += valor - descuento;
-                total += subtotal;
 
                 if (txtdescuento.Text != "")
                 {
@@ -218,6 +216,7 @@ namespace Pantalla_ventas
                 }
 
                 dgvventas.Rows.Add(producto, categoria, medida, precio, cantidad, valor, descuento, porcentaje_descuento.ToString() + "%", total);
+                CalcularFactura();
 
                 cmbcategoria.SelectedIndex = -1;
                 cmbproducto.SelectedIndex = -1;
@@ -231,6 +230,26 @@ namespace Pantalla_ventas
             numeroFactura++;
             File.WriteAllText("factura.txt", numeroFactura.ToString("D3"));
             txtfactura.Text = numeroFactura.ToString();
+        }
+
+        private void CalcularFactura()
+        {
+            double subtotal = 0;
+
+            foreach (DataGridViewRow fila in dgvventas.Rows)
+            {
+                if (fila.Cells[6].Value != null)
+                {
+                    subtotal += Convert.ToDouble(fila.Cells[5].Value);
+                }
+            }
+
+            double iva = subtotal * 0.15;
+            double total = subtotal + iva;
+
+            txtsubtotal.Text = subtotal.ToString("N2");
+            txtiva.Text = iva.ToString("N2");
+            txttotal.Text = total.ToString("N2");
         }
 
         private void button1_Click_1(object sender, EventArgs e)
@@ -250,22 +269,38 @@ namespace Pantalla_ventas
 
         private void button8_Click(object sender, EventArgs e)
         {
-            foreach (DataGridViewRow fila in dgvventas.Rows)
+            if (txtefectivo.Text == "")
             {
-                if (fila.Cells["Valor"].Value != null)
-                {
-                    subtotal += Convert.ToDouble(fila.Cells["Valor"].Value);
-                    txtsubtotal.Text = subtotal.ToString();
-
-                    double iva = subtotal * 0.15;
-                    txtiva.Text = iva.ToString("N2");
-
-                    double total = subtotal + iva;
-                    txttotal.Text = total.ToString("N2");
-
-                    double Total = Convert.ToDouble(txttotal.Text);
-                }
+                MessageBox.Show("Ingrese el monto entregado por el cliente.");
+                return;
             }
+
+            double monto = Convert.ToDouble(txtefectivo.Text);
+            double total = Convert.ToDouble(txttotal.Text);
+
+            if (monto < total)
+            {
+                MessageBox.Show("El monto es insuficiente para realizar el pago.");
+                return;
+            }
+
+            double cambio = monto - total;
+
+            MessageBox.Show(
+                "Gracias por su compra, su cambio es de C$ " + cambio.ToString("N2"),
+                "Pago realizado",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Information
+            );
+
+            numeroFactura++;
+            File.WriteAllText("factura.txt", numeroFactura.ToString("D3"));
+            txtfactura.Text = numeroFactura.ToString();
+        }
+
+        private void txtsubtotal_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -8,7 +8,6 @@ namespace SISTEMA
 {
     internal class ClaseVenta
     {
-        private int _id_venta;
         private string _fecha_venta;
         private string _tipo_venta;       
         private int _numero_factura;
@@ -45,7 +44,7 @@ namespace SISTEMA
             get => default;
             set
             {
-                if()
+                
             }
         }
     }

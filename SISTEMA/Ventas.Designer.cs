@@ -567,7 +567,7 @@
             button1.ForeColor = Color.FromArgb(69, 69, 210);
             button1.Location = new Point(30, 44);
             button1.Name = "button1";
-            button1.Size = new Size(157, 35);
+            button1.Size = new Size(165, 35);
             button1.TabIndex = 21;
             button1.Text = "💸DEVOLUCIÓN";
             button1.UseVisualStyleBackColor = false;

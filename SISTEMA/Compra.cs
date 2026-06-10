@@ -166,5 +166,9 @@ namespace Registro_de_compra
 
         }
 
+        private void Compra_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

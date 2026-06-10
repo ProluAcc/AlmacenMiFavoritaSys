@@ -360,7 +360,7 @@
             button4.BackColor = SystemColors.ButtonFace;
             button4.Font = new Font("Segoe UI Black", 11F, FontStyle.Bold);
             button4.ForeColor = Color.FromArgb(69, 69, 210);
-            button4.Location = new Point(332, 171);
+            button4.Location = new Point(351, 199);
             button4.Name = "button4";
             button4.Size = new Size(118, 36);
             button4.TabIndex = 107;

@@ -182,9 +182,9 @@ namespace Pantalla_ventas
 
             cmbtipo.SelectedIndex = -1;
             cmbproducto.SelectedIndex = -1;
-            numericant.Value = 0;            
+            numericant.Value = 0;
             dgvventas.Rows.Clear();
-            subtotal = 0;            
+            subtotal = 0;
         }
 
         private void button7_Click(object sender, EventArgs e)
@@ -195,16 +195,16 @@ namespace Pantalla_ventas
         private void buttonIngresar_Click(object sender, EventArgs e)
         {
             try
-            {                
+            {
                 string producto = cmbproducto.Text;
                 string categoria = cmbtipo.Text;
                 int cantidad = (int)numericant.Value;
 
-                double porcentaje_descuento = Convert.ToDouble(txtdescuento.Text);                
+                double porcentaje_descuento = Convert.ToDouble(txtdescuento.Text);
                 double precio = Convert.ToDouble(txtprecio.Text);
                 double descuento = precio * (porcentaje_descuento / 100);
 
-                double valor = precio * cantidad;                
+                double valor = precio * cantidad;
                 subtotal += valor - descuento;
                 total += subtotal;
 
@@ -212,13 +212,13 @@ namespace Pantalla_ventas
                 {
                     descuento = Convert.ToDouble(txtdescuento.Text);
                 }
-                
+
 
                 dgvventas.Rows.Add(producto, categoria, "NULL", precio, cantidad, valor, descuento, porcentaje_descuento.ToString() + "%", total);
 
                 cmbtipo.SelectedIndex = -1;
                 cmbproducto.SelectedIndex = -1;
-                numericant.Value = 0;                
+                numericant.Value = 0;
             }
             catch (Exception ex)
             {
@@ -229,6 +229,11 @@ namespace Pantalla_ventas
         private void button1_Click_1(object sender, EventArgs e)
         {
             Devolución obj = new Devolución(); obj.ShowDialog();
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

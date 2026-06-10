@@ -21,5 +21,15 @@ namespace SISTEMA
         {
 
         }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            Menu obj = new Menu(); obj.Show(); this.Hide();
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

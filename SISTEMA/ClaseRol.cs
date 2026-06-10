@@ -8,30 +8,44 @@ namespace SISTEMA
 {
     class ClaseRol
     {
-        private string _rol;
+        private int _idrol;
+        private string _nombre;
         private string _descripcion;
-        private string _usuario;
-        private string _contrasena;
+        private bool _activo;
 
-        public string usuario
+
+      
+        public string nombre
         {
-            get { return _usuario; }
+            get { return _nombre; }
             set
             {
-                _usuario = value;
-                if (_usuario == "") MessageBox.Show("Usuario incorrecto", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                _nombre = value;
+                if(string.IsNullOrWhiteSpace(_nombre)) MessageBox.Show("El campo 'Nombre' no puede ir vacio.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Error); 
+                
             }
         }
 
-        public string contrasena
+        public string descripcion
         {
-            get { return _contrasena; }
+            get { return _descripcion; }
             set
             {
-                _contrasena = value;
-                if (_contrasena == "") MessageBox.Show("Contraseña de usuario incorrecta", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                _descripcion = value;
+                if (string.IsNullOrWhiteSpace(_descripcion)) MessageBox.Show("El campo 'Descripción' no puede ir vacio.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Error); 
             }
         }
+
+        public bool activo
+        {
+            get { return _activo; }
+            set {
+                _activo = value;
+                string m = _activo.ToString();
+                if(string.IsNullOrWhiteSpace(m)) MessageBox.Show("El campo 'Rol' no puede ir vacio.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }    
+            
 
         internal ClaseUsuarios ClaseUsuarios
         {

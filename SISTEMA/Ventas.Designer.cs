@@ -37,7 +37,8 @@
             label2 = new Label();
             label1 = new Label();
             groupBox2 = new GroupBox();
-            btnlimpiar = new Button();
+            comboBox1 = new ComboBox();
+            label11 = new Label();
             cmbtipo = new ComboBox();
             label14 = new Label();
             txtdescuento = new TextBox();
@@ -48,7 +49,16 @@
             label6 = new Label();
             label5 = new Label();
             label4 = new Label();
+            btnlimpiar = new Button();
             dgvventas = new DataGridView();
+            Column4 = new DataGridViewTextBoxColumn();
+            Column68 = new DataGridViewTextBoxColumn();
+            Column69 = new DataGridViewTextBoxColumn();
+            Column66 = new DataGridViewTextBoxColumn();
+            Column5 = new DataGridViewTextBoxColumn();
+            Column3 = new DataGridViewTextBoxColumn();
+            Column67 = new DataGridViewTextBoxColumn();
+            Column16 = new DataGridViewTextBoxColumn();
             label7 = new Label();
             label8 = new Label();
             label9 = new Label();
@@ -64,19 +74,9 @@
             groupBox5 = new GroupBox();
             buttonIngresar = new Button();
             groupBox4 = new GroupBox();
+            button1 = new Button();
             Column1 = new DataGridViewTextBoxColumn();
             Column2 = new DataGridViewTextBoxColumn();
-            Column4 = new DataGridViewTextBoxColumn();
-            Column68 = new DataGridViewTextBoxColumn();
-            Column69 = new DataGridViewTextBoxColumn();
-            Column66 = new DataGridViewTextBoxColumn();
-            Column5 = new DataGridViewTextBoxColumn();
-            Column3 = new DataGridViewTextBoxColumn();
-            Column67 = new DataGridViewTextBoxColumn();
-            Column16 = new DataGridViewTextBoxColumn();
-            comboBox1 = new ComboBox();
-            label11 = new Label();
-            button1 = new Button();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)numericant).BeginInit();
@@ -101,6 +101,7 @@
             groupBox1.Size = new Size(1072, 60);
             groupBox1.TabIndex = 0;
             groupBox1.TabStop = false;
+            groupBox1.Enter += groupBox1_Enter;
             // 
             // button4
             // 
@@ -193,18 +194,25 @@
             groupBox2.TabIndex = 1;
             groupBox2.TabStop = false;
             // 
-            // btnlimpiar
+            // comboBox1
             // 
-            btnlimpiar.BackColor = SystemColors.ButtonFace;
-            btnlimpiar.Font = new Font("Segoe UI Black", 11F, FontStyle.Bold);
-            btnlimpiar.ForeColor = Color.FromArgb(69, 69, 210);
-            btnlimpiar.Location = new Point(9, 60);
-            btnlimpiar.Name = "btnlimpiar";
-            btnlimpiar.Size = new Size(133, 35);
-            btnlimpiar.TabIndex = 16;
-            btnlimpiar.Text = "🗑LIMPIAR";
-            btnlimpiar.UseVisualStyleBackColor = false;
-            btnlimpiar.Click += btnlimpiar_Click;
+            comboBox1.ForeColor = Color.Black;
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Location = new Point(300, 20);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(115, 23);
+            comboBox1.TabIndex = 18;
+            // 
+            // label11
+            // 
+            label11.AutoSize = true;
+            label11.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            label11.ForeColor = Color.Black;
+            label11.Location = new Point(215, 21);
+            label11.Name = "label11";
+            label11.Size = new Size(80, 20);
+            label11.TabIndex = 17;
+            label11.Text = "Categoría:";
             // 
             // cmbtipo
             // 
@@ -306,6 +314,19 @@
             label4.Text = "Producto:";
             label4.Click += label4_Click;
             // 
+            // btnlimpiar
+            // 
+            btnlimpiar.BackColor = SystemColors.ButtonFace;
+            btnlimpiar.Font = new Font("Segoe UI Black", 11F, FontStyle.Bold);
+            btnlimpiar.ForeColor = Color.FromArgb(69, 69, 210);
+            btnlimpiar.Location = new Point(9, 60);
+            btnlimpiar.Name = "btnlimpiar";
+            btnlimpiar.Size = new Size(133, 35);
+            btnlimpiar.TabIndex = 16;
+            btnlimpiar.Text = "🗑LIMPIAR";
+            btnlimpiar.UseVisualStyleBackColor = false;
+            btnlimpiar.Click += btnlimpiar_Click;
+            // 
             // dgvventas
             // 
             dgvventas.AllowUserToDeleteRows = false;
@@ -316,6 +337,48 @@
             dgvventas.Size = new Size(1072, 196);
             dgvventas.TabIndex = 2;
             dgvventas.TabStop = false;
+            // 
+            // Column4
+            // 
+            Column4.HeaderText = "Producto";
+            Column4.Name = "Column4";
+            Column4.Width = 250;
+            // 
+            // Column68
+            // 
+            Column68.HeaderText = "Categoría";
+            Column68.Name = "Column68";
+            Column68.Width = 150;
+            // 
+            // Column69
+            // 
+            Column69.HeaderText = "Medida";
+            Column69.Name = "Column69";
+            // 
+            // Column66
+            // 
+            Column66.HeaderText = "Precio";
+            Column66.Name = "Column66";
+            // 
+            // Column5
+            // 
+            Column5.HeaderText = "Cantidad";
+            Column5.Name = "Column5";
+            // 
+            // Column3
+            // 
+            Column3.HeaderText = "Valor";
+            Column3.Name = "Column3";
+            // 
+            // Column67
+            // 
+            Column67.HeaderText = "Descuento";
+            Column67.Name = "Column67";
+            // 
+            // Column16
+            // 
+            Column16.HeaderText = "% Descuento";
+            Column16.Name = "Column16";
             // 
             // label7
             // 
@@ -483,79 +546,6 @@
             groupBox4.TabStop = false;
             groupBox4.Text = "Crear";
             // 
-            // Column1
-            // 
-            Column1.HeaderText = "Categoría";
-            Column1.Name = "Column1";
-            Column1.Width = 150;
-            // 
-            // Column2
-            // 
-            Column2.HeaderText = "Medida";
-            Column2.Name = "Column2";
-            // 
-            // Column4
-            // 
-            Column4.HeaderText = "Producto";
-            Column4.Name = "Column4";
-            Column4.Width = 250;
-            // 
-            // Column68
-            // 
-            Column68.HeaderText = "Categoría";
-            Column68.Name = "Column68";
-            Column68.Width = 150;
-            // 
-            // Column69
-            // 
-            Column69.HeaderText = "Medida";
-            Column69.Name = "Column69";
-            // 
-            // Column66
-            // 
-            Column66.HeaderText = "Precio";
-            Column66.Name = "Column66";
-            // 
-            // Column5
-            // 
-            Column5.HeaderText = "Cantidad";
-            Column5.Name = "Column5";
-            // 
-            // Column3
-            // 
-            Column3.HeaderText = "Valor";
-            Column3.Name = "Column3";
-            // 
-            // Column67
-            // 
-            Column67.HeaderText = "Descuento";
-            Column67.Name = "Column67";
-            // 
-            // Column16
-            // 
-            Column16.HeaderText = "% Descuento";
-            Column16.Name = "Column16";
-            // 
-            // comboBox1
-            // 
-            comboBox1.ForeColor = Color.Black;
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(300, 20);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(115, 23);
-            comboBox1.TabIndex = 18;
-            // 
-            // label11
-            // 
-            label11.AutoSize = true;
-            label11.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            label11.ForeColor = Color.Black;
-            label11.Location = new Point(215, 21);
-            label11.Name = "label11";
-            label11.Size = new Size(80, 20);
-            label11.TabIndex = 17;
-            label11.Text = "Categoría:";
-            // 
             // button1
             // 
             button1.BackColor = SystemColors.ButtonFace;
@@ -568,6 +558,17 @@
             button1.Text = "💸DEVOLUCIÓN";
             button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click_1;
+            // 
+            // Column1
+            // 
+            Column1.HeaderText = "Categoría";
+            Column1.Name = "Column1";
+            Column1.Width = 150;
+            // 
+            // Column2
+            // 
+            Column2.HeaderText = "Medida";
+            Column2.Name = "Column2";
             // 
             // Ventas
             // 

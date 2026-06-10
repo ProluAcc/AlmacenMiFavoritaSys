@@ -61,7 +61,7 @@ namespace SISTEMA
 
             cmbBuscarQ.Items.Clear();
             cmbBuscarQ.Items.AddRange(new object[] { "Cédula", "Nombre", "Rol", "Correo", "Usuario", "Estado" });
-            cmbBuscarQ.SelectedIndex = 1; 
+            cmbBuscarQ.SelectedIndex = 1;
         }
 
         private static readonly Random rng = new Random();
@@ -147,7 +147,7 @@ namespace SISTEMA
 
             var nuevo = new UsuarioModel
             {
-                Cedula = GenerarCedula(), 
+                Cedula = GenerarCedula(),
                 NombreCompleto = txtNombreT.Text.Trim(),
                 Rol = comboRolR.SelectedItem?.ToString() ?? "",
                 CorreoElectronico = txtEmailU.Text.Trim(),
@@ -284,11 +284,19 @@ namespace SISTEMA
             MessageBox.Show("Usuario cargado en el formulario.", "Ingresar", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
-        
+
 
         private void button7_Click(object sender, EventArgs e)
         {
             Menu obj = new Menu(); obj.Show(); this.Hide();
+        }
+
+        private void button7_Click_1(object sender, EventArgs e)
+        {
+            using (var f = new Ayuda())
+            {
+                f.ShowDialog(this);
+            }
         }
     }
 }

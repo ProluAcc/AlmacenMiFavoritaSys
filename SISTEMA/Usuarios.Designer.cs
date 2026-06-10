@@ -306,6 +306,7 @@
             button7.TabIndex = 119;
             button7.Text = "AYUDA";
             button7.UseVisualStyleBackColor = false;
+            button7.Click += button7_Click_1;
             // 
             // btnBuscarD
             // 

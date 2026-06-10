@@ -30,7 +30,7 @@ namespace SISTEMA
 
         private void Usuarios_Load(object sender, EventArgs e)
         {
-            InicializarCombos();            
+            InicializarCombos();
         }
 
         private void InicializarCombos()
@@ -127,7 +127,7 @@ namespace SISTEMA
                     resultado = usuarios.Where(u => u.username?.IndexOf(criterio, StringComparison.OrdinalIgnoreCase) >= 0);
                     break;
                 case "Estado":
-                    resultado = usuarios.Where(u => u.estado?.IndexOf(criterio, StringComparison.OrdinalIgnoreCase) >= 0);
+                    resultado = usuarios.Where(u => u.estado?.Equals(criterio, StringComparison.OrdinalIgnoreCase) ?? false);
                     break;
                 default:
                     resultado = usuarios.Where(u => u.nombre?.IndexOf(criterio, StringComparison.OrdinalIgnoreCase) >= 0);
@@ -227,6 +227,11 @@ namespace SISTEMA
         }
 
         private void btnGuardarH_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnEditarM_Click_1(object sender, EventArgs e)
         {
 
         }

@@ -29,6 +29,14 @@
         private void InitializeComponent()
         {
             dataGridView1 = new DataGridView();
+            Column2 = new DataGridViewTextBoxColumn();
+            Column6 = new DataGridViewTextBoxColumn();
+            Column5 = new DataGridViewTextBoxColumn();
+            Column1 = new DataGridViewTextBoxColumn();
+            Column3 = new DataGridViewTextBoxColumn();
+            Column9 = new DataGridViewTextBoxColumn();
+            Column4 = new DataGridViewTextBoxColumn();
+            Column7 = new DataGridViewTextBoxColumn();
             textbuscarT = new TextBox();
             cmbBuscarQ = new ComboBox();
             label10 = new Label();
@@ -57,14 +65,6 @@
             btnIngresarW = new Button();
             btnEditarM = new Button();
             button6 = new Button();
-            Column2 = new DataGridViewTextBoxColumn();
-            Column6 = new DataGridViewTextBoxColumn();
-            Column5 = new DataGridViewTextBoxColumn();
-            Column1 = new DataGridViewTextBoxColumn();
-            Column3 = new DataGridViewTextBoxColumn();
-            Column9 = new DataGridViewTextBoxColumn();
-            Column4 = new DataGridViewTextBoxColumn();
-            Column7 = new DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             panel2.SuspendLayout();
             SuspendLayout();
@@ -77,6 +77,46 @@
             dataGridView1.Name = "dataGridView1";
             dataGridView1.Size = new Size(944, 209);
             dataGridView1.TabIndex = 99;
+            // 
+            // Column2
+            // 
+            Column2.HeaderText = "Nombre Completo ";
+            Column2.Name = "Column2";
+            // 
+            // Column6
+            // 
+            Column6.HeaderText = "Usuario ";
+            Column6.Name = "Column6";
+            // 
+            // Column5
+            // 
+            Column5.HeaderText = "Correo Electronico ";
+            Column5.Name = "Column5";
+            // 
+            // Column1
+            // 
+            Column1.HeaderText = "Contraseña";
+            Column1.Name = "Column1";
+            // 
+            // Column3
+            // 
+            Column3.HeaderText = "Pregunta";
+            Column3.Name = "Column3";
+            // 
+            // Column9
+            // 
+            Column9.HeaderText = "Respuesta";
+            Column9.Name = "Column9";
+            // 
+            // Column4
+            // 
+            Column4.HeaderText = "Rol ";
+            Column4.Name = "Column4";
+            // 
+            // Column7
+            // 
+            Column7.HeaderText = "Estado ";
+            Column7.Name = "Column7";
             // 
             // textbuscarT
             // 
@@ -347,6 +387,7 @@
             btnEditarM.TabIndex = 117;
             btnEditarM.Text = "✏️EDITAR";
             btnEditarM.UseVisualStyleBackColor = false;
+            btnEditarM.Click += btnEditarM_Click_1;
             // 
             // button6
             // 
@@ -360,46 +401,6 @@
             button6.Text = "➕";
             button6.UseVisualStyleBackColor = false;
             button6.Click += button6_Click;
-            // 
-            // Column2
-            // 
-            Column2.HeaderText = "Nombre Completo ";
-            Column2.Name = "Column2";
-            // 
-            // Column6
-            // 
-            Column6.HeaderText = "Usuario ";
-            Column6.Name = "Column6";
-            // 
-            // Column5
-            // 
-            Column5.HeaderText = "Correo Electronico ";
-            Column5.Name = "Column5";
-            // 
-            // Column1
-            // 
-            Column1.HeaderText = "Contraseña";
-            Column1.Name = "Column1";
-            // 
-            // Column3
-            // 
-            Column3.HeaderText = "Pregunta";
-            Column3.Name = "Column3";
-            // 
-            // Column9
-            // 
-            Column9.HeaderText = "Respuesta";
-            Column9.Name = "Column9";
-            // 
-            // Column4
-            // 
-            Column4.HeaderText = "Rol ";
-            Column4.Name = "Column4";
-            // 
-            // Column7
-            // 
-            Column7.HeaderText = "Estado ";
-            Column7.Name = "Column7";
             // 
             // Usuarios
             // 

@@ -37,6 +37,9 @@
             label2 = new Label();
             label1 = new Label();
             groupBox2 = new GroupBox();
+            comboBox1 = new ComboBox();
+            label11 = new Label();
+            cmbtipo = new ComboBox();
             txtmedida = new TextBox();
             label11 = new Label();
             cmbcategoria = new ComboBox();
@@ -102,6 +105,7 @@
             groupBox1.Size = new Size(1129, 60);
             groupBox1.TabIndex = 0;
             groupBox1.TabStop = false;
+            groupBox1.Enter += groupBox1_Enter;
             // 
             // button4
             // 
@@ -196,8 +200,26 @@
             groupBox2.TabStop = false;
             groupBox2.Enter += groupBox2_Enter;
             // 
+            // comboBox1
             // txtmedida
             // 
+            comboBox1.ForeColor = Color.Black;
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Location = new Point(300, 20);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(115, 23);
+            comboBox1.TabIndex = 18;
+            // 
+            // label11
+            // 
+            label11.AutoSize = true;
+            label11.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            label11.ForeColor = Color.Black;
+            label11.Location = new Point(215, 21);
+            label11.Name = "label11";
+            label11.Size = new Size(80, 20);
+            label11.TabIndex = 17;
+            label11.Text = "Categoría:";
             txtmedida.Location = new Point(302, 18);
             txtmedida.Name = "txtmedida";
             txtmedida.Size = new Size(113, 23);
@@ -559,6 +581,30 @@
             groupBox4.TabIndex = 11;
             groupBox4.TabStop = false;
             groupBox4.Text = "Crear";
+            // 
+            // button1
+            // 
+            button1.BackColor = SystemColors.ButtonFace;
+            button1.Font = new Font("Segoe UI Black", 11F, FontStyle.Bold);
+            button1.ForeColor = Color.FromArgb(69, 69, 210);
+            button1.Location = new Point(6, 21);
+            button1.Name = "button1";
+            button1.Size = new Size(157, 35);
+            button1.TabIndex = 21;
+            button1.Text = "💸DEVOLUCIÓN";
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click_1;
+            // 
+            // Column1
+            // 
+            Column1.HeaderText = "Categoría";
+            Column1.Name = "Column1";
+            Column1.Width = 150;
+            // 
+            // Column2
+            // 
+            Column2.HeaderText = "Medida";
+            Column2.Name = "Column2";
             // 
             // button1
             // 

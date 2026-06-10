@@ -27,6 +27,7 @@ namespace SISTEMA
         private string _respuesta;
         private string _estado;
         private int _idrol;
+        private string _rol;
 
         //validaciones
         public int id_usuario
@@ -96,6 +97,36 @@ namespace SISTEMA
                 _idrol = value;
                 string m = _idrol.ToString();
                 if (string.IsNullOrWhiteSpace(m)) MessageBox.Show("El rol no puede ir vacio.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        public string pregunta
+        {
+            get { return _pregunta; }
+            set
+            {
+                _pregunta = value;
+                if (_pregunta == "") MessageBox.Show("El campo 'Contraseña' no puede ir vacio.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        public string respuesta
+        {
+            get { return _respuesta; }
+            set
+            {
+                _respuesta = value;
+                if (_respuesta == "") MessageBox.Show("El campo 'Contraseña' no puede ir vacio.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        public string rol
+        {
+            get { return _rol; }
+            set
+            {
+                _rol = value;
+                if (_rol == "") MessageBox.Show("El campo 'Contraseña' no puede ir vacio.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

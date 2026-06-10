@@ -3,7 +3,6 @@ namespace SISTEMA
     public partial class Login : Form
     {
         ClaseUsuarios cu = new();
-        ClaseRol u = new();
         public Login()
         {
             InitializeComponent();
@@ -16,26 +15,28 @@ namespace SISTEMA
 
         private void button4_Click(object sender, EventArgs e)
         {
-            u.usuario = txtUsuario.Text;
-            u.contrasena = txtContrasena.Text;
+            cu.username = txtUsuario.Text;
+            cu.contrasena = txtContrasena.Text;
 
             try
             {
-                if (!cu.usersContrasenas.ContainsKey(u.usuario))
+                if (!cu.usersContrasenas.ContainsKey(cu.username))
                 {
                     MessageBox.Show("Usuario incorrecto", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     txtUsuario.Text = ""; txtUsuario.Focus();
                 }
-                else if (u.contrasena != cu.usersContrasenas[u.usuario])
+                else if (cu.contrasena != cu.usersContrasenas[cu.username])
                 {
                     MessageBox.Show("Contraseña incorrecta", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     txtContrasena.Text = ""; txtContrasena.Focus();
                 }
-                else if (u.contrasena == cu.usersContrasenas[u.usuario])
+                else if (cu.contrasena == cu.usersContrasenas[cu.username])
                 {
-                    MessageBox.Show($"¡Bienvenido al sistema {u.usuario}!", "Bienvenido(a)", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    Bienvenida obj = new Bienvenida(); obj.Show(); this.Hide();
-                }                                                      
+                    MessageBox.Show($"¡Bienvenido al sistema {cu.username}!", "Bienvenido(a)", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Menu obj = new Menu(); 
+                    
+                    obj.Show(); this.Hide();
+                }
             }
             catch (Exception x)
             {
@@ -47,6 +48,11 @@ namespace SISTEMA
         private void btnRecuperar_Click(object sender, EventArgs e)
         {
             Recuperacion obj = new Recuperacion(); obj.Show(); this.Hide();
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

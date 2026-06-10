@@ -12,13 +12,8 @@ namespace SISTEMA
         private string _fecha_compra;
         private string _fecha_entrega;
         private int _numero_factura;
-        private int _id_proveedor;
-        private int _id_usuario;
-        private int _cantidad;
-        private int _subtotal;
-        private int _impuesto;
-        private int _total;
-        private int _id_producto;
+        private int _idproveedor;
+        private int _idusuario;
 
         internal ClaseProveedor ClaseProveedor
         {
@@ -29,6 +24,30 @@ namespace SISTEMA
         }
 
         internal ClaseProducto ClaseProducto
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
+        internal Clase_detalle_compra Clase_detalle_compra
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
+        internal ClaseCaja ClaseCaja
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
+        internal ClaseUsuarios ClaseUsuarios
         {
             get => default;
             set

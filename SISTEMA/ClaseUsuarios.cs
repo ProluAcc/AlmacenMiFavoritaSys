@@ -10,8 +10,8 @@ namespace SISTEMA
     {
         public Dictionary<string, string> usersContrasenas = new Dictionary<string, string>()
         {
-            { "Christiam", "c1234" },
-            { "Jack", "j1234"},
+            {"Christiam", "c1234" },
+            {"Jack", "j1234"},
             {"Kelly", "k1234" },
             {"Amaru", "a1234" },
             {"Helkind", "h1234" },
@@ -20,13 +20,13 @@ namespace SISTEMA
 
         private int _id_usuario;
         private string _nombre;
-        private string _correo;
-        private string _estado;
+        private string _username;       
         private string _contrasena;
+        private string _correo;
         private string _pregunta;
         private string _respuesta;
-        private string _rol;
-        private string _descripcionRol;
+        private string _estado;
+        private int _idrol;
 
         //validaciones
         public int id_usuario
@@ -45,7 +45,17 @@ namespace SISTEMA
             set
             {
                 _nombre = value;
-                if (_nombre == "") MessageBox.Show("El campo 'Cédula' no puede ir vacio.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                if (_nombre == "") MessageBox.Show("El campo 'Nombre' no puede ir vacio.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        public string username
+        {
+            get { return _username; }
+            set
+            {
+                _username = value;
+                if (_username == "") MessageBox.Show("El campo 'Username' no puede ir vacio.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -58,7 +68,6 @@ namespace SISTEMA
                 if (_correo == "") MessageBox.Show("El campo 'Correo' no puede ir vacio.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
 
         public string estado
         {
@@ -79,13 +88,14 @@ namespace SISTEMA
             }
         }
 
-        public string rol
+        public int idrol
         {
-            get { return _rol; }
+            get { return _idrol; }
             set
             {
-                _rol = value;
-                if (_rol == "") MessageBox.Show("El rol no puede ir vacio.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                _idrol = value;
+                string m = _idrol.ToString();
+                if (string.IsNullOrWhiteSpace(m)) MessageBox.Show("El rol no puede ir vacio.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -98,6 +108,14 @@ namespace SISTEMA
         }
 
         internal ClaseCompra ClaseCompra
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
+        internal ClaseRol ClaseRol
         {
             get => default;
             set

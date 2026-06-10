@@ -19,6 +19,16 @@ namespace Pantalla_ventas
             { "Tenis Deportivos", 1200},
             { "Zapatos Formales", 1500},
             { "Botines", 1300 },
+            { "Blusa Casual", 450 },
+            { "Blusa Elegante", 650 },
+            { "Camiseta Básica", 350 },
+            { "Camiseta Estampada", 400 },
+            { "Camisa Manga Larga m", 700 },
+            { "Vestido Casual", 900 },
+            { "Vestido de Fiesta", 1500 },
+            { "Falda Corta", 500 },
+            { "Falda Larga", 600 },
+            { "Pantalón Jeans Dama", 800 },
         };
 
         Dictionary<string, List<string>> tipos = new Dictionary<string, List<string>>()
@@ -36,7 +46,7 @@ namespace Pantalla_ventas
             },
 
             {
-            "Calzado",
+            "Calzado masculino",
                new List<string>()
                {
                    "Tenis Deportivos",
@@ -44,6 +54,23 @@ namespace Pantalla_ventas
                    "Botas",
                }
             },
+
+            {
+                "Ropa Femenina",
+                new List<string>()
+                {
+                    "Blusa Casual",
+                    "Blusa Elegante",
+                    "Camiseta Básica",
+                    "Camiseta Estampada",
+                    "Camisa Manga Larga m",
+                    "Vestido Casual",
+                    "Vestido de Fiesta",
+                    "Falda Corta",
+                    "Falda Larga",
+                    "Pantalón Jeans Dama"
+                }
+            }
         };
 
         public Ventas()
@@ -91,11 +118,14 @@ namespace Pantalla_ventas
         private void Form1_Load(object sender, EventArgs e)
         {
             txtfecha.Text = DateTime.Now.ToShortDateString();
-            txtfecha.ReadOnly = true;
+            txtfecha.Enabled = false;
+
+            txtfactura.Enabled = false;
 
 
             cmbtipo.Items.Add("Ropa Masculina");
-            cmbtipo.Items.Add("Calzado");
+            cmbtipo.Items.Add("Calzado masculino");
+            cmbtipo.Items.Add("Ropa Femenina");
 
             if (File.Exists("factura.txt"))
             {
@@ -176,15 +206,17 @@ namespace Pantalla_ventas
 
         private void btnlimpiar_Click(object sender, EventArgs e)
         {
-            numeroFactura++;
-            File.WriteAllText("factura.txt", numeroFactura.ToString("D3"));
-            txtfactura.Text = numeroFactura.ToString();
-
-            cmbtipo.SelectedIndex = -1;
             cmbproducto.SelectedIndex = -1;
+            cmbtipo.SelectedIndex = -1;
+            txttalla.Clear();
             numericant.Value = 0;
-            dgvventas.Rows.Clear();
-            subtotal = 0;
+            txtprecio.Clear();
+            txtdescuento.Clear();
+
+            txtiva.Clear();
+            txtsubtotal.Clear();
+            txttotal.Clear();
+            txtefectivo.Clear();
         }
 
         private void button7_Click(object sender, EventArgs e)
@@ -198,6 +230,7 @@ namespace Pantalla_ventas
             {
                 string producto = cmbproducto.Text;
                 string categoria = cmbtipo.Text;
+                string talla = txttalla.Text;
                 int cantidad = (int)numericant.Value;
 
                 double porcentaje_descuento = Convert.ToDouble(txtdescuento.Text);
@@ -213,8 +246,7 @@ namespace Pantalla_ventas
                     descuento = Convert.ToDouble(txtdescuento.Text);
                 }
 
-
-                dgvventas.Rows.Add(producto, categoria, "NULL", precio, cantidad, valor, descuento, porcentaje_descuento.ToString() + "%", total);
+                dgvventas.Rows.Add(producto, categoria, talla, precio, cantidad, valor, descuento, porcentaje_descuento.ToString() + "%", total);
 
                 cmbtipo.SelectedIndex = -1;
                 cmbproducto.SelectedIndex = -1;
@@ -224,6 +256,24 @@ namespace Pantalla_ventas
             {
                 MessageBox.Show("Error al ingresar la venta: " + ex.Message);
             }
+
+            CalcularFactura();
+        }
+
+        private void CalcularFactura()
+        {
+            double subtotal = 0;
+
+            foreach (DataGridViewRow fila in dgvventas.Rows)
+                if (fila.Cells[6].Value != null)
+                    subtotal += Convert.ToDouble(fila.Cells[5].Value);
+
+            double iva = subtotal * 0.15;
+            double total = subtotal + iva;
+
+            txtsubtotal.Text = subtotal.ToString("N2");
+            txtiva.Text = iva.ToString("N2");
+            txttotal.Text = total.ToString("N2");
         }
 
         private void button1_Click_1(object sender, EventArgs e)
@@ -234,6 +284,37 @@ namespace Pantalla_ventas
         private void groupBox1_Enter(object sender, EventArgs e)
         {
 
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            if (txtefectivo.Text == "")
+            {
+                MessageBox.Show("Ingrese el monto entregado por el cliente.");
+                return;
+            }
+
+            double monto = Convert.ToDouble(txtefectivo.Text);
+            double total = Convert.ToDouble(txttotal.Text);
+
+            if (monto < total)
+            {
+                MessageBox.Show("El monto es insuficiente para realizar el pago.");
+                return;
+            }
+
+            double cambio = monto - total;
+
+            MessageBox.Show(
+                "Gracias por su compra, su cambio es de C$ " + cambio.ToString("N2"),
+                "Pago realizado",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Information
+            );
+
+            numeroFactura++;
+            File.WriteAllText("factura.txt", numeroFactura.ToString("D3"));
+            txtfactura.Text = numeroFactura.ToString();
         }
     }
 }

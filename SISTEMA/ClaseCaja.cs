@@ -9,9 +9,20 @@ namespace SISTEMA
     internal class ClaseCaja
     {
         private int _id_caja;
-        private string _fecha_apertura;
-        private string _fecha_cierre;
-        private double _saldo_inicial;
+        private string _tipo_movimiento;
+        private double _monto;
+        private string _fecha_movimiento;        
         private double _saldo_final;
+        private int _id_venta;
+        private int _id_usuario;
+        private int _id_compra;
+
+        internal ClaseVenta ClaseVenta
+        {
+            get => default;
+            set
+            {
+            }
+        }
     }
 }

@@ -1,5 +1,7 @@
 using Pantalla_de_devolución;
 using SISTEMA;
+using System.Diagnostics;
+using System.Text;
 
 namespace Pantalla_ventas
 {
@@ -231,13 +233,12 @@ namespace Pantalla_ventas
                 string producto = cmbproducto.Text;
                 string categoria = cmbtipo.Text;
                 string talla = txttalla.Text;
-                int cantidad = (int)numericant.Value;
-
-                double porcentaje_descuento = Convert.ToDouble(txtdescuento.Text);
                 double precio = Convert.ToDouble(txtprecio.Text);
-                double descuento = precio * (porcentaje_descuento / 100);
-
+                int cantidad = (int)numericant.Value;
                 double valor = precio * cantidad;
+                double descuento = Convert.ToDouble(txtdescuento.Text);
+                double porcentaje_descuento = (descuento / valor) * 100;
+
                 subtotal += valor - descuento;
                 total += subtotal;
 
@@ -315,6 +316,83 @@ namespace Pantalla_ventas
             numeroFactura++;
             File.WriteAllText("factura.txt", numeroFactura.ToString("D3"));
             txtfactura.Text = numeroFactura.ToString();
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            StringBuilder html = new StringBuilder();
+
+            html.Append("<html>");
+            html.Append("<head>");
+            html.Append("<title>Factura</title>");
+            html.Append("</head>");
+            html.Append("<body>");
+
+            html.Append("<h1 align='center'>LA FAVORITA - MATAGALPA</h1>");
+            html.Append("<h2 align='center'>FACTURA DE VENTA</h2>");
+
+            html.Append("<p><b>No. Factura:</b> " + txtfactura.Text + "</p>");
+            html.Append("<p><b>Fecha:</b> " + txtfecha.Text + "</p>");
+            html.Append("<p><b>Cliente:</b> " + txtcliente.Text + "</p>");
+
+            html.Append("<br>");
+
+            html.Append("<table border='1' cellpadding='5' cellspacing='0'>");
+
+            html.Append("<tr>");
+            html.Append("<th>Producto</th>");
+            html.Append("<th>Categoria</th>");
+            html.Append("<th>Medida</th>");
+            html.Append("<th>Precio</th>");
+            html.Append("<th>Cantidad</th>");
+            html.Append("<th>Valor</th>");
+            html.Append("<th>Descuento</th>");
+            html.Append("<th>% Descuento</th>");
+            html.Append("</tr>");
+
+            foreach (DataGridViewRow fila in dgvventas.Rows)
+            {
+                if (!fila.IsNewRow)
+                {
+                    html.Append("<tr>");
+
+                    html.Append("<td>" + fila.Cells[0].Value + "</td>");
+                    html.Append("<td>" + fila.Cells[1].Value + "</td>");
+                    html.Append("<td>" + fila.Cells[2].Value + "</td>");
+                    html.Append("<td>" + fila.Cells[3].Value + "</td>");
+                    html.Append("<td>" + fila.Cells[4].Value + "</td>");
+                    html.Append("<td>" + fila.Cells[5].Value + "</td>");
+                    html.Append("<td>" + fila.Cells[6].Value + "</td>");
+                    html.Append("<td>" + fila.Cells[7].Value + "</td>");
+
+                    html.Append("</tr>");
+                }
+            }
+
+            html.Append("</table>");
+
+            html.Append("<br><br>");
+
+            html.Append("<p><b>Subtotal:</b> C$ " + txtsubtotal.Text + "</p>");
+            html.Append("<p><b>IVA (15%):</b> C$ " + txtiva.Text + "</p>");
+            html.Append("<p><b>Total:</b> C$ " + txttotal.Text + "</p>");
+            html.Append("<p><b>Monto recibido:</b> C$ " + txtefectivo.Text + "</p>");
+
+            html.Append("<br>");
+            html.Append("<h3>¡Gracias por su compra!</h3>");
+
+            html.Append("</body>");
+            html.Append("</html>");
+
+            File.WriteAllText("Factura_" + txtfactura.Text + ".html", html.ToString());
+
+            Process.Start(new ProcessStartInfo()
+            {
+                FileName = "Factura_" + txtfactura.Text + ".html",
+                UseShellExecute = true
+            });
+
+            MessageBox.Show("Factura generada correctamente.");
         }
     }
 }

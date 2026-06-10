@@ -37,6 +37,7 @@
             label2 = new Label();
             label1 = new Label();
             groupBox2 = new GroupBox();
+            txttalla = new TextBox();
             label11 = new Label();
             cmbtipo = new ComboBox();
             label14 = new Label();
@@ -77,7 +78,6 @@
             button1 = new Button();
             Column1 = new DataGridViewTextBoxColumn();
             Column2 = new DataGridViewTextBoxColumn();
-            txttalla = new TextBox();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)numericant).BeginInit();
@@ -194,6 +194,14 @@
             groupBox2.Size = new Size(646, 108);
             groupBox2.TabIndex = 1;
             groupBox2.TabStop = false;
+            // 
+            // txttalla
+            // 
+            txttalla.ForeColor = Color.Black;
+            txttalla.Location = new Point(302, 18);
+            txttalla.Name = "txttalla";
+            txttalla.Size = new Size(103, 23);
+            txttalla.TabIndex = 18;
             // 
             // label11
             // 
@@ -324,7 +332,7 @@
             dgvventas.AllowUserToDeleteRows = false;
             dgvventas.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvventas.Columns.AddRange(new DataGridViewColumn[] { Column4, Column68, Column69, Column66, Column5, Column3, Column67, Column16 });
-            dgvventas.Location = new Point(2, 189);
+            dgvventas.Location = new Point(2, 198);
             dgvventas.Name = "dgvventas";
             dgvventas.Size = new Size(1042, 196);
             dgvventas.TabIndex = 2;
@@ -369,7 +377,7 @@
             // 
             // Column16
             // 
-            Column16.HeaderText = "% Descuento";
+            Column16.HeaderText = "%Descuento";
             Column16.Name = "Column16";
             // 
             // label7
@@ -463,6 +471,7 @@
             button2.TabIndex = 20;
             button2.Text = "GENERAR PDF";
             button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click_1;
             // 
             // btncambio
             // 
@@ -576,14 +585,6 @@
             Column2.HeaderText = "Medida";
             Column2.Name = "Column2";
             // 
-            // txttalla
-            // 
-            txttalla.ForeColor = Color.Black;
-            txttalla.Location = new Point(302, 18);
-            txttalla.Name = "txttalla";
-            txttalla.Size = new Size(103, 23);
-            txttalla.TabIndex = 18;
-            // 
             // Ventas
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -664,6 +665,9 @@
         private Button button4;
         private Button btncambio;
         private Button buttonIngresar;
+        private Label label11;
+        private Button button1;
+        private TextBox txttalla;
         private DataGridViewTextBoxColumn Column4;
         private DataGridViewTextBoxColumn Column68;
         private DataGridViewTextBoxColumn Column69;
@@ -672,8 +676,5 @@
         private DataGridViewTextBoxColumn Column3;
         private DataGridViewTextBoxColumn Column67;
         private DataGridViewTextBoxColumn Column16;
-        private Label label11;
-        private Button button1;
-        private TextBox txttalla;
     }
 }

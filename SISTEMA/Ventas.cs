@@ -200,10 +200,13 @@ namespace Pantalla_ventas
 
             txtfactura.Enabled = false;
 
+
             cmbtipo.Items.Add("Camisetas masculinas");
             cmbtipo.Items.Add("Pantalones masculinos");
             cmbtipo.Items.Add("Calzado");
             cmbtipo.Items.Add("Ropa Femenina");
+
+            cmbtalla.DropDownStyle = ComboBoxStyle.DropDownList;
 
 
             if (File.Exists("factura.txt"))
@@ -291,11 +294,6 @@ namespace Pantalla_ventas
             numericant.Value = 0;
             txtprecio.Clear();
             txtdescuento.Clear();
-
-            txtiva.Clear();
-            txtsubtotal.Clear();
-            txttotal.Clear();
-            txtefectivo.Clear();
         }
 
         private void button7_Click(object sender, EventArgs e)
@@ -313,8 +311,16 @@ namespace Pantalla_ventas
                 double precio = Convert.ToDouble(txtprecio.Text);
                 int cantidad = (int)numericant.Value;
                 double valor = precio * cantidad;
-                double descuento = Convert.ToDouble(txtdescuento.Text); 
-                double porcentaje_descuento = (descuento / valor) * 100; //valor(20% / 100)
+
+                double porcentaje_descuento = Convert.ToDouble(txtdescuento.Text);
+                if (porcentaje_descuento < 0 || porcentaje_descuento > 100)
+                {
+                    MessageBox.Show("El descuento debe estar entre 0 y 100%.");
+                    return;
+                }
+
+                double descuento = valor * (porcentaje_descuento / 100); //valor(20% / 100)
+
 
                 if (txtcliente.Text == "" ||
                 cmbtipo.Text == "" ||
@@ -328,13 +334,17 @@ namespace Pantalla_ventas
                     return;
                 }
 
-                dgvventas.Rows.Add(producto, categoria, talla, precio, cantidad, valor, descuento, porcentaje_descuento.ToString() + "%", total);
+                if (cmbtalla.SelectedIndex == -1)
+                {
+                    MessageBox.Show("Seleccione una talla válida.");
+                    return;
+                }
+
+                dgvventas.Rows.Add(producto, categoria, talla, precio, cantidad, valor, porcentaje_descuento.ToString() + "%", descuento);
 
                 btnnuevo.Enabled = false;
                 btnfactura.Enabled = false;
                 btncambio.Enabled = true;
-                buttonIngresar.Enabled = false;
-                btnlimpiar.Enabled = false;
 
                 cmbtipo.SelectedIndex = -1;
                 cmbproducto.SelectedIndex = -1;
@@ -394,16 +404,14 @@ namespace Pantalla_ventas
 
             double cambio = monto - total;
 
-            MessageBox.Show(
-                "Gracias por su compra, su cambio es de C$ " + cambio.ToString("N2"),
-                "Pago realizado",
-                MessageBoxButtons.OK,
-                MessageBoxIcon.Information
-            );
+            MessageBox.Show( "Gracias por su compra, su cambio es de C$ " + cambio.ToString("N2"), "Pago realizado",MessageBoxButtons.OK,MessageBoxIcon.Information);
 
-            btnfactura.Enabled = true;
+            buttonIngresar.Enabled = false;
+            btnlimpiar.Enabled = false;
             btnnuevo.Enabled = false;
             btncambio.Enabled = false;
+            btnfactura.Enabled = true;
+
         }
 
         private void button2_Click_1(object sender, EventArgs e)
@@ -488,7 +496,7 @@ namespace Pantalla_ventas
 
             btnnuevo.Enabled = true;
             btnfactura.Enabled = false;
-            buttonIngresar.Enabled = true;
+            buttonIngresar.Enabled = false;
             btnlimpiar.Enabled = true;
         }
 
@@ -524,6 +532,11 @@ namespace Pantalla_ventas
             txtfactura.Text = numeroFactura.ToString();
 
             btnnuevo.Enabled = false;
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

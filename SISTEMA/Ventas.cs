@@ -1,4 +1,4 @@
-using Pantalla_de_devolución;
+using Pantalla_de_devoluciÃ³n;
 using SISTEMA;
 using System.Diagnostics;
 using System.Text;
@@ -11,6 +11,8 @@ namespace Pantalla_ventas
         double subtotal = 0;
         double total = 0;
 
+        public double Cambio { get; set; }
+
         Dictionary<string, double> producto = new Dictionary<string, double>()
         {
             { "Camisa Polo", 500 },
@@ -18,11 +20,11 @@ namespace Pantalla_ventas
             { "Camisa Manga Corta", 550 },
             { "Camisa Casual Cuadros", 650 },
             { "Camisa Formal Slim Fit", 800 },
-            { "Pantalón Jeans Clásico", 700 },
-            { "Pantalón Jeans Skinny", 750 },
-            { "Pantalón de Vestir", 850 },
-            { "Pantalón Cargo", 900 },
-            { "Pantalón Chino", 800 },
+            { "Pantalé® Jeans Clå«³ico", 700 },
+            { "Pantalé® Jeans Skinny", 750 },
+            { "Pantalé® de Vestir", 850 },
+            { "Pantalé® Cargo", 900 },
+            { "Pantalé® Chino", 800 },
             { "Zapatos Formales", 1500 },
             { "Tenis Deportivos", 1200 },
             { "Botas de Trabajo", 1800 },
@@ -32,7 +34,7 @@ namespace Pantalla_ventas
             { "Botines Dama", 1600 },
             { "Chinelas Dama", 450 },
             { "Blusa Elegante", 650 },
-            { "Camiseta Básica", 350 },
+            { "Camiseta Bå«³ica", 350 },
             { "Camisa Manga Larga Dama", 700 },
             { "Vestido de Fiesta", 1500 },
             { "Falda Corta", 500 },
@@ -57,11 +59,11 @@ namespace Pantalla_ventas
             "Pantalones masculinos",
                new List<string>()
                {
-                   "Pantalón Jeans Clásico",
-                   "Pantalón Jeans Skinny",
-                   "Pantalón de Vestir",
-                   "Pantalón Cargo",
-                   "Pantalón Chino"
+                   "Pantalé® Jeans Clå«³ico",
+                   "Pantalé® Jeans Skinny",
+                   "Pantalé® de Vestir",
+                   "Pantalé® Cargo",
+                   "Pantalé® Chino"
                }
             },
 
@@ -86,7 +88,7 @@ namespace Pantalla_ventas
                 new List<string>()
                 {
                     "Blusa Elegante",
-                    "Camiseta Básica",
+                    "Camiseta Bå«³ica",
                     "Camisa Manga Larga Dama",
                     "Vestido de Fiesta",
                     "Falda Corta",
@@ -103,11 +105,11 @@ namespace Pantalla_ventas
             { "Camisa Casual Cuadros", new List<string>() { "S", "M", "L", "XL" } },
             { "Camisa Formal Slim Fit", new List<string>() { "S", "M", "L", "XL" } },
 
-            { "Pantalón Jeans Clásico", new List<string>() { "30", "32", "34", "36", "38", "40" } },
-            { "Pantalón Jeans Skinny", new List<string>() { "30", "32", "34", "36", "38", "40" } },
-            { "Pantalón de Vestir", new List<string>() { "30", "32", "34", "36", "38", "40" } },
-            { "Pantalón Cargo", new List<string>() { "30", "32", "34", "36", "38", "40" } },
-            { "Pantalón Chino", new List<string>() { "30", "32", "34", "36", "38", "40" } },
+            { "Pantalé® Jeans Clå«³ico", new List<string>() { "30", "32", "34", "36", "38", "40" } },
+            { "Pantalé® Jeans Skinny", new List<string>() { "30", "32", "34", "36", "38", "40" } },
+            { "Pantalé® de Vestir", new List<string>() { "30", "32", "34", "36", "38", "40" } },
+            { "Pantalé® Cargo", new List<string>() { "30", "32", "34", "36", "38", "40" } },
+            { "Pantalé® Chino", new List<string>() { "30", "32", "34", "36", "38", "40" } },
 
             { "Zapatos Formales", new List<string>() { "38", "39", "40", "41", "42", "43" } },
             { "Tenis Deportivos", new List<string>() { "38", "39", "40", "41", "42", "43" } },
@@ -120,13 +122,15 @@ namespace Pantalla_ventas
             { "Chinelas Dama", new List<string>() { "35", "36", "37", "38", "39" } },
 
             { "Blusa Elegante", new List<string>() { "S", "M", "L", "XL" } },
-            { "Camiseta Básica", new List<string>() { "S", "M", "L", "XL" } },
+            { "Camiseta Bå«³ica", new List<string>() { "S", "M", "L", "XL" } },
             { "Camisa Manga Larga Dama", new List<string>() { "S", "M", "L", "XL" } },
             { "Vestido de Fiesta", new List<string>() { "S", "M", "L", "XL" } },
             { "Falda Corta", new List<string>() { "S", "M", "L", "XL" } },
             { "Falda Larga", new List<string>() { "S", "M", "L", "XL" } },
-            { "Pantalón Jeans Dama", new List<string>() { "30", "32", "34", "36", "38" } }
+            { "Pantalé® Jeans Dama", new List<string>() { "30", "32", "34", "36", "38" } }
         };
+
+
 
         public Ventas()
         {
@@ -195,6 +199,7 @@ namespace Pantalla_ventas
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            txtfecha.Enabled = false;
             txtfecha.Text = DateTime.Now.ToShortDateString();
             txtfecha.Enabled = false;
 
@@ -250,7 +255,7 @@ namespace Pantalla_ventas
 
         private void button6_Click(object sender, EventArgs e)
         {
-            Devolución obj = new Devolución(); obj.ShowDialog();
+            DevoluciÃ³n obj = new DevoluciÃ³n(); obj.ShowDialog();
         }
 
         private void vScrollBar1_Scroll(object sender, ScrollEventArgs e)
@@ -272,7 +277,7 @@ namespace Pantalla_ventas
         {
             cmbproducto.Items.Clear();
 
-            string tiposeleccionado = cmbtipo.Text;
+            string tiposeleccionado = cmbcategoria.Text;
 
             if (tipos.ContainsKey(tiposeleccionado))
             {
@@ -336,7 +341,7 @@ namespace Pantalla_ventas
                 buttonIngresar.Enabled = false;
                 btnlimpiar.Enabled = false;
 
-                cmbtipo.SelectedIndex = -1;
+                cmbcategoria.SelectedIndex = -1;
                 cmbproducto.SelectedIndex = -1;
                 numericant.Value = 0;
 
@@ -347,6 +352,10 @@ namespace Pantalla_ventas
             {
                 MessageBox.Show("Error al ingresar la venta: " + ex.Message);
             }
+
+            numeroFactura++;
+            File.WriteAllText("factura.txt", numeroFactura.ToString("D3"));
+            txtfactura.Text = numeroFactura.ToString();
         }
 
         private void CalcularFactura()
@@ -354,8 +363,12 @@ namespace Pantalla_ventas
             double subtotal = 0;
 
             foreach (DataGridViewRow fila in dgvventas.Rows)
+            {
                 if (fila.Cells[6].Value != null)
+                {
                     subtotal += Convert.ToDouble(fila.Cells[5].Value);
+                }
+            }
 
             double iva = subtotal * 0.15;
             double total = subtotal + iva;
@@ -367,10 +380,15 @@ namespace Pantalla_ventas
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            Devolución obj = new Devolución(); obj.ShowDialog();
+            DevoluciÃ³n obj = new DevoluciÃ³n(); obj.ShowDialog();
         }
 
-        private void groupBox1_Enter(object sender, EventArgs e)
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
         {
 
         }
@@ -401,9 +419,14 @@ namespace Pantalla_ventas
                 MessageBoxIcon.Information
             );
 
-            btnfactura.Enabled = true;
-            btnnuevo.Enabled = false;
-            btncambio.Enabled = false;
+            numeroFactura++;
+            File.WriteAllText("factura.txt", numeroFactura.ToString("D3"));
+            txtfactura.Text = numeroFactura.ToString();
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
         }
 
         private void button2_Click_1(object sender, EventArgs e)
@@ -467,7 +490,7 @@ namespace Pantalla_ventas
             html.Append("<p><b>Monto recibido:</b> C$ " + txtefectivo.Text + "</p>");
 
             html.Append("<br>");
-            html.Append("<h3>¡Gracias por su compra!</h3>");
+            html.Append("<h3>ï¼šracias por su compra!</h3>");
 
             html.Append("</body>");
             html.Append("</html>");

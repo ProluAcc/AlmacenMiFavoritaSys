@@ -45,7 +45,6 @@
             Column9 = new DataGridViewTextBoxColumn();
             Column10 = new DataGridViewTextBoxColumn();
             panel8 = new Panel();
-            label13 = new Label();
             label10 = new Label();
             label9 = new Label();
             label8 = new Label();
@@ -226,7 +225,6 @@
             // 
             panel8.BackColor = SystemColors.Control;
             panel8.BorderStyle = BorderStyle.FixedSingle;
-            panel8.Controls.Add(label13);
             panel8.Controls.Add(label10);
             panel8.Controls.Add(label9);
             panel8.Controls.Add(label8);
@@ -235,17 +233,6 @@
             panel8.Size = new Size(487, 120);
             panel8.TabIndex = 5;
             panel8.Paint += panel8_Paint;
-            // 
-            // label13
-            // 
-            label13.AutoSize = true;
-            label13.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            label13.ForeColor = Color.Black;
-            label13.Location = new Point(289, 9);
-            label13.Name = "label13";
-            label13.Size = new Size(27, 20);
-            label13.TabIndex = 3;
-            label13.Text = "C$";
             // 
             // label10
             // 
@@ -519,6 +506,7 @@
             FormBorderStyle = FormBorderStyle.None;
             Name = "Compra";
             Text = "Registro de compra";
+            Load += Compra_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             panel2.ResumeLayout(false);
@@ -571,7 +559,6 @@
         private DataGridViewTextBoxColumn Column8;
         private DataGridViewTextBoxColumn Column9;
         private DataGridViewTextBoxColumn Column10;
-        private Label label13;
         private Button button1;
     }
 }

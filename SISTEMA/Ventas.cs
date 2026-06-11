@@ -1,4 +1,4 @@
-using Pantalla_de_devoluci鏮;
+using Pantalla_de_devolución;
 using SISTEMA;
 using System.Diagnostics;
 using System.Text;
@@ -255,7 +255,7 @@ namespace Pantalla_ventas
 
         private void button6_Click(object sender, EventArgs e)
         {
-            Devoluci鏮 obj = new Devoluci鏮(); obj.ShowDialog();
+            Devolución obj = new Devolución(); obj.ShowDialog();
         }
 
         private void vScrollBar1_Scroll(object sender, ScrollEventArgs e)
@@ -378,25 +378,9 @@ namespace Pantalla_ventas
             txttotal.Text = total.ToString("N2");
         }
 
-        private void CalcularFactura()
-        {
-            double subtotal = 0;
-
-            foreach (DataGridViewRow fila in dgvventas.Rows)
-                if (fila.Cells[6].Value != null)
-                    subtotal += Convert.ToDouble(fila.Cells[5].Value);
-
-            double iva = subtotal * 0.15;
-            double total = subtotal + iva;
-
-            txtsubtotal.Text = subtotal.ToString("N2");
-            txtiva.Text = iva.ToString("N2");
-            txttotal.Text = total.ToString("N2");
-        }
-
         private void button1_Click_1(object sender, EventArgs e)
         {
-            Devoluci鏮 obj = new Devoluci鏮(); obj.ShowDialog();
+            Devolución obj = new Devolución(); obj.ShowDialog();
         }
 
         private void groupBox2_Enter(object sender, EventArgs e)
@@ -443,37 +427,6 @@ namespace Pantalla_ventas
         private void groupBox1_Enter(object sender, EventArgs e)
         {
 
-        }
-
-        private void button8_Click(object sender, EventArgs e)
-        {
-            if (txtefectivo.Text == "")
-            {
-                MessageBox.Show("Ingrese el monto entregado por el cliente.");
-                return;
-            }
-
-            double monto = Convert.ToDouble(txtefectivo.Text);
-            double total = Convert.ToDouble(txttotal.Text);
-
-            if (monto < total)
-            {
-                MessageBox.Show("El monto es insuficiente para realizar el pago.");
-                return;
-            }
-
-            double cambio = monto - total;
-
-            MessageBox.Show(
-                "Gracias por su compra, su cambio es de C$ " + cambio.ToString("N2"),
-                "Pago realizado",
-                MessageBoxButtons.OK,
-                MessageBoxIcon.Information
-            );
-
-            btnfactura.Enabled = true;
-            btnnuevo.Enabled = false;
-            btncambio.Enabled = false;
         }
 
         private void button2_Click_1(object sender, EventArgs e)

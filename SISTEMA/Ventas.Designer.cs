@@ -39,9 +39,6 @@
             groupBox2 = new GroupBox();
             cmbtalla = new ComboBox();
             label11 = new Label();
-            txtmedida = new TextBox();
-            label11 = new Label();
-            cmbcategoria = new ComboBox();
             label14 = new Label();
             txtdescuento = new TextBox();
             label13 = new Label();
@@ -81,6 +78,7 @@
             button1 = new Button();
             Column1 = new DataGridViewTextBoxColumn();
             Column2 = new DataGridViewTextBoxColumn();
+            cmbcategoria = new ComboBox();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)numericant).BeginInit();
@@ -105,6 +103,7 @@
             groupBox1.Size = new Size(1137, 60);
             groupBox1.TabIndex = 0;
             groupBox1.TabStop = false;
+            // 
             // button4
             // 
             button4.BackColor = SystemColors.ButtonFace;
@@ -179,9 +178,9 @@
             // groupBox2
             // 
             groupBox2.BackColor = SystemColors.Control;
+            groupBox2.Controls.Add(cmbcategoria);
             groupBox2.Controls.Add(cmbtalla);
             groupBox2.Controls.Add(label11);
-            groupBox2.Controls.Add(cmbcategoria);
             groupBox2.Controls.Add(label14);
             groupBox2.Controls.Add(txtdescuento);
             groupBox2.Controls.Add(label13);
@@ -218,16 +217,6 @@
             label11.Size = new Size(45, 20);
             label11.TabIndex = 17;
             label11.Text = "Talla:";
-            // 
-            // cmbcategoria
-            // 
-            cmbtipo.ForeColor = Color.Black;
-            cmbtipo.FormattingEnabled = true;
-            cmbtipo.Location = new Point(91, 23);
-            cmbtipo.Name = "cmbtipo";
-            cmbtipo.Size = new Size(115, 23);
-            cmbtipo.TabIndex = 12;
-            cmbtipo.SelectedIndexChanged += cmbtipo_SelectedIndexChanged;
             // 
             // label14
             // 
@@ -538,7 +527,7 @@
             groupBox5.Controls.Add(btnlimpiar);
             groupBox5.Location = new Point(664, 72);
             groupBox5.Name = "groupBox5";
-            groupBox5.Size = new Size(278, 108);
+            groupBox5.Size = new Size(244, 108);
             groupBox5.TabIndex = 10;
             groupBox5.TabStop = false;
             groupBox5.Text = "Acciones";
@@ -548,7 +537,7 @@
             btnnuevo.BackColor = SystemColors.ButtonFace;
             btnnuevo.Font = new Font("Segoe UI Black", 11F, FontStyle.Bold);
             btnnuevo.ForeColor = Color.FromArgb(69, 69, 210);
-            btnnuevo.Location = new Point(172, 34);
+            btnnuevo.Location = new Point(148, 18);
             btnnuevo.Name = "btnnuevo";
             btnnuevo.Size = new Size(85, 35);
             btnnuevo.TabIndex = 21;
@@ -573,9 +562,9 @@
             // 
             groupBox4.BackColor = SystemColors.Control;
             groupBox4.Controls.Add(button1);
-            groupBox4.Location = new Point(958, 72);
+            groupBox4.Location = new Point(914, 72);
             groupBox4.Name = "groupBox4";
-            groupBox4.Size = new Size(226, 108);
+            groupBox4.Size = new Size(196, 108);
             groupBox4.TabIndex = 11;
             groupBox4.TabStop = false;
             groupBox4.Text = "Crear";
@@ -585,31 +574,7 @@
             button1.BackColor = SystemColors.ButtonFace;
             button1.Font = new Font("Segoe UI Black", 11F, FontStyle.Bold);
             button1.ForeColor = Color.FromArgb(69, 69, 210);
-            button1.Location = new Point(6, 21);
-            button1.Name = "button1";
-            button1.Size = new Size(157, 35);
-            button1.TabIndex = 21;
-            button1.Text = "💸DEVOLUCIÓN";
-            button1.UseVisualStyleBackColor = false;
-            button1.Click += button1_Click_1;
-            // 
-            // Column1
-            // 
-            Column1.HeaderText = "Categoría";
-            Column1.Name = "Column1";
-            Column1.Width = 150;
-            // 
-            // Column2
-            // 
-            Column2.HeaderText = "Medida";
-            Column2.Name = "Column2";
-            // 
-            // button1
-            // 
-            button1.BackColor = SystemColors.ButtonFace;
-            button1.Font = new Font("Segoe UI Black", 11F, FontStyle.Bold);
-            button1.ForeColor = Color.FromArgb(69, 69, 210);
-            button1.Location = new Point(30, 44);
+            button1.Location = new Point(13, 23);
             button1.Name = "button1";
             button1.Size = new Size(165, 35);
             button1.TabIndex = 21;
@@ -627,6 +592,15 @@
             // 
             Column2.HeaderText = "Medida";
             Column2.Name = "Column2";
+            // 
+            // cmbcategoria
+            // 
+            cmbcategoria.ForeColor = Color.Black;
+            cmbcategoria.FormattingEnabled = true;
+            cmbcategoria.Location = new Point(91, 24);
+            cmbcategoria.Name = "cmbcategoria";
+            cmbcategoria.Size = new Size(115, 23);
+            cmbcategoria.TabIndex = 19;
             // 
             // Ventas
             // 
@@ -720,5 +694,6 @@
         private DataGridViewTextBoxColumn Column16;
         private ComboBox cmbtalla;
         private Button btnnuevo;
+        private ComboBox cmbcategoria;
     }
 }

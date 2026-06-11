@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SISTEMA
 {
-    internal class ClaseMedida
+    internal class ClaseTalla
     {
         private int id_medida;
         private string nombre;

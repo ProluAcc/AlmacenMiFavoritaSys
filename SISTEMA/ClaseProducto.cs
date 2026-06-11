@@ -28,7 +28,7 @@ namespace SISTEMA
             }
         }
 
-        internal ClaseMedida ClaseMedida
+        internal ClaseTalla ClaseMedida
         {
             get => default;
             set

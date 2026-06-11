@@ -37,7 +37,7 @@
             label2 = new Label();
             label1 = new Label();
             groupBox2 = new GroupBox();
-            txttalla = new TextBox();
+            cmbtalla = new ComboBox();
             label11 = new Label();
             cmbtipo = new ComboBox();
             label14 = new Label();
@@ -66,13 +66,14 @@
             txtiva = new TextBox();
             txttotal = new TextBox();
             groupBox3 = new GroupBox();
-            button2 = new Button();
+            btnfactura = new Button();
             btncambio = new Button();
             btnhistoventas = new Button();
             label12 = new Label();
             txtsubtotal = new TextBox();
             txtefectivo = new TextBox();
             groupBox5 = new GroupBox();
+            btnnuevo = new Button();
             buttonIngresar = new Button();
             groupBox4 = new GroupBox();
             button1 = new Button();
@@ -177,7 +178,7 @@
             // groupBox2
             // 
             groupBox2.BackColor = SystemColors.Control;
-            groupBox2.Controls.Add(txttalla);
+            groupBox2.Controls.Add(cmbtalla);
             groupBox2.Controls.Add(label11);
             groupBox2.Controls.Add(cmbtipo);
             groupBox2.Controls.Add(label14);
@@ -195,13 +196,15 @@
             groupBox2.TabIndex = 1;
             groupBox2.TabStop = false;
             // 
-            // txttalla
+            // cmbtalla
             // 
-            txttalla.ForeColor = Color.Black;
-            txttalla.Location = new Point(302, 18);
-            txttalla.Name = "txttalla";
-            txttalla.Size = new Size(103, 23);
-            txttalla.TabIndex = 18;
+            cmbtalla.ForeColor = Color.Black;
+            cmbtalla.FormattingEnabled = true;
+            cmbtalla.Location = new Point(299, 18);
+            cmbtalla.Name = "cmbtalla";
+            cmbtalla.Size = new Size(74, 23);
+            cmbtalla.TabIndex = 18;
+            cmbtalla.SelectedIndexChanged += cmbtalla_SelectedIndexChanged;
             // 
             // label11
             // 
@@ -332,7 +335,7 @@
             dgvventas.AllowUserToDeleteRows = false;
             dgvventas.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvventas.Columns.AddRange(new DataGridViewColumn[] { Column4, Column68, Column69, Column66, Column5, Column3, Column67, Column16 });
-            dgvventas.Location = new Point(2, 198);
+            dgvventas.Location = new Point(50, 198);
             dgvventas.Name = "dgvventas";
             dgvventas.Size = new Size(1042, 196);
             dgvventas.TabIndex = 2;
@@ -442,7 +445,7 @@
             // groupBox3
             // 
             groupBox3.BackColor = SystemColors.Control;
-            groupBox3.Controls.Add(button2);
+            groupBox3.Controls.Add(btnfactura);
             groupBox3.Controls.Add(btncambio);
             groupBox3.Controls.Add(btnhistoventas);
             groupBox3.Controls.Add(label12);
@@ -460,18 +463,18 @@
             groupBox3.TabIndex = 8;
             groupBox3.TabStop = false;
             // 
-            // button2
+            // btnfactura
             // 
-            button2.BackColor = SystemColors.ButtonFace;
-            button2.Font = new Font("Segoe UI Black", 11F, FontStyle.Bold);
-            button2.ForeColor = Color.FromArgb(69, 69, 210);
-            button2.Location = new Point(912, 28);
-            button2.Name = "button2";
-            button2.Size = new Size(94, 56);
-            button2.TabIndex = 20;
-            button2.Text = "GENERAR PDF";
-            button2.UseVisualStyleBackColor = false;
-            button2.Click += button2_Click_1;
+            btnfactura.BackColor = SystemColors.ButtonFace;
+            btnfactura.Font = new Font("Segoe UI Black", 11F, FontStyle.Bold);
+            btnfactura.ForeColor = Color.FromArgb(69, 69, 210);
+            btnfactura.Location = new Point(912, 28);
+            btnfactura.Name = "btnfactura";
+            btnfactura.Size = new Size(94, 56);
+            btnfactura.TabIndex = 20;
+            btnfactura.Text = "GENERAR PDF";
+            btnfactura.UseVisualStyleBackColor = false;
+            btnfactura.Click += button2_Click_1;
             // 
             // btncambio
             // 
@@ -528,21 +531,35 @@
             // groupBox5
             // 
             groupBox5.BackColor = SystemColors.Control;
+            groupBox5.Controls.Add(btnnuevo);
             groupBox5.Controls.Add(buttonIngresar);
             groupBox5.Controls.Add(btnlimpiar);
             groupBox5.Location = new Point(664, 72);
             groupBox5.Name = "groupBox5";
-            groupBox5.Size = new Size(150, 108);
+            groupBox5.Size = new Size(278, 108);
             groupBox5.TabIndex = 10;
             groupBox5.TabStop = false;
             groupBox5.Text = "Acciones";
+            // 
+            // btnnuevo
+            // 
+            btnnuevo.BackColor = SystemColors.ButtonFace;
+            btnnuevo.Font = new Font("Segoe UI Black", 11F, FontStyle.Bold);
+            btnnuevo.ForeColor = Color.FromArgb(69, 69, 210);
+            btnnuevo.Location = new Point(172, 34);
+            btnnuevo.Name = "btnnuevo";
+            btnnuevo.Size = new Size(85, 35);
+            btnnuevo.TabIndex = 21;
+            btnnuevo.Text = "⬆️NUEVO";
+            btnnuevo.UseVisualStyleBackColor = false;
+            btnnuevo.Click += btnnuevo_Click;
             // 
             // buttonIngresar
             // 
             buttonIngresar.BackColor = SystemColors.ButtonFace;
             buttonIngresar.Font = new Font("Segoe UI Black", 11F, FontStyle.Bold);
             buttonIngresar.ForeColor = Color.FromArgb(69, 69, 210);
-            buttonIngresar.Location = new Point(9, 19);
+            buttonIngresar.Location = new Point(9, 18);
             buttonIngresar.Name = "buttonIngresar";
             buttonIngresar.Size = new Size(133, 35);
             buttonIngresar.TabIndex = 20;
@@ -554,7 +571,7 @@
             // 
             groupBox4.BackColor = SystemColors.Control;
             groupBox4.Controls.Add(button1);
-            groupBox4.Location = new Point(820, 72);
+            groupBox4.Location = new Point(958, 72);
             groupBox4.Name = "groupBox4";
             groupBox4.Size = new Size(169, 108);
             groupBox4.TabIndex = 11;
@@ -652,7 +669,7 @@
         private ComboBox comboBox5;
         private Label label15;
         private GroupBox groupBox5;
-        private Button button2;
+        private Button btnfactura;
         private Button button6;
         private Button btnhistoventas;
         private GroupBox groupBox4;
@@ -667,7 +684,6 @@
         private Button buttonIngresar;
         private Label label11;
         private Button button1;
-        private TextBox txttalla;
         private DataGridViewTextBoxColumn Column4;
         private DataGridViewTextBoxColumn Column68;
         private DataGridViewTextBoxColumn Column69;
@@ -676,5 +692,7 @@
         private DataGridViewTextBoxColumn Column3;
         private DataGridViewTextBoxColumn Column67;
         private DataGridViewTextBoxColumn Column16;
+        private ComboBox cmbtalla;
+        private Button btnnuevo;
     }
 }

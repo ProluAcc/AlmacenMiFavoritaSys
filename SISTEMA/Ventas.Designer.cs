@@ -51,6 +51,14 @@
             label4 = new Label();
             btnlimpiar = new Button();
             dgvventas = new DataGridView();
+            Column4 = new DataGridViewTextBoxColumn();
+            Column68 = new DataGridViewTextBoxColumn();
+            Column69 = new DataGridViewTextBoxColumn();
+            Column66 = new DataGridViewTextBoxColumn();
+            Column5 = new DataGridViewTextBoxColumn();
+            Column3 = new DataGridViewTextBoxColumn();
+            Column67 = new DataGridViewTextBoxColumn();
+            Column16 = new DataGridViewTextBoxColumn();
             label7 = new Label();
             label8 = new Label();
             label9 = new Label();
@@ -71,14 +79,6 @@
             button1 = new Button();
             Column1 = new DataGridViewTextBoxColumn();
             Column2 = new DataGridViewTextBoxColumn();
-            Column4 = new DataGridViewTextBoxColumn();
-            Column68 = new DataGridViewTextBoxColumn();
-            Column69 = new DataGridViewTextBoxColumn();
-            Column66 = new DataGridViewTextBoxColumn();
-            Column5 = new DataGridViewTextBoxColumn();
-            Column3 = new DataGridViewTextBoxColumn();
-            Column67 = new DataGridViewTextBoxColumn();
-            Column16 = new DataGridViewTextBoxColumn();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)numericant).BeginInit();
@@ -342,6 +342,48 @@
             dgvventas.TabIndex = 2;
             dgvventas.TabStop = false;
             // 
+            // Column4
+            // 
+            Column4.HeaderText = "Producto";
+            Column4.Name = "Column4";
+            Column4.Width = 250;
+            // 
+            // Column68
+            // 
+            Column68.HeaderText = "Categoría";
+            Column68.Name = "Column68";
+            Column68.Width = 150;
+            // 
+            // Column69
+            // 
+            Column69.HeaderText = "Medida";
+            Column69.Name = "Column69";
+            // 
+            // Column66
+            // 
+            Column66.HeaderText = "Precio";
+            Column66.Name = "Column66";
+            // 
+            // Column5
+            // 
+            Column5.HeaderText = "Cantidad";
+            Column5.Name = "Column5";
+            // 
+            // Column3
+            // 
+            Column3.HeaderText = "Valor";
+            Column3.Name = "Column3";
+            // 
+            // Column67
+            // 
+            Column67.HeaderText = "%Descuento";
+            Column67.Name = "Column67";
+            // 
+            // Column16
+            // 
+            Column16.HeaderText = "Descuento";
+            Column16.Name = "Column16";
+            // 
             // label7
             // 
             label7.AutoSize = true;
@@ -560,48 +602,6 @@
             // 
             Column2.HeaderText = "Medida";
             Column2.Name = "Column2";
-            // 
-            // Column4
-            // 
-            Column4.HeaderText = "Producto";
-            Column4.Name = "Column4";
-            Column4.Width = 250;
-            // 
-            // Column68
-            // 
-            Column68.HeaderText = "Categoría";
-            Column68.Name = "Column68";
-            Column68.Width = 150;
-            // 
-            // Column69
-            // 
-            Column69.HeaderText = "Medida";
-            Column69.Name = "Column69";
-            // 
-            // Column66
-            // 
-            Column66.HeaderText = "Precio";
-            Column66.Name = "Column66";
-            // 
-            // Column5
-            // 
-            Column5.HeaderText = "Cantidad";
-            Column5.Name = "Column5";
-            // 
-            // Column3
-            // 
-            Column3.HeaderText = "Valor";
-            Column3.Name = "Column3";
-            // 
-            // Column67
-            // 
-            Column67.HeaderText = "%Descuento";
-            Column67.Name = "Column67";
-            // 
-            // Column16
-            // 
-            Column16.HeaderText = "Descuento";
-            Column16.Name = "Column16";
             // 
             // Ventas
             // 

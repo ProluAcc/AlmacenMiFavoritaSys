@@ -350,7 +350,7 @@ namespace Pantalla_ventas
                 cmbproducto.SelectedIndex = -1;
                 numericant.Value = 0;
 
-                CalcularFactura();
+                CalcularFactura(valor, descuento);
 
             }
             catch (Exception ex)
@@ -359,16 +359,11 @@ namespace Pantalla_ventas
             }
         }
 
-        private void CalcularFactura()
+        private void CalcularFactura(double valor, double descuento)
         {
-            double subtotal = 0;
-
-            foreach (DataGridViewRow fila in dgvventas.Rows)
-                if (fila.Cells[6].Value != null)
-                    subtotal += Convert.ToDouble(fila.Cells[5].Value);
-
-            double iva = subtotal * 0.15;
-            double total = subtotal + iva;
+            double iva = valor * 0.15;
+            subtotal += valor + iva;
+            total = subtotal - descuento;
 
             txtsubtotal.Text = subtotal.ToString("N2");
             txtiva.Text = iva.ToString("N2");
@@ -411,7 +406,6 @@ namespace Pantalla_ventas
             btnnuevo.Enabled = false;
             btncambio.Enabled = false;
             btnfactura.Enabled = true;
-
         }
 
         private void button2_Click_1(object sender, EventArgs e)
@@ -497,7 +491,8 @@ namespace Pantalla_ventas
             btnnuevo.Enabled = true;
             btnfactura.Enabled = false;
             buttonIngresar.Enabled = false;
-            btnlimpiar.Enabled = true;
+            btnlimpiar.Enabled = false;
+            dgvventas.Rows.Clear();
         }
 
         private void cmbtalla_SelectedIndexChanged(object sender, EventArgs e)
@@ -509,7 +504,7 @@ namespace Pantalla_ventas
         }
 
         private void btnnuevo_Click(object sender, EventArgs e)
-        {
+        { 
             txtcliente.Clear();
             cmbproducto.SelectedIndex = -1;
             cmbtipo.SelectedIndex = -1;

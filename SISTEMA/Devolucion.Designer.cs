@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             groupBox1 = new GroupBox();
+            button5 = new Button();
             textBox3 = new TextBox();
             button1 = new Button();
             label3 = new Label();
@@ -64,7 +65,6 @@
             textBox5 = new TextBox();
             label5 = new Label();
             label4 = new Label();
-            button5 = new Button();
             groupBox1.SuspendLayout();
             groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
@@ -94,6 +94,18 @@
             groupBox1.TabIndex = 0;
             groupBox1.TabStop = false;
             groupBox1.Enter += groupBox1_Enter;
+            // 
+            // button5
+            // 
+            button5.BackColor = SystemColors.ButtonFace;
+            button5.Font = new Font("Segoe UI Black", 11F, FontStyle.Bold);
+            button5.ForeColor = Color.FromArgb(69, 69, 210);
+            button5.Location = new Point(895, 16);
+            button5.Name = "button5";
+            button5.Size = new Size(73, 35);
+            button5.TabIndex = 18;
+            button5.Text = "AYUDA";
+            button5.UseVisualStyleBackColor = false;
             // 
             // textBox3
             // 
@@ -370,6 +382,7 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(634, 133);
             panel1.TabIndex = 8;
+            panel1.Paint += panel1_Paint;
             // 
             // groupBox2
             // 
@@ -453,18 +466,6 @@
             label4.Size = new Size(127, 20);
             label4.TabIndex = 11;
             label4.Text = "Producto Nuevo:";
-            // 
-            // button5
-            // 
-            button5.BackColor = SystemColors.ButtonFace;
-            button5.Font = new Font("Segoe UI Black", 11F, FontStyle.Bold);
-            button5.ForeColor = Color.FromArgb(69, 69, 210);
-            button5.Location = new Point(895, 16);
-            button5.Name = "button5";
-            button5.Size = new Size(73, 35);
-            button5.TabIndex = 18;
-            button5.Text = "AYUDA";
-            button5.UseVisualStyleBackColor = false;
             // 
             // Devolución
             // 

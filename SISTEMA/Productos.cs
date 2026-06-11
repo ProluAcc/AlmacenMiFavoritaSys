@@ -69,7 +69,7 @@ namespace SISTEMA
 
         private void button8_Click_1(object sender, EventArgs e)
         {
-            Medida obj = new Medida(); obj.ShowDialog();
+            Talla obj = new Talla(); obj.ShowDialog();
         }
 
         private void comboBox1_SelectedIndexChanged_1(object sender, EventArgs e)
@@ -144,6 +144,11 @@ namespace SISTEMA
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            Marca obj = new Marca(); obj.ShowDialog();
         }
     }
 

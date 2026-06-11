@@ -1,6 +1,6 @@
 ﻿namespace SISTEMA
 {
-    partial class Medida
+    partial class Talla
     {
         /// <summary>
         /// Required designer variable.
@@ -44,8 +44,9 @@
             label4 = new Label();
             textBox4 = new TextBox();
             panel1 = new Panel();
-            label2 = new Label();
             button5 = new Button();
+            label2 = new Label();
+            comboBox1 = new ComboBox();
             groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
             panel1.SuspendLayout();
@@ -54,6 +55,7 @@
             // groupBox2
             // 
             groupBox2.BackColor = SystemColors.Control;
+            groupBox2.Controls.Add(comboBox1);
             groupBox2.Controls.Add(button4);
             groupBox2.Controls.Add(button2);
             groupBox2.Controls.Add(button3);
@@ -79,9 +81,9 @@
             button4.ForeColor = Color.FromArgb(69, 69, 210);
             button4.Location = new Point(264, 90);
             button4.Name = "button4";
-            button4.Size = new Size(239, 35);
+            button4.Size = new Size(213, 35);
             button4.TabIndex = 115;
-            button4.Text = "🔓HABILITAR/DESHABILITAR";
+            button4.Text = "🔓ACTIVAR/DESACTIVAR";
             button4.UseVisualStyleBackColor = false;
             // 
             // button2
@@ -101,7 +103,7 @@
             button3.BackColor = SystemColors.ButtonFace;
             button3.Font = new Font("Segoe UI Black", 11F, FontStyle.Bold);
             button3.ForeColor = Color.FromArgb(69, 69, 210);
-            button3.Location = new Point(243, 137);
+            button3.Location = new Point(357, 136);
             button3.Name = "button3";
             button3.Size = new Size(128, 35);
             button3.TabIndex = 113;
@@ -111,7 +113,7 @@
             // textBox6
             // 
             textBox6.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            textBox6.Location = new Point(73, 141);
+            textBox6.Location = new Point(187, 140);
             textBox6.Name = "textBox6";
             textBox6.Size = new Size(162, 27);
             textBox6.TabIndex = 112;
@@ -208,8 +210,20 @@
             panel1.Controls.Add(label2);
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(528, 48);
+            panel1.Size = new Size(515, 48);
             panel1.TabIndex = 4;
+            // 
+            // button5
+            // 
+            button5.BackColor = SystemColors.ButtonFace;
+            button5.Font = new Font("Segoe UI Black", 11F, FontStyle.Bold);
+            button5.ForeColor = Color.FromArgb(69, 69, 210);
+            button5.Location = new Point(433, 4);
+            button5.Name = "button5";
+            button5.Size = new Size(73, 35);
+            button5.TabIndex = 18;
+            button5.Text = "AYUDA";
+            button5.UseVisualStyleBackColor = false;
             // 
             // label2
             // 
@@ -219,31 +233,28 @@
             label2.ForeColor = Color.Black;
             label2.Location = new Point(3, 7);
             label2.Name = "label2";
-            label2.Size = new Size(235, 32);
+            label2.Size = new Size(213, 32);
             label2.TabIndex = 81;
-            label2.Text = "AGREGAR MEDIDA";
+            label2.Text = "AGREGAR TALLA";
             // 
-            // button5
+            // comboBox1
             // 
-            button5.BackColor = SystemColors.ButtonFace;
-            button5.Font = new Font("Segoe UI Black", 11F, FontStyle.Bold);
-            button5.ForeColor = Color.FromArgb(69, 69, 210);
-            button5.Location = new Point(449, 5);
-            button5.Name = "button5";
-            button5.Size = new Size(73, 35);
-            button5.TabIndex = 18;
-            button5.Text = "AYUDA";
-            button5.UseVisualStyleBackColor = false;
+            comboBox1.Font = new Font("Segoe UI", 11F);
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Location = new Point(73, 139);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(108, 28);
+            comboBox1.TabIndex = 116;
             // 
-            // Medida
+            // Talla
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(527, 498);
+            ClientSize = new Size(517, 498);
             Controls.Add(panel1);
             Controls.Add(groupBox2);
-            Name = "Medida";
-            Text = "Medida";
+            Name = "Talla";
+            Text = "Talla";
             groupBox2.ResumeLayout(false);
             groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
@@ -272,5 +283,6 @@
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private DataGridViewTextBoxColumn Column1;
         private Button button5;
+        private ComboBox comboBox1;
     }
 }

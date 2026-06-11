@@ -31,16 +31,6 @@
             button2 = new Button();
             button7 = new Button();
             dataGridView1 = new DataGridView();
-            Column1 = new DataGridViewTextBoxColumn();
-            Column2 = new DataGridViewTextBoxColumn();
-            Column3 = new DataGridViewTextBoxColumn();
-            Column4 = new DataGridViewTextBoxColumn();
-            Column5 = new DataGridViewTextBoxColumn();
-            Column7 = new DataGridViewTextBoxColumn();
-            Column8 = new DataGridViewTextBoxColumn();
-            Column9 = new DataGridViewTextBoxColumn();
-            Column6 = new DataGridViewTextBoxColumn();
-            Column10 = new DataGridViewTextBoxColumn();
             TXTprecioc = new TextBox();
             TXTnombre = new TextBox();
             TXTpreciov = new TextBox();
@@ -72,6 +62,17 @@
             button8 = new Button();
             button9 = new Button();
             CBmarca = new ComboBox();
+            Column1 = new DataGridViewTextBoxColumn();
+            Column2 = new DataGridViewTextBoxColumn();
+            Column3 = new DataGridViewTextBoxColumn();
+            Column4 = new DataGridViewTextBoxColumn();
+            Column5 = new DataGridViewTextBoxColumn();
+            Column7 = new DataGridViewTextBoxColumn();
+            Column8 = new DataGridViewTextBoxColumn();
+            Column9 = new DataGridViewTextBoxColumn();
+            Column6 = new DataGridViewTextBoxColumn();
+            Column10 = new DataGridViewTextBoxColumn();
+            button10 = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -109,59 +110,6 @@
             dataGridView1.Size = new Size(956, 256);
             dataGridView1.TabIndex = 100;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
-            // 
-            // Column1
-            // 
-            Column1.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            Column1.HeaderText = "Código";
-            Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            Column2.HeaderText = "Nombre del Producto";
-            Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            Column3.HeaderText = "Categoría";
-            Column3.Name = "Column3";
-            // 
-            // Column4
-            // 
-            Column4.HeaderText = "Medida";
-            Column4.Name = "Column4";
-            // 
-            // Column5
-            // 
-            Column5.HeaderText = "Marca";
-            Column5.Name = "Column5";
-            // 
-            // Column7
-            // 
-            Column7.HeaderText = "Descripción";
-            Column7.Name = "Column7";
-            // 
-            // Column8
-            // 
-            Column8.HeaderText = "Precio Venta";
-            Column8.Name = "Column8";
-            // 
-            // Column9
-            // 
-            Column9.HeaderText = "Precio Compra";
-            Column9.Name = "Column9";
-            // 
-            // Column6
-            // 
-            Column6.HeaderText = "Stock Máximo";
-            Column6.Name = "Column6";
-            Column6.Width = 60;
-            // 
-            // Column10
-            // 
-            Column10.HeaderText = "Stock Mínimo";
-            Column10.Name = "Column10";
-            Column10.Width = 60;
             // 
             // TXTprecioc
             // 
@@ -233,9 +181,9 @@
             label10.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
             label10.Location = new Point(577, 68);
             label10.Name = "label10";
-            label10.Size = new Size(61, 20);
+            label10.Size = new Size(41, 20);
             label10.TabIndex = 88;
-            label10.Text = "Medida";
+            label10.Text = "Talla";
             // 
             // label9
             // 
@@ -481,12 +429,79 @@
             CBmarca.TabIndex = 120;
             CBmarca.SelectedIndexChanged += comboBox1_SelectedIndexChanged_1;
             // 
+            // Column1
+            // 
+            Column1.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            Column1.HeaderText = "Código";
+            Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            Column2.HeaderText = "Nombre del Producto";
+            Column2.Name = "Column2";
+            // 
+            // Column3
+            // 
+            Column3.HeaderText = "Categoría";
+            Column3.Name = "Column3";
+            // 
+            // Column4
+            // 
+            Column4.HeaderText = "Talla";
+            Column4.Name = "Column4";
+            // 
+            // Column5
+            // 
+            Column5.HeaderText = "Marca";
+            Column5.Name = "Column5";
+            // 
+            // Column7
+            // 
+            Column7.HeaderText = "Descripción";
+            Column7.Name = "Column7";
+            // 
+            // Column8
+            // 
+            Column8.HeaderText = "Precio Venta";
+            Column8.Name = "Column8";
+            // 
+            // Column9
+            // 
+            Column9.HeaderText = "Precio Compra";
+            Column9.Name = "Column9";
+            // 
+            // Column6
+            // 
+            Column6.HeaderText = "Stock Máximo";
+            Column6.Name = "Column6";
+            Column6.Width = 60;
+            // 
+            // Column10
+            // 
+            Column10.HeaderText = "Stock Mínimo";
+            Column10.Name = "Column10";
+            Column10.Width = 60;
+            // 
+            // button10
+            // 
+            button10.BackColor = SystemColors.ButtonFace;
+            button10.Font = new Font("Segoe UI Black", 11F, FontStyle.Bold);
+            button10.ForeColor = Color.FromArgb(69, 69, 210);
+            button10.Location = new Point(890, 88);
+            button10.Name = "button10";
+            button10.Size = new Size(37, 29);
+            button10.TabIndex = 121;
+            button10.Text = "➕";
+            button10.UseVisualStyleBackColor = false;
+            button10.Click += button10_Click;
+            // 
             // Productos
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Gainsboro;
             ClientSize = new Size(975, 527);
+            Controls.Add(button10);
             Controls.Add(CBmarca);
             Controls.Add(button9);
             Controls.Add(button8);
@@ -560,6 +575,10 @@
         private Label label13;
         private Button button4;
         private Button button5;
+        private Button button6;
+        private Button button8;
+        private Button button9;
+        private ComboBox CBmarca;
         private DataGridViewTextBoxColumn Column1;
         private DataGridViewTextBoxColumn Column2;
         private DataGridViewTextBoxColumn Column3;
@@ -570,9 +589,6 @@
         private DataGridViewTextBoxColumn Column9;
         private DataGridViewTextBoxColumn Column6;
         private DataGridViewTextBoxColumn Column10;
-        private Button button6;
-        private Button button8;
-        private Button button9;
-        private ComboBox CBmarca;
+        private Button button10;
     }
 }

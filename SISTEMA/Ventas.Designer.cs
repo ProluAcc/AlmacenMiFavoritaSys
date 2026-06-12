@@ -366,12 +366,12 @@
             // 
             // Column67
             // 
-            Column67.HeaderText = "Descuento";
+            Column67.HeaderText = "%Descuento";
             Column67.Name = "Column67";
             // 
             // Column16
             // 
-            Column16.HeaderText = "%Descuento";
+            Column16.HeaderText = "Descuento";
             Column16.Name = "Column16";
             // 
             // label7
@@ -684,6 +684,8 @@
         private Button buttonIngresar;
         private Label label11;
         private Button button1;
+        private ComboBox cmbtalla;
+        private Button btnnuevo;
         private DataGridViewTextBoxColumn Column4;
         private DataGridViewTextBoxColumn Column68;
         private DataGridViewTextBoxColumn Column69;

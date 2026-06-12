@@ -205,10 +205,13 @@ namespace Pantalla_ventas
 
             txtfactura.Enabled = false;
 
+
             cmbtipo.Items.Add("Camisetas masculinas");
             cmbtipo.Items.Add("Pantalones masculinos");
             cmbtipo.Items.Add("Calzado");
             cmbtipo.Items.Add("Ropa Femenina");
+
+            cmbtalla.DropDownStyle = ComboBoxStyle.DropDownList;
 
 
             if (File.Exists("factura.txt"))
@@ -296,11 +299,6 @@ namespace Pantalla_ventas
             numericant.Value = 0;
             txtprecio.Clear();
             txtdescuento.Clear();
-
-            txtiva.Clear();
-            txtsubtotal.Clear();
-            txttotal.Clear();
-            txtefectivo.Clear();
         }
 
         private void button7_Click(object sender, EventArgs e)
@@ -318,8 +316,16 @@ namespace Pantalla_ventas
                 double precio = Convert.ToDouble(txtprecio.Text);
                 int cantidad = (int)numericant.Value;
                 double valor = precio * cantidad;
-                double descuento = Convert.ToDouble(txtdescuento.Text); 
-                double porcentaje_descuento = (descuento / valor) * 100; //valor(20% / 100)
+
+                double porcentaje_descuento = Convert.ToDouble(txtdescuento.Text);
+                if (porcentaje_descuento < 0 || porcentaje_descuento > 100)
+                {
+                    MessageBox.Show("El descuento debe estar entre 0 y 100%.");
+                    return;
+                }
+
+                double descuento = valor * (porcentaje_descuento / 100); //valor(20% / 100)
+
 
                 if (txtcliente.Text == "" ||
                 cmbtipo.Text == "" ||
@@ -333,19 +339,23 @@ namespace Pantalla_ventas
                     return;
                 }
 
-                dgvventas.Rows.Add(producto, categoria, talla, precio, cantidad, valor, descuento, porcentaje_descuento.ToString() + "%", total);
+                if (cmbtalla.SelectedIndex == -1)
+                {
+                    MessageBox.Show("Seleccione una talla v�lida.");
+                    return;
+                }
+
+                dgvventas.Rows.Add(producto, categoria, talla, precio, cantidad, valor, porcentaje_descuento.ToString() + "%", descuento);
 
                 btnnuevo.Enabled = false;
                 btnfactura.Enabled = false;
                 btncambio.Enabled = true;
-                buttonIngresar.Enabled = false;
-                btnlimpiar.Enabled = false;
 
                 cmbcategoria.SelectedIndex = -1;
                 cmbproducto.SelectedIndex = -1;
                 numericant.Value = 0;
 
-                CalcularFactura();
+                CalcularFactura(valor, descuento);
 
             }
             catch (Exception ex)
@@ -358,20 +368,11 @@ namespace Pantalla_ventas
             txtfactura.Text = numeroFactura.ToString();
         }
 
-        private void CalcularFactura()
+        private void CalcularFactura(double valor, double descuento)
         {
-            double subtotal = 0;
-
-            foreach (DataGridViewRow fila in dgvventas.Rows)
-            {
-                if (fila.Cells[6].Value != null)
-                {
-                    subtotal += Convert.ToDouble(fila.Cells[5].Value);
-                }
-            }
-
-            double iva = subtotal * 0.15;
-            double total = subtotal + iva;
+            double iva = valor * 0.15;
+            subtotal += valor + iva;
+            total = subtotal - descuento;
 
             txtsubtotal.Text = subtotal.ToString("N2");
             txtiva.Text = iva.ToString("N2");
@@ -412,12 +413,7 @@ namespace Pantalla_ventas
 
             double cambio = monto - total;
 
-            MessageBox.Show(
-                "Gracias por su compra, su cambio es de C$ " + cambio.ToString("N2"),
-                "Pago realizado",
-                MessageBoxButtons.OK,
-                MessageBoxIcon.Information
-            );
+            MessageBox.Show( "Gracias por su compra, su cambio es de C$ " + cambio.ToString("N2"), "Pago realizado",MessageBoxButtons.OK,MessageBoxIcon.Information);
 
             numeroFactura++;
             File.WriteAllText("factura.txt", numeroFactura.ToString("D3"));
@@ -511,8 +507,9 @@ namespace Pantalla_ventas
 
             btnnuevo.Enabled = true;
             btnfactura.Enabled = false;
-            buttonIngresar.Enabled = true;
-            btnlimpiar.Enabled = true;
+            buttonIngresar.Enabled = false;
+            btnlimpiar.Enabled = false;
+            dgvventas.Rows.Clear();
         }
 
         private void cmbtalla_SelectedIndexChanged(object sender, EventArgs e)
@@ -524,7 +521,7 @@ namespace Pantalla_ventas
         }
 
         private void btnnuevo_Click(object sender, EventArgs e)
-        {
+        { 
             txtcliente.Clear();
             cmbproducto.SelectedIndex = -1;
             cmbtipo.SelectedIndex = -1;
@@ -547,6 +544,11 @@ namespace Pantalla_ventas
             txtfactura.Text = numeroFactura.ToString();
 
             btnnuevo.Enabled = false;
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

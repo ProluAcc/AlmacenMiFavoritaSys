@@ -46,6 +46,7 @@
             label1 = new Label();
             textBox1 = new TextBox();
             label3 = new Label();
+            comboBox1 = new ComboBox();
             panel1.SuspendLayout();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
@@ -59,7 +60,7 @@
             panel1.Controls.Add(label2);
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(539, 48);
+            panel1.Size = new Size(527, 48);
             panel1.TabIndex = 0;
             // 
             // button5
@@ -67,7 +68,7 @@
             button5.BackColor = SystemColors.ButtonFace;
             button5.Font = new Font("Segoe UI Black", 11F, FontStyle.Bold);
             button5.ForeColor = Color.FromArgb(69, 69, 210);
-            button5.Location = new Point(459, 5);
+            button5.Location = new Point(439, 4);
             button5.Name = "button5";
             button5.Size = new Size(73, 35);
             button5.TabIndex = 18;
@@ -89,6 +90,7 @@
             // groupBox1
             // 
             groupBox1.BackColor = SystemColors.Control;
+            groupBox1.Controls.Add(comboBox1);
             groupBox1.Controls.Add(button4);
             groupBox1.Controls.Add(button2);
             groupBox1.Controls.Add(button1);
@@ -102,7 +104,7 @@
             groupBox1.Controls.Add(label3);
             groupBox1.Location = new Point(12, 54);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(521, 432);
+            groupBox1.Size = new Size(515, 432);
             groupBox1.TabIndex = 1;
             groupBox1.TabStop = false;
             groupBox1.Text = "Categoría";
@@ -114,9 +116,9 @@
             button4.ForeColor = Color.FromArgb(69, 69, 210);
             button4.Location = new Point(262, 93);
             button4.Name = "button4";
-            button4.Size = new Size(253, 35);
+            button4.Size = new Size(209, 35);
             button4.TabIndex = 119;
-            button4.Text = "🔓HABILITAR/DESHABILITAR";
+            button4.Text = "🔓ACTIVAR/DESACTIVAR";
             button4.UseVisualStyleBackColor = false;
             // 
             // button2
@@ -148,7 +150,7 @@
             button3.BackColor = SystemColors.ButtonFace;
             button3.Font = new Font("Segoe UI Black", 11F, FontStyle.Bold);
             button3.ForeColor = Color.FromArgb(69, 69, 210);
-            button3.Location = new Point(241, 134);
+            button3.Location = new Point(373, 134);
             button3.Name = "button3";
             button3.Size = new Size(128, 35);
             button3.TabIndex = 116;
@@ -158,16 +160,16 @@
             // textBox6
             // 
             textBox6.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            textBox6.Location = new Point(70, 134);
+            textBox6.Location = new Point(184, 137);
             textBox6.Name = "textBox6";
-            textBox6.Size = new Size(162, 27);
+            textBox6.Size = new Size(183, 27);
             textBox6.TabIndex = 115;
             // 
             // label4
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            label4.Location = new Point(8, 137);
+            label4.Location = new Point(8, 140);
             label4.Name = "label4";
             label4.Size = new Size(56, 20);
             label4.TabIndex = 114;
@@ -235,12 +237,21 @@
             label3.TabIndex = 95;
             label3.Text = "Nombre:";
             // 
+            // comboBox1
+            // 
+            comboBox1.Font = new Font("Segoe UI", 11F);
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Location = new Point(70, 136);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(108, 28);
+            comboBox1.TabIndex = 120;
+            // 
             // Categoria
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Gainsboro;
-            ClientSize = new Size(539, 489);
+            ClientSize = new Size(528, 489);
             Controls.Add(groupBox1);
             Controls.Add(panel1);
             Name = "Categoria";
@@ -273,5 +284,6 @@
         private DataGridViewTextBoxColumn Column2;
         private DataGridViewTextBoxColumn Column3;
         private Button button5;
+        private ComboBox comboBox1;
     }
 }

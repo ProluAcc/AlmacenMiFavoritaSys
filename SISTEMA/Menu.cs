@@ -124,7 +124,7 @@ namespace SISTEMA
 
         private void medidaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MostrarFormularioMdi(new Medida());
+            MostrarFormularioMdi(new Talla());
         }
 
         private void rolToolStripMenuItem_Click(object sender, EventArgs e)
@@ -155,6 +155,11 @@ namespace SISTEMA
         private void reportesToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void marcaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MostrarFormularioMdi(new Marca());
         }
     }
 }

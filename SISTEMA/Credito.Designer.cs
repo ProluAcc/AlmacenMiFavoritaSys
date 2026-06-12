@@ -171,7 +171,7 @@
             groupBox2.Size = new Size(314, 373);
             groupBox2.TabIndex = 5;
             groupBox2.TabStop = false;
-            groupBox2.Text = "Condiciones del Crédito";
+            groupBox2.Text = "Datos del Crédito";
             groupBox2.Enter += groupBox2_Enter;
             // 
             // textBox3

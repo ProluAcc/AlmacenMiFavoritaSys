@@ -81,11 +81,11 @@
             groupBox1.Controls.Add(button5);
             groupBox1.Controls.Add(textBox3);
             groupBox1.Controls.Add(button1);
-            groupBox1.Controls.Add(label3);
-            groupBox1.Controls.Add(textBox2);
-            groupBox1.Controls.Add(label2);
             groupBox1.Controls.Add(label1);
+            groupBox1.Controls.Add(label2);
+            groupBox1.Controls.Add(label3);
             groupBox1.Controls.Add(textBox1);
+            groupBox1.Controls.Add(textBox2);
             groupBox1.Location = new Point(1, 2);
             groupBox1.Margin = new Padding(4, 3, 4, 3);
             groupBox1.Name = "groupBox1";
@@ -110,7 +110,7 @@
             // textBox3
             // 
             textBox3.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            textBox3.Location = new Point(579, 19);
+            textBox3.Location = new Point(684, 20);
             textBox3.Margin = new Padding(4, 3, 4, 3);
             textBox3.Name = "textBox3";
             textBox3.Size = new Size(138, 27);
@@ -121,7 +121,7 @@
             button1.BackColor = SystemColors.ControlLight;
             button1.Font = new Font("Segoe UI Black", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button1.ForeColor = Color.FromArgb(69, 69, 210);
-            button1.Location = new Point(734, 13);
+            button1.Location = new Point(244, 14);
             button1.Margin = new Padding(4, 3, 4, 3);
             button1.Name = "button1";
             button1.Size = new Size(101, 39);
@@ -134,7 +134,7 @@
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
             label3.ForeColor = Color.Black;
-            label3.Location = new Point(454, 22);
+            label3.Location = new Point(563, 23);
             label3.Margin = new Padding(4, 0, 4, 0);
             label3.Name = "label3";
             label3.Size = new Size(117, 20);
@@ -146,18 +146,19 @@
             // 
             textBox2.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
             textBox2.ForeColor = Color.Black;
-            textBox2.Location = new Point(308, 19);
+            textBox2.Location = new Point(417, 20);
             textBox2.Margin = new Padding(4, 3, 4, 3);
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(138, 27);
             textBox2.TabIndex = 3;
+            textBox2.TextChanged += textBox2_TextChanged;
             // 
             // label2
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
             label2.ForeColor = Color.Black;
-            label2.Location = new Point(244, 22);
+            label2.Location = new Point(353, 23);
             label2.Margin = new Padding(4, 0, 4, 0);
             label2.Name = "label2";
             label2.Size = new Size(61, 20);
@@ -315,7 +316,7 @@
             button3.Name = "button3";
             button3.Size = new Size(131, 50);
             button3.TabIndex = 8;
-            button3.Text = "🔃PROCESAR DEVOLUCIÓN";
+            button3.Text = "🔽AGREGAR DEVOLUCIÓN";
             button3.UseVisualStyleBackColor = false;
             button3.Click += button3_Click_1;
             // 

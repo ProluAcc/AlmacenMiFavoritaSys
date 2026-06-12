@@ -37,7 +37,8 @@
             label2 = new Label();
             label1 = new Label();
             groupBox2 = new GroupBox();
-            cmbtalla = new ComboBox();
+            cmbbtalla = new ComboBox();
+            cmbcategoria = new ComboBox();
             label11 = new Label();
             label14 = new Label();
             txtdescuento = new TextBox();
@@ -72,13 +73,12 @@
             txtsubtotal = new TextBox();
             txtefectivo = new TextBox();
             groupBox5 = new GroupBox();
-            btnnuevo = new Button();
+            btnnuevoo = new Button();
             buttonIngresar = new Button();
             groupBox4 = new GroupBox();
             button1 = new Button();
             Column1 = new DataGridViewTextBoxColumn();
             Column2 = new DataGridViewTextBoxColumn();
-            cmbcategoria = new ComboBox();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)numericant).BeginInit();
@@ -100,7 +100,7 @@
             groupBox1.Controls.Add(label1);
             groupBox1.Location = new Point(2, 2);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(1137, 60);
+            groupBox1.Size = new Size(1155, 60);
             groupBox1.TabIndex = 0;
             groupBox1.TabStop = false;
             // 
@@ -109,7 +109,7 @@
             button4.BackColor = SystemColors.ButtonFace;
             button4.Font = new Font("Segoe UI Black", 11F, FontStyle.Bold);
             button4.ForeColor = Color.FromArgb(69, 69, 210);
-            button4.Location = new Point(1027, 12);
+            button4.Location = new Point(1061, 12);
             button4.Name = "button4";
             button4.Size = new Size(81, 35);
             button4.TabIndex = 14;
@@ -178,8 +178,8 @@
             // groupBox2
             // 
             groupBox2.BackColor = SystemColors.Control;
+            groupBox2.Controls.Add(cmbbtalla);
             groupBox2.Controls.Add(cmbcategoria);
-            groupBox2.Controls.Add(cmbtalla);
             groupBox2.Controls.Add(label11);
             groupBox2.Controls.Add(label14);
             groupBox2.Controls.Add(txtdescuento);
@@ -197,15 +197,25 @@
             groupBox2.TabStop = false;
             groupBox2.Enter += groupBox2_Enter;
             // 
-            // cmbtalla
+            // cmbbtalla
             // 
-            cmbtalla.ForeColor = Color.Black;
-            cmbtalla.FormattingEnabled = true;
-            cmbtalla.Location = new Point(299, 18);
-            cmbtalla.Name = "cmbtalla";
-            cmbtalla.Size = new Size(74, 23);
-            cmbtalla.TabIndex = 18;
-            cmbtalla.SelectedIndexChanged += cmbtalla_SelectedIndexChanged;
+            cmbbtalla.ForeColor = Color.Black;
+            cmbbtalla.FormattingEnabled = true;
+            cmbbtalla.Location = new Point(302, 18);
+            cmbbtalla.Name = "cmbbtalla";
+            cmbbtalla.Size = new Size(99, 23);
+            cmbbtalla.TabIndex = 20;
+            cmbbtalla.SelectedIndexChanged += cmbbtalla_SelectedIndexChanged;
+            // 
+            // cmbcategoria
+            // 
+            cmbcategoria.ForeColor = Color.Black;
+            cmbcategoria.FormattingEnabled = true;
+            cmbcategoria.Location = new Point(91, 24);
+            cmbcategoria.Name = "cmbcategoria";
+            cmbcategoria.Size = new Size(115, 23);
+            cmbcategoria.TabIndex = 19;
+            cmbcategoria.SelectedIndexChanged += cmbcategoria_SelectedIndexChanged_2;
             // 
             // label11
             // 
@@ -522,28 +532,28 @@
             // groupBox5
             // 
             groupBox5.BackColor = SystemColors.Control;
-            groupBox5.Controls.Add(btnnuevo);
+            groupBox5.Controls.Add(btnnuevoo);
             groupBox5.Controls.Add(buttonIngresar);
             groupBox5.Controls.Add(btnlimpiar);
             groupBox5.Location = new Point(664, 72);
             groupBox5.Name = "groupBox5";
-            groupBox5.Size = new Size(244, 108);
+            groupBox5.Size = new Size(272, 108);
             groupBox5.TabIndex = 10;
             groupBox5.TabStop = false;
             groupBox5.Text = "Acciones";
             // 
-            // btnnuevo
+            // btnnuevoo
             // 
-            btnnuevo.BackColor = SystemColors.ButtonFace;
-            btnnuevo.Font = new Font("Segoe UI Black", 11F, FontStyle.Bold);
-            btnnuevo.ForeColor = Color.FromArgb(69, 69, 210);
-            btnnuevo.Location = new Point(148, 18);
-            btnnuevo.Name = "btnnuevo";
-            btnnuevo.Size = new Size(85, 35);
-            btnnuevo.TabIndex = 21;
-            btnnuevo.Text = "⬆️NUEVO";
-            btnnuevo.UseVisualStyleBackColor = false;
-            btnnuevo.Click += btnnuevo_Click;
+            btnnuevoo.BackColor = SystemColors.ButtonFace;
+            btnnuevoo.Font = new Font("Segoe UI Black", 11F, FontStyle.Bold);
+            btnnuevoo.ForeColor = Color.FromArgb(69, 69, 210);
+            btnnuevoo.Location = new Point(160, 43);
+            btnnuevoo.Name = "btnnuevoo";
+            btnnuevoo.Size = new Size(96, 35);
+            btnnuevoo.TabIndex = 21;
+            btnnuevoo.Text = "⬆️NUEVO";
+            btnnuevoo.UseVisualStyleBackColor = false;
+            btnnuevoo.Click += btnnuevoo_Click;
             // 
             // buttonIngresar
             // 
@@ -562,9 +572,9 @@
             // 
             groupBox4.BackColor = SystemColors.Control;
             groupBox4.Controls.Add(button1);
-            groupBox4.Location = new Point(914, 72);
+            groupBox4.Location = new Point(958, 72);
             groupBox4.Name = "groupBox4";
-            groupBox4.Size = new Size(196, 108);
+            groupBox4.Size = new Size(186, 108);
             groupBox4.TabIndex = 11;
             groupBox4.TabStop = false;
             groupBox4.Text = "Crear";
@@ -593,21 +603,12 @@
             Column2.HeaderText = "Medida";
             Column2.Name = "Column2";
             // 
-            // cmbcategoria
-            // 
-            cmbcategoria.ForeColor = Color.Black;
-            cmbcategoria.FormattingEnabled = true;
-            cmbcategoria.Location = new Point(91, 24);
-            cmbcategoria.Name = "cmbcategoria";
-            cmbcategoria.Size = new Size(115, 23);
-            cmbcategoria.TabIndex = 19;
-            // 
             // Ventas
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Gainsboro;
-            ClientSize = new Size(1139, 509);
+            ClientSize = new Size(1156, 509);
             Controls.Add(groupBox4);
             Controls.Add(groupBox5);
             Controls.Add(groupBox3);
@@ -694,8 +695,8 @@
         private DataGridViewTextBoxColumn Column3;
         private DataGridViewTextBoxColumn Column67;
         private DataGridViewTextBoxColumn Column16;
-        private ComboBox cmbtalla;
-        private Button btnnuevo;
         private ComboBox cmbcategoria;
+        private ComboBox cmbbtalla;
+        private Button btnnuevoo;
     }
 }

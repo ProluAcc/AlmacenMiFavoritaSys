@@ -20,11 +20,11 @@ namespace Pantalla_ventas
             { "Camisa Manga Corta", 550 },
             { "Camisa Casual Cuadros", 650 },
             { "Camisa Formal Slim Fit", 800 },
-            { "Pantal鏮 Jeans Cl嫳ico", 700 },
-            { "Pantal鏮 Jeans Skinny", 750 },
-            { "Pantal鏮 de Vestir", 850 },
-            { "Pantal鏮 Cargo", 900 },
-            { "Pantal鏮 Chino", 800 },
+            { "Pantalon Jeans Claico", 700 },
+            { "Pantalon Jeans Skinny", 750 },
+            { "Pantalon de Vestir", 850 },
+            { "Pantalon Cargo", 900 },
+            { "Pantalon Chino", 800 },
             { "Zapatos Formales", 1500 },
             { "Tenis Deportivos", 1200 },
             { "Botas de Trabajo", 1800 },
@@ -34,7 +34,7 @@ namespace Pantalla_ventas
             { "Botines Dama", 1600 },
             { "Chinelas Dama", 450 },
             { "Blusa Elegante", 650 },
-            { "Camiseta B嫳ica", 350 },
+            { "Camiseta Basica", 350 },
             { "Camisa Manga Larga Dama", 700 },
             { "Vestido de Fiesta", 1500 },
             { "Falda Corta", 500 },
@@ -59,11 +59,11 @@ namespace Pantalla_ventas
             "Pantalones masculinos",
                new List<string>()
                {
-                   "Pantal鏮 Jeans Cl嫳ico",
-                   "Pantal鏮 Jeans Skinny",
-                   "Pantal鏮 de Vestir",
-                   "Pantal鏮 Cargo",
-                   "Pantal鏮 Chino"
+                   "Pantalon Jeans Clasico",
+                   "Pantalon Jeans Skinny",
+                   "Pantalon de Vestir",
+                   "Pantalon Cargo",
+                   "Pantalon Chino"
                }
             },
 
@@ -88,7 +88,7 @@ namespace Pantalla_ventas
                 new List<string>()
                 {
                     "Blusa Elegante",
-                    "Camiseta B嫳ica",
+                    "Camiseta Basica",
                     "Camisa Manga Larga Dama",
                     "Vestido de Fiesta",
                     "Falda Corta",
@@ -105,11 +105,11 @@ namespace Pantalla_ventas
             { "Camisa Casual Cuadros", new List<string>() { "S", "M", "L", "XL" } },
             { "Camisa Formal Slim Fit", new List<string>() { "S", "M", "L", "XL" } },
 
-            { "Pantal鏮 Jeans Cl嫳ico", new List<string>() { "30", "32", "34", "36", "38", "40" } },
-            { "Pantal鏮 Jeans Skinny", new List<string>() { "30", "32", "34", "36", "38", "40" } },
-            { "Pantal鏮 de Vestir", new List<string>() { "30", "32", "34", "36", "38", "40" } },
-            { "Pantal鏮 Cargo", new List<string>() { "30", "32", "34", "36", "38", "40" } },
-            { "Pantal鏮 Chino", new List<string>() { "30", "32", "34", "36", "38", "40" } },
+            { "Pantalon Jeans Cl嫳ico", new List<string>() { "30", "32", "34", "36", "38", "40" } },
+            { "Pantalon Jeans Skinny", new List<string>() { "30", "32", "34", "36", "38", "40" } },
+            { "Pantalon de Vestir", new List<string>() { "30", "32", "34", "36", "38", "40" } },
+            { "Pantalon Cargo", new List<string>() { "30", "32", "34", "36", "38", "40" } },
+            { "Pantalon Chino", new List<string>() { "30", "32", "34", "36", "38", "40" } },
 
             { "Zapatos Formales", new List<string>() { "38", "39", "40", "41", "42", "43" } },
             { "Tenis Deportivos", new List<string>() { "38", "39", "40", "41", "42", "43" } },
@@ -122,12 +122,11 @@ namespace Pantalla_ventas
             { "Chinelas Dama", new List<string>() { "35", "36", "37", "38", "39" } },
 
             { "Blusa Elegante", new List<string>() { "S", "M", "L", "XL" } },
-            { "Camiseta B嫳ica", new List<string>() { "S", "M", "L", "XL" } },
+            { "Camiseta Basica", new List<string>() { "S", "M", "L", "XL" } },
             { "Camisa Manga Larga Dama", new List<string>() { "S", "M", "L", "XL" } },
             { "Vestido de Fiesta", new List<string>() { "S", "M", "L", "XL" } },
             { "Falda Corta", new List<string>() { "S", "M", "L", "XL" } },
             { "Falda Larga", new List<string>() { "S", "M", "L", "XL" } },
-            { "Pantal鏮 Jeans Dama", new List<string>() { "30", "32", "34", "36", "38" } }
         };
 
 
@@ -135,7 +134,7 @@ namespace Pantalla_ventas
         public Ventas()
         {
             InitializeComponent();
-            btnnuevo.Enabled = false;
+            btnnuevoo.Enabled = false;
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -162,17 +161,17 @@ namespace Pantalla_ventas
                 txtprecio.Text = producto[productoSeleccionado].ToString();
             }
 
-            cmbtalla.Items.Clear();
+            cmbbtalla.Items.Clear();
 
             if (tallasPorProducto.ContainsKey(productoSeleccionado))
             {
                 foreach (string talla in tallasPorProducto[productoSeleccionado])
                 {
-                    cmbtalla.Items.Add(talla);
+                    cmbbtalla.Items.Add(talla);
                 }
             }
 
-            cmbtalla.SelectedIndex = -1;
+            cmbbtalla.SelectedIndex = -1;
 
 
             string productoseleccionado = cmbproducto.Text;
@@ -206,12 +205,12 @@ namespace Pantalla_ventas
             txtfactura.Enabled = false;
 
 
-            cmbtipo.Items.Add("Camisetas masculinas");
-            cmbtipo.Items.Add("Pantalones masculinos");
-            cmbtipo.Items.Add("Calzado");
-            cmbtipo.Items.Add("Ropa Femenina");
+            cmbcategoria.Items.Add("Camisetas masculinas");
+            cmbcategoria.Items.Add("Pantalones masculinos");
+            cmbcategoria.Items.Add("Calzado");
+            cmbcategoria.Items.Add("Ropa Femenina");
 
-            cmbtalla.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbbtalla.DropDownStyle = ComboBoxStyle.DropDownList;
 
 
             if (File.Exists("factura.txt"))
@@ -278,24 +277,14 @@ namespace Pantalla_ventas
 
         private void cmbtipo_SelectedIndexChanged(object sender, EventArgs e)
         {
-            cmbproducto.Items.Clear();
-
-            string tiposeleccionado = cmbcategoria.Text;
-
-            if (tipos.ContainsKey(tiposeleccionado))
-            {
-                foreach (string producto in tipos[tiposeleccionado])
-                {
-                    cmbproducto.Items.Add(producto);
-                }
-            }
+            
         }
 
         private void btnlimpiar_Click(object sender, EventArgs e)
         {
-            cmbtipo.SelectedIndex = -1;
+            cmbcategoria.SelectedIndex = -1;
             cmbproducto.SelectedIndex = -1;
-            cmbtalla.SelectedIndex = -1;
+            cmbbtalla.SelectedIndex = -1;
             numericant.Value = 0;
             txtprecio.Clear();
             txtdescuento.Clear();
@@ -311,8 +300,8 @@ namespace Pantalla_ventas
             try
             {
                 string producto = cmbproducto.Text;
-                string categoria = cmbtipo.Text;
-                string talla = cmbtalla.Text;
+                string categoria = cmbcategoria.Text;
+                string talla = cmbbtalla.Text;
                 double precio = Convert.ToDouble(txtprecio.Text);
                 int cantidad = (int)numericant.Value;
                 double valor = precio * cantidad;
@@ -328,9 +317,9 @@ namespace Pantalla_ventas
 
 
                 if (txtcliente.Text == "" ||
-                cmbtipo.Text == "" ||
+                cmbcategoria.Text == "" ||
                 cmbproducto.Text == "" ||
-                cmbtalla.Text == "" ||
+                cmbbtalla.Text == " " ||
                 txtdescuento.Text == "" ||
                 txtprecio.Text == "" ||
                 numericant.Value == 0)
@@ -339,18 +328,18 @@ namespace Pantalla_ventas
                     return;
                 }
 
-                if (cmbtalla.SelectedIndex == -1)
+                if (cmbbtalla.SelectedIndex == -1)
                 {
-                    MessageBox.Show("Seleccione una talla v�lida.");
+                    MessageBox.Show("Seleccione una talla valida.");
                     return;
                 }
 
                 dgvventas.Rows.Add(producto, categoria, talla, precio, cantidad, valor, porcentaje_descuento.ToString() + "%", descuento);
 
-                btnnuevo.Enabled = false;
+
                 btnfactura.Enabled = false;
                 btncambio.Enabled = true;
-
+                btnnuevoo.Enabled = false;
                 cmbcategoria.SelectedIndex = -1;
                 cmbproducto.SelectedIndex = -1;
                 numericant.Value = 0;
@@ -413,7 +402,10 @@ namespace Pantalla_ventas
 
             double cambio = monto - total;
 
-            MessageBox.Show( "Gracias por su compra, su cambio es de C$ " + cambio.ToString("N2"), "Pago realizado",MessageBoxButtons.OK,MessageBoxIcon.Information);
+            MessageBox.Show("Gracias por su compra, su cambio es de C$ " + cambio.ToString("N2"), "Pago realizado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            btnfactura.Enabled = false;
+            buttonIngresar.Enabled = false;
+            btnlimpiar.Enabled = false;
 
             numeroFactura++;
             File.WriteAllText("factura.txt", numeroFactura.ToString("D3"));
@@ -505,27 +497,20 @@ namespace Pantalla_ventas
             File.WriteAllText("factura.txt", numeroFactura.ToString("D3"));
             txtfactura.Text = numeroFactura.ToString();
 
-            btnnuevo.Enabled = true;
+            btnnuevoo.Enabled = true;
             btnfactura.Enabled = false;
             buttonIngresar.Enabled = false;
             btnlimpiar.Enabled = false;
+            btncambio.Enabled = false;
             dgvventas.Rows.Clear();
         }
-
-        private void cmbtalla_SelectedIndexChanged(object sender, EventArgs e)
+   
+        private void btnnuevoo_Click(object sender, EventArgs e)
         {
-            cmbtalla.Items.Add("Camisetas masculinas");
-            cmbtalla.Items.Add("Pantalones masculinos");
-            cmbtalla.Items.Add("Calzado");
-            cmbtalla.Items.Add("Ropa Femenina");
-        }
-
-        private void btnnuevo_Click(object sender, EventArgs e)
-        { 
             txtcliente.Clear();
             cmbproducto.SelectedIndex = -1;
-            cmbtipo.SelectedIndex = -1;
-            cmbtalla.SelectedIndex = -1;
+            cmbcategoria.SelectedIndex = -1;
+            cmbbtalla.SelectedIndex = -1;
             numericant.Value = 0;
             txtprecio.Clear();
             txtdescuento.Clear();
@@ -537,18 +522,46 @@ namespace Pantalla_ventas
 
             buttonIngresar.Enabled = true;
             btnlimpiar.Enabled = true;
-            btnnuevo.Enabled = true;
+            btnnuevoo.Enabled = true;
 
             numeroFactura++;
             File.WriteAllText("factura.txt", numeroFactura.ToString("D3"));
             txtfactura.Text = numeroFactura.ToString();
 
-            btnnuevo.Enabled = false;
+            btnnuevoo.Enabled = false;
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void cmbcategoria_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+
+        }
+
+        private void cmbbtalla_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            cmbbtalla.Items.Add("Camisetas masculinas");
+            cmbbtalla.Items.Add("Pantalones masculinos");
+            cmbbtalla.Items.Add("Calzado");
+            cmbbtalla.Items.Add("Ropa Femenina");
+        }
+
+        private void cmbcategoria_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmbcategoria_SelectedIndexChanged_2(object sender, EventArgs e)
+        {
+            cmbproducto.Items.Clear();
+
+            string tiposeleccionado = cmbcategoria.Text;
+
+            if (tipos.ContainsKey(tiposeleccionado))
+            {
+                foreach (string producto in tipos[tiposeleccionado])
+                {
+                    cmbproducto.Items.Add(producto);
+                }
+            }
         }
     }
 }

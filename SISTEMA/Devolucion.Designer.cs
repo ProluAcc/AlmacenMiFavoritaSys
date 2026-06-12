@@ -33,7 +33,6 @@
             textBox3 = new TextBox();
             button1 = new Button();
             label3 = new Label();
-            textBox2 = new TextBox();
             label2 = new Label();
             label1 = new Label();
             textBox1 = new TextBox();
@@ -65,6 +64,7 @@
             textBox5 = new TextBox();
             label5 = new Label();
             label4 = new Label();
+            comboBox2 = new ComboBox();
             groupBox1.SuspendLayout();
             groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
@@ -78,6 +78,7 @@
             // groupBox1
             // 
             groupBox1.BackColor = SystemColors.Control;
+            groupBox1.Controls.Add(comboBox2);
             groupBox1.Controls.Add(button5);
             groupBox1.Controls.Add(textBox3);
             groupBox1.Controls.Add(button1);
@@ -85,7 +86,6 @@
             groupBox1.Controls.Add(label2);
             groupBox1.Controls.Add(label3);
             groupBox1.Controls.Add(textBox1);
-            groupBox1.Controls.Add(textBox2);
             groupBox1.Location = new Point(1, 2);
             groupBox1.Margin = new Padding(4, 3, 4, 3);
             groupBox1.Name = "groupBox1";
@@ -141,17 +141,6 @@
             label3.TabIndex = 4;
             label3.Text = "Fecha de venta:";
             label3.Click += label3_Click;
-            // 
-            // textBox2
-            // 
-            textBox2.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            textBox2.ForeColor = Color.Black;
-            textBox2.Location = new Point(417, 20);
-            textBox2.Margin = new Padding(4, 3, 4, 3);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(138, 27);
-            textBox2.TabIndex = 3;
-            textBox2.TextChanged += textBox2_TextChanged;
             // 
             // label2
             // 
@@ -468,6 +457,15 @@
             label4.TabIndex = 11;
             label4.Text = "Producto Nuevo:";
             // 
+            // comboBox2
+            // 
+            comboBox2.Font = new Font("Segoe UI", 11F);
+            comboBox2.FormattingEnabled = true;
+            comboBox2.Location = new Point(421, 20);
+            comboBox2.Name = "comboBox2";
+            comboBox2.Size = new Size(135, 28);
+            comboBox2.TabIndex = 19;
+            // 
             // Devolución
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -505,7 +503,6 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button1;
@@ -539,5 +536,6 @@
         private ComboBox comboBox1;
         private RadioButton radioButton1;
         private Button button5;
+        private ComboBox comboBox2;
     }
 }

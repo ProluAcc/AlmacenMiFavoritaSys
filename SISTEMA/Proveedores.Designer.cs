@@ -28,56 +28,56 @@
         /// </summary>
         private void InitializeComponent()
         {
-            textBox5 = new TextBox();
-            comboBox2 = new ComboBox();
+            txtBuscar = new TextBox();
+            cmbBuscar = new ComboBox();
             label7 = new Label();
-            textBox4 = new TextBox();
-            textBox3 = new TextBox();
-            textBox2 = new TextBox();
-            button2 = new Button();
-            button1 = new Button();
+            txtDireccion = new TextBox();
+            txtTelefono = new TextBox();
+            txtNombre = new TextBox();
+            btnLimpiar = new Button();
+            btnGuardar = new Button();
             label5 = new Label();
             label4 = new Label();
             label3 = new Label();
             label2 = new Label();
-            dataGridView1 = new DataGridView();
+            dgvProveedor = new DataGridView();
             Column2 = new DataGridViewTextBoxColumn();
             Column4 = new DataGridViewTextBoxColumn();
             Column3 = new DataGridViewTextBoxColumn();
             Column1 = new DataGridViewTextBoxColumn();
             Column6 = new DataGridViewTextBoxColumn();
             Column5 = new DataGridViewTextBoxColumn();
-            comboBox1 = new ComboBox();
+            cmbEstado = new ComboBox();
             panel3 = new Panel();
+            button6 = new Button();
             label6 = new Label();
-            textBox1 = new TextBox();
-            button3 = new Button();
-            textBox6 = new TextBox();
+            btnBuscar = new Button();
+            txtCorreo = new TextBox();
             label1 = new Label();
             label8 = new Label();
-            button4 = new Button();
-            button5 = new Button();
-            button6 = new Button();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            btnIngresar = new Button();
+            btnEditar = new Button();
+            dtpFecha = new DateTimePicker();
+            ((System.ComponentModel.ISupportInitialize)dgvProveedor).BeginInit();
             panel3.SuspendLayout();
             SuspendLayout();
             // 
-            // textBox5
+            // txtBuscar
             // 
-            textBox5.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            textBox5.Location = new Point(293, 191);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(187, 27);
-            textBox5.TabIndex = 79;
+            txtBuscar.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            txtBuscar.Location = new Point(272, 192);
+            txtBuscar.Name = "txtBuscar";
+            txtBuscar.Size = new Size(187, 27);
+            txtBuscar.TabIndex = 79;
             // 
-            // comboBox2
+            // cmbBuscar
             // 
-            comboBox2.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(107, 191);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(159, 28);
-            comboBox2.TabIndex = 78;
+            cmbBuscar.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            cmbBuscar.FormattingEnabled = true;
+            cmbBuscar.Location = new Point(107, 191);
+            cmbBuscar.Name = "cmbBuscar";
+            cmbBuscar.Size = new Size(159, 28);
+            cmbBuscar.TabIndex = 78;
             // 
             // label7
             // 
@@ -89,53 +89,54 @@
             label7.TabIndex = 77;
             label7.Text = "Buscar por:";
             // 
-            // textBox4
+            // txtDireccion
             // 
-            textBox4.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            textBox4.Location = new Point(473, 105);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(218, 27);
-            textBox4.TabIndex = 76;
+            txtDireccion.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            txtDireccion.Location = new Point(473, 105);
+            txtDireccion.Name = "txtDireccion";
+            txtDireccion.Size = new Size(218, 27);
+            txtDireccion.TabIndex = 76;
             // 
-            // textBox3
+            // txtTelefono
             // 
-            textBox3.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            textBox3.Location = new Point(191, 105);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(123, 27);
-            textBox3.TabIndex = 75;
+            txtTelefono.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            txtTelefono.Location = new Point(191, 105);
+            txtTelefono.Name = "txtTelefono";
+            txtTelefono.Size = new Size(123, 27);
+            txtTelefono.TabIndex = 75;
             // 
-            // textBox2
+            // txtNombre
             // 
-            textBox2.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            textBox2.Location = new Point(12, 105);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(173, 27);
-            textBox2.TabIndex = 74;
+            txtNombre.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            txtNombre.Location = new Point(12, 105);
+            txtNombre.Name = "txtNombre";
+            txtNombre.Size = new Size(173, 27);
+            txtNombre.TabIndex = 74;
             // 
-            // button2
+            // btnLimpiar
             // 
-            button2.BackColor = SystemColors.ButtonFace;
-            button2.Font = new Font("Segoe UI Black", 11F, FontStyle.Bold);
-            button2.ForeColor = Color.FromArgb(69, 69, 210);
-            button2.Location = new Point(840, 146);
-            button2.Name = "button2";
-            button2.Size = new Size(109, 37);
-            button2.TabIndex = 73;
-            button2.Text = "🗑LIMPIAR";
-            button2.UseVisualStyleBackColor = false;
+            btnLimpiar.BackColor = SystemColors.ButtonFace;
+            btnLimpiar.Font = new Font("Segoe UI Black", 11F, FontStyle.Bold);
+            btnLimpiar.ForeColor = Color.FromArgb(69, 69, 210);
+            btnLimpiar.Location = new Point(840, 146);
+            btnLimpiar.Name = "btnLimpiar";
+            btnLimpiar.Size = new Size(109, 37);
+            btnLimpiar.TabIndex = 73;
+            btnLimpiar.Text = "🗑LIMPIAR";
+            btnLimpiar.UseVisualStyleBackColor = false;
+            btnLimpiar.Click += btnLimpiar_Click;
             // 
-            // button1
+            // btnGuardar
             // 
-            button1.BackColor = SystemColors.ButtonFace;
-            button1.Font = new Font("Segoe UI Black", 11F, FontStyle.Bold);
-            button1.ForeColor = Color.FromArgb(69, 69, 210);
-            button1.Location = new Point(845, 242);
-            button1.Name = "button1";
-            button1.Size = new Size(118, 42);
-            button1.TabIndex = 72;
-            button1.Text = "✔️GUARDAR";
-            button1.UseVisualStyleBackColor = false;
+            btnGuardar.BackColor = SystemColors.ButtonFace;
+            btnGuardar.Font = new Font("Segoe UI Black", 11F, FontStyle.Bold);
+            btnGuardar.ForeColor = Color.FromArgb(69, 69, 210);
+            btnGuardar.Location = new Point(845, 242);
+            btnGuardar.Name = "btnGuardar";
+            btnGuardar.Size = new Size(118, 42);
+            btnGuardar.TabIndex = 72;
+            btnGuardar.Text = "✔️GUARDAR";
+            btnGuardar.UseVisualStyleBackColor = false;
             // 
             // label5
             // 
@@ -179,17 +180,18 @@
             label2.TabIndex = 68;
             label2.Text = "Nombre del proveedor:";
             // 
-            // dataGridView1
+            // dgvProveedor
             // 
-            dataGridView1.AllowUserToResizeRows = false;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Column2, Column4, Column3, Column1, Column6, Column5 });
-            dataGridView1.ImeMode = ImeMode.On;
-            dataGridView1.Location = new Point(12, 242);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(823, 273);
-            dataGridView1.TabIndex = 67;
+            dgvProveedor.AllowUserToResizeRows = false;
+            dgvProveedor.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvProveedor.Columns.AddRange(new DataGridViewColumn[] { Column2, Column4, Column3, Column1, Column6, Column5 });
+            dgvProveedor.ImeMode = ImeMode.On;
+            dgvProveedor.Location = new Point(12, 242);
+            dgvProveedor.Name = "dgvProveedor";
+            dgvProveedor.RowHeadersWidth = 51;
+            dgvProveedor.Size = new Size(823, 273);
+            dgvProveedor.TabIndex = 67;
+            dgvProveedor.CellContentDoubleClick += dgvProveedor_CellContentDoubleClick;
             // 
             // Column2
             // 
@@ -229,14 +231,14 @@
             Column5.MinimumWidth = 6;
             Column5.Name = "Column5";
             // 
-            // comboBox1
+            // cmbEstado
             // 
-            comboBox1.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(845, 104);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(112, 28);
-            comboBox1.TabIndex = 66;
+            cmbEstado.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            cmbEstado.FormattingEnabled = true;
+            cmbEstado.Location = new Point(845, 104);
+            cmbEstado.Name = "cmbEstado";
+            cmbEstado.Size = new Size(112, 28);
+            cmbEstado.TabIndex = 66;
             // 
             // panel3
             // 
@@ -249,6 +251,18 @@
             panel3.Size = new Size(975, 64);
             panel3.TabIndex = 81;
             // 
+            // button6
+            // 
+            button6.BackColor = SystemColors.ButtonFace;
+            button6.Font = new Font("Segoe UI Black", 11F, FontStyle.Bold);
+            button6.ForeColor = Color.FromArgb(69, 69, 210);
+            button6.Location = new Point(889, 15);
+            button6.Name = "button6";
+            button6.Size = new Size(73, 35);
+            button6.TabIndex = 118;
+            button6.Text = "AYUDA";
+            button6.UseVisualStyleBackColor = false;
+            // 
             // label6
             // 
             label6.AutoSize = true;
@@ -260,33 +274,26 @@
             label6.TabIndex = 10;
             label6.Text = "NUEVO PROVEEDOR";
             // 
-            // textBox1
+            // btnBuscar
             // 
-            textBox1.Font = new Font("Segoe UI", 11F);
-            textBox1.Location = new Point(697, 105);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(142, 27);
-            textBox1.TabIndex = 84;
+            btnBuscar.BackColor = SystemColors.ButtonFace;
+            btnBuscar.Font = new Font("Segoe UI Black", 11F, FontStyle.Bold);
+            btnBuscar.ForeColor = Color.FromArgb(69, 69, 210);
+            btnBuscar.Location = new Point(473, 185);
+            btnBuscar.Name = "btnBuscar";
+            btnBuscar.Size = new Size(112, 38);
+            btnBuscar.TabIndex = 85;
+            btnBuscar.Text = "🔍BUSCAR";
+            btnBuscar.UseVisualStyleBackColor = false;
+            btnBuscar.Click += btnBuscar_Click;
             // 
-            // button3
+            // txtCorreo
             // 
-            button3.BackColor = SystemColors.ButtonFace;
-            button3.Font = new Font("Segoe UI Black", 11F, FontStyle.Bold);
-            button3.ForeColor = Color.FromArgb(69, 69, 210);
-            button3.Location = new Point(497, 184);
-            button3.Name = "button3";
-            button3.Size = new Size(112, 38);
-            button3.TabIndex = 85;
-            button3.Text = "🔍BUSCAR";
-            button3.UseVisualStyleBackColor = false;
-            // 
-            // textBox6
-            // 
-            textBox6.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            textBox6.Location = new Point(320, 105);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(147, 27);
-            textBox6.TabIndex = 86;
+            txtCorreo.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            txtCorreo.Location = new Point(320, 105);
+            txtCorreo.Name = "txtCorreo";
+            txtCorreo.Size = new Size(147, 27);
+            txtCorreo.TabIndex = 86;
             // 
             // label1
             // 
@@ -309,41 +316,40 @@
             label8.TabIndex = 88;
             label8.Text = "Fecha de Registro:";
             // 
-            // button4
+            // btnIngresar
             // 
-            button4.BackColor = SystemColors.ButtonFace;
-            button4.Font = new Font("Segoe UI Black", 11F, FontStyle.Bold);
-            button4.ForeColor = Color.FromArgb(69, 69, 210);
-            button4.Location = new Point(727, 147);
-            button4.Name = "button4";
-            button4.Size = new Size(107, 37);
-            button4.TabIndex = 89;
-            button4.Text = "⬇️INGRESAR";
-            button4.UseVisualStyleBackColor = false;
+            btnIngresar.BackColor = SystemColors.ButtonFace;
+            btnIngresar.Font = new Font("Segoe UI Black", 11F, FontStyle.Bold);
+            btnIngresar.ForeColor = Color.FromArgb(69, 69, 210);
+            btnIngresar.Location = new Point(727, 147);
+            btnIngresar.Name = "btnIngresar";
+            btnIngresar.Size = new Size(107, 37);
+            btnIngresar.TabIndex = 89;
+            btnIngresar.Text = "⬇️INGRESAR";
+            btnIngresar.UseVisualStyleBackColor = false;
+            btnIngresar.Click += button4_Click;
             // 
-            // button5
+            // btnEditar
             // 
-            button5.BackColor = SystemColors.ButtonFace;
-            button5.Font = new Font("Segoe UI Black", 11F, FontStyle.Bold);
-            button5.ForeColor = Color.FromArgb(69, 69, 210);
-            button5.Location = new Point(845, 290);
-            button5.Name = "button5";
-            button5.Size = new Size(118, 38);
-            button5.TabIndex = 117;
-            button5.Text = "✏️EDITAR";
-            button5.UseVisualStyleBackColor = false;
+            btnEditar.BackColor = SystemColors.ButtonFace;
+            btnEditar.Font = new Font("Segoe UI Black", 11F, FontStyle.Bold);
+            btnEditar.ForeColor = Color.FromArgb(69, 69, 210);
+            btnEditar.Location = new Point(845, 290);
+            btnEditar.Name = "btnEditar";
+            btnEditar.Size = new Size(118, 38);
+            btnEditar.TabIndex = 117;
+            btnEditar.Text = "✏️EDITAR";
+            btnEditar.UseVisualStyleBackColor = false;
+            btnEditar.Click += btnEditar_Click;
             // 
-            // button6
+            // dtpFecha
             // 
-            button6.BackColor = SystemColors.ButtonFace;
-            button6.Font = new Font("Segoe UI Black", 11F, FontStyle.Bold);
-            button6.ForeColor = Color.FromArgb(69, 69, 210);
-            button6.Location = new Point(889, 15);
-            button6.Name = "button6";
-            button6.Size = new Size(73, 35);
-            button6.TabIndex = 118;
-            button6.Text = "AYUDA";
-            button6.UseVisualStyleBackColor = false;
+            dtpFecha.Font = new Font("Segoe UI", 11F);
+            dtpFecha.Format = DateTimePickerFormat.Short;
+            dtpFecha.Location = new Point(697, 105);
+            dtpFecha.Name = "dtpFecha";
+            dtpFecha.Size = new Size(137, 27);
+            dtpFecha.TabIndex = 118;
             // 
             // Proveedores
             // 
@@ -351,32 +357,32 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Gainsboro;
             ClientSize = new Size(975, 527);
-            Controls.Add(button5);
-            Controls.Add(button4);
+            Controls.Add(dtpFecha);
+            Controls.Add(btnEditar);
+            Controls.Add(btnIngresar);
             Controls.Add(label8);
             Controls.Add(label1);
-            Controls.Add(textBox6);
-            Controls.Add(button3);
-            Controls.Add(textBox1);
-            Controls.Add(textBox5);
-            Controls.Add(comboBox2);
+            Controls.Add(txtCorreo);
+            Controls.Add(btnBuscar);
+            Controls.Add(txtBuscar);
+            Controls.Add(cmbBuscar);
             Controls.Add(label7);
-            Controls.Add(textBox4);
-            Controls.Add(textBox3);
-            Controls.Add(textBox2);
-            Controls.Add(button2);
-            Controls.Add(button1);
+            Controls.Add(txtDireccion);
+            Controls.Add(txtTelefono);
+            Controls.Add(txtNombre);
+            Controls.Add(btnLimpiar);
+            Controls.Add(btnGuardar);
             Controls.Add(label5);
             Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(label2);
-            Controls.Add(dataGridView1);
-            Controls.Add(comboBox1);
+            Controls.Add(dgvProveedor);
+            Controls.Add(cmbEstado);
             Controls.Add(panel3);
             FormBorderStyle = FormBorderStyle.None;
             Name = "Proveedores";
             Text = "Proveedores";
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvProveedor).EndInit();
             panel3.ResumeLayout(false);
             panel3.PerformLayout();
             ResumeLayout(false);
@@ -384,35 +390,35 @@
         }
 
         #endregion
-        private TextBox textBox5;
-        private ComboBox comboBox2;
+        private TextBox txtBuscar;
+        private ComboBox cmbBuscar;
         private Label label7;
-        private TextBox textBox4;
-        private TextBox textBox3;
-        private TextBox textBox2;
-        private Button button2;
-        private Button button1;
+        private TextBox txtDireccion;
+        private TextBox txtTelefono;
+        private TextBox txtNombre;
+        private Button btnLimpiar;
+        private Button btnGuardar;
         private Label label5;
         private Label label4;
         private Label label3;
         private Label label2;
-        private DataGridView dataGridView1;
-        private ComboBox comboBox1;
+        private DataGridView dgvProveedor;
+        private ComboBox cmbEstado;
         private Panel panel3;
         private Label label6;
-        private TextBox textBox1;
-        private Button button3;
+        private Button btnBuscar;
         private DataGridViewTextBoxColumn Column2;
         private DataGridViewTextBoxColumn Column4;
         private DataGridViewTextBoxColumn Column3;
         private DataGridViewTextBoxColumn Column1;
         private DataGridViewTextBoxColumn Column6;
         private DataGridViewTextBoxColumn Column5;
-        private TextBox textBox6;
+        private TextBox txtCorreo;
         private Label label1;
         private Label label8;
-        private Button button4;
-        private Button button5;
+        private Button btnIngresar;
+        private Button btnEditar;
         private Button button6;
+        private DateTimePicker dtpFecha;
     }
 }

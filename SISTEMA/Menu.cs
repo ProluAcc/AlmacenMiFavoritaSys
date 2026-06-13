@@ -13,7 +13,6 @@ using Registro_de_compra;
 using Pantalla_ventas;
 using Inventario;
 using Control_de_egresos_de_caja;
-using Gestión_de_Uusarios;
 
 namespace SISTEMA
 {
@@ -112,10 +111,6 @@ namespace SISTEMA
             MostrarFormularioMdi(new ControlEgresosCaja());
         }
 
-        private void controlDeRolesToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            MostrarFormularioMdi(new GestionUsuarios());
-        }
 
         private void categoríaToolStripMenuItem_Click(object sender, EventArgs e)
         {

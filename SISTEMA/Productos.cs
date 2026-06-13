@@ -33,6 +33,11 @@ namespace SISTEMA
             CBmarca.Items.Add("NIKE");
             CBmarca.Items.Add("LEVI");
             CBmarca.Items.Add("B.S Style SCRN CLASSIC 2023");
+            CBbuscar.Items.Add("Código");
+            CBbuscar.Items.Add("Nombre");
+            CBbuscar.Items.Add("Categoría");
+            CBbuscar.Items.Add("Talla");
+            CBbuscar.Items.Add("Marca");
             TXTstockmin.Text = "10";
             TXTstockmin.Enabled = false;
         }
@@ -149,6 +154,11 @@ namespace SISTEMA
         private void button10_Click(object sender, EventArgs e)
         {
             Marca obj = new Marca(); obj.ShowDialog();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+
         }
     }
 

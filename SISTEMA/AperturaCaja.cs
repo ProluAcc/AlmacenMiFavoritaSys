@@ -12,9 +12,15 @@ namespace SISTEMA
 {
     public partial class AperturaCaja : Form
     {
-        public AperturaCaja()
+        public AperturaCaja(string nombreUsuario)
         {
             InitializeComponent();
+            label1.Text = $"Usuario que Abre Caja: {nombreUsuario}";
+        }
+
+        private void AperturaCaja_Load(object sender, EventArgs e)
+        {
+            
         }
     }
 }

@@ -14,9 +14,10 @@ namespace Registro_de_compra
         // IVA rate (change if your tax rate is different)
         private const decimal IvaRate = 0.15m;
 
-        public Compra()
+        public Compra(string username)
         {
             InitializeComponent();
+            comboBox3.Text = username;
 
             // wire the ingresar button (button3) to the handler
             // the designer didn't set an event handler for button3; do it here
@@ -47,11 +48,6 @@ namespace Registro_de_compra
         private void panel11_Paint(object sender, PaintEventArgs e)
         {
 
-        }
-
-        private void btnInicio_Click(object sender, EventArgs e)
-        {
-            Menu obj = new Menu(); obj.Show(); this.Hide();
         }
 
         private void button6_Click(object sender, EventArgs e)
@@ -163,6 +159,7 @@ namespace Registro_de_compra
             // last resort: replace comma/dot and try again
             var cleaned = raw.Replace(",", ".").Replace(" ", string.Empty);
             return decimal.TryParse(cleaned, styles, CultureInfo.InvariantCulture, out value);
+
 
         }
 

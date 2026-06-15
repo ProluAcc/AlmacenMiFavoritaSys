@@ -46,12 +46,6 @@ namespace SISTEMA
         {
 
         }
-
-        private void button8_Click(object sender, EventArgs e)
-        {
-            Menu obj = new Menu(); obj.Show(); this.Hide();
-        }
-
         private void label2_Click(object sender, EventArgs e)
         {
 

@@ -77,6 +77,7 @@
             button1.TabIndex = 3;
             button1.Text = "<- Regresar a Login";
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // frmBienvenida
             // 
@@ -91,6 +92,7 @@
             FormBorderStyle = FormBorderStyle.None;
             Name = "frmBienvenida";
             Text = "frmBienvenida";
+            Load += frmBienvenida_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();

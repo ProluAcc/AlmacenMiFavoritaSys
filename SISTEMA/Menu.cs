@@ -18,10 +18,12 @@ namespace SISTEMA
 {
     public partial class Menu : Form
     {
-        public Menu()
+        string nombreUsuario;
+        public Menu(string username)
         {
             InitializeComponent();
-            MostrarFormularioMdi(new frmBienvenida());
+            MostrarFormularioMdi(new frmBienvenida(username));
+            nombreUsuario = username;
         }
 
         private void Bienvenida_Load(object sender, EventArgs e)
@@ -53,12 +55,12 @@ namespace SISTEMA
 
         private void cajaToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            MostrarFormularioMdi(new Caja());
+            MostrarFormularioMdi(new Caja(nombreUsuario));
         }
 
         private void aperturaDeCajaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MostrarFormularioMdi(new AperturaCaja());
+            MostrarFormularioMdi(new AperturaCaja(nombreUsuario));
         }
 
         private void productoToolStripMenuItem_Click(object sender, EventArgs e)
@@ -83,7 +85,7 @@ namespace SISTEMA
 
         private void compraToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MostrarFormularioMdi(new Compra());
+            MostrarFormularioMdi(new Compra(nombreUsuario));
         }
 
         private void ventaToolStripMenuItem_Click(object sender, EventArgs e)

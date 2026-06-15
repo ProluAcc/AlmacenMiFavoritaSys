@@ -243,11 +243,6 @@ namespace Pantalla_ventas
 
         }
 
-        private void btnInicio_Click(object sender, EventArgs e)
-        {
-            Menu obj = new Menu(); obj.Show(); this.Hide();
-        }
-
         private void groupBox3_Enter(object sender, EventArgs e)
         {
 

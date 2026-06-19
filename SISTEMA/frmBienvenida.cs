@@ -12,7 +12,7 @@ namespace SISTEMA
 {
     public partial class frmBienvenida : Form
     {
-        public frmBienvenida(string username)
+        public frmBienvenida()
         {
             InitializeComponent();
             label1.Text = $"¡Bienvenido, {username}!";

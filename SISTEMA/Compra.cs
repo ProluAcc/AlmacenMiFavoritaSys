@@ -14,7 +14,7 @@ namespace Registro_de_compra
         // IVA rate (change if your tax rate is different)
         private const decimal IvaRate = 0.15m;
 
-        public Compra(string username)
+        public Compra()
         {
             InitializeComponent();
             comboBox3.Text = username;

@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             label1 = new Label();
-            lblUsuario = new Label();
+            label2 = new Label();
             groupBox1 = new GroupBox();
             button6 = new Button();
-            lblDolar = new Label();
+            label4 = new Label();
             dateTimePicker1 = new DateTimePicker();
             groupBox2 = new GroupBox();
             dataGridView1 = new DataGridView();
@@ -82,25 +82,25 @@
             label1.TabIndex = 0;
             label1.Text = "Fecha";
             // 
-            // lblUsuario
+            // label2
             // 
-            lblUsuario.AutoSize = true;
-            lblUsuario.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            lblUsuario.ForeColor = Color.Black;
-            lblUsuario.Location = new Point(190, 20);
-            lblUsuario.Name = "lblUsuario";
-            lblUsuario.Size = new Size(67, 20);
-            lblUsuario.TabIndex = 1;
-            lblUsuario.Text = "Usuario:";
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            label2.ForeColor = Color.Black;
+            label2.Location = new Point(190, 20);
+            label2.Name = "label2";
+            label2.Size = new Size(67, 20);
+            label2.TabIndex = 1;
+            label2.Text = "Usuario:";
             // 
             // groupBox1
             // 
             groupBox1.BackColor = SystemColors.Control;
             groupBox1.Controls.Add(button6);
-            groupBox1.Controls.Add(lblDolar);
+            groupBox1.Controls.Add(label4);
             groupBox1.Controls.Add(dateTimePicker1);
             groupBox1.Controls.Add(label1);
-            groupBox1.Controls.Add(lblUsuario);
+            groupBox1.Controls.Add(label2);
             groupBox1.ForeColor = Color.Black;
             groupBox1.Location = new Point(1, 0);
             groupBox1.Name = "groupBox1";
@@ -120,16 +120,16 @@
             button6.Text = "AYUDA";
             button6.UseVisualStyleBackColor = false;
             // 
-            // lblDolar
+            // label4
             // 
             lblDolar.AutoSize = true;
             lblDolar.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
             lblDolar.ForeColor = Color.Black;
             lblDolar.Location = new Point(615, 21);
             lblDolar.Name = "lblDolar";
-            lblDolar.Size = new Size(173, 20);
+            lblDolar.Size = new Size(235, 20);
             lblDolar.TabIndex = 16;
-            lblDolar.Text = "Cambio de Dólar: $1 ->";
+            lblDolar.Text = "Cambio de Dólar: $1 -> C$37.50";
             // 
             // dateTimePicker1
             // 
@@ -477,7 +477,7 @@
         #endregion
 
         private Label label1;
-        private Label lblUsuario;
+        private Label label2;
         private GroupBox groupBox1;
         private GroupBox groupBox2;
         private DataGridView dataGridView1;
@@ -499,7 +499,7 @@
         private Button button5;
         private Button button1;
         private DateTimePicker dateTimePicker1;
-        private Label lblDolar;
+        private Label label4;
         private Button button6;
         private Label label14;
         private Label label13;

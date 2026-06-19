@@ -20,6 +20,11 @@ namespace SISTEMA
             CargarComboBox();
         }
 
+        private void button7_Click(object sender, EventArgs e)
+        {
+            Menu obj = new Menu(); obj.Show(); this.Hide();
+        }
+
         private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
         {
 

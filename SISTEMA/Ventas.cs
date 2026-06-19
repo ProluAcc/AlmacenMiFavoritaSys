@@ -134,7 +134,7 @@ namespace Pantalla_ventas
         public Ventas()
         {
             InitializeComponent();
-            btnnuevo.Enabled = false;
+            btnnuevoo.Enabled = false;
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -313,6 +313,16 @@ namespace Pantalla_ventas
                 double valor = precio * cantidad;
                 string tipodepago = cmbpago.SelectedItem.ToString();
 
+                double porcentaje_descuento = Convert.ToDouble(txtdescuento.Text);
+                if (porcentaje_descuento < 0 || porcentaje_descuento > 100)
+                {
+                    MessageBox.Show("El descuento debe estar entre 0 y 100%.");
+                    return;
+                }
+
+                double descuento = valor * (porcentaje_descuento / 100); //valor(20% / 100)
+
+
                 if (txtcliente.Text == "" ||
                 cmbcategoria.Text == "" ||
                 cmbproducto.Text == "" ||
@@ -326,19 +336,30 @@ namespace Pantalla_ventas
                     return;
                 }
 
-                dgvventas.Rows.Add(producto, categoria, talla, precio, cantidad, valor, descuento, porcentaje_descuento.ToString() + "%", total);
+                if (cmbpago.SelectedIndex == -1)
+                {
+                    MessageBox.Show("Por favor, seleccione un tipo de pago.");
+                    return;
+                }
 
-                btnnuevo.Enabled = false;
+                if (cmbtalla.SelectedIndex == -1)
+                {
+                    MessageBox.Show("Seleccione una talla valida.");
+                    return;
+                }
+
+                dgvventas.Rows.Add(producto, categoria, talla, precio, cantidad, valor, porcentaje_descuento.ToString() + "%", descuento, tipodepago);
+
+
                 btnfactura.Enabled = false;
                 btncambio.Enabled = true;
-                buttonIngresar.Enabled = false;
-                btnlimpiar.Enabled = false;
-
+                btnnuevoo.Enabled = false;
                 cmbcategoria.SelectedIndex = -1;
                 cmbproducto.SelectedIndex = -1;
                 numericant.Value = 0;
 
-                CalcularFactura();
+
+                CalcularFactura(valor, descuento);
 
             }
             catch (Exception ex)
@@ -346,25 +367,14 @@ namespace Pantalla_ventas
                 MessageBox.Show("Error al ingresar la venta: " + ex.Message);
             }
 
-            numeroFactura++;
-            File.WriteAllText("factura.txt", numeroFactura.ToString("D3"));
-            txtfactura.Text = numeroFactura.ToString();
+
         }
 
-        private void CalcularFactura()
+        private void CalcularFactura(double valor, double descuento)
         {
-            double subtotal = 0;
-
-            foreach (DataGridViewRow fila in dgvventas.Rows)
-            {
-                if (fila.Cells[6].Value != null)
-                {
-                    subtotal += Convert.ToDouble(fila.Cells[5].Value);
-                }
-            }
-
-            double iva = subtotal * 0.15;
-            double total = subtotal + iva;
+            double iva = valor * 0.15;
+            subtotal += valor + iva;
+            total = subtotal - descuento;
 
             txtsubtotal.Text = subtotal.ToString("N2");
             txtiva.Text = iva.ToString("N2");
@@ -405,16 +415,11 @@ namespace Pantalla_ventas
 
             double cambio = monto - total;
 
-            MessageBox.Show(
-                "Gracias por su compra, su cambio es de C$ " + cambio.ToString("N2"),
-                "Pago realizado",
-                MessageBoxButtons.OK,
-                MessageBoxIcon.Information
-            );
-
-            numeroFactura++;
-            File.WriteAllText("factura.txt", numeroFactura.ToString("D3"));
-            txtfactura.Text = numeroFactura.ToString();
+            MessageBox.Show("Gracias por su compra, su cambio es de C$ " + cambio.ToString("N2"), "Pago realizado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            btnfactura.Enabled = true;
+            buttonIngresar.Enabled = false;
+            btnlimpiar.Enabled = false;
+            btncambio.Enabled = false;
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
@@ -477,13 +482,13 @@ namespace Pantalla_ventas
 
             html.Append("<br><br>");
 
-            html.Append("<p><b>Subtotal:</b> C$ " + txtsubtotal.Text + "</p>");
             html.Append("<p><b>IVA (15%):</b> C$ " + txtiva.Text + "</p>");
+            html.Append("<p><b>Subtotal:</b> C$ " + txtsubtotal.Text + "</p>");
             html.Append("<p><b>Total:</b> C$ " + txttotal.Text + "</p>");
             html.Append("<p><b>Monto recibido:</b> C$ " + txtefectivo.Text + "</p>");
 
             html.Append("<br>");
-            html.Append("<h3>：racias por su compra!</h3>");
+            html.Append("<h3>!Gracias por su compra!</h3>");
 
             html.Append("</body>");
             html.Append("</html>");
@@ -498,33 +503,25 @@ namespace Pantalla_ventas
 
             MessageBox.Show("Factura generada correctamente.");
 
-            numeroFactura++;
-            File.WriteAllText("factura.txt", numeroFactura.ToString("D3"));
-            txtfactura.Text = numeroFactura.ToString();
 
-            btnnuevo.Enabled = true;
+            btnnuevoo.Enabled = true;
             btnfactura.Enabled = false;
-            buttonIngresar.Enabled = true;
-            btnlimpiar.Enabled = true;
+            buttonIngresar.Enabled = false;
+            btnlimpiar.Enabled = false;
+            btncambio.Enabled = false;
+            dgvventas.Rows.Clear();
         }
 
-        private void cmbtalla_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            cmbtalla.Items.Add("Camisetas masculinas");
-            cmbtalla.Items.Add("Pantalones masculinos");
-            cmbtalla.Items.Add("Calzado");
-            cmbtalla.Items.Add("Ropa Femenina");
-        }
-
-        private void btnnuevo_Click(object sender, EventArgs e)
+        private void btnnuevoo_Click(object sender, EventArgs e)
         {
             txtcliente.Clear();
             cmbproducto.SelectedIndex = -1;
-            cmbtipo.SelectedIndex = -1;
+            cmbcategoria.SelectedIndex = -1;
             cmbtalla.SelectedIndex = -1;
             numericant.Value = 0;
             txtprecio.Clear();
             txtdescuento.Clear();
+            cmbpago.SelectedIndex = -1;
 
             txtiva.Clear();
             txtsubtotal.Clear();
@@ -533,13 +530,63 @@ namespace Pantalla_ventas
 
             buttonIngresar.Enabled = true;
             btnlimpiar.Enabled = true;
-            btnnuevo.Enabled = true;
+            btnnuevoo.Enabled = true;
 
             numeroFactura++;
             File.WriteAllText("factura.txt", numeroFactura.ToString("D3"));
             txtfactura.Text = numeroFactura.ToString();
 
-            btnnuevo.Enabled = false;
+            btnnuevoo.Enabled = false;
+
+            //Cuenta nueva
+            txtsubtotal.Text = "0.00";
+            txtiva.Text = "0.00";
+            txttotal.Text = "0.00";
+            subtotal = 0;
+            total = 0;
+        }
+
+        private void cmbcategoria_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmbbtalla_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            cmbtalla.Items.Add("Camisetas masculinas");
+            cmbtalla.Items.Add("Pantalones masculinos");
+            cmbtalla.Items.Add("Calzado");
+            cmbtalla.Items.Add("Ropa Femenina");
+        }
+
+        private void cmbcategoria_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmbcategoria_SelectedIndexChanged_2(object sender, EventArgs e)
+        {
+            cmbproducto.Items.Clear();
+
+            string tiposeleccionado = cmbcategoria.Text;
+
+            if (tipos.ContainsKey(tiposeleccionado))
+            {
+                foreach (string producto in tipos[tiposeleccionado])
+                {
+                    cmbproducto.Items.Add(producto);
+                }
+            }
+        }
+
+        private void cmbpago_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox5_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

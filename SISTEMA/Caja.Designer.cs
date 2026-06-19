@@ -122,14 +122,14 @@
             // 
             // label4
             // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            label4.ForeColor = Color.Black;
-            label4.Location = new Point(615, 21);
-            label4.Name = "label4";
-            label4.Size = new Size(173, 20);
-            label4.TabIndex = 16;
-            label4.Text = "Cambio de Dólar: $1 ->";
+            lblDolar.AutoSize = true;
+            lblDolar.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            lblDolar.ForeColor = Color.Black;
+            lblDolar.Location = new Point(615, 21);
+            lblDolar.Name = "lblDolar";
+            lblDolar.Size = new Size(235, 20);
+            lblDolar.TabIndex = 16;
+            lblDolar.Text = "Cambio de Dólar: $1 -> C$37.50";
             // 
             // dateTimePicker1
             // 

@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Npgsql;
+using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,16 +10,6 @@ namespace SISTEMA
 {
     class ClaseUsuarios
     {
-        public Dictionary<string, string> usersContrasenas = new Dictionary<string, string>()
-        {
-            {"Christiam", "c1234" },
-            {"Jack", "j1234"},
-            {"Kelly", "k1234" },
-            {"Amaru", "a1234" },
-            {"Helkind", "h1234" },
-            {"Admin", "MiFavorita77" }
-        };
-
         private int _id_usuario;
         private string _nombre;
         private string _username;       
@@ -98,6 +90,65 @@ namespace SISTEMA
                 if (string.IsNullOrWhiteSpace(m)) MessageBox.Show("El rol no puede ir vacio.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        public bool iniciarSesion(string username, string contrasena)
+        {
+            //instanciar la conexion 
+            Conexion connection = new Conexion();
+
+            //crea el objeto de conexion a la base de datos con el string de conexion
+            using (NpgsqlConnection conexion = new NpgsqlConnection(connection.con))
+            {
+                try
+                {
+                    //inicia la conexion 
+                    conexion.Open();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al conectar a la base de datos: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+                //busca la constraseña y el rol filtrandolo por el nombre de usuario
+                string consulta = "select u.contrasena, r.nombre from rol r join usuario u on r.id_rol = u.id_rol where u.username = @usuario";
+
+                //realiza la consulta a la base de datos según la consulta anterior y a la conexión creada
+                using (NpgsqlCommand comando = new NpgsqlCommand(consulta, conexion))
+                {
+                    //reemplaza el parametro @usuario con el valor dado como username
+                    comando.Parameters.AddWithValue("@usuario", username);
+
+                    //utilza el datareader para guardar los resultados de la consulta y poder leerlos
+                    using (NpgsqlDataReader reader = comando.ExecuteReader())
+                    {
+                        // Si el reader tiene filas, significa que el usuario existe
+                        if (reader.Read())
+                        {
+                            //la fila 0 es la contraseña y la 1 es el rol 
+                            string contrasenaAlmacenada = reader.GetString(0);
+                            string rolUsuario = reader.GetString(1);
+                            
+                            if (contrasena == contrasenaAlmacenada)
+                            {
+                                MessageBox.Show($"Bienvenido, has iniciado sesión como {rolUsuario}.", "Acceso Concedido");
+                                return true;
+                            }
+                            else
+                            {
+                                MessageBox.Show("Contraseña incorrecta.", "Error de Acceso");
+                                return false;
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("El usuario no existe.", "Error de Acceso");
+                            return false;
+                        }
+                    }
+                }
+            }            
+        }
+
 
         internal ClaseVenta ClaseVenta
         {

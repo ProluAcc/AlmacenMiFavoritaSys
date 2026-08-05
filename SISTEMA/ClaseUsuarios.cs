@@ -5,6 +5,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using BCrypt.Net;
 
 namespace SISTEMA
 {
@@ -19,6 +20,9 @@ namespace SISTEMA
         private string _respuesta;
         private string _estado;
         private int _idrol;
+
+        //instanciar la conexion 
+        Conexion connection = new Conexion();
 
         //validaciones
         public int id_usuario
@@ -80,6 +84,26 @@ namespace SISTEMA
             }
         }
 
+        public string respuesta
+        {
+            get { return _respuesta; }
+            set
+            {
+                _respuesta = value;
+                if (_respuesta == "") MessageBox.Show("El campo 'Respuesta de seguridad' no puede ir vacio.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        public string pregunta
+        {
+            get { return _pregunta; }
+            set
+            {
+                _pregunta = value;
+                if (_pregunta == "") MessageBox.Show("El campo 'Pregunta de seguridad' no puede ir vacio.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
         public int idrol
         {
             get { return _idrol; }
@@ -92,9 +116,7 @@ namespace SISTEMA
         }
 
         public bool iniciarSesion(string username, string contrasena)
-        {
-            //instanciar la conexion 
-            Conexion connection = new Conexion();
+        {            
 
             //crea el objeto de conexion a la base de datos con el string de conexion
             using (NpgsqlConnection conexion = new NpgsqlConnection(connection.con))
@@ -149,6 +171,145 @@ namespace SISTEMA
             }            
         }
 
+        public string BuscarCorreo(string correo)
+        {
+            //crea el objeto de conexion a la base de datos con el string de conexion
+            using (NpgsqlConnection conexion = new NpgsqlConnection(connection.con))
+            {
+                try
+                {
+                    //inicia la conexion 
+                    conexion.Open();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al conectar a la base de datos: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+                //filtra la pregunta de seguridad según el correo ingresado
+                string consulta = "select pregunta from usuario where correo = @correo";
+
+                //realiza la consulta a la base de datos según la consulta anterior y a la conexión creada
+                using (NpgsqlCommand comando = new NpgsqlCommand(consulta, conexion))
+                {
+                    //reemplaza el parametro @correo con el valor dado como correo
+                    comando.Parameters.AddWithValue("@correo", correo);
+
+                    //utilza el datareader para guardar los resultados de la consulta y poder leerlos
+                    using (NpgsqlDataReader reader = comando.ExecuteReader())
+                    {
+                        // Si el reader tiene filas, significa que el correo existe
+                        if (reader.Read())
+                        {
+                            //la fila 0 es la pregunta de seguridad
+                            string preguntaSeguridad = reader.GetString(0);
+                            return preguntaSeguridad;
+                        }
+                        else
+                        {
+                            MessageBox.Show("El correo no existe.", "Error de Acceso");
+                            return "";
+                        }
+                    }
+                }
+            }
+        }
+
+        public bool ComprobarRespuesta(string correo, string respuesta)
+        {
+            //crea el objeto de conexion a la base de datos con el string de conexion
+            using (NpgsqlConnection conexion = new NpgsqlConnection(connection.con))
+            {
+                try
+                {
+                    //inicia la conexion 
+                    conexion.Open();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al conectar a la base de datos: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+                //filtra la respuesta de seguridad según el correo ingresado
+                string consulta = "select respuesta from usuario where correo = @correo";
+
+                //realiza la consulta a la base de datos según la consulta anterior y a la conexión creada
+                using (NpgsqlCommand comando = new NpgsqlCommand(consulta, conexion))
+                {
+                    //reemplaza el parametro @correo con el valor dado como correo
+                    comando.Parameters.AddWithValue("@correo", correo);
+
+                    //utilza el datareader para guardar los resultados de la consulta y poder leerlos
+                    using (NpgsqlDataReader reader = comando.ExecuteReader())
+                    {
+                        // Si el reader tiene filas, significa que el correo existe
+                        if (reader.Read())
+                        {
+                            //guarda la respuesta
+                            string respuestaSeguridad = reader.GetString(0);
+
+                            //compara la respuesta ingresada con la almacenada en la base de datos
+                            if (respuestaSeguridad == respuesta)
+                            {                                
+                                return true;
+                            }
+                            else
+                            {                                
+                                return false;
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("El correo no existe.", "Error de Acceso");
+                            return false;
+                        }
+                    }
+                }
+            }
+        }
+
+        public bool CambiarContrasena(string correo, string contrasena)
+        {
+            //crea el objeto de conexion a la base de datos con el string de conexion
+            using (NpgsqlConnection conexion = new NpgsqlConnection(connection.con))
+            {
+                try
+                {
+                    //inicia la conexion 
+                    conexion.Open();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al conectar a la base de datos: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+                //actualiza la contraseña según el correo ingresado
+                string consulta = "update usuario set contrasena = @contrasena where correo = @correo";
+
+                //realiza la consulta a la base de datos según la consulta anterior y a la conexión creada
+                using (NpgsqlCommand comando = new NpgsqlCommand(consulta, conexion))
+                {
+                    //reemplaza el parametro @correo con el valor dado como correo
+                    comando.Parameters.AddWithValue("@correo", correo);
+                    string hash = BCrypt.Net.BCrypt.HashPassword(contrasena);                    
+                    comando.Parameters.AddWithValue("@contrasena", hash);
+
+                    //ExecuteNonQuery devuelve el número de filas afectadas
+                    int filasAfectadas = comando.ExecuteNonQuery();
+
+                    //Si filasAfectadas > 0, significa que el correo existe y la contraseña fue actualizada
+                    if (filasAfectadas > 0)
+                    {
+                        return true;
+                    }
+                    else
+                    {
+                        MessageBox.Show("El correo no existe.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return false;
+                    }
+                }
+            }
+        }
 
         internal ClaseVenta ClaseVenta
         {

@@ -29,19 +29,19 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
-            button4 = new Button();
-            textBox4 = new TextBox();
-            textBox5 = new TextBox();
+            btnComprobar = new Button();
+            txtConfirmacion = new TextBox();
+            txtNuevaContrasena = new TextBox();
             label5 = new Label();
             label6 = new Label();
             button3 = new Button();
             button2 = new Button();
-            button1 = new Button();
-            textBox3 = new TextBox();
-            textBox2 = new TextBox();
+            btnRecuperar = new Button();
+            txtRespuesta = new TextBox();
+            txtPregunta = new TextBox();
             label4 = new Label();
             label3 = new Label();
-            textBox1 = new TextBox();
+            txtCorreo = new TextBox();
             label2 = new Label();
             label1 = new Label();
             panel1.SuspendLayout();
@@ -51,19 +51,19 @@
             // 
             panel1.BackColor = SystemColors.Control;
             panel1.BorderStyle = BorderStyle.FixedSingle;
-            panel1.Controls.Add(button4);
-            panel1.Controls.Add(textBox4);
-            panel1.Controls.Add(textBox5);
+            panel1.Controls.Add(btnComprobar);
+            panel1.Controls.Add(txtConfirmacion);
+            panel1.Controls.Add(txtNuevaContrasena);
             panel1.Controls.Add(label5);
             panel1.Controls.Add(label6);
             panel1.Controls.Add(button3);
             panel1.Controls.Add(button2);
-            panel1.Controls.Add(button1);
-            panel1.Controls.Add(textBox3);
-            panel1.Controls.Add(textBox2);
+            panel1.Controls.Add(btnRecuperar);
+            panel1.Controls.Add(txtRespuesta);
+            panel1.Controls.Add(txtPregunta);
             panel1.Controls.Add(label4);
             panel1.Controls.Add(label3);
-            panel1.Controls.Add(textBox1);
+            panel1.Controls.Add(txtCorreo);
             panel1.Controls.Add(label2);
             panel1.Controls.Add(label1);
             panel1.Location = new Point(8, 11);
@@ -71,36 +71,37 @@
             panel1.Size = new Size(420, 449);
             panel1.TabIndex = 2;
             // 
-            // button4
+            // btnComprobar
             // 
-            button4.BackColor = SystemColors.ButtonFace;
-            button4.FlatAppearance.BorderColor = Color.FromArgb(23, 23, 255);
-            button4.Font = new Font("Segoe UI Black", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button4.ForeColor = Color.FromArgb(69, 69, 210);
-            button4.Location = new Point(291, 207);
-            button4.Name = "button4";
-            button4.Size = new Size(102, 37);
-            button4.TabIndex = 14;
-            button4.Text = "Comprobar";
-            button4.UseVisualStyleBackColor = false;
+            btnComprobar.BackColor = SystemColors.ButtonFace;
+            btnComprobar.FlatAppearance.BorderColor = Color.FromArgb(23, 23, 255);
+            btnComprobar.Font = new Font("Segoe UI Black", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnComprobar.ForeColor = Color.FromArgb(69, 69, 210);
+            btnComprobar.Location = new Point(287, 210);
+            btnComprobar.Name = "btnComprobar";
+            btnComprobar.Size = new Size(124, 37);
+            btnComprobar.TabIndex = 14;
+            btnComprobar.Text = "Comprobar";
+            btnComprobar.UseVisualStyleBackColor = false;
+            btnComprobar.Click += btnComprobar_Click;
             // 
-            // textBox4
+            // txtConfirmacion
             // 
-            textBox4.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            textBox4.ForeColor = Color.Black;
-            textBox4.Location = new Point(20, 346);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(246, 27);
-            textBox4.TabIndex = 13;
+            txtConfirmacion.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            txtConfirmacion.ForeColor = Color.Black;
+            txtConfirmacion.Location = new Point(20, 346);
+            txtConfirmacion.Name = "txtConfirmacion";
+            txtConfirmacion.Size = new Size(246, 27);
+            txtConfirmacion.TabIndex = 13;
             // 
-            // textBox5
+            // txtNuevaContrasena
             // 
-            textBox5.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            textBox5.ForeColor = Color.Black;
-            textBox5.Location = new Point(20, 280);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(246, 27);
-            textBox5.TabIndex = 12;
+            txtNuevaContrasena.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            txtNuevaContrasena.ForeColor = Color.Black;
+            txtNuevaContrasena.Location = new Point(20, 280);
+            txtNuevaContrasena.Name = "txtNuevaContrasena";
+            txtNuevaContrasena.Size = new Size(246, 27);
+            txtNuevaContrasena.TabIndex = 12;
             // 
             // label5
             // 
@@ -136,6 +137,7 @@
             button3.TabIndex = 9;
             button3.Text = "Buscar";
             button3.UseVisualStyleBackColor = false;
+            button3.Click += button3_Click;
             // 
             // button2
             // 
@@ -150,36 +152,37 @@
             button2.UseVisualStyleBackColor = false;
             button2.Click += button2_Click;
             // 
-            // button1
+            // btnRecuperar
             // 
-            button1.BackColor = SystemColors.ButtonFace;
-            button1.FlatAppearance.BorderColor = Color.FromArgb(23, 23, 255);
-            button1.Font = new Font("Segoe UI Black", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button1.ForeColor = Color.FromArgb(69, 69, 210);
-            button1.Location = new Point(291, 341);
-            button1.Name = "button1";
-            button1.Size = new Size(102, 37);
-            button1.TabIndex = 7;
-            button1.Text = "Recuperar";
-            button1.UseVisualStyleBackColor = false;
+            btnRecuperar.BackColor = SystemColors.ButtonFace;
+            btnRecuperar.FlatAppearance.BorderColor = Color.FromArgb(23, 23, 255);
+            btnRecuperar.Font = new Font("Segoe UI Black", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnRecuperar.ForeColor = Color.FromArgb(69, 69, 210);
+            btnRecuperar.Location = new Point(287, 341);
+            btnRecuperar.Name = "btnRecuperar";
+            btnRecuperar.Size = new Size(121, 37);
+            btnRecuperar.TabIndex = 7;
+            btnRecuperar.Text = "Recuperar";
+            btnRecuperar.UseVisualStyleBackColor = false;
+            btnRecuperar.Click += btnRecuperar_Click;
             // 
-            // textBox3
+            // txtRespuesta
             // 
-            textBox3.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            textBox3.ForeColor = Color.Black;
-            textBox3.Location = new Point(17, 217);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(246, 27);
-            textBox3.TabIndex = 6;
+            txtRespuesta.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            txtRespuesta.ForeColor = Color.Black;
+            txtRespuesta.Location = new Point(17, 217);
+            txtRespuesta.Name = "txtRespuesta";
+            txtRespuesta.Size = new Size(246, 27);
+            txtRespuesta.TabIndex = 6;
             // 
-            // textBox2
+            // txtPregunta
             // 
-            textBox2.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            textBox2.ForeColor = Color.Black;
-            textBox2.Location = new Point(17, 151);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(246, 27);
-            textBox2.TabIndex = 5;
+            txtPregunta.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            txtPregunta.ForeColor = Color.Black;
+            txtPregunta.Location = new Point(17, 151);
+            txtPregunta.Name = "txtPregunta";
+            txtPregunta.Size = new Size(246, 27);
+            txtPregunta.TabIndex = 5;
             // 
             // label4
             // 
@@ -203,14 +206,14 @@
             label3.TabIndex = 3;
             label3.Text = "Pregunta de Recuperación:";
             // 
-            // textBox1
+            // txtCorreo
             // 
-            textBox1.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            textBox1.ForeColor = Color.Black;
-            textBox1.Location = new Point(17, 88);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(199, 27);
-            textBox1.TabIndex = 2;
+            txtCorreo.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            txtCorreo.ForeColor = Color.Black;
+            txtCorreo.Location = new Point(17, 88);
+            txtCorreo.Name = "txtCorreo";
+            txtCorreo.Size = new Size(199, 27);
+            txtCorreo.TabIndex = 2;
             // 
             // label2
             // 
@@ -252,18 +255,18 @@
 
         private Panel panel1;
         private Button button2;
-        private Button button1;
-        private TextBox textBox3;
-        private TextBox textBox2;
+        private Button btnRecuperar;
+        private TextBox txtRespuesta;
+        private TextBox txtPregunta;
         private Label label4;
         private Label label3;
-        private TextBox textBox1;
+        private TextBox txtCorreo;
         private Label label2;
         private Label label1;
         private Button button3;
-        private Button button4;
-        private TextBox textBox4;
-        private TextBox textBox5;
+        private Button btnComprobar;
+        private TextBox txtConfirmacion;
+        private TextBox txtNuevaContrasena;
         private Label label5;
         private Label label6;
     }

@@ -17,7 +17,6 @@ namespace Registro_de_compra
         public Compra()
         {
             InitializeComponent();
-            comboBox3.Text = username;
 
             // wire the ingresar button (button3) to the handler
             // the designer didn't set an event handler for button3; do it here

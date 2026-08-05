@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace SISTEMA
 {
-    public partial class Medida : Form
+    public partial class Marca : Form
     {
-        public Medida()
+        public Marca()
         {
             InitializeComponent();
         }

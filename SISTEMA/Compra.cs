@@ -49,11 +49,6 @@ namespace Registro_de_compra
 
         }
 
-        private void btnInicio_Click(object sender, EventArgs e)
-        {
-            Menu obj = new Menu(); obj.Show(); this.Hide();
-        }
-
         private void button6_Click(object sender, EventArgs e)
         {
 
@@ -164,7 +159,12 @@ namespace Registro_de_compra
             var cleaned = raw.Replace(",", ".").Replace(" ", string.Empty);
             return decimal.TryParse(cleaned, styles, CultureInfo.InvariantCulture, out value);
 
+
         }
 
+        private void Compra_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

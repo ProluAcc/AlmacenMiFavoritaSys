@@ -13,16 +13,17 @@ using Registro_de_compra;
 using Pantalla_ventas;
 using Inventario;
 using Control_de_egresos_de_caja;
-using Gestión_de_Uusarios;
 
 namespace SISTEMA
 {
     public partial class Menu : Form
     {
-        public Menu()
+        string nombreUsuario;
+        public Menu(string username)
         {
             InitializeComponent();
-            MostrarFormularioMdi(new frmBienvenida());
+            MostrarFormularioMdi(new frmBienvenida(username));
+            nombreUsuario = username;
         }
 
         private void Bienvenida_Load(object sender, EventArgs e)
@@ -54,12 +55,12 @@ namespace SISTEMA
 
         private void cajaToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            MostrarFormularioMdi(new Caja());
+            MostrarFormularioMdi(new Caja(nombreUsuario));
         }
 
         private void aperturaDeCajaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MostrarFormularioMdi(new AperturaCaja());
+            MostrarFormularioMdi(new AperturaCaja(nombreUsuario));
         }
 
         private void productoToolStripMenuItem_Click(object sender, EventArgs e)
@@ -84,7 +85,7 @@ namespace SISTEMA
 
         private void compraToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MostrarFormularioMdi(new Compra());
+            MostrarFormularioMdi(new Compra(nombreUsuario));
         }
 
         private void ventaToolStripMenuItem_Click(object sender, EventArgs e)
@@ -112,10 +113,6 @@ namespace SISTEMA
             MostrarFormularioMdi(new ControlEgresosCaja());
         }
 
-        private void controlDeRolesToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            MostrarFormularioMdi(new GestionUsuarios());
-        }
 
         private void categoríaToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -124,7 +121,7 @@ namespace SISTEMA
 
         private void medidaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MostrarFormularioMdi(new Medida());
+            MostrarFormularioMdi(new Talla());
         }
 
         private void rolToolStripMenuItem_Click(object sender, EventArgs e)
@@ -155,6 +152,11 @@ namespace SISTEMA
         private void reportesToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void marcaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MostrarFormularioMdi(new Marca());
         }
     }
 }

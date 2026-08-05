@@ -10,17 +10,11 @@ using System.Windows.Forms;
 
 namespace SISTEMA
 {
-    public partial class AperturaCaja : Form
+    public partial class Acercade : Form
     {
-        public AperturaCaja(string nombreUsuario)
+        public Acercade()
         {
             InitializeComponent();
-            label1.Text = $"Usuario que Abre Caja: {nombreUsuario}";
-        }
-
-        private void AperturaCaja_Load(object sender, EventArgs e)
-        {
-            
         }
     }
 }

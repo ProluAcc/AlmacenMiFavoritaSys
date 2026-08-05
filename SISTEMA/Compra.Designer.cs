@@ -45,7 +45,6 @@
             Column9 = new DataGridViewTextBoxColumn();
             Column10 = new DataGridViewTextBoxColumn();
             panel8 = new Panel();
-            label13 = new Label();
             label10 = new Label();
             label9 = new Label();
             label8 = new Label();
@@ -226,7 +225,6 @@
             // 
             panel8.BackColor = SystemColors.Control;
             panel8.BorderStyle = BorderStyle.FixedSingle;
-            panel8.Controls.Add(label13);
             panel8.Controls.Add(label10);
             panel8.Controls.Add(label9);
             panel8.Controls.Add(label8);
@@ -235,17 +233,6 @@
             panel8.Size = new Size(487, 120);
             panel8.TabIndex = 5;
             panel8.Paint += panel8_Paint;
-            // 
-            // label13
-            // 
-            label13.AutoSize = true;
-            label13.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            label13.ForeColor = Color.Black;
-            label13.Location = new Point(289, 9);
-            label13.Name = "label13";
-            label13.Size = new Size(27, 20);
-            label13.TabIndex = 3;
-            label13.Text = "C$";
             // 
             // label10
             // 
@@ -369,7 +356,7 @@
             // 
             dateTimePicker2.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
             dateTimePicker2.Format = DateTimePickerFormat.Short;
-            dateTimePicker2.Location = new Point(416, 10);
+            dateTimePicker2.Location = new Point(139, 49);
             dateTimePicker2.Name = "dateTimePicker2";
             dateTimePicker2.Size = new Size(145, 27);
             dateTimePicker2.TabIndex = 14;
@@ -401,9 +388,9 @@
             // 
             textBox10.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
             textBox10.HideSelection = false;
-            textBox10.Location = new Point(721, 51);
+            textBox10.Location = new Point(754, 51);
             textBox10.Name = "textBox10";
-            textBox10.Size = new Size(139, 27);
+            textBox10.Size = new Size(106, 27);
             textBox10.TabIndex = 12;
             textBox10.TextChanged += textBox10_TextChanged;
             // 
@@ -412,7 +399,7 @@
             label12.AutoSize = true;
             label12.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
             label12.ForeColor = Color.Black;
-            label12.Location = new Point(581, 54);
+            label12.Location = new Point(614, 54);
             label12.Name = "label12";
             label12.Size = new Size(134, 20);
             label12.TabIndex = 11;
@@ -423,9 +410,9 @@
             textBox9.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
             textBox9.ForeColor = Color.Black;
             textBox9.HideSelection = false;
-            textBox9.Location = new Point(422, 52);
+            textBox9.Location = new Point(716, 12);
             textBox9.Name = "textBox9";
-            textBox9.Size = new Size(139, 27);
+            textBox9.Size = new Size(142, 27);
             textBox9.TabIndex = 10;
             // 
             // label11
@@ -433,7 +420,7 @@
             label11.AutoSize = true;
             label11.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
             label11.ForeColor = Color.Black;
-            label11.Location = new Point(344, 54);
+            label11.Location = new Point(638, 14);
             label11.Name = "label11";
             label11.Size = new Size(75, 20);
             label11.TabIndex = 9;
@@ -444,7 +431,7 @@
             comboBox1.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
             comboBox1.ForeColor = Color.Black;
             comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(138, 49);
+            comboBox1.Location = new Point(448, 48);
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(145, 28);
             comboBox1.TabIndex = 8;
@@ -455,7 +442,7 @@
             label7.AutoSize = true;
             label7.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
             label7.ForeColor = Color.Black;
-            label7.Location = new Point(54, 52);
+            label7.Location = new Point(364, 51);
             label7.Name = "label7";
             label7.Size = new Size(77, 20);
             label7.TabIndex = 8;
@@ -465,7 +452,7 @@
             // 
             textBox6.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
             textBox6.HideSelection = false;
-            textBox6.Location = new Point(721, 11);
+            textBox6.Location = new Point(455, 11);
             textBox6.Name = "textBox6";
             textBox6.Size = new Size(139, 27);
             textBox6.TabIndex = 7;
@@ -476,7 +463,7 @@
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
             label4.ForeColor = Color.Black;
-            label4.Location = new Point(567, 15);
+            label4.Location = new Point(301, 15);
             label4.Name = "label4";
             label4.Size = new Size(148, 20);
             label4.TabIndex = 6;
@@ -487,7 +474,7 @@
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
             label5.ForeColor = Color.Black;
-            label5.Location = new Point(287, 15);
+            label5.Location = new Point(10, 54);
             label5.Name = "label5";
             label5.Size = new Size(132, 20);
             label5.TabIndex = 2;
@@ -519,6 +506,7 @@
             FormBorderStyle = FormBorderStyle.None;
             Name = "Compra";
             Text = "Registro de compra";
+            Load += Compra_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             panel2.ResumeLayout(false);
@@ -571,7 +559,6 @@
         private DataGridViewTextBoxColumn Column8;
         private DataGridViewTextBoxColumn Column9;
         private DataGridViewTextBoxColumn Column10;
-        private Label label13;
         private Button button1;
     }
 }

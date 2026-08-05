@@ -1,5 +1,7 @@
-using Pantalla_de_devoluci髇;
+using Pantalla_de_devoluci贸n;
 using SISTEMA;
+using System.Diagnostics;
+using System.Text;
 
 namespace Pantalla_ventas
 {
@@ -9,46 +11,130 @@ namespace Pantalla_ventas
         double subtotal = 0;
         double total = 0;
 
+        public double Cambio { get; set; }
+
         Dictionary<string, double> producto = new Dictionary<string, double>()
         {
-            {"Camisa Polo", 500},
-            {"Camisa Manga Larga", 700},
-            {"Camiseta Deportiva", 800},
-            {"Pantal髇 Jeans", 600},
-            {"Pantal髇 de Vestir", 650},
-            { "Tenis Deportivos", 1200},
-            { "Zapatos Formales", 1500},
-            { "Botines", 1300 },
+            { "Camisa Polo", 500 },
+            { "Camisa Manga Larga", 700 },
+            { "Camisa Manga Corta", 550 },
+            { "Camisa Casual Cuadros", 650 },
+            { "Camisa Formal Slim Fit", 800 },
+            { "Pantalon Jeans Clasico", 700 },
+            { "Pantalon Jeans Skinny", 750 },
+            { "Pantalon de Vestir", 850 },
+            { "Pantalon Cargo", 900 },
+            { "Pantalon Chino", 800 },
+            { "Zapatos Formales", 1500 },
+            { "Tenis Deportivos", 1200 },
+            { "Botas de Trabajo", 1800 },
+            { "Chinelas Playeras", 500 },
+            { "Tacones Elegantes", 1400 },
+            { "Sandalias Casuales", 900 },
+            { "Botines Dama", 1600 },
+            { "Chinelas Dama", 450 },
+            { "Blusa Elegante", 650 },
+            { "Camiseta Basica", 350 },
+            { "Camisa Manga Larga Dama", 700 },
+            { "Vestido de Fiesta", 1500 },
+            { "Falda Corta", 500 },
+            { "Falda Larga", 600 },
         };
 
         Dictionary<string, List<string>> tipos = new Dictionary<string, List<string>>()
         {
             {
-             "Ropa Masculina",
+             "Camisetas masculinas",
                 new List<string>()
                 {
-                 "Camisa Polo",
-                 "Camisa Manga Larga",
-                 "Camiseta Deportiva",
-                 "Pantal髇 Jeans",
-                 "Pantal髇 de Vestir",
+                   "Camisa Polo",
+                   "Camisa Manga Larga",
+                   "Camisa Manga Corta",
+                   "Camisa Casual Cuadros",
+                   "Camisa Formal Slim Fit"
                 }
             },
 
             {
-            "Calzado",
+            "Pantalones masculinos",
                new List<string>()
                {
-                   "Tenis Deportivos",
-                   "Zapatos Formales",
-                   "Botas",
+                   "Pantalon Jeans Clasico",
+                   "Pantalon Jeans Skinny",
+                   "Pantalon de Vestir",
+                   "Pantalon Cargo",
+                   "Pantalon Chino"
                }
             },
+
+            {
+                "Calzado",
+                new List<string>()
+                {
+                    "Zapatos Formales",
+                    "Tenis Deportivos",
+                    "Botas de Trabajo",
+                    "Chinelas Playeras",
+                    "Tacones Elegantes",
+                    "Sandalias Casuales",
+                    "Botines Dama",
+                    "Chinelas Dama"
+                }
+
+            },
+
+            {
+                "Ropa Femenina",
+                new List<string>()
+                {
+                    "Blusa Elegante",
+                    "Camiseta Basica",
+                    "Camisa Manga Larga Dama",
+                    "Vestido de Fiesta",
+                    "Falda Corta",
+                    "Falda Larga",
+                }
+            }
         };
+
+        Dictionary<string, List<string>> tallasPorProducto = new Dictionary<string, List<string>>()
+        {
+            { "Camisa Polo", new List<string>() { "S", "M", "L", "XL" } },
+            { "Camisa Manga Larga", new List<string>() { "S", "M", "L", "XL" } },
+            { "Camisa Manga Corta", new List<string>() { "S", "M", "L", "XL" } },
+            { "Camisa Casual Cuadros", new List<string>() { "S", "M", "L", "XL" } },
+            { "Camisa Formal Slim Fit", new List<string>() { "S", "M", "L", "XL" } },
+
+            { "Pantalon Jeans Clasico", new List<string>() { "30", "32", "34", "36", "38", "40" } },
+            { "Pantalon Jeans Skinny", new List<string>() { "30", "32", "34", "36", "38", "40" } },
+            { "Pantalon de Vestir", new List<string>() { "30", "32", "34", "36", "38", "40" } },
+            { "Pantalon Cargo", new List<string>() { "30", "32", "34", "36", "38", "40" } },
+            { "Pantalon Chino", new List<string>() { "30", "32", "34", "36", "38", "40" } },
+
+            { "Zapatos Formales", new List<string>() { "38", "39", "40", "41", "42", "43" } },
+            { "Tenis Deportivos", new List<string>() { "38", "39", "40", "41", "42", "43" } },
+            { "Botas de Trabajo", new List<string>() { "38", "39", "40", "41", "42", "43" } },
+            { "Chinelas Playeras", new List<string>() { "38", "39", "40", "41", "42", "43" } },
+
+            { "Tacones Elegantes", new List<string>() { "35", "36", "37", "38", "39" } },
+            { "Sandalias Casuales", new List<string>() { "35", "36", "37", "38", "39" } },
+            { "Botines Dama", new List<string>() { "35", "36", "37", "38", "39" } },
+            { "Chinelas Dama", new List<string>() { "35", "36", "37", "38", "39" } },
+
+            { "Blusa Elegante", new List<string>() { "S", "M", "L", "XL" } },
+            { "Camiseta Basica", new List<string>() { "S", "M", "L", "XL" } },
+            { "Camisa Manga Larga Dama", new List<string>() { "S", "M", "L", "XL" } },
+            { "Vestido de Fiesta", new List<string>() { "S", "M", "L", "XL" } },
+            { "Falda Corta", new List<string>() { "S", "M", "L", "XL" } },
+            { "Falda Larga", new List<string>() { "S", "M", "L", "XL" } },
+        };
+
+
 
         public Ventas()
         {
             InitializeComponent();
+            btnnuevoo.Enabled = false;
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -68,8 +154,30 @@ namespace Pantalla_ventas
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
+            string productoSeleccionado = cmbproducto.Text;
+
+            if (producto.ContainsKey(productoSeleccionado))
+            {
+                txtprecio.Text = producto[productoSeleccionado].ToString();
+            }
+
+            cmbtalla.Items.Clear();
+
+            if (tallasPorProducto.ContainsKey(productoSeleccionado))
+            {
+                foreach (string talla in tallasPorProducto[productoSeleccionado])
+                {
+                    cmbtalla.Items.Add(talla);
+                }
+            }
+
+            cmbtalla.SelectedIndex = -1;
+
+
             string productoseleccionado = cmbproducto.Text;
 
+
+            MessageBox.Show(productoseleccionado);
             txtprecio.Text = producto[productoseleccionado].ToString();
 
             double precioUnitario = Convert.ToDouble(txtprecio.Text);
@@ -90,12 +198,26 @@ namespace Pantalla_ventas
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            txtfecha.Enabled = false;
             txtfecha.Text = DateTime.Now.ToShortDateString();
-            txtfecha.ReadOnly = true;
+            txtfecha.Enabled = false;
+
+            txtfactura.Enabled = false;
 
 
-            cmbtipo.Items.Add("Ropa Masculina");
-            cmbtipo.Items.Add("Calzado");
+            cmbcategoria.Items.Add("Camisetas masculinas");
+            cmbcategoria.Items.Add("Pantalones masculinos");
+            cmbcategoria.Items.Add("Calzado");
+            cmbcategoria.Items.Add("Ropa Femenina");
+
+            cmbtalla.DropDownStyle = ComboBoxStyle.DropDownList;
+
+            cmbpago.Items.Clear();
+            cmbpago.Items.Add("Efectivo");
+            cmbpago.Items.Add("Tarjeta");
+
+            cmbpago.SelectedIndex = -1;
+
 
             if (File.Exists("factura.txt"))
             {
@@ -141,7 +263,7 @@ namespace Pantalla_ventas
 
         private void button6_Click(object sender, EventArgs e)
         {
-            Devoluci髇 obj = new Devoluci髇(); obj.ShowDialog();
+            Devoluci贸n obj = new Devoluci贸n(); obj.ShowDialog();
         }
 
         private void vScrollBar1_Scroll(object sender, ScrollEventArgs e)
@@ -161,30 +283,17 @@ namespace Pantalla_ventas
 
         private void cmbtipo_SelectedIndexChanged(object sender, EventArgs e)
         {
-            cmbproducto.Items.Clear();
 
-            string tiposeleccionado = cmbtipo.Text;
-
-            if (tipos.ContainsKey(tiposeleccionado))
-            {
-                foreach (string producto in tipos[tiposeleccionado])
-                {
-                    cmbproducto.Items.Add(producto);
-                }
-            }
         }
 
         private void btnlimpiar_Click(object sender, EventArgs e)
         {
-            numeroFactura++;
-            File.WriteAllText("factura.txt", numeroFactura.ToString("D3"));
-            txtfactura.Text = numeroFactura.ToString();
-
-            cmbtipo.SelectedIndex = -1;
+            cmbcategoria.SelectedIndex = -1;
             cmbproducto.SelectedIndex = -1;
+            cmbtalla.SelectedIndex = -1;
             numericant.Value = 0;
-            dgvventas.Rows.Clear();
-            subtotal = 0;
+            txtprecio.Clear();
+            txtdescuento.Clear();
         }
 
         private void button7_Click(object sender, EventArgs e)
@@ -197,41 +306,285 @@ namespace Pantalla_ventas
             try
             {
                 string producto = cmbproducto.Text;
-                string categoria = cmbtipo.Text;
+                string categoria = cmbcategoria.Text;
+                string talla = cmbtalla.Text;
+                double precio = Convert.ToDouble(txtprecio.Text);
                 int cantidad = (int)numericant.Value;
+                double valor = precio * cantidad;
+                string tipodepago = cmbpago.SelectedItem.ToString();
 
                 double porcentaje_descuento = Convert.ToDouble(txtdescuento.Text);
-                double precio = Convert.ToDouble(txtprecio.Text);
-                double descuento = precio * (porcentaje_descuento / 100);
-
-                double valor = precio * cantidad;
-                subtotal += valor - descuento;
-                total += subtotal;
-
-                if (txtdescuento.Text != "")
+                if (porcentaje_descuento < 0 || porcentaje_descuento > 100)
                 {
-                    descuento = Convert.ToDouble(txtdescuento.Text);
+                    MessageBox.Show("El descuento debe estar entre 0 y 100%.");
+                    return;
                 }
 
+                double descuento = valor * (porcentaje_descuento / 100); //valor(20% / 100)
 
-                dgvventas.Rows.Add(producto, categoria, "NULL", precio, cantidad, valor, descuento, porcentaje_descuento.ToString() + "%", total);
 
-                cmbtipo.SelectedIndex = -1;
+                if (txtcliente.Text == "" ||
+                cmbcategoria.Text == "" ||
+                cmbproducto.Text == "" ||
+                cmbtalla.Text == " " ||
+                txtdescuento.Text == "" ||
+                txtprecio.Text == "" ||
+                numericant.Value == 0 ||
+                cmbpago.Text == "")
+                {
+                    MessageBox.Show("Debe completar todos los campos antes de ingresar la venta.", "Campos incompletos", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                if (cmbpago.SelectedIndex == -1)
+                {
+                    MessageBox.Show("Por favor, seleccione un tipo de pago.");
+                    return;
+                }
+
+                if (cmbtalla.SelectedIndex == -1)
+                {
+                    MessageBox.Show("Seleccione una talla valida.");
+                    return;
+                }
+
+                dgvventas.Rows.Add(producto, categoria, talla, precio, cantidad, valor, porcentaje_descuento.ToString() + "%", descuento, tipodepago);
+
+
+                btnfactura.Enabled = false;
+                btncambio.Enabled = true;
+                btnnuevoo.Enabled = false;
+                cmbcategoria.SelectedIndex = -1;
                 cmbproducto.SelectedIndex = -1;
                 numericant.Value = 0;
+
+
+                CalcularFactura(valor, descuento);
+
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error al ingresar la venta: " + ex.Message);
             }
+
+
+        }
+
+        private void CalcularFactura(double valor, double descuento)
+        {
+            double iva = valor * 0.15;
+            subtotal += valor + iva;
+            total = subtotal - descuento;
+
+            txtsubtotal.Text = subtotal.ToString("N2");
+            txtiva.Text = iva.ToString("N2");
+            txttotal.Text = total.ToString("N2");
         }
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            Devoluci髇 obj = new Devoluci髇(); obj.ShowDialog();
+            Devoluci贸n obj = new Devoluci贸n(); obj.ShowDialog();
+        }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            if (txtefectivo.Text == "")
+            {
+                MessageBox.Show("Ingrese el monto entregado por el cliente.");
+                return;
+            }
+
+            double monto = Convert.ToDouble(txtefectivo.Text);
+            double total = Convert.ToDouble(txttotal.Text);
+
+            if (monto < total)
+            {
+                MessageBox.Show("El monto es insuficiente para realizar el pago.");
+                return;
+            }
+
+            double cambio = monto - total;
+
+            MessageBox.Show("Gracias por su compra, su cambio es de C$ " + cambio.ToString("N2"), "Pago realizado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            btnfactura.Enabled = true;
+            buttonIngresar.Enabled = false;
+            btnlimpiar.Enabled = false;
+            btncambio.Enabled = false;
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            StringBuilder html = new StringBuilder();
+
+            html.Append("<html>");
+            html.Append("<head>");
+            html.Append("<title>Factura</title>");
+            html.Append("</head>");
+            html.Append("<body>");
+
+            html.Append("<h1 align='center'>LA FAVORITA - MATAGALPA</h1>");
+            html.Append("<h2 align='center'>FACTURA DE VENTA</h2>");
+
+            html.Append("<p><b>No. Factura:</b> " + txtfactura.Text + "</p>");
+            html.Append("<p><b>Fecha:</b> " + txtfecha.Text + "</p>");
+            html.Append("<p><b>Cliente:</b> " + txtcliente.Text + "</p>");
+
+            html.Append("<br>");
+
+            html.Append("<table border='1' cellpadding='5' cellspacing='0'>");
+
+            html.Append("<tr>");
+            html.Append("<th>Producto</th>");
+            html.Append("<th>Categoria</th>");
+            html.Append("<th>Medida</th>");
+            html.Append("<th>Precio</th>");
+            html.Append("<th>Cantidad</th>");
+            html.Append("<th>Valor</th>");
+            html.Append("<th>Descuento</th>");
+            html.Append("<th>% Descuento</th>");
+            html.Append("</tr>");
+
+            foreach (DataGridViewRow fila in dgvventas.Rows)
+            {
+                if (!fila.IsNewRow)
+                {
+                    html.Append("<tr>");
+
+                    html.Append("<td>" + fila.Cells[0].Value + "</td>");
+                    html.Append("<td>" + fila.Cells[1].Value + "</td>");
+                    html.Append("<td>" + fila.Cells[2].Value + "</td>");
+                    html.Append("<td>" + fila.Cells[3].Value + "</td>");
+                    html.Append("<td>" + fila.Cells[4].Value + "</td>");
+                    html.Append("<td>" + fila.Cells[5].Value + "</td>");
+                    html.Append("<td>" + fila.Cells[6].Value + "</td>");
+                    html.Append("<td>" + fila.Cells[7].Value + "</td>");
+
+                    html.Append("</tr>");
+                }
+            }
+
+            html.Append("</table>");
+
+            html.Append("<br><br>");
+
+            html.Append("<p><b>IVA (15%):</b> C$ " + txtiva.Text + "</p>");
+            html.Append("<p><b>Subtotal:</b> C$ " + txtsubtotal.Text + "</p>");
+            html.Append("<p><b>Total:</b> C$ " + txttotal.Text + "</p>");
+            html.Append("<p><b>Monto recibido:</b> C$ " + txtefectivo.Text + "</p>");
+
+            html.Append("<br>");
+            html.Append("<h3>!Gracias por su compra!</h3>");
+
+            html.Append("</body>");
+            html.Append("</html>");
+
+            File.WriteAllText("Factura_" + txtfactura.Text + ".html", html.ToString());
+
+            Process.Start(new ProcessStartInfo()
+            {
+                FileName = "Factura_" + txtfactura.Text + ".html",
+                UseShellExecute = true
+            });
+
+            MessageBox.Show("Factura generada correctamente.");
+
+
+            btnnuevoo.Enabled = true;
+            btnfactura.Enabled = false;
+            buttonIngresar.Enabled = false;
+            btnlimpiar.Enabled = false;
+            btncambio.Enabled = false;
+            dgvventas.Rows.Clear();
+        }
+
+        private void btnnuevoo_Click(object sender, EventArgs e)
+        {
+            txtcliente.Clear();
+            cmbproducto.SelectedIndex = -1;
+            cmbcategoria.SelectedIndex = -1;
+            cmbtalla.SelectedIndex = -1;
+            numericant.Value = 0;
+            txtprecio.Clear();
+            txtdescuento.Clear();
+            cmbpago.SelectedIndex = -1;
+
+            txtiva.Clear();
+            txtsubtotal.Clear();
+            txttotal.Clear();
+            txtefectivo.Clear();
+
+            buttonIngresar.Enabled = true;
+            btnlimpiar.Enabled = true;
+            btnnuevoo.Enabled = true;
+
+            numeroFactura++;
+            File.WriteAllText("factura.txt", numeroFactura.ToString("D3"));
+            txtfactura.Text = numeroFactura.ToString();
+
+            btnnuevoo.Enabled = false;
+
+            //Cuenta nueva
+            txtsubtotal.Text = "0.00";
+            txtiva.Text = "0.00";
+            txttotal.Text = "0.00";
+            subtotal = 0;
+            total = 0;
+        }
+
+        private void cmbcategoria_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmbbtalla_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            cmbtalla.Items.Add("Camisetas masculinas");
+            cmbtalla.Items.Add("Pantalones masculinos");
+            cmbtalla.Items.Add("Calzado");
+            cmbtalla.Items.Add("Ropa Femenina");
+        }
+
+        private void cmbcategoria_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmbcategoria_SelectedIndexChanged_2(object sender, EventArgs e)
+        {
+            cmbproducto.Items.Clear();
+
+            string tiposeleccionado = cmbcategoria.Text;
+
+            if (tipos.ContainsKey(tiposeleccionado))
+            {
+                foreach (string producto in tipos[tiposeleccionado])
+                {
+                    cmbproducto.Items.Add(producto);
+                }
+            }
+        }
+
+        private void cmbpago_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox5_Enter(object sender, EventArgs e)
         {
 
         }

@@ -77,5 +77,15 @@ namespace Pantalla_de_devolución
         {
             Menu obj = new Menu(); obj.Show(); this.Hide();
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

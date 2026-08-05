@@ -39,6 +39,7 @@
             clienteToolStripMenuItem = new ToolStripMenuItem();
             categoríaToolStripMenuItem = new ToolStripMenuItem();
             medidaToolStripMenuItem = new ToolStripMenuItem();
+            marcaToolStripMenuItem = new ToolStripMenuItem();
             rolToolStripMenuItem = new ToolStripMenuItem();
             módulosToolStripMenuItem = new ToolStripMenuItem();
             compraToolStripMenuItem = new ToolStripMenuItem();
@@ -48,7 +49,6 @@
             nivelaciónDeInventarioToolStripMenuItem = new ToolStripMenuItem();
             reportesToolStripMenuItem = new ToolStripMenuItem();
             controlDeEgresosDeCajaToolStripMenuItem = new ToolStripMenuItem();
-            controlDeRolesToolStripMenuItem = new ToolStripMenuItem();
             reporteDeComprasToolStripMenuItem = new ToolStripMenuItem();
             reporteDeProductosToolStripMenuItem = new ToolStripMenuItem();
             reporteDeVentasToolStripMenuItem = new ToolStripMenuItem();
@@ -89,7 +89,7 @@
             // 
             // ingresarNuevoToolStripMenuItem
             // 
-            ingresarNuevoToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { productoToolStripMenuItem, proveedorToolStripMenuItem, usuarioToolStripMenuItem, clienteToolStripMenuItem, categoríaToolStripMenuItem, medidaToolStripMenuItem, rolToolStripMenuItem });
+            ingresarNuevoToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { productoToolStripMenuItem, proveedorToolStripMenuItem, usuarioToolStripMenuItem, clienteToolStripMenuItem, categoríaToolStripMenuItem, medidaToolStripMenuItem, marcaToolStripMenuItem, rolToolStripMenuItem });
             ingresarNuevoToolStripMenuItem.Name = "ingresarNuevoToolStripMenuItem";
             ingresarNuevoToolStripMenuItem.Size = new Size(99, 20);
             ingresarNuevoToolStripMenuItem.Text = "Ingresar Nuevo";
@@ -133,8 +133,15 @@
             // 
             medidaToolStripMenuItem.Name = "medidaToolStripMenuItem";
             medidaToolStripMenuItem.Size = new Size(128, 22);
-            medidaToolStripMenuItem.Text = "Medida";
+            medidaToolStripMenuItem.Text = "Talla";
             medidaToolStripMenuItem.Click += medidaToolStripMenuItem_Click;
+            // 
+            // marcaToolStripMenuItem
+            // 
+            marcaToolStripMenuItem.Name = "marcaToolStripMenuItem";
+            marcaToolStripMenuItem.Size = new Size(128, 22);
+            marcaToolStripMenuItem.Text = "Marca";
+            marcaToolStripMenuItem.Click += marcaToolStripMenuItem_Click;
             // 
             // rolToolStripMenuItem
             // 
@@ -187,7 +194,7 @@
             // 
             // reportesToolStripMenuItem
             // 
-            reportesToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { controlDeEgresosDeCajaToolStripMenuItem, controlDeRolesToolStripMenuItem, reporteDeComprasToolStripMenuItem, reporteDeProductosToolStripMenuItem, reporteDeVentasToolStripMenuItem });
+            reportesToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { controlDeEgresosDeCajaToolStripMenuItem, reporteDeComprasToolStripMenuItem, reporteDeProductosToolStripMenuItem, reporteDeVentasToolStripMenuItem });
             reportesToolStripMenuItem.Name = "reportesToolStripMenuItem";
             reportesToolStripMenuItem.Size = new Size(120, 20);
             reportesToolStripMenuItem.Text = " Reportes y Control";
@@ -199,13 +206,6 @@
             controlDeEgresosDeCajaToolStripMenuItem.Size = new Size(215, 22);
             controlDeEgresosDeCajaToolStripMenuItem.Text = "Control de Egresos de Caja";
             controlDeEgresosDeCajaToolStripMenuItem.Click += controlDeEgresosDeCajaToolStripMenuItem_Click;
-            // 
-            // controlDeRolesToolStripMenuItem
-            // 
-            controlDeRolesToolStripMenuItem.Name = "controlDeRolesToolStripMenuItem";
-            controlDeRolesToolStripMenuItem.Size = new Size(215, 22);
-            controlDeRolesToolStripMenuItem.Text = "Gestión de Usuarios";
-            controlDeRolesToolStripMenuItem.Click += controlDeRolesToolStripMenuItem_Click;
             // 
             // reporteDeComprasToolStripMenuItem
             // 
@@ -280,7 +280,6 @@
         private ToolStripMenuItem inventarioToolStripMenuItem;
         private ToolStripMenuItem nivelaciónDeInventarioToolStripMenuItem;
         private ToolStripMenuItem controlDeEgresosDeCajaToolStripMenuItem;
-        private ToolStripMenuItem controlDeRolesToolStripMenuItem;
         private ToolStripMenuItem reporteDeComprasToolStripMenuItem;
         private ToolStripMenuItem reporteDeProductosToolStripMenuItem;
         private ToolStripMenuItem reporteDeVentasToolStripMenuItem;
@@ -288,5 +287,6 @@
         private ToolStripMenuItem categoríaToolStripMenuItem;
         private ToolStripMenuItem medidaToolStripMenuItem;
         private ToolStripMenuItem rolToolStripMenuItem;
+        private ToolStripMenuItem marcaToolStripMenuItem;
     }
 }

@@ -20,6 +20,7 @@ namespace SISTEMA
         private string _respuesta;
         private string _estado;
         private int _idrol;
+        private string _rol;
 
         //instanciar la conexion 
         Conexion connection = new Conexion();
@@ -113,8 +114,8 @@ namespace SISTEMA
                 string m = _idrol.ToString();
                 if (string.IsNullOrWhiteSpace(m)) MessageBox.Show("El rol no puede ir vacio.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        }
-
+        }      
+      
         public bool iniciarSesion(string username, string contrasena)
         {            
 
@@ -307,9 +308,7 @@ namespace SISTEMA
                         MessageBox.Show("El correo no existe.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return false;
                     }
-                }
-            }
-        }
+                }                  
 
         internal ClaseVenta ClaseVenta
         {

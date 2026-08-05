@@ -28,19 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            dataGridView1 = new DataGridView();
-            Column1 = new DataGridViewTextBoxColumn();
-            Column2 = new DataGridViewTextBoxColumn();
-            Column3 = new DataGridViewTextBoxColumn();
-            Column6 = new DataGridViewTextBoxColumn();
-            Column4 = new DataGridViewTextBoxColumn();
+            dgvCliente = new DataGridView();
             txtBuscar = new TextBox();
             cbBuscar = new ComboBox();
             label7 = new Label();
-            btnCancelar = new Button();
+            btnLimpiar = new Button();
             btnGuardar = new Button();
             cbEstado = new ComboBox();
-            txtRuc = new TextBox();
+            txtDireccion = new TextBox();
             txtTelefono = new TextBox();
             label6 = new Label();
             label5 = new Label();
@@ -49,57 +44,32 @@
             label3 = new Label();
             label2 = new Label();
             button7 = new Button();
-            textBox1 = new TextBox();
+            txtCorreo = new TextBox();
             label1 = new Label();
-            button1 = new Button();
-            button2 = new Button();
-            button5 = new Button();
+            btnBuscar = new Button();
+            btnIngresar = new Button();
+            btnEditar = new Button();
             button3 = new Button();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            Column1 = new DataGridViewTextBoxColumn();
+            Column2 = new DataGridViewTextBoxColumn();
+            Column3 = new DataGridViewTextBoxColumn();
+            Column6 = new DataGridViewTextBoxColumn();
+            Column4 = new DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)dgvCliente).BeginInit();
             SuspendLayout();
             // 
-            // dataGridView1
+            // dgvCliente
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3, Column6, Column4 });
-            dataGridView1.Location = new Point(12, 226);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(814, 289);
-            dataGridView1.TabIndex = 80;
-            // 
-            // Column1
-            // 
-            Column1.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            Column1.HeaderText = "Nombre de Cliente";
-            Column1.MinimumWidth = 6;
-            Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            Column2.HeaderText = "Teléfono";
-            Column2.MinimumWidth = 6;
-            Column2.Name = "Column2";
-            Column2.Width = 125;
-            // 
-            // Column3
-            // 
-            Column3.HeaderText = "Dirección";
-            Column3.MinimumWidth = 6;
-            Column3.Name = "Column3";
-            Column3.Width = 125;
-            // 
-            // Column6
-            // 
-            Column6.HeaderText = "Correo";
-            Column6.Name = "Column6";
-            // 
-            // Column4
-            // 
-            Column4.HeaderText = "Estado";
-            Column4.MinimumWidth = 6;
-            Column4.Name = "Column4";
-            Column4.Width = 125;
+            dgvCliente.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvCliente.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3, Column6, Column4 });
+            dgvCliente.Location = new Point(12, 226);
+            dgvCliente.Name = "dgvCliente";
+            dgvCliente.RowHeadersWidth = 51;
+            dgvCliente.Size = new Size(814, 289);
+            dgvCliente.TabIndex = 80;
+            dgvCliente.CellContentClick += dgvCliente_CellContentClick;
+            dgvCliente.CellDoubleClick += dgvCliente_CellDoubleClick;
+            dgvCliente.DoubleClick += dgvCliente_DoubleClick;
             // 
             // txtBuscar
             // 
@@ -130,29 +100,31 @@
             label7.Text = "Buscar:";
             label7.Click += label7_Click;
             // 
-            // btnCancelar
+            // btnLimpiar
             // 
-            btnCancelar.BackColor = SystemColors.ButtonFace;
-            btnCancelar.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            btnCancelar.ForeColor = Color.FromArgb(69, 69, 210);
-            btnCancelar.Location = new Point(676, 180);
-            btnCancelar.Name = "btnCancelar";
-            btnCancelar.Size = new Size(124, 34);
-            btnCancelar.TabIndex = 76;
-            btnCancelar.Text = "🗑LIMPIAR";
-            btnCancelar.UseVisualStyleBackColor = false;
+            btnLimpiar.BackColor = SystemColors.ButtonFace;
+            btnLimpiar.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            btnLimpiar.ForeColor = Color.FromArgb(69, 69, 210);
+            btnLimpiar.Location = new Point(676, 180);
+            btnLimpiar.Name = "btnLimpiar";
+            btnLimpiar.Size = new Size(124, 34);
+            btnLimpiar.TabIndex = 76;
+            btnLimpiar.Text = "🗑LIMPIAR";
+            btnLimpiar.UseVisualStyleBackColor = false;
+            btnLimpiar.Click += btnLimpiar_Click;
             // 
             // btnGuardar
             // 
             btnGuardar.BackColor = SystemColors.ButtonFace;
             btnGuardar.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
             btnGuardar.ForeColor = Color.FromArgb(69, 69, 210);
-            btnGuardar.Location = new Point(840, 267);
+            btnGuardar.Location = new Point(832, 226);
             btnGuardar.Name = "btnGuardar";
             btnGuardar.Size = new Size(123, 39);
             btnGuardar.TabIndex = 75;
             btnGuardar.Text = "💾 GUARDAR";
             btnGuardar.UseVisualStyleBackColor = false;
+            btnGuardar.Click += btnGuardar_Click;
             // 
             // cbEstado
             // 
@@ -163,13 +135,13 @@
             cbEstado.Size = new Size(114, 28);
             cbEstado.TabIndex = 74;
             // 
-            // txtRuc
+            // txtDireccion
             // 
-            txtRuc.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            txtRuc.Location = new Point(372, 117);
-            txtRuc.Name = "txtRuc";
-            txtRuc.Size = new Size(204, 27);
-            txtRuc.TabIndex = 73;
+            txtDireccion.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            txtDireccion.Location = new Point(372, 117);
+            txtDireccion.Name = "txtDireccion";
+            txtDireccion.Size = new Size(204, 27);
+            txtDireccion.TabIndex = 73;
             // 
             // txtTelefono
             // 
@@ -254,13 +226,13 @@
             button7.UseVisualStyleBackColor = false;
             button7.Click += button7_Click;
             // 
-            // textBox1
+            // txtCorreo
             // 
-            textBox1.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            textBox1.Location = new Point(582, 117);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(204, 27);
-            textBox1.TabIndex = 86;
+            txtCorreo.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            txtCorreo.Location = new Point(582, 117);
+            txtCorreo.Name = "txtCorreo";
+            txtCorreo.Size = new Size(204, 27);
+            txtCorreo.TabIndex = 86;
             // 
             // label1
             // 
@@ -273,41 +245,44 @@
             label1.TabIndex = 84;
             label1.Text = "Correo:";
             // 
-            // button1
+            // btnBuscar
             // 
-            button1.BackColor = SystemColors.ButtonFace;
-            button1.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            button1.ForeColor = Color.FromArgb(69, 69, 210);
-            button1.Location = new Point(387, 181);
-            button1.Name = "button1";
-            button1.Size = new Size(113, 33);
-            button1.TabIndex = 87;
-            button1.Text = "🔍BUSCAR";
-            button1.UseVisualStyleBackColor = false;
+            btnBuscar.BackColor = SystemColors.ButtonFace;
+            btnBuscar.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            btnBuscar.ForeColor = Color.FromArgb(69, 69, 210);
+            btnBuscar.Location = new Point(387, 181);
+            btnBuscar.Name = "btnBuscar";
+            btnBuscar.Size = new Size(113, 33);
+            btnBuscar.TabIndex = 87;
+            btnBuscar.Text = "🔍BUSCAR";
+            btnBuscar.UseVisualStyleBackColor = false;
+            btnBuscar.Click += btnBuscar_Click;
             // 
-            // button2
+            // btnIngresar
             // 
-            button2.BackColor = SystemColors.ButtonFace;
-            button2.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            button2.ForeColor = Color.FromArgb(69, 69, 210);
-            button2.Location = new Point(558, 180);
-            button2.Name = "button2";
-            button2.Size = new Size(112, 34);
-            button2.TabIndex = 88;
-            button2.Text = "⬇️INGRESAR";
-            button2.UseVisualStyleBackColor = false;
+            btnIngresar.BackColor = SystemColors.ButtonFace;
+            btnIngresar.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            btnIngresar.ForeColor = Color.FromArgb(69, 69, 210);
+            btnIngresar.Location = new Point(558, 180);
+            btnIngresar.Name = "btnIngresar";
+            btnIngresar.Size = new Size(112, 34);
+            btnIngresar.TabIndex = 88;
+            btnIngresar.Text = "⬇️INGRESAR";
+            btnIngresar.UseVisualStyleBackColor = false;
+            btnIngresar.Click += btnIngresar_Click;
             // 
-            // button5
+            // btnEditar
             // 
-            button5.BackColor = SystemColors.ButtonFace;
-            button5.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            button5.ForeColor = Color.FromArgb(69, 69, 210);
-            button5.Location = new Point(849, 226);
-            button5.Name = "button5";
-            button5.Size = new Size(105, 35);
-            button5.TabIndex = 117;
-            button5.Text = "✏️EDITAR";
-            button5.UseVisualStyleBackColor = false;
+            btnEditar.BackColor = SystemColors.ButtonFace;
+            btnEditar.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            btnEditar.ForeColor = Color.FromArgb(69, 69, 210);
+            btnEditar.Location = new Point(806, 181);
+            btnEditar.Name = "btnEditar";
+            btnEditar.Size = new Size(123, 35);
+            btnEditar.TabIndex = 117;
+            btnEditar.Text = "✏️EDITAR";
+            btnEditar.UseVisualStyleBackColor = false;
+            btnEditar.Click += btnEditar_Click;
             // 
             // button3
             // 
@@ -321,6 +296,39 @@
             button3.Text = "AYUDA";
             button3.UseVisualStyleBackColor = false;
             // 
+            // Column1
+            // 
+            Column1.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            Column1.HeaderText = "Nombre de Cliente";
+            Column1.MinimumWidth = 6;
+            Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            Column2.HeaderText = "Teléfono";
+            Column2.MinimumWidth = 6;
+            Column2.Name = "Column2";
+            Column2.Width = 125;
+            // 
+            // Column3
+            // 
+            Column3.HeaderText = "Dirección";
+            Column3.MinimumWidth = 6;
+            Column3.Name = "Column3";
+            Column3.Width = 170;
+            // 
+            // Column6
+            // 
+            Column6.HeaderText = "Correo";
+            Column6.Name = "Column6";
+            // 
+            // Column4
+            // 
+            Column4.HeaderText = "Estado";
+            Column4.MinimumWidth = 6;
+            Column4.Name = "Column4";
+            Column4.Width = 125;
+            // 
             // Clientes
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -328,19 +336,19 @@
             BackColor = Color.Gainsboro;
             ClientSize = new Size(975, 527);
             Controls.Add(button3);
-            Controls.Add(button5);
-            Controls.Add(button2);
-            Controls.Add(button1);
-            Controls.Add(textBox1);
+            Controls.Add(btnEditar);
+            Controls.Add(btnIngresar);
+            Controls.Add(btnBuscar);
+            Controls.Add(txtCorreo);
             Controls.Add(label1);
-            Controls.Add(dataGridView1);
+            Controls.Add(dgvCliente);
             Controls.Add(txtBuscar);
             Controls.Add(cbBuscar);
             Controls.Add(label7);
-            Controls.Add(btnCancelar);
+            Controls.Add(btnLimpiar);
             Controls.Add(btnGuardar);
             Controls.Add(cbEstado);
-            Controls.Add(txtRuc);
+            Controls.Add(txtDireccion);
             Controls.Add(txtTelefono);
             Controls.Add(label6);
             Controls.Add(label5);
@@ -352,20 +360,20 @@
             FormBorderStyle = FormBorderStyle.None;
             Name = "Clientes";
             Text = "Clientes";
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvCliente).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-        private DataGridView dataGridView1;
+        private DataGridView dgvCliente;
         private TextBox txtBuscar;
         private ComboBox cbBuscar;
         private Label label7;
-        private Button btnCancelar;
+        private Button btnLimpiar;
         private Button btnGuardar;
         private ComboBox cbEstado;
-        private TextBox txtRuc;
+        private TextBox txtDireccion;
         private TextBox txtTelefono;
         private Label label6;
         private Label label5;
@@ -374,16 +382,16 @@
         private Label label3;
         private Label label2;
         private Button button7;
-        private TextBox textBox1;
+        private TextBox txtCorreo;
         private Label label1;
-        private Button button1;
+        private Button btnBuscar;
+        private Button btnIngresar;
+        private Button btnEditar;
+        private Button button3;
         private DataGridViewTextBoxColumn Column1;
         private DataGridViewTextBoxColumn Column2;
         private DataGridViewTextBoxColumn Column3;
         private DataGridViewTextBoxColumn Column6;
         private DataGridViewTextBoxColumn Column4;
-        private Button button2;
-        private Button button5;
-        private Button button3;
     }
 }

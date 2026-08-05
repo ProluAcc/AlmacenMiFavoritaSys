@@ -91,6 +91,7 @@
             FormBorderStyle = FormBorderStyle.None;
             Name = "frmBienvenida";
             Text = "frmBienvenida";
+            Load += frmBienvenida_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();

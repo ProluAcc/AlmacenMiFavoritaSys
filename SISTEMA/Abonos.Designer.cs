@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             groupBox1 = new GroupBox();
-            radioButton1 = new RadioButton();
-            textBox1 = new TextBox();
-            radioButton2 = new RadioButton();
-            comboBox1 = new ComboBox();
-            button1 = new Button();
             dataGridView1 = new DataGridView();
+            button1 = new Button();
+            comboBox1 = new ComboBox();
+            radioButton2 = new RadioButton();
+            textBox1 = new TextBox();
+            radioButton1 = new RadioButton();
             panel1 = new Panel();
             label13 = new Label();
             label12 = new Label();
@@ -47,17 +47,19 @@
             panel2 = new Panel();
             label5 = new Label();
             groupBox2 = new GroupBox();
-            label1 = new Label();
-            textBox2 = new TextBox();
-            label2 = new Label();
-            textBox3 = new TextBox();
-            label3 = new Label();
-            textBox4 = new TextBox();
-            textBox5 = new TextBox();
-            label4 = new Label();
+            button2 = new Button();
             textBox6 = new TextBox();
             label10 = new Label();
-            button2 = new Button();
+            textBox5 = new TextBox();
+            label4 = new Label();
+            textBox4 = new TextBox();
+            label3 = new Label();
+            textBox3 = new TextBox();
+            label2 = new Label();
+            textBox2 = new TextBox();
+            label1 = new Label();
+            textBox7 = new TextBox();
+            label11 = new Label();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             panel1.SuspendLayout();
@@ -81,46 +83,13 @@
             groupBox1.TabStop = false;
             groupBox1.Text = "Buscar cliente";
             // 
-            // radioButton1
+            // dataGridView1
             // 
-            radioButton1.AutoSize = true;
-            radioButton1.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            radioButton1.Location = new Point(6, 22);
-            radioButton1.Name = "radioButton1";
-            radioButton1.Size = new Size(204, 24);
-            radioButton1.TabIndex = 0;
-            radioButton1.TabStop = true;
-            radioButton1.Text = "No. de Factura al Crédito:";
-            radioButton1.UseVisualStyleBackColor = true;
-            // 
-            // textBox1
-            // 
-            textBox1.Font = new Font("Segoe UI", 11F);
-            textBox1.Location = new Point(207, 20);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(178, 27);
-            textBox1.TabIndex = 1;
-            // 
-            // radioButton2
-            // 
-            radioButton2.AutoSize = true;
-            radioButton2.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            radioButton2.Location = new Point(391, 23);
-            radioButton2.Name = "radioButton2";
-            radioButton2.Size = new Size(79, 24);
-            radioButton2.TabIndex = 2;
-            radioButton2.TabStop = true;
-            radioButton2.Text = "Cliente:";
-            radioButton2.UseVisualStyleBackColor = true;
-            // 
-            // comboBox1
-            // 
-            comboBox1.Font = new Font("Segoe UI", 11F);
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(470, 21);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(168, 28);
-            comboBox1.TabIndex = 3;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(6, 58);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.Size = new Size(764, 150);
+            dataGridView1.TabIndex = 5;
             // 
             // button1
             // 
@@ -134,13 +103,46 @@
             button1.Text = "🔍 ";
             button1.UseVisualStyleBackColor = false;
             // 
-            // dataGridView1
+            // comboBox1
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(6, 58);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(764, 150);
-            dataGridView1.TabIndex = 5;
+            comboBox1.Font = new Font("Segoe UI", 11F);
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Location = new Point(470, 21);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(168, 28);
+            comboBox1.TabIndex = 3;
+            // 
+            // radioButton2
+            // 
+            radioButton2.AutoSize = true;
+            radioButton2.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            radioButton2.Location = new Point(391, 23);
+            radioButton2.Name = "radioButton2";
+            radioButton2.Size = new Size(79, 24);
+            radioButton2.TabIndex = 2;
+            radioButton2.TabStop = true;
+            radioButton2.Text = "Cliente:";
+            radioButton2.UseVisualStyleBackColor = true;
+            // 
+            // textBox1
+            // 
+            textBox1.Font = new Font("Segoe UI", 11F);
+            textBox1.Location = new Point(207, 20);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(178, 27);
+            textBox1.TabIndex = 1;
+            // 
+            // radioButton1
+            // 
+            radioButton1.AutoSize = true;
+            radioButton1.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            radioButton1.Location = new Point(6, 22);
+            radioButton1.Name = "radioButton1";
+            radioButton1.Size = new Size(204, 24);
+            radioButton1.TabIndex = 0;
+            radioButton1.TabStop = true;
+            radioButton1.Text = "No. de Factura al Crédito:";
+            radioButton1.UseVisualStyleBackColor = true;
             // 
             // panel1
             // 
@@ -266,6 +268,8 @@
             // groupBox2
             // 
             groupBox2.BackColor = SystemColors.Control;
+            groupBox2.Controls.Add(textBox7);
+            groupBox2.Controls.Add(label11);
             groupBox2.Controls.Add(button2);
             groupBox2.Controls.Add(textBox6);
             groupBox2.Controls.Add(label10);
@@ -284,77 +288,17 @@
             groupBox2.TabStop = false;
             groupBox2.Text = "Abonos";
             // 
-            // label1
+            // button2
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            label1.Location = new Point(12, 19);
-            label1.Name = "label1";
-            label1.Size = new Size(83, 20);
-            label1.TabIndex = 0;
-            label1.Text = "Cuota No.:";
-            // 
-            // textBox2
-            // 
-            textBox2.Font = new Font("Segoe UI", 11F);
-            textBox2.Location = new Point(6, 43);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(100, 27);
-            textBox2.TabIndex = 6;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            label2.Location = new Point(120, 19);
-            label2.Name = "label2";
-            label2.Size = new Size(165, 20);
-            label2.TabIndex = 7;
-            label2.Text = "Fecha Limite del Pago:";
-            // 
-            // textBox3
-            // 
-            textBox3.Font = new Font("Segoe UI", 11F);
-            textBox3.Location = new Point(117, 42);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(168, 27);
-            textBox3.TabIndex = 8;
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            label3.Location = new Point(32, 83);
-            label3.Name = "label3";
-            label3.Size = new Size(50, 20);
-            label3.TabIndex = 9;
-            label3.Text = "Mora:";
-            // 
-            // textBox4
-            // 
-            textBox4.Font = new Font("Segoe UI", 11F);
-            textBox4.Location = new Point(6, 106);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(100, 27);
-            textBox4.TabIndex = 10;
-            // 
-            // textBox5
-            // 
-            textBox5.Font = new Font("Segoe UI", 11F);
-            textBox5.Location = new Point(117, 106);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(117, 27);
-            textBox5.TabIndex = 12;
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            label4.Location = new Point(117, 83);
-            label4.Name = "label4";
-            label4.Size = new Size(117, 20);
-            label4.TabIndex = 11;
-            label4.Text = "Total a Abonar:";
+            button2.BackColor = SystemColors.ButtonFace;
+            button2.Font = new Font("Segoe UI Black", 11F, FontStyle.Bold);
+            button2.ForeColor = Color.FromArgb(69, 69, 210);
+            button2.Location = new Point(277, 141);
+            button2.Name = "button2";
+            button2.Size = new Size(178, 37);
+            button2.TabIndex = 6;
+            button2.Text = "💰REGISTRAR ABONO";
+            button2.UseVisualStyleBackColor = false;
             // 
             // textBox6
             // 
@@ -374,17 +318,95 @@
             label10.TabIndex = 13;
             label10.Text = "Cantidad Abonada:";
             // 
-            // button2
+            // textBox5
             // 
-            button2.BackColor = SystemColors.ButtonFace;
-            button2.Font = new Font("Segoe UI Black", 11F, FontStyle.Bold);
-            button2.ForeColor = Color.FromArgb(69, 69, 210);
-            button2.Location = new Point(277, 141);
-            button2.Name = "button2";
-            button2.Size = new Size(178, 37);
-            button2.TabIndex = 6;
-            button2.Text = "💰REGISTRAR ABONO";
-            button2.UseVisualStyleBackColor = false;
+            textBox5.Font = new Font("Segoe UI", 11F);
+            textBox5.Location = new Point(117, 106);
+            textBox5.Name = "textBox5";
+            textBox5.Size = new Size(117, 27);
+            textBox5.TabIndex = 12;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            label4.Location = new Point(117, 83);
+            label4.Name = "label4";
+            label4.Size = new Size(117, 20);
+            label4.TabIndex = 11;
+            label4.Text = "Total a Abonar:";
+            // 
+            // textBox4
+            // 
+            textBox4.Font = new Font("Segoe UI", 11F);
+            textBox4.Location = new Point(6, 106);
+            textBox4.Name = "textBox4";
+            textBox4.Size = new Size(100, 27);
+            textBox4.TabIndex = 10;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            label3.Location = new Point(32, 83);
+            label3.Name = "label3";
+            label3.Size = new Size(50, 20);
+            label3.TabIndex = 9;
+            label3.Text = "Mora:";
+            // 
+            // textBox3
+            // 
+            textBox3.Font = new Font("Segoe UI", 11F);
+            textBox3.Location = new Point(251, 40);
+            textBox3.Name = "textBox3";
+            textBox3.Size = new Size(168, 27);
+            textBox3.TabIndex = 8;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            label2.Location = new Point(254, 17);
+            label2.Name = "label2";
+            label2.Size = new Size(165, 20);
+            label2.TabIndex = 7;
+            label2.Text = "Fecha Limite del Pago:";
+            // 
+            // textBox2
+            // 
+            textBox2.Font = new Font("Segoe UI", 11F);
+            textBox2.Location = new Point(6, 43);
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(100, 27);
+            textBox2.TabIndex = 6;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            label1.Location = new Point(12, 19);
+            label1.Name = "label1";
+            label1.Size = new Size(83, 20);
+            label1.TabIndex = 0;
+            label1.Text = "Cuota No.:";
+            // 
+            // textBox7
+            // 
+            textBox7.Font = new Font("Segoe UI", 11F);
+            textBox7.Location = new Point(117, 40);
+            textBox7.Name = "textBox7";
+            textBox7.Size = new Size(128, 27);
+            textBox7.TabIndex = 16;
+            // 
+            // label11
+            // 
+            label11.AutoSize = true;
+            label11.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            label11.Location = new Point(117, 19);
+            label11.Name = "label11";
+            label11.Size = new Size(126, 20);
+            label11.TabIndex = 15;
+            label11.Text = "Monto de Cuota:";
             // 
             // Abonos
             // 
@@ -441,5 +463,7 @@
         private TextBox textBox3;
         private Label label2;
         private Button button2;
+        private TextBox textBox7;
+        private Label label11;
     }
 }

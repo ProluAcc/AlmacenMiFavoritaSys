@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             groupBox1 = new GroupBox();
+            button5 = new Button();
             textBox3 = new TextBox();
             button1 = new Button();
             label3 = new Label();
-            textBox2 = new TextBox();
             label2 = new Label();
             label1 = new Label();
             textBox1 = new TextBox();
@@ -64,7 +64,7 @@
             textBox5 = new TextBox();
             label5 = new Label();
             label4 = new Label();
-            button5 = new Button();
+            comboBox2 = new ComboBox();
             groupBox1.SuspendLayout();
             groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
@@ -78,13 +78,13 @@
             // groupBox1
             // 
             groupBox1.BackColor = SystemColors.Control;
+            groupBox1.Controls.Add(comboBox2);
             groupBox1.Controls.Add(button5);
             groupBox1.Controls.Add(textBox3);
             groupBox1.Controls.Add(button1);
-            groupBox1.Controls.Add(label3);
-            groupBox1.Controls.Add(textBox2);
-            groupBox1.Controls.Add(label2);
             groupBox1.Controls.Add(label1);
+            groupBox1.Controls.Add(label2);
+            groupBox1.Controls.Add(label3);
             groupBox1.Controls.Add(textBox1);
             groupBox1.Location = new Point(1, 2);
             groupBox1.Margin = new Padding(4, 3, 4, 3);
@@ -95,10 +95,22 @@
             groupBox1.TabStop = false;
             groupBox1.Enter += groupBox1_Enter;
             // 
+            // button5
+            // 
+            button5.BackColor = SystemColors.ButtonFace;
+            button5.Font = new Font("Segoe UI Black", 11F, FontStyle.Bold);
+            button5.ForeColor = Color.FromArgb(69, 69, 210);
+            button5.Location = new Point(895, 16);
+            button5.Name = "button5";
+            button5.Size = new Size(73, 35);
+            button5.TabIndex = 18;
+            button5.Text = "AYUDA";
+            button5.UseVisualStyleBackColor = false;
+            // 
             // textBox3
             // 
             textBox3.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            textBox3.Location = new Point(579, 19);
+            textBox3.Location = new Point(684, 20);
             textBox3.Margin = new Padding(4, 3, 4, 3);
             textBox3.Name = "textBox3";
             textBox3.Size = new Size(138, 27);
@@ -109,7 +121,7 @@
             button1.BackColor = SystemColors.ControlLight;
             button1.Font = new Font("Segoe UI Black", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button1.ForeColor = Color.FromArgb(69, 69, 210);
-            button1.Location = new Point(734, 13);
+            button1.Location = new Point(244, 14);
             button1.Margin = new Padding(4, 3, 4, 3);
             button1.Name = "button1";
             button1.Size = new Size(101, 39);
@@ -122,7 +134,7 @@
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
             label3.ForeColor = Color.Black;
-            label3.Location = new Point(454, 22);
+            label3.Location = new Point(563, 23);
             label3.Margin = new Padding(4, 0, 4, 0);
             label3.Name = "label3";
             label3.Size = new Size(117, 20);
@@ -130,22 +142,12 @@
             label3.Text = "Fecha de venta:";
             label3.Click += label3_Click;
             // 
-            // textBox2
-            // 
-            textBox2.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            textBox2.ForeColor = Color.Black;
-            textBox2.Location = new Point(308, 19);
-            textBox2.Margin = new Padding(4, 3, 4, 3);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(138, 27);
-            textBox2.TabIndex = 3;
-            // 
             // label2
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
             label2.ForeColor = Color.Black;
-            label2.Location = new Point(244, 22);
+            label2.Location = new Point(353, 23);
             label2.Margin = new Padding(4, 0, 4, 0);
             label2.Name = "label2";
             label2.Size = new Size(61, 20);
@@ -303,7 +305,7 @@
             button3.Name = "button3";
             button3.Size = new Size(131, 50);
             button3.TabIndex = 8;
-            button3.Text = "🔃PROCESAR DEVOLUCIÓN";
+            button3.Text = "🔽AGREGAR DEVOLUCIÓN";
             button3.UseVisualStyleBackColor = false;
             button3.Click += button3_Click_1;
             // 
@@ -370,6 +372,7 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(634, 133);
             panel1.TabIndex = 8;
+            panel1.Paint += panel1_Paint;
             // 
             // groupBox2
             // 
@@ -454,17 +457,14 @@
             label4.TabIndex = 11;
             label4.Text = "Producto Nuevo:";
             // 
-            // button5
+            // comboBox2
             // 
-            button5.BackColor = SystemColors.ButtonFace;
-            button5.Font = new Font("Segoe UI Black", 11F, FontStyle.Bold);
-            button5.ForeColor = Color.FromArgb(69, 69, 210);
-            button5.Location = new Point(895, 16);
-            button5.Name = "button5";
-            button5.Size = new Size(73, 35);
-            button5.TabIndex = 18;
-            button5.Text = "AYUDA";
-            button5.UseVisualStyleBackColor = false;
+            comboBox2.Font = new Font("Segoe UI", 11F);
+            comboBox2.FormattingEnabled = true;
+            comboBox2.Location = new Point(421, 20);
+            comboBox2.Name = "comboBox2";
+            comboBox2.Size = new Size(135, 28);
+            comboBox2.TabIndex = 19;
             // 
             // Devolución
             // 
@@ -503,7 +503,6 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button1;
@@ -537,5 +536,6 @@
         private ComboBox comboBox1;
         private RadioButton radioButton1;
         private Button button5;
+        private ComboBox comboBox2;
     }
 }

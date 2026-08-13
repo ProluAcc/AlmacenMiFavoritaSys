@@ -26,7 +26,7 @@ namespace SISTEMA
                 {
                     Menu obj = new Menu(); obj.Show(); this.Hide();
                 }
-                else MessageBox.Show("Usuario o contraseña incorrectos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                else MessageBox.Show("Usuario o contraseï¿½a incorrectos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             catch (Exception x)
             {
@@ -44,12 +44,12 @@ namespace SISTEMA
                 }
                 else if (cu.contrasena != cu.usersContrasenas[cu.username])
                 {
-                    MessageBox.Show("Contraseña incorrecta", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Contraseï¿½a incorrecta", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     txtContrasena.Text = ""; txtContrasena.Focus();
                 }
                 else if (cu.contrasena == cu.usersContrasenas[cu.username])
                 {
-                    MessageBox.Show($"¡Bienvenido al sistema {cu.username}!", "Bienvenido(a)", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show($"ï¿½Bienvenido al sistema {cu.username}!", "Bienvenido(a)", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     Menu obj = new Menu(); 
                     
                     obj.Show(); this.Hide();

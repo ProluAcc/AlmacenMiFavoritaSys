@@ -15,7 +15,7 @@ namespace SISTEMA
         public frmBienvenida()
         {
             InitializeComponent();
-            label1.Text = $"¡Bienvenido, {username}!";
+            label1.Text = $"¡Bienvenido,!";
         }
 
         private void button1_Click(object sender, EventArgs e)

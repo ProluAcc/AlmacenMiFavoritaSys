@@ -22,7 +22,7 @@ namespace SISTEMA
         public Menu(string username)
         {
             InitializeComponent();
-            MostrarFormularioMdi(new frmBienvenida(username));
+            MostrarFormularioMdi(new frmBienvenida());
             nombreUsuario = username;
         }
 
@@ -85,7 +85,7 @@ namespace SISTEMA
 
         private void compraToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MostrarFormularioMdi(new Compra(nombreUsuario));
+            MostrarFormularioMdi(new Compra());
         }
 
         private void ventaToolStripMenuItem_Click(object sender, EventArgs e)

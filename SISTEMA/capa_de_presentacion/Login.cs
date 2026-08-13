@@ -22,6 +22,21 @@ namespace SISTEMA
 
             try
             {
+                if (cu.iniciarSesion(cu.username, cu.contrasena))
+                {
+                    Menu obj = new Menu(); obj.Show(); this.Hide();
+                }
+                else MessageBox.Show("Usuario o contraseña incorrectos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (Exception x)
+            {
+                MessageBox.Show(x.Message);
+                txtUsuario.Focus();
+            }
+
+            /*
+            try
+            {
                 if (!cu.usersContrasenas.ContainsKey(cu.username))
                 {
                     MessageBox.Show("Usuario incorrecto", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -44,7 +59,7 @@ namespace SISTEMA
             {
                 MessageBox.Show(x.Message);
                 txtUsuario.Focus();
-            }
+            }*/
         }
 
         private void btnRecuperar_Click(object sender, EventArgs e)

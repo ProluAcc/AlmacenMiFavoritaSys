@@ -31,20 +31,20 @@
             button1 = new Button();
             label2 = new Label();
             groupBox1 = new GroupBox();
-            button2 = new Button();
-            textBox8 = new TextBox();
+            btnRespaldo = new Button();
+            txtNombreRespaldo = new TextBox();
             label1 = new Label();
             groupBox2 = new GroupBox();
-            textBox1 = new TextBox();
-            button4 = new Button();
-            button3 = new Button();
+            txtRestauracion = new TextBox();
+            btnSeleccionar = new Button();
+            btnRestaurar = new Button();
             label3 = new Label();
             dataGridView1 = new DataGridView();
             Column1 = new DataGridViewTextBoxColumn();
             groupBox3 = new GroupBox();
             groupBox4 = new GroupBox();
-            button6 = new Button();
-            button5 = new Button();
+            btnEliminar = new Button();
+            btnDescargar = new Button();
             button7 = new Button();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
@@ -78,8 +78,8 @@
             // groupBox1
             // 
             groupBox1.BackColor = SystemColors.Control;
-            groupBox1.Controls.Add(button2);
-            groupBox1.Controls.Add(textBox8);
+            groupBox1.Controls.Add(btnRespaldo);
+            groupBox1.Controls.Add(txtNombreRespaldo);
             groupBox1.Controls.Add(label1);
             groupBox1.Location = new Point(12, 66);
             groupBox1.Name = "groupBox1";
@@ -88,25 +88,26 @@
             groupBox1.TabStop = false;
             groupBox1.Text = "Crear Respaldo";
             // 
-            // button2
+            // btnRespaldo
             // 
-            button2.BackColor = SystemColors.ControlLight;
-            button2.Font = new Font("Segoe UI Black", 11F, FontStyle.Bold);
-            button2.ForeColor = Color.FromArgb(69, 69, 210);
-            button2.Location = new Point(176, 51);
-            button2.Name = "button2";
-            button2.Size = new Size(190, 38);
-            button2.TabIndex = 15;
-            button2.Text = "💾CREAR RESPALDO";
-            button2.UseVisualStyleBackColor = false;
+            btnRespaldo.BackColor = SystemColors.ControlLight;
+            btnRespaldo.Font = new Font("Segoe UI Black", 11F, FontStyle.Bold);
+            btnRespaldo.ForeColor = Color.FromArgb(69, 69, 210);
+            btnRespaldo.Location = new Point(176, 51);
+            btnRespaldo.Name = "btnRespaldo";
+            btnRespaldo.Size = new Size(190, 38);
+            btnRespaldo.TabIndex = 15;
+            btnRespaldo.Text = "💾CREAR RESPALDO";
+            btnRespaldo.UseVisualStyleBackColor = false;
+            btnRespaldo.Click += button2_Click;
             // 
-            // textBox8
+            // txtNombreRespaldo
             // 
-            textBox8.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            textBox8.Location = new Point(176, 18);
-            textBox8.Name = "textBox8";
-            textBox8.Size = new Size(190, 27);
-            textBox8.TabIndex = 14;
+            txtNombreRespaldo.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            txtNombreRespaldo.Location = new Point(176, 18);
+            txtNombreRespaldo.Name = "txtNombreRespaldo";
+            txtNombreRespaldo.Size = new Size(190, 27);
+            txtNombreRespaldo.TabIndex = 14;
             // 
             // label1
             // 
@@ -122,9 +123,9 @@
             // groupBox2
             // 
             groupBox2.BackColor = SystemColors.Control;
-            groupBox2.Controls.Add(textBox1);
-            groupBox2.Controls.Add(button4);
-            groupBox2.Controls.Add(button3);
+            groupBox2.Controls.Add(txtRestauracion);
+            groupBox2.Controls.Add(btnSeleccionar);
+            groupBox2.Controls.Add(btnRestaurar);
             groupBox2.Controls.Add(label3);
             groupBox2.Location = new Point(417, 66);
             groupBox2.Name = "groupBox2";
@@ -134,37 +135,37 @@
             groupBox2.Text = "Restaurar Base de Datos";
             groupBox2.Enter += groupBox2_Enter;
             // 
-            // textBox1
+            // txtRestauracion
             // 
-            textBox1.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            textBox1.Location = new Point(202, 28);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(338, 27);
-            textBox1.TabIndex = 16;
+            txtRestauracion.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            txtRestauracion.Location = new Point(202, 28);
+            txtRestauracion.Name = "txtRestauracion";
+            txtRestauracion.Size = new Size(338, 27);
+            txtRestauracion.TabIndex = 16;
             // 
-            // button4
+            // btnSeleccionar
             // 
-            button4.BackColor = SystemColors.ControlLight;
-            button4.Font = new Font("Segoe UI Black", 11F, FontStyle.Bold);
-            button4.ForeColor = Color.FromArgb(69, 69, 210);
-            button4.Location = new Point(6, 22);
-            button4.Name = "button4";
-            button4.Size = new Size(190, 38);
-            button4.TabIndex = 16;
-            button4.Text = "SELECCIONAR ARCHIVO";
-            button4.UseVisualStyleBackColor = false;
+            btnSeleccionar.BackColor = SystemColors.ControlLight;
+            btnSeleccionar.Font = new Font("Segoe UI Black", 11F, FontStyle.Bold);
+            btnSeleccionar.ForeColor = Color.FromArgb(69, 69, 210);
+            btnSeleccionar.Location = new Point(6, 22);
+            btnSeleccionar.Name = "btnSeleccionar";
+            btnSeleccionar.Size = new Size(190, 38);
+            btnSeleccionar.TabIndex = 16;
+            btnSeleccionar.Text = "SELECCIONAR ARCHIVO";
+            btnSeleccionar.UseVisualStyleBackColor = false;
             // 
-            // button3
+            // btnRestaurar
             // 
-            button3.BackColor = SystemColors.ControlLight;
-            button3.Font = new Font("Segoe UI Black", 11F, FontStyle.Bold);
-            button3.ForeColor = Color.FromArgb(69, 69, 210);
-            button3.Location = new Point(392, 65);
-            button3.Name = "button3";
-            button3.Size = new Size(148, 38);
-            button3.TabIndex = 15;
-            button3.Text = "💾RESTAURAR";
-            button3.UseVisualStyleBackColor = false;
+            btnRestaurar.BackColor = SystemColors.ControlLight;
+            btnRestaurar.Font = new Font("Segoe UI Black", 11F, FontStyle.Bold);
+            btnRestaurar.ForeColor = Color.FromArgb(69, 69, 210);
+            btnRestaurar.Location = new Point(392, 65);
+            btnRestaurar.Name = "btnRestaurar";
+            btnRestaurar.Size = new Size(148, 38);
+            btnRestaurar.TabIndex = 15;
+            btnRestaurar.Text = "💾RESTAURAR";
+            btnRestaurar.UseVisualStyleBackColor = false;
             // 
             // label3
             // 
@@ -205,8 +206,8 @@
             // groupBox4
             // 
             groupBox4.BackColor = SystemColors.Control;
-            groupBox4.Controls.Add(button6);
-            groupBox4.Controls.Add(button5);
+            groupBox4.Controls.Add(btnEliminar);
+            groupBox4.Controls.Add(btnDescargar);
             groupBox4.Location = new Point(12, 181);
             groupBox4.Name = "groupBox4";
             groupBox4.Size = new Size(299, 77);
@@ -214,29 +215,29 @@
             groupBox4.TabStop = false;
             groupBox4.Text = "Acciones";
             // 
-            // button6
+            // btnEliminar
             // 
-            button6.BackColor = SystemColors.ControlLight;
-            button6.Font = new Font("Segoe UI Black", 11F, FontStyle.Bold);
-            button6.ForeColor = Color.FromArgb(69, 69, 210);
-            button6.Location = new Point(154, 22);
-            button6.Name = "button6";
-            button6.Size = new Size(130, 38);
-            button6.TabIndex = 17;
-            button6.Text = "🗑️ELIMINAR";
-            button6.UseVisualStyleBackColor = false;
+            btnEliminar.BackColor = SystemColors.ControlLight;
+            btnEliminar.Font = new Font("Segoe UI Black", 11F, FontStyle.Bold);
+            btnEliminar.ForeColor = Color.FromArgb(69, 69, 210);
+            btnEliminar.Location = new Point(154, 22);
+            btnEliminar.Name = "btnEliminar";
+            btnEliminar.Size = new Size(130, 38);
+            btnEliminar.TabIndex = 17;
+            btnEliminar.Text = "🗑️ELIMINAR";
+            btnEliminar.UseVisualStyleBackColor = false;
             // 
-            // button5
+            // btnDescargar
             // 
-            button5.BackColor = SystemColors.ControlLight;
-            button5.Font = new Font("Segoe UI Black", 11F, FontStyle.Bold);
-            button5.ForeColor = Color.FromArgb(69, 69, 210);
-            button5.Location = new Point(6, 22);
-            button5.Name = "button5";
-            button5.Size = new Size(142, 38);
-            button5.TabIndex = 16;
-            button5.Text = "📎DESCARGAR";
-            button5.UseVisualStyleBackColor = false;
+            btnDescargar.BackColor = SystemColors.ControlLight;
+            btnDescargar.Font = new Font("Segoe UI Black", 11F, FontStyle.Bold);
+            btnDescargar.ForeColor = Color.FromArgb(69, 69, 210);
+            btnDescargar.Location = new Point(6, 22);
+            btnDescargar.Name = "btnDescargar";
+            btnDescargar.Size = new Size(142, 38);
+            btnDescargar.TabIndex = 16;
+            btnDescargar.Text = "📎DESCARGAR";
+            btnDescargar.UseVisualStyleBackColor = false;
             // 
             // button7
             // 
@@ -283,18 +284,18 @@
         private Label label2;
         private GroupBox groupBox1;
         private Label label1;
-        private TextBox textBox8;
-        private Button button2;
+        private TextBox txtNombreRespaldo;
+        private Button btnRespaldo;
         private GroupBox groupBox2;
-        private Button button4;
-        private Button button3;
+        private Button btnSeleccionar;
+        private Button btnRestaurar;
         private Label label3;
-        private TextBox textBox1;
+        private TextBox txtRestauracion;
         private DataGridView dataGridView1;
         private GroupBox groupBox3;
         private GroupBox groupBox4;
-        private Button button6;
-        private Button button5;
+        private Button btnEliminar;
+        private Button btnDescargar;
         private DataGridViewTextBoxColumn Column1;
         private Button button7;
     }

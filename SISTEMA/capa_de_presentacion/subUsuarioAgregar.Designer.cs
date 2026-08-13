@@ -48,6 +48,7 @@
             comboRolR = new ComboBox();
             label7 = new Label();
             btnIngresarW = new Button();
+            button2 = new Button();
             SuspendLayout();
             // 
             // label2
@@ -236,19 +237,32 @@
             btnIngresarW.BackColor = SystemColors.ButtonFace;
             btnIngresarW.Font = new Font("Segoe UI Black", 11F, FontStyle.Bold);
             btnIngresarW.ForeColor = Color.FromArgb(69, 69, 210);
-            btnIngresarW.Location = new Point(358, 243);
+            btnIngresarW.Location = new Point(116, 298);
             btnIngresarW.Name = "btnIngresarW";
             btnIngresarW.Size = new Size(134, 36);
             btnIngresarW.TabIndex = 163;
             btnIngresarW.Text = "➕AGREGAR";
             btnIngresarW.UseVisualStyleBackColor = false;
             // 
+            // button2
+            // 
+            button2.BackColor = SystemColors.ButtonFace;
+            button2.Font = new Font("Segoe UI Black", 11F, FontStyle.Bold);
+            button2.ForeColor = Color.FromArgb(69, 69, 210);
+            button2.Location = new Point(269, 298);
+            button2.Name = "button2";
+            button2.Size = new Size(150, 36);
+            button2.TabIndex = 197;
+            button2.Text = "✖️CANCELAR";
+            button2.UseVisualStyleBackColor = false;
+            // 
             // subUsuarioAgregar
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Gainsboro;
-            ClientSize = new Size(531, 301);
+            ClientSize = new Size(531, 346);
+            Controls.Add(button2);
             Controls.Add(btnIngresarW);
             Controls.Add(button6);
             Controls.Add(comboEstadoY);
@@ -298,5 +312,6 @@
         private ComboBox comboRolR;
         private Label label7;
         private Button btnIngresarW;
+        private Button button2;
     }
 }

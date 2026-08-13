@@ -20,8 +20,8 @@ namespace SISTEMA
         {
             InitializeComponent();
 
-            btnGuardarH.Click += btnGuardarH_Click;
-            btnLimpiarK.Click += btnLimpiarK_Click;
+            //btnGuardarH.Click += btnGuardarH_Click;
+            //btnLimpiarK.Click += btnLimpiarK_Click;
             btnBuscarD.Click += btnBuscarD_Click;
             btnEditarM.Click += btnEditarM_Click;
             btnIngresarW.Click += btnIngresarW_Click;
@@ -36,7 +36,7 @@ namespace SISTEMA
 
         private void InicializarCombos()
         {
-            comboRolR.Items.Clear();
+            /*comboRolR.Items.Clear();
             comboRolR.Items.AddRange(new object[] { "Admin", "Cajero", "Encargado de Compras", "Gerente" });
             comboRolR.SelectedIndex = -1;
 
@@ -46,7 +46,7 @@ namespace SISTEMA
 
             cmbBuscarQ.Items.Clear();
             cmbBuscarQ.Items.AddRange(new object[] { "Nombre", "Usuario", "Correo", "Rol", "Estado" });
-            cmbBuscarQ.SelectedIndex = 1;
+            cmbBuscarQ.SelectedIndex = 1;*/
         }
 
         private void RefrescarGrid(IEnumerable<ClaseUsuarios> lista)
@@ -60,7 +60,7 @@ namespace SISTEMA
 
         private void LimpiarCampos()
         {
-            txtNombreT.Clear();
+            /*txtNombreT.Clear();
             txtUsuarioL.Clear();
             txtEmailU.Clear();
             textContraseñaJ.Clear();
@@ -69,13 +69,13 @@ namespace SISTEMA
             // Dejar los combos en blanco para que el usuario los seleccione manualmente
             comboRolR.SelectedIndex = -1;
             comboEstadoY.SelectedIndex = -1;
-            editingIndex = -1;
+            editingIndex = -1;*/
         }
 
         private void btnGuardarH_Click(object sender, EventArgs e)
         {
             // Acción 'Ingresar' — aquí la dejo como "cargar al formulario" el usuario seleccionado actualmente.
-            if (dataGridView1.SelectedRows.Count == 0)
+            /*if (dataGridView1.SelectedRows.Count == 0)
             {
                 MessageBox.Show("Selecciona una fila en el listado para 'Ingresar'.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
@@ -93,7 +93,7 @@ namespace SISTEMA
             comboEstadoY.SelectedItem = u.estado;
 
             editingIndex = idx;
-            MessageBox.Show("Usuario cargado en el formulario.", "Ingresar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Usuario cargado en el formulario.", "Ingresar", MessageBoxButtons.OK, MessageBoxIcon.Information);*/
         }
 
         private void btnLimpiarK_Click(object sender, EventArgs e)
@@ -141,7 +141,7 @@ namespace SISTEMA
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             // Cargar fila seleccionada en los campos para editar
-            if (e.RowIndex < 0 || e.RowIndex >= usuarios.Count) return;
+            /*if (e.RowIndex < 0 || e.RowIndex >= usuarios.Count) return;
 
             editingIndex = e.RowIndex;
             var u = usuarios[editingIndex];
@@ -155,12 +155,12 @@ namespace SISTEMA
             comboRolR.SelectedItem = u.rol;
             comboEstadoY.SelectedItem = u.estado;
 
-            MessageBox.Show("Usuario cargado para edición. Usa ✏️EDITAR para aplicar cambios.", "Edición", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Usuario cargado para edición. Usa ✏️EDITAR para aplicar cambios.", "Edición", MessageBoxButtons.OK, MessageBoxIcon.Information);*/
         }
 
         private void btnEditarM_Click(object sender, EventArgs e)
         {
-            if (editingIndex < 0 || editingIndex >= usuarios.Count)
+            /*if (editingIndex < 0 || editingIndex >= usuarios.Count)
             {
                 MessageBox.Show("No hay ningún usuario cargado para editar. Haz doble clic en la fila a editar.", "Editar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
@@ -178,12 +178,12 @@ namespace SISTEMA
 
             RefrescarGrid(usuarios);
             LimpiarCampos();
-            MessageBox.Show("Usuario actualizado correctamente.", "Editar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Usuario actualizado correctamente.", "Editar", MessageBoxButtons.OK, MessageBoxIcon.Information);*/
         }
 
         private void btnIngresarW_Click(object sender, EventArgs e)
         {
-            try
+            /*try
             {
                 // Agregar nuevo usuario (no duplicados por 'Usuario')
                 if (usuarios.Any(x => x.username.Equals(txtUsuarioL.Text, StringComparison.OrdinalIgnoreCase)))
@@ -209,7 +209,7 @@ namespace SISTEMA
                 LimpiarCampos();
                 MessageBox.Show("Usuario guardado correctamente.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            catch (Exception x) { MessageBox.Show("Error al guardar usuario: " + x.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+            catch (Exception x) { MessageBox.Show("Error al guardar usuario: " + x.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }*/
         }
 
         private void button7_Click_1(object sender, EventArgs e)

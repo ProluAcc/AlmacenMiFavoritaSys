@@ -1,4 +1,5 @@
 ﻿using SISTEMA.capa_de_datos;
+using SISTEMA.capa_de_presentacion;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -21,11 +22,6 @@ namespace SISTEMA
             CargarComboBox();
         }
 
-        private void button7_Click(object sender, EventArgs e)
-        {
-            Menu obj = new Menu(); obj.Show(); this.Hide();
-        }
-
         private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
         {
 
@@ -42,18 +38,18 @@ namespace SISTEMA
 
         private void Limpiar()
         {
-            txtNombre.Text = "";
+            /*txtNombre.Text = "";
             txtDireccion.Text = "";
             txtTelefono.Text = "";
             txtCorreo.Text = "";
-            cmbEstado.SelectedIndex = -1;
+            cmbEstado.SelectedIndex = -1;*/
         }
 
         private void CargarComboBox()
         {
-            cmbEstado.Items.Add("Activo");
+            /*cmbEstado.Items.Add("Activo");
             cmbEstado.Items.Add("Inactivo");
-            cmbEstado.SelectedIndex = -1;
+            cmbEstado.SelectedIndex = -1;*/
 
             cmbBuscar.Items.Add("Nombre");
             cmbBuscar.Items.Add("Teléfono");
@@ -64,7 +60,7 @@ namespace SISTEMA
 
         private void button4_Click(object sender, EventArgs e)
         {
-            try
+            /*try
             {
                 if (p.Any(x => x.nombre.Equals(txtCorreo.Text, StringComparison.OrdinalIgnoreCase)))
                 {
@@ -91,7 +87,7 @@ namespace SISTEMA
             catch (Exception x)
             {
                 MessageBox.Show("Error: " + x.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            }*/
         }
 
         private void btnLimpiar_Click(object sender, EventArgs e)
@@ -101,7 +97,7 @@ namespace SISTEMA
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            try 
+            /*try 
             {
                 if (indexEditar < 0 || indexEditar >= p.Count)
                 {
@@ -124,7 +120,7 @@ namespace SISTEMA
             catch (Exception x)
             {
                 MessageBox.Show("Error: " + x.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            }*/
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
@@ -170,7 +166,7 @@ namespace SISTEMA
 
         private void dgvProveedor_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            try
+            /*try
             {
                 if (e.RowIndex < 0 || e.RowIndex >= p.Count) return;
 
@@ -189,7 +185,7 @@ namespace SISTEMA
             catch (Exception x)
             {
                 MessageBox.Show("Error: " + x.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            }*/
         }
     }
 }

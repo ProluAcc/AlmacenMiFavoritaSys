@@ -43,6 +43,7 @@
             label6 = new Label();
             cmbEstado = new ComboBox();
             btnIngresar = new Button();
+            button2 = new Button();
             SuspendLayout();
             // 
             // button7
@@ -129,7 +130,7 @@
             txtDireccion.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
             txtDireccion.Location = new Point(215, 123);
             txtDireccion.Name = "txtDireccion";
-            txtDireccion.Size = new Size(218, 27);
+            txtDireccion.Size = new Size(200, 27);
             txtDireccion.TabIndex = 152;
             // 
             // label5
@@ -185,12 +186,24 @@
             btnIngresar.BackColor = SystemColors.ButtonFace;
             btnIngresar.Font = new Font("Segoe UI Black", 11F, FontStyle.Bold);
             btnIngresar.ForeColor = Color.FromArgb(69, 69, 210);
-            btnIngresar.Location = new Point(453, 118);
+            btnIngresar.Location = new Point(431, 118);
             btnIngresar.Name = "btnIngresar";
-            btnIngresar.Size = new Size(126, 37);
+            btnIngresar.Size = new Size(148, 37);
             btnIngresar.TabIndex = 157;
             btnIngresar.Text = "➕AGREGAR";
             btnIngresar.UseVisualStyleBackColor = false;
+            // 
+            // button2
+            // 
+            button2.BackColor = SystemColors.ButtonFace;
+            button2.Font = new Font("Segoe UI Black", 11F, FontStyle.Bold);
+            button2.ForeColor = Color.FromArgb(69, 69, 210);
+            button2.Location = new Point(431, 161);
+            button2.Name = "button2";
+            button2.Size = new Size(150, 36);
+            button2.TabIndex = 197;
+            button2.Text = "✖️CANCELAR";
+            button2.UseVisualStyleBackColor = false;
             // 
             // subProveedorAgregar
             // 
@@ -198,6 +211,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Gainsboro;
             ClientSize = new Size(593, 305);
+            Controls.Add(button2);
             Controls.Add(btnIngresar);
             Controls.Add(label6);
             Controls.Add(cmbEstado);
@@ -236,5 +250,6 @@
         private Label label6;
         private ComboBox cmbEstado;
         private Button btnIngresar;
+        private Button button2;
     }
 }

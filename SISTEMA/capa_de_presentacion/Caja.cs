@@ -1,5 +1,6 @@
 using Control_de_egresos_de_caja;
 using SISTEMA;
+using SISTEMA.capa_de_presentacion;
 
 namespace caja
 {
@@ -8,8 +9,6 @@ namespace caja
         public Caja(string username)
         {
             InitializeComponent();
-            lblUsuario.Text = $"Usuario: {username}";
-            lblDolar.Text = $"Cambio de Dólar: $1-> {CalcularDolar()}";
         }
 
         private double CalcularDolar()

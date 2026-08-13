@@ -19,7 +19,6 @@ namespace SISTEMA.capa_de_datos
         private string _pregunta;
         private string _respuesta;
         private string _estado;
-        private int _idrol;
         private string _rol;
 
         //instanciar la conexion 
@@ -105,13 +104,13 @@ namespace SISTEMA.capa_de_datos
             }
         }
 
-        public int idrol
+        public string rol
         {
-            get { return _idrol; }
+            get { return _rol; }
             set
             {
-                _idrol = value;
-                string m = _idrol.ToString();
+                _rol = value;
+                string m = _rol.ToString();
                 if (string.IsNullOrWhiteSpace(m)) MessageBox.Show("El rol no puede ir vacio.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }      
@@ -292,7 +291,7 @@ namespace SISTEMA.capa_de_datos
                 {
                     //reemplaza el parametro @correo con el valor dado como correo
                     comando.Parameters.AddWithValue("@correo", correo);
-                    string hash = BCrypt.Net.BCrypt.HashPassword(contrasena);                    
+                    string hash = BCrypt.Net.BCrypt.HashPassword(contrasena);
                     comando.Parameters.AddWithValue("@contrasena", hash);
 
                     //ExecuteNonQuery devuelve el número de filas afectadas
@@ -308,7 +307,9 @@ namespace SISTEMA.capa_de_datos
                         MessageBox.Show("El correo no existe.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return false;
                     }
-                }                  
+                }
+            }
+        }
 
         internal ClaseVenta ClaseVenta
         {

@@ -41,6 +41,7 @@
             button7 = new Button();
             button2 = new Button();
             label2 = new Label();
+            button1 = new Button();
             SuspendLayout();
             // 
             // textBox1
@@ -154,9 +155,9 @@
             button2.BackColor = SystemColors.ButtonFace;
             button2.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
             button2.ForeColor = Color.FromArgb(69, 69, 210);
-            button2.Location = new Point(463, 157);
+            button2.Location = new Point(148, 213);
             button2.Name = "button2";
-            button2.Size = new Size(112, 34);
+            button2.Size = new Size(140, 36);
             button2.TabIndex = 98;
             button2.Text = "➕AGREGAR";
             button2.UseVisualStyleBackColor = false;
@@ -173,12 +174,25 @@
             label2.TabIndex = 99;
             label2.Text = "AGREGAR CLIENTE";
             // 
+            // button1
+            // 
+            button1.BackColor = SystemColors.ButtonFace;
+            button1.Font = new Font("Segoe UI Black", 11F, FontStyle.Bold);
+            button1.ForeColor = Color.FromArgb(69, 69, 210);
+            button1.Location = new Point(304, 213);
+            button1.Name = "button1";
+            button1.Size = new Size(150, 36);
+            button1.TabIndex = 197;
+            button1.Text = "✖️CANCELAR";
+            button1.UseVisualStyleBackColor = false;
+            // 
             // subClienteAgregar
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Gainsboro;
-            ClientSize = new Size(594, 209);
+            ClientSize = new Size(594, 261);
+            Controls.Add(button1);
             Controls.Add(label2);
             Controls.Add(button2);
             Controls.Add(button7);
@@ -213,5 +227,6 @@
         private Button button7;
         private Button button2;
         private Label label2;
+        private Button button1;
     }
 }

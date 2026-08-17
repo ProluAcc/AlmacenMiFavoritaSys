@@ -120,17 +120,6 @@
             button6.Text = "AYUDA";
             button6.UseVisualStyleBackColor = false;
             // 
-            // label4
-            // 
-            lblDolar.AutoSize = true;
-            lblDolar.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            lblDolar.ForeColor = Color.Black;
-            lblDolar.Location = new Point(615, 21);
-            lblDolar.Name = "lblDolar";
-            lblDolar.Size = new Size(235, 20);
-            lblDolar.TabIndex = 16;
-            lblDolar.Text = "Cambio de Dólar: $1 -> C$37.50";
-            // 
             // dateTimePicker1
             // 
             dateTimePicker1.CalendarFont = new Font("Segoe UI", 11F);

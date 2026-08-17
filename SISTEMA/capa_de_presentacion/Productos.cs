@@ -16,7 +16,7 @@ namespace SISTEMA
         public Productos()
         {
             InitializeComponent();
-            CBcategoria.Items.Add("Camisa");
+            /*CBcategoria.Items.Add("Camisa");
             CBcategoria.Items.Add("Pantalón");
             CBcategoria.Items.Add("Zapatos");
             CBtalla.Items.Add("S");
@@ -39,17 +39,12 @@ namespace SISTEMA
             CBbuscar.Items.Add("Talla");
             CBbuscar.Items.Add("Marca");
             TXTstockmin.Text = "10";
-            TXTstockmin.Enabled = false;
+            TXTstockmin.Enabled = false;*/
         }
 
         private void label6_Click(object sender, EventArgs e)
         {
 
-        }
-
-        private void button8_Click(object sender, EventArgs e)
-        {
-            Menu obj = new Menu(); obj.Show(); this.Hide();
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -84,18 +79,7 @@ namespace SISTEMA
 
         private void button4_Click(object sender, EventArgs e)
         {
-            dataGridView1.Rows.Add(
-             TXTcodigo.Text,
-             TXTdescripcion.Text,
-             CBcategoria.Text,
-             CBtalla.Text,
-             CBmarca.Text,
-             TXTpreciov.Text,
-             TXTnombre.Text,
-             TXTprecioc.Text,
-             TXTstockmax.Text,
-             TXTstockmin.Text
-             );
+           
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -128,32 +112,10 @@ namespace SISTEMA
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-            TXTstockmin.Text = "1"; // valor fijo
-
-            TXTcodigo.Clear();
-            TXTnombre.Clear();
-            TXTprecioc.Clear();
-            TXTpreciov.Clear();
-            TXTstockmax.Clear();
-            TXTdescripcion.Clear();
-
-
-            CBmarca.SelectedIndex = -1;
-            CBcategoria.SelectedIndex = -1;
-            CBtalla.SelectedIndex = -1;
-        }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
-        }
-
-        private void button10_Click(object sender, EventArgs e)
-        {
-            Marca obj = new Marca(); obj.ShowDialog();
         }
 
         private void button5_Click(object sender, EventArgs e)

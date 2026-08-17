@@ -53,6 +53,7 @@
             label3 = new Label();
             button7 = new Button();
             label2 = new Label();
+            button2 = new Button();
             SuspendLayout();
             // 
             // button8
@@ -84,9 +85,9 @@
             button4.BackColor = SystemColors.ButtonFace;
             button4.Font = new Font("Segoe UI Black", 11F, FontStyle.Bold);
             button4.ForeColor = Color.FromArgb(69, 69, 210);
-            button4.Location = new Point(542, 175);
+            button4.Location = new Point(527, 175);
             button4.Name = "button4";
-            button4.Size = new Size(128, 35);
+            button4.Size = new Size(150, 35);
             button4.TabIndex = 139;
             button4.Text = "➕AGREGAR";
             button4.UseVisualStyleBackColor = false;
@@ -297,12 +298,25 @@
             label2.TabIndex = 143;
             label2.Text = "AGREGAR PRODUCTO";
             // 
+            // button2
+            // 
+            button2.BackColor = SystemColors.ButtonFace;
+            button2.Font = new Font("Segoe UI Black", 11F, FontStyle.Bold);
+            button2.ForeColor = Color.FromArgb(69, 69, 210);
+            button2.Location = new Point(527, 224);
+            button2.Name = "button2";
+            button2.Size = new Size(150, 36);
+            button2.TabIndex = 197;
+            button2.Text = "✖️CANCELAR";
+            button2.UseVisualStyleBackColor = false;
+            // 
             // subProductoAgregar
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Gainsboro;
             ClientSize = new Size(689, 278);
+            Controls.Add(button2);
             Controls.Add(label2);
             Controls.Add(button7);
             Controls.Add(button8);
@@ -361,5 +375,6 @@
         private Label label3;
         private Button button7;
         private Label label2;
+        private Button button2;
     }
 }

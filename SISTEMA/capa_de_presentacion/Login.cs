@@ -24,7 +24,7 @@ namespace SISTEMA
             {
                 if (cu.iniciarSesion(cu.username, cu.contrasena))
                 {
-                    Menu obj = new Menu(); obj.Show(); this.Hide();
+                    Menu obj = new Menu(cu.username); obj.Show(); this.Hide();
                 }
                 else MessageBox.Show("Usuario o contrase�a incorrectos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }

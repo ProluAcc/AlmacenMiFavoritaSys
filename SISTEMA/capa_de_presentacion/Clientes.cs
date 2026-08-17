@@ -18,8 +18,7 @@ namespace SISTEMA
         private int indexEditar = -1;
         public Clientes()
         {
-            InitializeComponent();
-            IniciarCB();
+            InitializeComponent();            
         }
 
         private void label7_Click(object sender, EventArgs e)
@@ -27,17 +26,6 @@ namespace SISTEMA
 
         }
 
-        public void Limpiar()
-        {
-            txtNombre.Text = "";
-            txtTelefono.Text = "";
-            txtCorreo.Text = "";
-            txtDireccion.Text = "";
-
-            cbEstado.SelectedIndex = -1;
-            cbBuscar.SelectedIndex = -1;
-            indexEditar = -1;
-        }
 
         private void RefrescarGrid(IEnumerable<ClaseClientes> lista)
         {
@@ -48,19 +36,6 @@ namespace SISTEMA
             }
         }
 
-        public void IniciarCB()
-        {
-            cbEstado.Items.Add("Activo");
-            cbEstado.Items.Add("Inactivo");
-            cbEstado.SelectedIndex = -1;
-
-            cbBuscar.Items.Add("Nombre");
-            cbBuscar.Items.Add("Correo");
-            cbBuscar.Items.Add("Teléfono");
-            cbBuscar.Items.Add("Estado");
-            cbBuscar.SelectedIndex = -1;
-        }
-
         private void button7_Click(object sender, EventArgs e)
         {
 
@@ -68,7 +43,7 @@ namespace SISTEMA
 
         private void btnIngresar_Click(object sender, EventArgs e)
         {
-            try
+            /*try
             {
                 if (cliente.Any(x => x.correo.Equals(txtCorreo.Text, StringComparison.OrdinalIgnoreCase)))
                 {
@@ -95,17 +70,13 @@ namespace SISTEMA
             catch (Exception ex)
             {
                 MessageBox.Show("Error al ingresar el cliente: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            }*/
         }
 
-        private void btnLimpiar_Click(object sender, EventArgs e)
-        {
-            Limpiar();
-        }
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            if (indexEditar < 0 || indexEditar >= cliente.Count)
+            /*if (indexEditar < 0 || indexEditar >= cliente.Count)
             {
                 MessageBox.Show("No hay ningún cliente cargado para editar. Haz doble clic en la fila a editar.", "Editar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
@@ -120,7 +91,7 @@ namespace SISTEMA
 
             RefrescarGrid(cliente);
             Limpiar();
-            MessageBox.Show("Cliente actualizado correctamente.", "Editar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Cliente actualizado correctamente.", "Editar", MessageBoxButtons.OK, MessageBoxIcon.Information);*/
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
@@ -174,7 +145,7 @@ namespace SISTEMA
 
         private void dgvCliente_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex < 0 || e.RowIndex >= cliente.Count) return;
+            /*if (e.RowIndex < 0 || e.RowIndex >= cliente.Count) return;
 
             indexEditar = e.RowIndex;
             var u = cliente[indexEditar];
@@ -185,7 +156,7 @@ namespace SISTEMA
             txtTelefono.Text = u.telefono;
             cbEstado.Text = u.estado;
 
-            MessageBox.Show("Cliente cargado para edición. Usa ✏️EDITAR para aplicar cambios.", "Edición", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Cliente cargado para edición. Usa ✏️EDITAR para aplicar cambios.", "Edición", MessageBoxButtons.OK, MessageBoxIcon.Information);*/
         }
     }
 }

@@ -311,6 +311,154 @@ namespace SISTEMA.capa_de_datos
             }
         }
 
+        public bool VerificarSiUsuarioExiste(string correo)
+        {
+            //crea el objeto de conexion a la base de datos con el string de conexion
+            using (NpgsqlConnection conexion = new NpgsqlConnection(connection.con))
+            {
+                try
+                {
+                    //inicia la conexion 
+                    conexion.Open();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al conectar a la base de datos: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+                //filtra al usuario por el correo
+                string consulta = "select * from usuario where correo = @correo";
+
+                //realiza la consulta a la base de datos según la consulta anterior y a la conexión creada
+                using (NpgsqlCommand comando = new NpgsqlCommand(consulta, conexion))
+                {
+                    //reemplaza el parametro @correo con el valor dado como correo
+                    comando.Parameters.AddWithValue("@correo", correo);
+
+                    //utilza el datareader para guardar los resultados de la consulta y poder leerlos
+                    using (NpgsqlDataReader reader = comando.ExecuteReader())
+                    {
+                        // Si el reader tiene filas, significa que el correo existe
+                        if (reader.Read())
+                        {                                                        
+                            return true;
+                        }
+                        else
+                        {
+                            return false; 
+                        }
+                    }
+                }
+            }
+        }
+
+        public bool AgregarUsuario(int rol, string nombre, string username, string contrasena, string correo, string pregunta, string respuesta, string estado)
+        {
+            //crea el objeto de conexion a la base de datos con el string de conexion
+            using (NpgsqlConnection conexion = new NpgsqlConnection(connection.con))
+            {
+                try
+                {
+                    //inicia la conexion 
+                    conexion.Open();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al conectar a la base de datos: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+                //hace el insert del usuario a la base de datos con los datos recolecatos de los campos en subUsuarioAgregar
+                string consulta = "insert into usuario(id_rol, nombre, username, contrasena, correo, pregunta, respuesta, estado) values (@rol, @nombre, @username, @contrasena, @correo, @pregunta, @respuesta, @estado);";
+
+                //realiza la consulta a la base de datos según la consulta anterior y a la conexión creada
+                using (NpgsqlCommand comando = new NpgsqlCommand(consulta, conexion))
+                {
+                    //reemplaza los parametros dados
+                    comando.Parameters.AddWithValue("@rol", rol);
+                    comando.Parameters.AddWithValue("@nombre", nombre);
+                    comando.Parameters.AddWithValue("@username", username);
+                    comando.Parameters.AddWithValue("@contrasena", contrasena);
+                    comando.Parameters.AddWithValue("@correo", correo);                    
+                    comando.Parameters.AddWithValue("@pregunta", pregunta);
+                    comando.Parameters.AddWithValue("@respuesta", respuesta);
+                    comando.Parameters.AddWithValue("@estado", estado);
+
+                    //ExecuteNonQuery devuelve el número de filas afectadas
+                    int filasAfectadas = comando.ExecuteNonQuery();
+
+                    //Si filasAfectadas > 0, significa que el correo existe y la contraseña fue actualizada
+                    if (filasAfectadas > 0)
+                    {
+                        return true;
+                    }
+                    else
+                    {                        
+                        return false;
+                    }
+                }
+            }
+        }
+
+        public void BuscarUsuario(string parametro, string dato,  DataGridView data)
+        {
+            //crea el objeto de conexion a la base de datos con el string de conexion
+            using (NpgsqlConnection conexion = new NpgsqlConnection(connection.con))
+            {
+                try
+                {
+                    //inicia la conexion 
+                    conexion.Open();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al conectar a la base de datos: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+                //selecciona al usuario según el parametro y el dato dato
+                string consulta = "";
+                switch (parametro)
+                {
+                    case "nombre":
+                        consulta = "select * from usuario where nombre = @dato";                        
+                        break;
+                    case "username":
+                        consulta = "select * from usuario where username = @dato";
+                        break;
+                    case "correo":
+                        consulta = "select * from usuario where correo = @dato";
+                        break;
+                    case "estado":
+                        consulta = "select * from usuario where estado = @dato";
+                        break;
+                    case "rol":
+                        consulta = "select * from usuario where id_rol = @dato";
+                        break;
+                }                
+
+                //realiza la consulta a la base de datos según la consulta anterior y a la conexión creada
+                using (NpgsqlCommand comando = new NpgsqlCommand(consulta, conexion))
+                {
+                    //reemplaza con el valor del parametro y el dato
+                    //comando.Parameters.AddWithValue("@parametro", parametro);
+                    comando.Parameters.AddWithValue("@dato", dato);
+
+                    //utilza el datareader para guardar los resultados de la consulta y poder leerlos
+                    using (NpgsqlDataReader reader = comando.ExecuteReader())
+                    {
+                        // Si el reader tiene filas, significa que el usuario existe
+                        if (reader.Read())
+                        {
+                            data.DataSource = reader;
+                        }
+                        else
+                        {
+                            MessageBox.Show("No se encontró al usuario especificado con el parámetro especificado.", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        }
+                    }
+                }
+            }
+        }
+        
         internal ClaseVenta ClaseVenta
         {
             get => default;

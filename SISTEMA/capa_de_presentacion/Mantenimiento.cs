@@ -109,7 +109,7 @@ namespace SISTEMA
             }
         }
 
-        private void btnRestaurar_Click(object sender, EventArgs e)
+        private async void btnRestaurar_Click(object sender, EventArgs e)
         {
             string rutaRestaurar = dgvRespaldo.CurrentRow?.Cells[1].Value?.ToString();
 
@@ -138,10 +138,11 @@ namespace SISTEMA
                 string username = builder.Username;
                 string password = builder.Password;
                 string database = builder.Database;
+                string restoredDatabase = database + "_restaurada";
 
-                //crear la base de datos donde se hará la restauración
+                //crear la base de datos donde se hará la restauración SOLO si no existe
                 string createdbExe = "createdb";
-                string createdbArgs = $"-h {host} -p {port} -U {username} {database + "_restaurada"}";
+                string createdbArgs = $"-h {host} -p {port} -U {username} {restoredDatabase}";
 
                 var createdbPsi = new ProcessStartInfo(createdbExe, createdbArgs)
                 {
@@ -161,23 +162,27 @@ namespace SISTEMA
                     string createdbErr = createdbProcess.StandardError.ReadToEnd();
                     createdbProcess.WaitForExit();
 
-                    // Si el código es 0 o la BD ya existe, continua
-                    if (createdbProcess.ExitCode != 0 && !createdbErr.Contains("already exists"))
+                    // Si el código es 0, la BD se creó. Si no es 0, verificar si ya existe
+                    if (createdbProcess.ExitCode == 0)
+                    {
+                        MessageBox.Show("Base de datos para restauración creada. Empezando a copiar el contenido...", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else if (createdbErr.Contains("ya existe"))
+                    {
+                        MessageBox.Show("Base de datos para restauración ya existe. Procedeiendo a sobrescribir el contenido...", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
                     {
                         MessageBox.Show($"Error al crear base de datos:\n{createdbErr}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return;
                     }
-                    MessageBox.Show("Base de datos para restauración creada. Empezando a copiar el contenido...", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
 
                 // Nombre del ejecutable pg_restore
                 string pgRestoreExe = "pg_restore";
 
-                // Argumentos en formato custom para permitir restauración con pg_restore
-                //string arguments = $"--host \"{host}\" --port {port} --username \"{username}\" --format custom --verbose --file \"{rutaRestaurar}\" \"{database}\"";
-                //string arguments = $"--host \"{host}\" --port {port} --username svc_restore -n admin -n public --clean --if-exists --no-owner --no-comments --no-acl --exit-on-error --file \"{rutaRestaurar}\"";
-                //string arguments = $"-h {host} -p {port} -U {username} -d {database} -v --clean --if-exists --no-owner --no-comments --no-acl \"{rutaRestaurar}\"";
-                string arguments = $"-h {host} -p {port} -U {username} -d {database + "_restaurada"} -v -F c --clean --if-exists --no-owner --no-comments --no-acl \"{rutaRestaurar}\"";
+                // Argumentos con --clean --if-exists para limpiar y sobrescribir datos existentes
+                string arguments = $"-h {host} -p {port} -U {username} -d {restoredDatabase} -v -F c --clean --if-exists --no-owner --no-comments --no-acl \"{rutaRestaurar}\"";
 
                 //se configura para ejecutar pg_restore con los argumentos especificados anteriormetne
                 var psi = new ProcessStartInfo(pgRestoreExe, arguments)
@@ -185,7 +190,7 @@ namespace SISTEMA
                     UseShellExecute = false,
                     RedirectStandardOutput = true,
                     RedirectStandardError = true,
-                    CreateNoWindow = true
+                    CreateNoWindow = false
                 };
 
                 // Evitar que pg_restore pida contraseña interactiva
@@ -194,16 +199,21 @@ namespace SISTEMA
                 //empieza el proceso de pg_restore
                 using (var process = Process.Start(psi))
                 {
-                    // Leer salidas para diagnóstico 
-                    string stdOut = process.StandardOutput.ReadToEnd();
-                    string stdErr = process.StandardError.ReadToEnd();
+                    // Leer ambos streams de forma asincrónica para evitar deadlock
+                    var stdOutTask = process.StandardOutput.ReadToEndAsync();
+                    var stdErrTask = process.StandardError.ReadToEndAsync();
+
+                    await Task.WhenAll(stdOutTask, stdErrTask);
+
+                    string stdOut = stdOutTask.Result;
+                    string stdErr = stdErrTask.Result;
 
                     //esperar a que el proceso termine para mostrar si el respaldo fue exitoso o no
                     process.WaitForExit();
 
                     if (process.ExitCode == 0)
                     {
-                        MessageBox.Show("Restauración creada correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);                        
+                        MessageBox.Show("Restauración completada correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     else
                     {

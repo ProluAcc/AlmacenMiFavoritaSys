@@ -30,22 +30,22 @@
         {
             label2 = new Label();
             button7 = new Button();
-            txtNombreT = new TextBox();
+            txtNombre = new TextBox();
             label4 = new Label();
-            txtUsuarioL = new TextBox();
+            txtUsuario = new TextBox();
             label3 = new Label();
             label6 = new Label();
             label5 = new Label();
-            txtEmailU = new TextBox();
-            textContraseñaJ = new TextBox();
+            txtCorreo = new TextBox();
+            txtContrasena = new TextBox();
             label11 = new Label();
-            txtRespuestaT = new TextBox();
+            txtRespuesta = new TextBox();
             label1 = new Label();
-            txtPreguntaL = new TextBox();
+            txtPregunta = new TextBox();
             button6 = new Button();
-            comboEstadoY = new ComboBox();
+            comboEstado = new ComboBox();
             label9 = new Label();
-            comboRolR = new ComboBox();
+            comboRol = new ComboBox();
             label7 = new Label();
             btnIngresarW = new Button();
             button2 = new Button();
@@ -69,17 +69,17 @@
             button7.Enabled = false;
             button7.Location = new Point(0, 0);
             button7.Name = "button7";
-            button7.Size = new Size(532, 79);
+            button7.Size = new Size(575, 79);
             button7.TabIndex = 144;
             button7.UseVisualStyleBackColor = false;
             // 
-            // txtNombreT
+            // txtNombre
             // 
-            txtNombreT.Font = new Font("Segoe UI", 11F);
-            txtNombreT.Location = new Point(16, 121);
-            txtNombreT.Name = "txtNombreT";
-            txtNombreT.Size = new Size(145, 27);
-            txtNombreT.TabIndex = 149;
+            txtNombre.Font = new Font("Segoe UI", 11F);
+            txtNombre.Location = new Point(16, 121);
+            txtNombre.Name = "txtNombre";
+            txtNombre.Size = new Size(145, 27);
+            txtNombre.TabIndex = 149;
             // 
             // label4
             // 
@@ -91,13 +91,13 @@
             label4.TabIndex = 148;
             label4.Text = "Usuario:";
             // 
-            // txtUsuarioL
+            // txtUsuario
             // 
-            txtUsuarioL.Font = new Font("Segoe UI", 11F);
-            txtUsuarioL.Location = new Point(16, 185);
-            txtUsuarioL.Name = "txtUsuarioL";
-            txtUsuarioL.Size = new Size(145, 27);
-            txtUsuarioL.TabIndex = 147;
+            txtUsuario.Font = new Font("Segoe UI", 11F);
+            txtUsuario.Location = new Point(16, 185);
+            txtUsuario.Name = "txtUsuario";
+            txtUsuario.Size = new Size(145, 27);
+            txtUsuario.TabIndex = 147;
             // 
             // label3
             // 
@@ -129,22 +129,22 @@
             label5.TabIndex = 152;
             label5.Text = "Contraseña:";
             // 
-            // txtEmailU
+            // txtCorreo
             // 
-            txtEmailU.Font = new Font("Segoe UI", 11F);
-            txtEmailU.Location = new Point(16, 251);
-            txtEmailU.Name = "txtEmailU";
-            txtEmailU.Size = new Size(145, 27);
-            txtEmailU.TabIndex = 151;
-            txtEmailU.TextChanged += txtEmailU_TextChanged;
+            txtCorreo.Font = new Font("Segoe UI", 11F);
+            txtCorreo.Location = new Point(16, 251);
+            txtCorreo.Name = "txtCorreo";
+            txtCorreo.Size = new Size(145, 27);
+            txtCorreo.TabIndex = 151;
+            txtCorreo.TextChanged += txtEmailU_TextChanged;
             // 
-            // textContraseñaJ
+            // txtContrasena
             // 
-            textContraseñaJ.Font = new Font("Segoe UI", 11F);
-            textContraseñaJ.Location = new Point(184, 121);
-            textContraseñaJ.Name = "textContraseñaJ";
-            textContraseñaJ.Size = new Size(141, 27);
-            textContraseñaJ.TabIndex = 150;
+            txtContrasena.Font = new Font("Segoe UI", 11F);
+            txtContrasena.Location = new Point(184, 121);
+            txtContrasena.Name = "txtContrasena";
+            txtContrasena.Size = new Size(172, 27);
+            txtContrasena.TabIndex = 150;
             // 
             // label11
             // 
@@ -152,17 +152,17 @@
             label11.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
             label11.Location = new Point(184, 228);
             label11.Name = "label11";
-            label11.Size = new Size(85, 20);
+            label11.Size = new Size(180, 20);
             label11.TabIndex = 157;
-            label11.Text = "Respuesta:";
+            label11.Text = "Respuesta de Seguridad:";
             // 
-            // txtRespuestaT
+            // txtRespuesta
             // 
-            txtRespuestaT.Font = new Font("Segoe UI", 11F);
-            txtRespuestaT.Location = new Point(184, 251);
-            txtRespuestaT.Name = "txtRespuestaT";
-            txtRespuestaT.Size = new Size(141, 27);
-            txtRespuestaT.TabIndex = 156;
+            txtRespuesta.Font = new Font("Segoe UI", 11F);
+            txtRespuesta.Location = new Point(184, 251);
+            txtRespuesta.Name = "txtRespuesta";
+            txtRespuesta.Size = new Size(172, 27);
+            txtRespuesta.TabIndex = 156;
             // 
             // label1
             // 
@@ -170,63 +170,64 @@
             label1.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
             label1.Location = new Point(184, 162);
             label1.Name = "label1";
-            label1.Size = new Size(77, 20);
+            label1.Size = new Size(172, 20);
             label1.TabIndex = 155;
-            label1.Text = "Pregunta:";
+            label1.Text = "Pregunta de Seguridad:";
             // 
-            // txtPreguntaL
+            // txtPregunta
             // 
-            txtPreguntaL.Font = new Font("Segoe UI", 11F);
-            txtPreguntaL.Location = new Point(184, 185);
-            txtPreguntaL.Name = "txtPreguntaL";
-            txtPreguntaL.Size = new Size(141, 27);
-            txtPreguntaL.TabIndex = 154;
+            txtPregunta.Font = new Font("Segoe UI", 11F);
+            txtPregunta.Location = new Point(184, 185);
+            txtPregunta.Name = "txtPregunta";
+            txtPregunta.Size = new Size(172, 27);
+            txtPregunta.TabIndex = 154;
             // 
             // button6
             // 
             button6.BackColor = SystemColors.ButtonFace;
             button6.Font = new Font("Segoe UI Black", 11F, FontStyle.Bold);
             button6.ForeColor = Color.FromArgb(69, 69, 210);
-            button6.Location = new Point(484, 185);
+            button6.Location = new Point(519, 184);
             button6.Name = "button6";
             button6.Size = new Size(37, 29);
             button6.TabIndex = 162;
             button6.Text = "➕";
             button6.UseVisualStyleBackColor = false;
+            button6.Click += button6_Click;
             // 
-            // comboEstadoY
+            // comboEstado
             // 
-            comboEstadoY.Font = new Font("Segoe UI", 11F);
-            comboEstadoY.FormattingEnabled = true;
-            comboEstadoY.Location = new Point(343, 120);
-            comboEstadoY.Name = "comboEstadoY";
-            comboEstadoY.Size = new Size(135, 28);
-            comboEstadoY.TabIndex = 161;
+            comboEstado.Font = new Font("Segoe UI", 11F);
+            comboEstado.FormattingEnabled = true;
+            comboEstado.Location = new Point(378, 119);
+            comboEstado.Name = "comboEstado";
+            comboEstado.Size = new Size(135, 28);
+            comboEstado.TabIndex = 161;
             // 
             // label9
             // 
             label9.AutoSize = true;
             label9.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            label9.Location = new Point(343, 97);
+            label9.Location = new Point(378, 96);
             label9.Name = "label9";
             label9.Size = new Size(60, 20);
             label9.TabIndex = 160;
             label9.Text = "Estado:";
             // 
-            // comboRolR
+            // comboRol
             // 
-            comboRolR.Font = new Font("Segoe UI", 11F);
-            comboRolR.FormattingEnabled = true;
-            comboRolR.Location = new Point(343, 185);
-            comboRolR.Name = "comboRolR";
-            comboRolR.Size = new Size(135, 28);
-            comboRolR.TabIndex = 159;
+            comboRol.Font = new Font("Segoe UI", 11F);
+            comboRol.FormattingEnabled = true;
+            comboRol.Location = new Point(378, 184);
+            comboRol.Name = "comboRol";
+            comboRol.Size = new Size(135, 28);
+            comboRol.TabIndex = 159;
             // 
             // label7
             // 
             label7.AutoSize = true;
             label7.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            label7.Location = new Point(345, 160);
+            label7.Location = new Point(380, 159);
             label7.Name = "label7";
             label7.Size = new Size(36, 20);
             label7.TabIndex = 158;
@@ -237,49 +238,51 @@
             btnIngresarW.BackColor = SystemColors.ButtonFace;
             btnIngresarW.Font = new Font("Segoe UI Black", 11F, FontStyle.Bold);
             btnIngresarW.ForeColor = Color.FromArgb(69, 69, 210);
-            btnIngresarW.Location = new Point(116, 298);
+            btnIngresarW.Location = new Point(145, 298);
             btnIngresarW.Name = "btnIngresarW";
             btnIngresarW.Size = new Size(134, 36);
             btnIngresarW.TabIndex = 163;
             btnIngresarW.Text = "➕AGREGAR";
             btnIngresarW.UseVisualStyleBackColor = false;
+            btnIngresarW.Click += btnIngresarW_Click;
             // 
             // button2
             // 
             button2.BackColor = SystemColors.ButtonFace;
             button2.Font = new Font("Segoe UI Black", 11F, FontStyle.Bold);
             button2.ForeColor = Color.FromArgb(69, 69, 210);
-            button2.Location = new Point(269, 298);
+            button2.Location = new Point(298, 298);
             button2.Name = "button2";
             button2.Size = new Size(150, 36);
             button2.TabIndex = 197;
             button2.Text = "✖️CANCELAR";
             button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click;
             // 
             // subUsuarioAgregar
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Gainsboro;
-            ClientSize = new Size(531, 346);
+            ClientSize = new Size(575, 346);
             Controls.Add(button2);
             Controls.Add(btnIngresarW);
             Controls.Add(button6);
-            Controls.Add(comboEstadoY);
+            Controls.Add(comboEstado);
             Controls.Add(label9);
-            Controls.Add(comboRolR);
+            Controls.Add(comboRol);
             Controls.Add(label7);
             Controls.Add(label11);
-            Controls.Add(txtRespuestaT);
+            Controls.Add(txtRespuesta);
             Controls.Add(label1);
-            Controls.Add(txtPreguntaL);
+            Controls.Add(txtPregunta);
             Controls.Add(label6);
             Controls.Add(label5);
-            Controls.Add(txtEmailU);
-            Controls.Add(textContraseñaJ);
-            Controls.Add(txtNombreT);
+            Controls.Add(txtCorreo);
+            Controls.Add(txtContrasena);
+            Controls.Add(txtNombre);
             Controls.Add(label4);
-            Controls.Add(txtUsuarioL);
+            Controls.Add(txtUsuario);
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(button7);
@@ -294,22 +297,22 @@
 
         private Label label2;
         private Button button7;
-        private TextBox txtNombreT;
+        private TextBox txtNombre;
         private Label label4;
-        private TextBox txtUsuarioL;
+        private TextBox txtUsuario;
         private Label label3;
         private Label label6;
         private Label label5;
-        private TextBox txtEmailU;
-        private TextBox textContraseñaJ;
+        private TextBox txtCorreo;
+        private TextBox txtContrasena;
         private Label label11;
-        private TextBox txtRespuestaT;
+        private TextBox txtRespuesta;
         private Label label1;
-        private TextBox txtPreguntaL;
+        private TextBox txtPregunta;
         private Button button6;
-        private ComboBox comboEstadoY;
+        private ComboBox comboEstado;
         private Label label9;
-        private ComboBox comboRolR;
+        private ComboBox comboRol;
         private Label label7;
         private Button btnIngresarW;
         private Button button2;

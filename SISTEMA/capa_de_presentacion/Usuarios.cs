@@ -12,20 +12,27 @@ using System.Windows.Forms;
 namespace SISTEMA
 {
     public partial class Usuarios : Form
-    {
-        private List<ClaseUsuarios> usuarios = new List<ClaseUsuarios>();
+    {        
         private int editingIndex = -1;
-
+        private ClaseRol r;
+        private ClaseUsuarios u;
         public Usuarios()
         {
             InitializeComponent();
 
+            r = new ClaseRol();
+            u = new ClaseUsuarios(); 
             //btnGuardarH.Click += btnGuardarH_Click;
             //btnLimpiarK.Click += btnLimpiarK_Click;
             btnBuscarD.Click += btnBuscarD_Click;
             btnEditarM.Click += btnEditarM_Click;
             btnIngresarW.Click += btnIngresarW_Click;
             dataGridView1.CellDoubleClick += dataGridView1_CellDoubleClick;
+            cmbBuscarQ.Items.Add("nombre");
+            cmbBuscarQ.Items.Add("username");
+            cmbBuscarQ.Items.Add("correo");
+            cmbBuscarQ.Items.Add("estado");
+            cmbBuscarQ.Items.Add("rol");
 
         }
 
@@ -103,7 +110,7 @@ namespace SISTEMA
 
         private void btnBuscarD_Click(object sender, EventArgs e)
         {
-            var criterio = textbuscarT.Text.Trim();
+            /*var criterio = textbuscarT.Text.Trim();
             if (string.IsNullOrWhiteSpace(criterio))
             {
                 RefrescarGrid(usuarios);
@@ -135,7 +142,7 @@ namespace SISTEMA
                     break;
             }
 
-            RefrescarGrid(resultado);
+            RefrescarGrid(resultado);*/
         }
 
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -224,7 +231,7 @@ namespace SISTEMA
 
         private void btnIngresarW_Click_1(object sender, EventArgs e)
         {
-
+            subUsuarioAgregar obj = new subUsuarioAgregar(); obj.ShowDialog();
         }
 
         private void btnGuardarH_Click_1(object sender, EventArgs e)
@@ -235,6 +242,25 @@ namespace SISTEMA
         private void btnEditarM_Click_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnBuscarD_Click_1(object sender, EventArgs e)
+        {
+            //guarda los datos 
+            string parametro = cmbBuscarQ.Text;
+            string dato = textbuscarT.Text;
+
+            //si el parametro es rol
+            if (parametro == "rol")
+            {                      
+                int numeroRol = r.ConseguirNumeroRol(dato);                
+
+                u.BuscarUsuario(parametro, numeroRol.ToString(), dataGridView1);
+            }
+            else
+            {
+                u.BuscarUsuario(parametro, dato, dataGridView1);
+            }
         }
     }
 }

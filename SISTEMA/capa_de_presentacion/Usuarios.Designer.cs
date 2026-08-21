@@ -206,6 +206,7 @@
             btnBuscarD.TabIndex = 102;
             btnBuscarD.Text = "🔍 BUSCAR";
             btnBuscarD.UseVisualStyleBackColor = false;
+            btnBuscarD.Click += btnBuscarD_Click_1;
             // 
             // Usuarios
             // 

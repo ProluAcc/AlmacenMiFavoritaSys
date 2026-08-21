@@ -29,17 +29,17 @@
         private void InitializeComponent()
         {
             groupBox1 = new GroupBox();
-            radioButton12 = new RadioButton();
-            radioButton11 = new RadioButton();
-            radioButton10 = new RadioButton();
-            radioButton9 = new RadioButton();
-            radioButton8 = new RadioButton();
-            radioButton1 = new RadioButton();
+            rbCompra = new RadioButton();
+            rbVenta = new RadioButton();
+            rbInventario = new RadioButton();
+            rbMantenimiento = new RadioButton();
+            rbTodo = new RadioButton();
+            rbCaja = new RadioButton();
             label5 = new Label();
             button1 = new Button();
-            textBox2 = new TextBox();
+            txtDescripcion = new TextBox();
             label1 = new Label();
-            textBox1 = new TextBox();
+            txtNombre = new TextBox();
             label3 = new Label();
             button4 = new Button();
             button2 = new Button();
@@ -63,17 +63,17 @@
             // groupBox1
             // 
             groupBox1.BackColor = SystemColors.Control;
-            groupBox1.Controls.Add(radioButton12);
-            groupBox1.Controls.Add(radioButton11);
-            groupBox1.Controls.Add(radioButton10);
-            groupBox1.Controls.Add(radioButton9);
-            groupBox1.Controls.Add(radioButton8);
-            groupBox1.Controls.Add(radioButton1);
+            groupBox1.Controls.Add(rbCompra);
+            groupBox1.Controls.Add(rbVenta);
+            groupBox1.Controls.Add(rbInventario);
+            groupBox1.Controls.Add(rbMantenimiento);
+            groupBox1.Controls.Add(rbTodo);
+            groupBox1.Controls.Add(rbCaja);
             groupBox1.Controls.Add(label5);
             groupBox1.Controls.Add(button1);
-            groupBox1.Controls.Add(textBox2);
+            groupBox1.Controls.Add(txtDescripcion);
             groupBox1.Controls.Add(label1);
-            groupBox1.Controls.Add(textBox1);
+            groupBox1.Controls.Add(txtNombre);
             groupBox1.Controls.Add(label3);
             groupBox1.Location = new Point(12, 54);
             groupBox1.Name = "groupBox1";
@@ -82,77 +82,77 @@
             groupBox1.TabStop = false;
             groupBox1.Text = "Categoría";
             // 
-            // radioButton12
+            // rbCompra
             // 
-            radioButton12.AutoSize = true;
-            radioButton12.Font = new Font("Segoe UI Black", 11F, FontStyle.Bold);
-            radioButton12.Location = new Point(83, 131);
-            radioButton12.Name = "radioButton12";
-            radioButton12.Size = new Size(92, 24);
-            radioButton12.TabIndex = 132;
-            radioButton12.TabStop = true;
-            radioButton12.Text = "Compras";
-            radioButton12.UseVisualStyleBackColor = true;
+            rbCompra.AutoSize = true;
+            rbCompra.Font = new Font("Segoe UI Black", 11F, FontStyle.Bold);
+            rbCompra.Location = new Point(83, 131);
+            rbCompra.Name = "rbCompra";
+            rbCompra.Size = new Size(85, 24);
+            rbCompra.TabIndex = 132;
+            rbCompra.TabStop = true;
+            rbCompra.Text = "Compra";
+            rbCompra.UseVisualStyleBackColor = true;
             // 
-            // radioButton11
+            // rbVenta
             // 
-            radioButton11.AutoSize = true;
-            radioButton11.Font = new Font("Segoe UI Black", 11F, FontStyle.Bold);
-            radioButton11.Location = new Point(181, 131);
-            radioButton11.Name = "radioButton11";
-            radioButton11.Size = new Size(76, 24);
-            radioButton11.TabIndex = 131;
-            radioButton11.TabStop = true;
-            radioButton11.Text = "Ventas";
-            radioButton11.UseVisualStyleBackColor = true;
+            rbVenta.AutoSize = true;
+            rbVenta.Font = new Font("Segoe UI Black", 11F, FontStyle.Bold);
+            rbVenta.Location = new Point(181, 131);
+            rbVenta.Name = "rbVenta";
+            rbVenta.Size = new Size(69, 24);
+            rbVenta.TabIndex = 131;
+            rbVenta.TabStop = true;
+            rbVenta.Text = "Venta";
+            rbVenta.UseVisualStyleBackColor = true;
             // 
-            // radioButton10
+            // rbInventario
             // 
-            radioButton10.AutoSize = true;
-            radioButton10.Font = new Font("Segoe UI Black", 11F, FontStyle.Bold);
-            radioButton10.Location = new Point(271, 131);
-            radioButton10.Name = "radioButton10";
-            radioButton10.Size = new Size(103, 24);
-            radioButton10.TabIndex = 130;
-            radioButton10.TabStop = true;
-            radioButton10.Text = "Inventario";
-            radioButton10.UseVisualStyleBackColor = true;
+            rbInventario.AutoSize = true;
+            rbInventario.Font = new Font("Segoe UI Black", 11F, FontStyle.Bold);
+            rbInventario.Location = new Point(271, 131);
+            rbInventario.Name = "rbInventario";
+            rbInventario.Size = new Size(103, 24);
+            rbInventario.TabIndex = 130;
+            rbInventario.TabStop = true;
+            rbInventario.Text = "Inventario";
+            rbInventario.UseVisualStyleBackColor = true;
             // 
-            // radioButton9
+            // rbMantenimiento
             // 
-            radioButton9.AutoSize = true;
-            radioButton9.Font = new Font("Segoe UI Black", 11F, FontStyle.Bold);
-            radioButton9.Location = new Point(17, 166);
-            radioButton9.Name = "radioButton9";
-            radioButton9.Size = new Size(139, 24);
-            radioButton9.TabIndex = 129;
-            radioButton9.TabStop = true;
-            radioButton9.Text = "Mantenimiento";
-            radioButton9.UseVisualStyleBackColor = true;
+            rbMantenimiento.AutoSize = true;
+            rbMantenimiento.Font = new Font("Segoe UI Black", 11F, FontStyle.Bold);
+            rbMantenimiento.Location = new Point(17, 166);
+            rbMantenimiento.Name = "rbMantenimiento";
+            rbMantenimiento.Size = new Size(139, 24);
+            rbMantenimiento.TabIndex = 129;
+            rbMantenimiento.TabStop = true;
+            rbMantenimiento.Text = "Mantenimiento";
+            rbMantenimiento.UseVisualStyleBackColor = true;
             // 
-            // radioButton8
+            // rbTodo
             // 
-            radioButton8.AutoSize = true;
-            radioButton8.Font = new Font("Segoe UI Black", 11F, FontStyle.Bold);
-            radioButton8.Location = new Point(162, 166);
-            radioButton8.Name = "radioButton8";
-            radioButton8.Size = new Size(67, 24);
-            radioButton8.TabIndex = 128;
-            radioButton8.TabStop = true;
-            radioButton8.Text = "Todo";
-            radioButton8.UseVisualStyleBackColor = true;
+            rbTodo.AutoSize = true;
+            rbTodo.Font = new Font("Segoe UI Black", 11F, FontStyle.Bold);
+            rbTodo.Location = new Point(162, 166);
+            rbTodo.Name = "rbTodo";
+            rbTodo.Size = new Size(67, 24);
+            rbTodo.TabIndex = 128;
+            rbTodo.TabStop = true;
+            rbTodo.Text = "Todo";
+            rbTodo.UseVisualStyleBackColor = true;
             // 
-            // radioButton1
+            // rbCaja
             // 
-            radioButton1.AutoSize = true;
-            radioButton1.Font = new Font("Segoe UI Black", 11F, FontStyle.Bold);
-            radioButton1.Location = new Point(17, 131);
-            radioButton1.Name = "radioButton1";
-            radioButton1.Size = new Size(57, 24);
-            radioButton1.TabIndex = 121;
-            radioButton1.TabStop = true;
-            radioButton1.Text = "Caja";
-            radioButton1.UseVisualStyleBackColor = true;
+            rbCaja.AutoSize = true;
+            rbCaja.Font = new Font("Segoe UI Black", 11F, FontStyle.Bold);
+            rbCaja.Location = new Point(17, 131);
+            rbCaja.Name = "rbCaja";
+            rbCaja.Size = new Size(57, 24);
+            rbCaja.TabIndex = 121;
+            rbCaja.TabStop = true;
+            rbCaja.Text = "Caja";
+            rbCaja.UseVisualStyleBackColor = true;
             // 
             // label5
             // 
@@ -176,13 +176,13 @@
             button1.Text = "✔️GUARDAR";
             button1.UseVisualStyleBackColor = false;
             // 
-            // textBox2
+            // txtDescripcion
             // 
-            textBox2.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            textBox2.Location = new Point(106, 57);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(265, 27);
-            textBox2.TabIndex = 98;
+            txtDescripcion.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            txtDescripcion.Location = new Point(106, 57);
+            txtDescripcion.Name = "txtDescripcion";
+            txtDescripcion.Size = new Size(265, 27);
+            txtDescripcion.TabIndex = 98;
             // 
             // label1
             // 
@@ -194,13 +194,13 @@
             label1.TabIndex = 97;
             label1.Text = "Descripción:";
             // 
-            // textBox1
+            // txtNombre
             // 
-            textBox1.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            textBox1.Location = new Point(83, 22);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(191, 27);
-            textBox1.TabIndex = 96;
+            txtNombre.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            txtNombre.Location = new Point(83, 22);
+            txtNombre.Name = "txtNombre";
+            txtNombre.Size = new Size(191, 27);
+            txtNombre.TabIndex = 96;
             // 
             // label3
             // 
@@ -375,20 +375,20 @@
         private TextBox textBox6;
         private Label label4;
         private DataGridView dataGridView1;
-        private TextBox textBox2;
+        private TextBox txtDescripcion;
         private Label label1;
-        private TextBox textBox1;
+        private TextBox txtNombre;
         private Label label3;
         private Panel panel1;
         private Label label2;
         private Label label5;
         private GroupBox groupBox2;
-        private RadioButton radioButton12;
-        private RadioButton radioButton11;
-        private RadioButton radioButton10;
-        private RadioButton radioButton9;
-        private RadioButton radioButton8;
-        private RadioButton radioButton1;
+        private RadioButton rbCompra;
+        private RadioButton rbVenta;
+        private RadioButton rbInventario;
+        private RadioButton rbMantenimiento;
+        private RadioButton rbTodo;
+        private RadioButton rbCaja;
         private DataGridViewTextBoxColumn Column1;
         private DataGridViewTextBoxColumn Column2;
         private DataGridViewTextBoxColumn Column3;

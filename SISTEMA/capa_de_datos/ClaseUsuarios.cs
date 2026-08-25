@@ -458,7 +458,49 @@ namespace SISTEMA.capa_de_datos
                 }
             }
         }
-        
+
+        public void BuscarUsuario(int dato, DataGridView data)
+        {
+            //crea el objeto de conexion a la base de datos con el string de conexion
+            using (NpgsqlConnection conexion = new NpgsqlConnection(connection.con))
+            {
+                try
+                {
+                    //inicia la conexion 
+                    conexion.Open();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al conectar a la base de datos: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+                //selecciona al usuario según el parametro y el dato dato
+                string consulta = "select * from usuario where id_rol = @dato";
+
+                //realiza la consulta a la base de datos según la consulta anterior y a la conexión creada
+                using (NpgsqlCommand comando = new NpgsqlCommand(consulta, conexion))
+                {
+                    //reemplaza con el valor del parametro y el dato
+                    //comando.Parameters.AddWithValue("@parametro", parametro);
+                    comando.Parameters.AddWithValue("@dato", dato);
+
+                    //utilza el datareader para guardar los resultados de la consulta y poder leerlos
+                    using (NpgsqlDataReader reader = comando.ExecuteReader())
+                    {
+                        // Si el reader tiene filas, significa que el usuario existe
+                        if (reader.Read())
+                        {
+                            data.DataSource = reader;
+                        }
+                        else
+                        {
+                            MessageBox.Show("No se encontró al usuario especificado con el parámetro especificado.", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        }
+                    }
+                }
+            }
+        }
+
         internal ClaseVenta ClaseVenta
         {
             get => default;

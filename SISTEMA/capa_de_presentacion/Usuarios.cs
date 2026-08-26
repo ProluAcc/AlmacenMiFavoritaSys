@@ -255,7 +255,7 @@ namespace SISTEMA
             {                      
                 int numeroRol = r.ConseguirNumeroRol(dato);                
 
-                u.BuscarUsuario(parametro, numeroRol.ToString(), dataGridView1);
+                u.BuscarUsuario(numeroRol, dataGridView1);
             }
             else
             {

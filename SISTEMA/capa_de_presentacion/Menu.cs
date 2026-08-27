@@ -22,8 +22,8 @@ namespace SISTEMA
         public Menu(string username)
         {
             InitializeComponent();
-            MostrarFormularioMdi(new frmBienvenida());
             nombreUsuario = username;
+            MostrarFormularioMdi(new frmBienvenida(nombreUsuario));            
         }
 
         private void Bienvenida_Load(object sender, EventArgs e)
@@ -157,6 +157,11 @@ namespace SISTEMA
         private void marcaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MostrarFormularioMdi(new Marca());
+        }
+
+        private void cajaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

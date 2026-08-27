@@ -62,6 +62,7 @@
             label5 = new Label();
             panel2 = new Panel();
             label3 = new Label();
+            lblDolar = new Label();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
@@ -96,6 +97,7 @@
             // groupBox1
             // 
             groupBox1.BackColor = SystemColors.Control;
+            groupBox1.Controls.Add(lblDolar);
             groupBox1.Controls.Add(button6);
             groupBox1.Controls.Add(label4);
             groupBox1.Controls.Add(dateTimePicker1);
@@ -119,6 +121,14 @@
             button6.TabIndex = 18;
             button6.Text = "AYUDA";
             button6.UseVisualStyleBackColor = false;
+            button6.Click += button6_Click;
+            // 
+            // label4
+            // 
+            label4.Location = new Point(0, 0);
+            label4.Name = "label4";
+            label4.Size = new Size(100, 23);
+            label4.TabIndex = 19;
             // 
             // dateTimePicker1
             // 
@@ -433,6 +443,17 @@
             label3.Text = "Crear Egreso de Caja";
             label3.Click += label3_Click;
             // 
+            // lblDolar
+            // 
+            lblDolar.AutoSize = true;
+            lblDolar.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            lblDolar.ForeColor = Color.Black;
+            lblDolar.Location = new Point(457, 22);
+            lblDolar.Name = "lblDolar";
+            lblDolar.Size = new Size(109, 20);
+            lblDolar.TabIndex = 20;
+            lblDolar.Text = "Cambio Dólar:";
+            // 
             // Caja
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -499,5 +520,6 @@
         private DataGridViewTextBoxColumn Column2;
         private Label label15;
         private Label label16;
+        private Label lblDolar;
     }
 }

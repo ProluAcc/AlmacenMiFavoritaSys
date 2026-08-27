@@ -31,17 +31,13 @@
             panel1 = new Panel();
             label6 = new Label();
             groupBox1 = new GroupBox();
+            label3 = new Label();
             button3 = new Button();
             textBox3 = new TextBox();
             label2 = new Label();
             label1 = new Label();
             dateTimePicker1 = new DateTimePicker();
             label26 = new Label();
-            dateTimePicker1 = new DateTimePicker();
-            label1 = new Label();
-            label2 = new Label();
-            textBox3 = new TextBox();
-            button3 = new Button();
             panel1.SuspendLayout();
             groupBox1.SuspendLayout();
             SuspendLayout();
@@ -70,6 +66,7 @@
             // groupBox1
             // 
             groupBox1.BackColor = SystemColors.Control;
+            groupBox1.Controls.Add(label3);
             groupBox1.Controls.Add(button3);
             groupBox1.Controls.Add(textBox3);
             groupBox1.Controls.Add(label2);
@@ -83,7 +80,18 @@
             groupBox1.TabStop = false;
             groupBox1.Text = "Abrir Caja";
             // 
-            // label26
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            label3.ForeColor = Color.Black;
+            label3.Location = new Point(6, 33);
+            label3.Name = "label3";
+            label3.Size = new Size(138, 20);
+            label3.TabIndex = 38;
+            label3.Text = "Fecha de apertura:";
+            // 
+            // button3
             // 
             button3.BackColor = SystemColors.ButtonFace;
             button3.Font = new Font("Segoe UI Black", 11F, FontStyle.Bold);
@@ -94,26 +102,15 @@
             button3.TabIndex = 36;
             button3.Text = "💰ABRIR CAJA";
             button3.UseVisualStyleBackColor = false;
+            button3.Click += button3_Click;
             // 
-            // dateTimePicker1
+            // textBox3
             // 
-            dateTimePicker1.CalendarFont = new Font("Segoe UI", 11F);
-            dateTimePicker1.Format = DateTimePickerFormat.Short;
-            dateTimePicker1.Location = new Point(149, 28);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(103, 23);
-            dateTimePicker1.TabIndex = 32;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            label1.ForeColor = Color.Black;
-            label1.Location = new Point(6, 62);
-            label1.Name = "label1";
-            label1.Size = new Size(168, 20);
-            label1.TabIndex = 33;
-            label1.Text = "Usuario que Abre Caja:";
+            textBox3.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            textBox3.Location = new Point(156, 96);
+            textBox3.Name = "textBox3";
+            textBox3.Size = new Size(176, 27);
+            textBox3.TabIndex = 35;
             // 
             // label2
             // 
@@ -131,7 +128,7 @@
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
             label1.ForeColor = Color.Black;
-            label1.Location = new Point(6, 62);
+            label1.Location = new Point(6, 65);
             label1.Name = "label1";
             label1.Size = new Size(168, 20);
             label1.TabIndex = 33;
@@ -139,23 +136,19 @@
             // 
             // dateTimePicker1
             // 
-            textBox3.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            textBox3.Location = new Point(156, 96);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(176, 27);
-            textBox3.TabIndex = 35;
+            dateTimePicker1.CalendarFont = new Font("Segoe UI", 11F);
+            dateTimePicker1.Format = DateTimePickerFormat.Short;
+            dateTimePicker1.Location = new Point(150, 33);
+            dateTimePicker1.Name = "dateTimePicker1";
+            dateTimePicker1.Size = new Size(103, 23);
+            dateTimePicker1.TabIndex = 32;
             // 
-            // button3
+            // label26
             // 
-            button3.BackColor = SystemColors.ButtonFace;
-            button3.Font = new Font("Segoe UI Black", 11F, FontStyle.Bold);
-            button3.ForeColor = Color.FromArgb(69, 69, 210);
-            button3.Location = new Point(87, 142);
-            button3.Name = "button3";
-            button3.Size = new Size(143, 36);
-            button3.TabIndex = 36;
-            button3.Text = "💰ABRIR CAJA";
-            button3.UseVisualStyleBackColor = false;
+            label26.Location = new Point(0, 0);
+            label26.Name = "label26";
+            label26.Size = new Size(100, 23);
+            label26.TabIndex = 37;
             // 
             // AperturaCaja
             // 
@@ -186,5 +179,6 @@
         private DateTimePicker dateTimePicker1;
         private TextBox textBox3;
         private Button button3;
+        private Label label3;
     }
 }

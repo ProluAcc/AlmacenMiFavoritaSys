@@ -9,9 +9,11 @@ namespace caja
         public Caja(string username)
         {
             InitializeComponent();
+            lblDolar.Text = $"Cambio Dólar: {CalcularDolar()}";
+            label2.Text = $"Usuario: {username}";
         }
 
-        private double CalcularDolar()
+        private string CalcularDolar()
         {
             double tc = 0.00;
             double tcActual = 36.6243;
@@ -19,7 +21,7 @@ namespace caja
             double iEU = 0.02;
 
             tc = tcActual * ((1 + iNic) / (1 + iEU));
-            return Math.Round(tc, 2);
+            return Math.Round(tc, 2).ToString();
         }
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -49,6 +51,11 @@ namespace caja
         private void button5_Click(object sender, EventArgs e)
         {
             ControlEgresosCaja obj = new ControlEgresosCaja(); obj.ShowDialog();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

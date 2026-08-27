@@ -72,6 +72,7 @@
             cajaToolStripMenuItem.Name = "cajaToolStripMenuItem";
             cajaToolStripMenuItem.Size = new Size(42, 20);
             cajaToolStripMenuItem.Text = "Caja";
+            cajaToolStripMenuItem.Click += cajaToolStripMenuItem_Click;
             // 
             // aperturaDeCajaToolStripMenuItem
             // 

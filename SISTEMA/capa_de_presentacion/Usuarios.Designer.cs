@@ -33,14 +33,6 @@
             button7 = new Button();
             btnIngresarW = new Button();
             btnEditarM = new Button();
-            Column7 = new DataGridViewTextBoxColumn();
-            Column4 = new DataGridViewTextBoxColumn();
-            Column9 = new DataGridViewTextBoxColumn();
-            Column3 = new DataGridViewTextBoxColumn();
-            Column1 = new DataGridViewTextBoxColumn();
-            Column5 = new DataGridViewTextBoxColumn();
-            Column6 = new DataGridViewTextBoxColumn();
-            Column2 = new DataGridViewTextBoxColumn();
             dataGridView1 = new DataGridView();
             label10 = new Label();
             cmbBuscarQ = new ComboBox();
@@ -111,58 +103,9 @@
             btnEditarM.UseVisualStyleBackColor = false;
             btnEditarM.Click += btnEditarM_Click_1;
             // 
-            // Column7
-            // 
-            Column7.HeaderText = "Estado ";
-            Column7.Name = "Column7";
-            Column7.Width = 110;
-            // 
-            // Column4
-            // 
-            Column4.HeaderText = "Rol ";
-            Column4.Name = "Column4";
-            Column4.Width = 110;
-            // 
-            // Column9
-            // 
-            Column9.HeaderText = "Respuesta";
-            Column9.Name = "Column9";
-            Column9.Width = 110;
-            // 
-            // Column3
-            // 
-            Column3.HeaderText = "Pregunta";
-            Column3.Name = "Column3";
-            Column3.Width = 110;
-            // 
-            // Column1
-            // 
-            Column1.HeaderText = "Contraseña";
-            Column1.Name = "Column1";
-            Column1.Width = 110;
-            // 
-            // Column5
-            // 
-            Column5.HeaderText = "Correo Electronico ";
-            Column5.Name = "Column5";
-            Column5.Width = 110;
-            // 
-            // Column6
-            // 
-            Column6.HeaderText = "Usuario ";
-            Column6.Name = "Column6";
-            Column6.Width = 110;
-            // 
-            // Column2
-            // 
-            Column2.HeaderText = "Nombre Completo ";
-            Column2.Name = "Column2";
-            Column2.Width = 110;
-            // 
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Column2, Column6, Column5, Column1, Column3, Column9, Column4, Column7 });
             dataGridView1.Location = new Point(0, 202);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.Size = new Size(924, 209);
@@ -239,14 +182,6 @@
         private Button btnIngresarW;
         private Button btnEditarM;
         private Button button7;
-        private DataGridViewTextBoxColumn Column7;
-        private DataGridViewTextBoxColumn Column4;
-        private DataGridViewTextBoxColumn Column9;
-        private DataGridViewTextBoxColumn Column3;
-        private DataGridViewTextBoxColumn Column1;
-        private DataGridViewTextBoxColumn Column5;
-        private DataGridViewTextBoxColumn Column6;
-        private DataGridViewTextBoxColumn Column2;
         private DataGridView dataGridView1;
         private Label label10;
         private ComboBox cmbBuscarQ;

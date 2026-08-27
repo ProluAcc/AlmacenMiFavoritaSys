@@ -12,10 +12,10 @@ namespace SISTEMA
 {
     public partial class frmBienvenida : Form
     {
-        public frmBienvenida()
+        public frmBienvenida(string username)
         {
             InitializeComponent();
-            label1.Text = $"¡Bienvenido,!";
+            label1.Text = $"¡Bienvenido, {username}!";
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -26,6 +26,11 @@ namespace SISTEMA
         private void frmBienvenida_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            Login obj = new Login(); obj.Show(); this.Hide();
         }
     }
 }

@@ -42,7 +42,6 @@
             label4 = new Label();
             label3 = new Label();
             button1 = new Button();
-            button3 = new Button();
             SuspendLayout();
             // 
             // label2
@@ -72,7 +71,7 @@
             button2.BackColor = SystemColors.ButtonFace;
             button2.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
             button2.ForeColor = Color.FromArgb(69, 69, 210);
-            button2.Location = new Point(450, 166);
+            button2.Location = new Point(47, 222);
             button2.Name = "button2";
             button2.Size = new Size(147, 34);
             button2.TabIndex = 118;
@@ -187,18 +186,6 @@
             button1.Text = "✖️CANCELAR";
             button1.UseVisualStyleBackColor = false;
             // 
-            // button3
-            // 
-            button3.BackColor = SystemColors.ButtonFace;
-            button3.Font = new Font("Segoe UI Black", 11F, FontStyle.Bold);
-            button3.ForeColor = Color.FromArgb(69, 69, 210);
-            button3.Location = new Point(14, 220);
-            button3.Name = "button3";
-            button3.Size = new Size(180, 36);
-            button3.TabIndex = 195;
-            button3.Text = "⛔DESHABILITAR";
-            button3.UseVisualStyleBackColor = false;
-            // 
             // subClienteModificar
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -206,7 +193,6 @@
             BackColor = Color.Gainsboro;
             ClientSize = new Size(605, 279);
             Controls.Add(button1);
-            Controls.Add(button3);
             Controls.Add(button2);
             Controls.Add(textBox1);
             Controls.Add(label1);
@@ -242,6 +228,5 @@
         private Label label4;
         private Label label3;
         private Button button1;
-        private Button button3;
     }
 }

@@ -79,7 +79,7 @@ namespace SISTEMA
 
         private void button4_Click(object sender, EventArgs e)
         {
-           
+
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -119,6 +119,11 @@ namespace SISTEMA
         }
 
         private void button5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }

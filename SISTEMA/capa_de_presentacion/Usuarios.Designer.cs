@@ -38,6 +38,7 @@
             cmbBuscarQ = new ComboBox();
             textbuscarT = new TextBox();
             btnBuscarD = new Button();
+            button1 = new Button();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
@@ -116,7 +117,7 @@
             // 
             label10.AutoSize = true;
             label10.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            label10.Location = new Point(207, 160);
+            label10.Location = new Point(111, 168);
             label10.Name = "label10";
             label10.Size = new Size(89, 20);
             label10.TabIndex = 96;
@@ -126,7 +127,7 @@
             // 
             cmbBuscarQ.Font = new Font("Segoe UI", 11F);
             cmbBuscarQ.FormattingEnabled = true;
-            cmbBuscarQ.Location = new Point(302, 157);
+            cmbBuscarQ.Location = new Point(206, 165);
             cmbBuscarQ.Name = "cmbBuscarQ";
             cmbBuscarQ.Size = new Size(121, 28);
             cmbBuscarQ.TabIndex = 97;
@@ -134,7 +135,7 @@
             // textbuscarT
             // 
             textbuscarT.Font = new Font("Segoe UI", 11F);
-            textbuscarT.Location = new Point(429, 157);
+            textbuscarT.Location = new Point(333, 165);
             textbuscarT.Name = "textbuscarT";
             textbuscarT.Size = new Size(157, 27);
             textbuscarT.TabIndex = 98;
@@ -144,7 +145,7 @@
             btnBuscarD.BackColor = SystemColors.ButtonFace;
             btnBuscarD.Font = new Font("Segoe UI Black", 11F, FontStyle.Bold);
             btnBuscarD.ForeColor = Color.FromArgb(69, 69, 210);
-            btnBuscarD.Location = new Point(604, 152);
+            btnBuscarD.Location = new Point(508, 160);
             btnBuscarD.Name = "btnBuscarD";
             btnBuscarD.Size = new Size(118, 36);
             btnBuscarD.TabIndex = 102;
@@ -152,12 +153,25 @@
             btnBuscarD.UseVisualStyleBackColor = false;
             btnBuscarD.Click += btnBuscarD_Click_1;
             // 
+            // button1
+            // 
+            button1.BackColor = SystemColors.ButtonFace;
+            button1.Font = new Font("Segoe UI Black", 11F, FontStyle.Bold);
+            button1.ForeColor = Color.FromArgb(69, 69, 210);
+            button1.Location = new Point(632, 160);
+            button1.Name = "button1";
+            button1.Size = new Size(180, 36);
+            button1.TabIndex = 194;
+            button1.Text = "⛔DESHABILITAR";
+            button1.UseVisualStyleBackColor = false;
+            // 
             // Usuarios
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Gainsboro;
             ClientSize = new Size(926, 412);
+            Controls.Add(button1);
             Controls.Add(btnEditarM);
             Controls.Add(btnIngresarW);
             Controls.Add(btnBuscarD);
@@ -188,5 +202,6 @@
         private ComboBox cmbBuscarQ;
         private TextBox textbuscarT;
         private Button btnBuscarD;
+        private Button button1;
     }
 }

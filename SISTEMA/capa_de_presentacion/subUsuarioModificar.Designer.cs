@@ -48,7 +48,6 @@
             label4 = new Label();
             txtUsuario = new TextBox();
             label8 = new Label();
-            button1 = new Button();
             button2 = new Button();
             SuspendLayout();
             // 
@@ -79,7 +78,7 @@
             btnIngresarW.BackColor = SystemColors.ButtonFace;
             btnIngresarW.Font = new Font("Segoe UI Black", 11F, FontStyle.Bold);
             btnIngresarW.ForeColor = Color.FromArgb(69, 69, 210);
-            btnIngresarW.Location = new Point(357, 240);
+            btnIngresarW.Location = new Point(46, 304);
             btnIngresarW.Name = "btnIngresarW";
             btnIngresarW.Size = new Size(150, 36);
             btnIngresarW.TabIndex = 192;
@@ -245,18 +244,6 @@
             label8.TabIndex = 175;
             label8.Text = "Nombre completo:";
             // 
-            // button1
-            // 
-            button1.BackColor = SystemColors.ButtonFace;
-            button1.Font = new Font("Segoe UI Black", 11F, FontStyle.Bold);
-            button1.ForeColor = Color.FromArgb(69, 69, 210);
-            button1.Location = new Point(16, 304);
-            button1.Name = "button1";
-            button1.Size = new Size(180, 36);
-            button1.TabIndex = 193;
-            button1.Text = "⛔DESHABILITAR";
-            button1.UseVisualStyleBackColor = false;
-            // 
             // button2
             // 
             button2.BackColor = SystemColors.ButtonFace;
@@ -276,7 +263,6 @@
             BackColor = Color.Gainsboro;
             ClientSize = new Size(550, 363);
             Controls.Add(button2);
-            Controls.Add(button1);
             Controls.Add(btnIngresarW);
             Controls.Add(button6);
             Controls.Add(comboEstado);
@@ -324,7 +310,6 @@
         private Label label4;
         private TextBox txtUsuario;
         private Label label8;
-        private Button button1;
         private Button button2;
     }
 }

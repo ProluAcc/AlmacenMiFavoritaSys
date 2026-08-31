@@ -32,21 +32,21 @@
             button7 = new Button();
             btnIngresarW = new Button();
             button6 = new Button();
-            comboEstadoY = new ComboBox();
+            comboEstado = new ComboBox();
             label9 = new Label();
-            comboRolR = new ComboBox();
+            comboRol = new ComboBox();
             label1 = new Label();
             label11 = new Label();
-            txtRespuestaT = new TextBox();
+            txtRespuesta = new TextBox();
             label3 = new Label();
-            txtPreguntaL = new TextBox();
+            txtPregunta = new TextBox();
             label6 = new Label();
             label5 = new Label();
-            txtEmailU = new TextBox();
-            textContraseñaJ = new TextBox();
-            txtNombreT = new TextBox();
+            txtCorreo = new TextBox();
+            txtContrasena = new TextBox();
+            txtNombre = new TextBox();
             label4 = new Label();
-            txtUsuarioL = new TextBox();
+            txtUsuario = new TextBox();
             label8 = new Label();
             button1 = new Button();
             button2 = new Button();
@@ -97,15 +97,16 @@
             button6.TabIndex = 191;
             button6.Text = "➕";
             button6.UseVisualStyleBackColor = false;
+            button6.Click += button6_Click;
             // 
-            // comboEstadoY
+            // comboEstado
             // 
-            comboEstadoY.Font = new Font("Segoe UI", 11F);
-            comboEstadoY.FormattingEnabled = true;
-            comboEstadoY.Location = new Point(342, 117);
-            comboEstadoY.Name = "comboEstadoY";
-            comboEstadoY.Size = new Size(135, 28);
-            comboEstadoY.TabIndex = 190;
+            comboEstado.Font = new Font("Segoe UI", 11F);
+            comboEstado.FormattingEnabled = true;
+            comboEstado.Location = new Point(342, 117);
+            comboEstado.Name = "comboEstado";
+            comboEstado.Size = new Size(135, 28);
+            comboEstado.TabIndex = 190;
             // 
             // label9
             // 
@@ -117,14 +118,14 @@
             label9.TabIndex = 189;
             label9.Text = "Estado:";
             // 
-            // comboRolR
+            // comboRol
             // 
-            comboRolR.Font = new Font("Segoe UI", 11F);
-            comboRolR.FormattingEnabled = true;
-            comboRolR.Location = new Point(342, 182);
-            comboRolR.Name = "comboRolR";
-            comboRolR.Size = new Size(135, 28);
-            comboRolR.TabIndex = 188;
+            comboRol.Font = new Font("Segoe UI", 11F);
+            comboRol.FormattingEnabled = true;
+            comboRol.Location = new Point(342, 182);
+            comboRol.Name = "comboRol";
+            comboRol.Size = new Size(135, 28);
+            comboRol.TabIndex = 188;
             // 
             // label1
             // 
@@ -146,13 +147,13 @@
             label11.TabIndex = 186;
             label11.Text = "Respuesta:";
             // 
-            // txtRespuestaT
+            // txtRespuesta
             // 
-            txtRespuestaT.Font = new Font("Segoe UI", 11F);
-            txtRespuestaT.Location = new Point(183, 248);
-            txtRespuestaT.Name = "txtRespuestaT";
-            txtRespuestaT.Size = new Size(141, 27);
-            txtRespuestaT.TabIndex = 185;
+            txtRespuesta.Font = new Font("Segoe UI", 11F);
+            txtRespuesta.Location = new Point(183, 248);
+            txtRespuesta.Name = "txtRespuesta";
+            txtRespuesta.Size = new Size(141, 27);
+            txtRespuesta.TabIndex = 185;
             // 
             // label3
             // 
@@ -164,13 +165,13 @@
             label3.TabIndex = 184;
             label3.Text = "Pregunta:";
             // 
-            // txtPreguntaL
+            // txtPregunta
             // 
-            txtPreguntaL.Font = new Font("Segoe UI", 11F);
-            txtPreguntaL.Location = new Point(183, 182);
-            txtPreguntaL.Name = "txtPreguntaL";
-            txtPreguntaL.Size = new Size(141, 27);
-            txtPreguntaL.TabIndex = 183;
+            txtPregunta.Font = new Font("Segoe UI", 11F);
+            txtPregunta.Location = new Point(183, 182);
+            txtPregunta.Name = "txtPregunta";
+            txtPregunta.Size = new Size(141, 27);
+            txtPregunta.TabIndex = 183;
             // 
             // label6
             // 
@@ -192,29 +193,29 @@
             label5.TabIndex = 181;
             label5.Text = "Contraseña:";
             // 
-            // txtEmailU
+            // txtCorreo
             // 
-            txtEmailU.Font = new Font("Segoe UI", 11F);
-            txtEmailU.Location = new Point(15, 248);
-            txtEmailU.Name = "txtEmailU";
-            txtEmailU.Size = new Size(145, 27);
-            txtEmailU.TabIndex = 180;
+            txtCorreo.Font = new Font("Segoe UI", 11F);
+            txtCorreo.Location = new Point(15, 248);
+            txtCorreo.Name = "txtCorreo";
+            txtCorreo.Size = new Size(145, 27);
+            txtCorreo.TabIndex = 180;
             // 
-            // textContraseñaJ
+            // txtContrasena
             // 
-            textContraseñaJ.Font = new Font("Segoe UI", 11F);
-            textContraseñaJ.Location = new Point(183, 118);
-            textContraseñaJ.Name = "textContraseñaJ";
-            textContraseñaJ.Size = new Size(141, 27);
-            textContraseñaJ.TabIndex = 179;
+            txtContrasena.Font = new Font("Segoe UI", 11F);
+            txtContrasena.Location = new Point(183, 118);
+            txtContrasena.Name = "txtContrasena";
+            txtContrasena.Size = new Size(141, 27);
+            txtContrasena.TabIndex = 179;
             // 
-            // txtNombreT
+            // txtNombre
             // 
-            txtNombreT.Font = new Font("Segoe UI", 11F);
-            txtNombreT.Location = new Point(15, 118);
-            txtNombreT.Name = "txtNombreT";
-            txtNombreT.Size = new Size(145, 27);
-            txtNombreT.TabIndex = 178;
+            txtNombre.Font = new Font("Segoe UI", 11F);
+            txtNombre.Location = new Point(15, 118);
+            txtNombre.Name = "txtNombre";
+            txtNombre.Size = new Size(145, 27);
+            txtNombre.TabIndex = 178;
             // 
             // label4
             // 
@@ -226,13 +227,13 @@
             label4.TabIndex = 177;
             label4.Text = "Usuario:";
             // 
-            // txtUsuarioL
+            // txtUsuario
             // 
-            txtUsuarioL.Font = new Font("Segoe UI", 11F);
-            txtUsuarioL.Location = new Point(15, 182);
-            txtUsuarioL.Name = "txtUsuarioL";
-            txtUsuarioL.Size = new Size(145, 27);
-            txtUsuarioL.TabIndex = 176;
+            txtUsuario.Font = new Font("Segoe UI", 11F);
+            txtUsuario.Location = new Point(15, 182);
+            txtUsuario.Name = "txtUsuario";
+            txtUsuario.Size = new Size(145, 27);
+            txtUsuario.TabIndex = 176;
             // 
             // label8
             // 
@@ -278,21 +279,21 @@
             Controls.Add(button1);
             Controls.Add(btnIngresarW);
             Controls.Add(button6);
-            Controls.Add(comboEstadoY);
+            Controls.Add(comboEstado);
             Controls.Add(label9);
-            Controls.Add(comboRolR);
+            Controls.Add(comboRol);
             Controls.Add(label1);
             Controls.Add(label11);
-            Controls.Add(txtRespuestaT);
+            Controls.Add(txtRespuesta);
             Controls.Add(label3);
-            Controls.Add(txtPreguntaL);
+            Controls.Add(txtPregunta);
             Controls.Add(label6);
             Controls.Add(label5);
-            Controls.Add(txtEmailU);
-            Controls.Add(textContraseñaJ);
-            Controls.Add(txtNombreT);
+            Controls.Add(txtCorreo);
+            Controls.Add(txtContrasena);
+            Controls.Add(txtNombre);
             Controls.Add(label4);
-            Controls.Add(txtUsuarioL);
+            Controls.Add(txtUsuario);
             Controls.Add(label8);
             Controls.Add(label2);
             Controls.Add(button7);
@@ -307,21 +308,21 @@
         private Button button7;
         private Button btnIngresarW;
         private Button button6;
-        private ComboBox comboEstadoY;
+        private ComboBox comboEstado;
         private Label label9;
-        private ComboBox comboRolR;
+        private ComboBox comboRol;
         private Label label1;
         private Label label11;
-        private TextBox txtRespuestaT;
+        private TextBox txtRespuesta;
         private Label label3;
-        private TextBox txtPreguntaL;
+        private TextBox txtPregunta;
         private Label label6;
         private Label label5;
-        private TextBox txtEmailU;
-        private TextBox textContraseñaJ;
-        private TextBox txtNombreT;
+        private TextBox txtCorreo;
+        private TextBox txtContrasena;
+        private TextBox txtNombre;
         private Label label4;
-        private TextBox txtUsuarioL;
+        private TextBox txtUsuario;
         private Label label8;
         private Button button1;
         private Button button2;

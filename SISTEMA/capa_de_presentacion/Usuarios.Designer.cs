@@ -110,6 +110,7 @@
             dataGridView1.Name = "dataGridView1";
             dataGridView1.Size = new Size(924, 209);
             dataGridView1.TabIndex = 99;
+            dataGridView1.CellDoubleClick += dataGridView1_CellDoubleClick_1;
             // 
             // label10
             // 

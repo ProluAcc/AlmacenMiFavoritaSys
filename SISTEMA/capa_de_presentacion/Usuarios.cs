@@ -8,11 +8,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static SISTEMA.subUsuarioModificar;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace SISTEMA
 {
     public partial class Usuarios : Form
-    {        
+    {
         private int editingIndex = -1;
         private ClaseRol r;
         private ClaseUsuarios u;
@@ -21,7 +23,7 @@ namespace SISTEMA
             InitializeComponent();
 
             r = new ClaseRol();
-            u = new ClaseUsuarios(); 
+            u = new ClaseUsuarios();
             //btnGuardarH.Click += btnGuardarH_Click;
             //btnLimpiarK.Click += btnLimpiarK_Click;
             btnBuscarD.Click += btnBuscarD_Click;
@@ -241,7 +243,12 @@ namespace SISTEMA
 
         private void btnEditarM_Click_1(object sender, EventArgs e)
         {
-
+            if (editingIndex < 0)
+            {
+                MessageBox.Show("No hay ningún usuario cargado para editar. Haz doble clic en la fila a editar.", "Editar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            subUsuarioModificar obj = new subUsuarioModificar(); obj.ShowDialog();
         }
 
         private void btnBuscarD_Click_1(object sender, EventArgs e)
@@ -252,8 +259,8 @@ namespace SISTEMA
 
             //si el parametro es rol
             if (parametro == "rol")
-            {                      
-                int numeroRol = r.ConseguirNumeroRol(dato);                
+            {
+                int numeroRol = r.ConseguirNumeroRol(dato);
 
                 u.BuscarUsuario(numeroRol, dataGridView1);
             }
@@ -261,6 +268,12 @@ namespace SISTEMA
             {
                 u.BuscarUsuario(parametro, dato, dataGridView1);
             }
+        }
+
+        private void dataGridView1_CellDoubleClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            editingIndex++;
+            
         }
     }
 }

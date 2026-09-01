@@ -43,6 +43,7 @@
             btnIngresar = new Button();
             btnEditar = new Button();
             button3 = new Button();
+            button1 = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvCliente).BeginInit();
             SuspendLayout();
             // 
@@ -95,7 +96,7 @@
             // txtBuscar
             // 
             txtBuscar.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            txtBuscar.Location = new Point(370, 193);
+            txtBuscar.Location = new Point(290, 192);
             txtBuscar.Name = "txtBuscar";
             txtBuscar.Size = new Size(154, 27);
             txtBuscar.TabIndex = 79;
@@ -104,7 +105,7 @@
             // 
             cbBuscar.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
             cbBuscar.FormattingEnabled = true;
-            cbBuscar.Location = new Point(222, 193);
+            cbBuscar.Location = new Point(142, 192);
             cbBuscar.Name = "cbBuscar";
             cbBuscar.Size = new Size(142, 28);
             cbBuscar.TabIndex = 78;
@@ -114,7 +115,7 @@
             label7.AutoSize = true;
             label7.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
             label7.ForeColor = Color.Black;
-            label7.Location = new Point(155, 196);
+            label7.Location = new Point(75, 195);
             label7.Name = "label7";
             label7.Size = new Size(61, 20);
             label7.TabIndex = 77;
@@ -149,7 +150,7 @@
             btnBuscar.BackColor = SystemColors.ButtonFace;
             btnBuscar.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
             btnBuscar.ForeColor = Color.FromArgb(69, 69, 210);
-            btnBuscar.Location = new Point(530, 190);
+            btnBuscar.Location = new Point(450, 189);
             btnBuscar.Name = "btnBuscar";
             btnBuscar.Size = new Size(113, 33);
             btnBuscar.TabIndex = 87;
@@ -195,12 +196,25 @@
             button3.Text = "AYUDA";
             button3.UseVisualStyleBackColor = false;
             // 
+            // button1
+            // 
+            button1.BackColor = SystemColors.ButtonFace;
+            button1.Font = new Font("Segoe UI Black", 11F, FontStyle.Bold);
+            button1.ForeColor = Color.FromArgb(69, 69, 210);
+            button1.Location = new Point(569, 189);
+            button1.Name = "button1";
+            button1.Size = new Size(178, 33);
+            button1.TabIndex = 196;
+            button1.Text = "⛔DESHABILITAR";
+            button1.UseVisualStyleBackColor = false;
+            // 
             // Clientes
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Gainsboro;
             ClientSize = new Size(831, 520);
+            Controls.Add(button1);
             Controls.Add(button3);
             Controls.Add(btnEditar);
             Controls.Add(btnIngresar);
@@ -235,5 +249,6 @@
         private DataGridViewTextBoxColumn Column3;
         private DataGridViewTextBoxColumn Column6;
         private DataGridViewTextBoxColumn Column4;
+        private Button button1;
     }
 }

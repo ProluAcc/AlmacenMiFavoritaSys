@@ -141,7 +141,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            label1.Location = new Point(194, 161);
+            label1.Location = new Point(218, 162);
             label1.Name = "label1";
             label1.Size = new Size(89, 20);
             label1.TabIndex = 106;
@@ -151,7 +151,7 @@
             // 
             CBbuscar.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
             CBbuscar.FormattingEnabled = true;
-            CBbuscar.Location = new Point(289, 158);
+            CBbuscar.Location = new Point(313, 159);
             CBbuscar.Name = "CBbuscar";
             CBbuscar.Size = new Size(90, 28);
             CBbuscar.TabIndex = 107;
@@ -159,7 +159,7 @@
             // TXTbuscar
             // 
             TXTbuscar.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            TXTbuscar.Location = new Point(385, 158);
+            TXTbuscar.Location = new Point(409, 159);
             TXTbuscar.Name = "TXTbuscar";
             TXTbuscar.Size = new Size(225, 27);
             TXTbuscar.TabIndex = 108;
@@ -170,7 +170,7 @@
             button3.BackColor = SystemColors.ButtonFace;
             button3.Font = new Font("Segoe UI Black", 11F, FontStyle.Bold);
             button3.ForeColor = Color.FromArgb(69, 69, 210);
-            button3.Location = new Point(616, 154);
+            button3.Location = new Point(640, 155);
             button3.Name = "button3";
             button3.Size = new Size(128, 35);
             button3.TabIndex = 109;

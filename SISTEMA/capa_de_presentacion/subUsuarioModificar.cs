@@ -16,6 +16,7 @@ namespace SISTEMA
     public partial class subUsuarioModificar : Form
     {
         private int editingIndex = 0;
+        private ClaseUsuarios usuarioEditar = new ClaseUsuarios();
         private ClaseRol Claserol = new ClaseRol();
         private ClaseUsuarios usr = new ClaseUsuarios();
         private Conexion connection = new Conexion();
@@ -37,6 +38,33 @@ namespace SISTEMA
                 txtRespuesta.Text = ListaUsuarios[editingIndex].respuesta;
                 comboEstado.Text = ListaUsuarios[editingIndex].estado;
                 string nombreRol = Claserol.ConseguirNombreRol(int.Parse(ListaUsuarios[editingIndex].rol));
+                comboRol.Text = nombreRol;
+            }
+            catch (Exception x)
+            {
+                MessageBox.Show(x.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        // Nuevo constructor que acepta un objeto ClaseUsuarios directamente
+        public subUsuarioModificar(ClaseUsuarios usuarioParaEditar)
+        {
+            InitializeComponent();
+            CargarRoles();
+            try
+            {
+                usuarioEditar = usuarioParaEditar;
+
+                //carga los datos en los textbox desde el usuario pasado
+                txtId.Text = usuarioEditar.id_usuario.ToString();
+                txtNombre.Text = usuarioEditar.nombre;
+                txtUsuario.Text = usuarioEditar.username;
+                txtCorreo.Text = usuarioEditar.correo;
+                txtContrasena.Text = usuarioEditar.contrasena;
+                txtPregunta.Text = usuarioEditar.pregunta;
+                txtRespuesta.Text = usuarioEditar.respuesta;
+                comboEstado.Text = usuarioEditar.estado;
+                string nombreRol = Claserol.ConseguirNombreRol(int.Parse(usuarioEditar.rol));
                 comboRol.Text = nombreRol;
             }
             catch (Exception x)

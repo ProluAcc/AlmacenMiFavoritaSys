@@ -49,6 +49,7 @@
             txtUsuario = new TextBox();
             label8 = new Label();
             button2 = new Button();
+            txtId = new TextBox();
             SuspendLayout();
             // 
             // label2
@@ -84,6 +85,7 @@
             btnIngresarW.TabIndex = 192;
             btnIngresarW.Text = "✏MODIFICAR";
             btnIngresarW.UseVisualStyleBackColor = false;
+            btnIngresarW.Click += btnIngresarW_Click;
             // 
             // button6
             // 
@@ -255,6 +257,16 @@
             button2.TabIndex = 194;
             button2.Text = "✖️CANCELAR";
             button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click;
+            // 
+            // txtId
+            // 
+            txtId.Enabled = false;
+            txtId.Font = new Font("Segoe UI", 11F);
+            txtId.Location = new Point(342, 248);
+            txtId.Name = "txtId";
+            txtId.Size = new Size(145, 27);
+            txtId.TabIndex = 195;
             // 
             // subUsuarioModificar
             // 
@@ -262,6 +274,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Gainsboro;
             ClientSize = new Size(550, 363);
+            Controls.Add(txtId);
             Controls.Add(button2);
             Controls.Add(btnIngresarW);
             Controls.Add(button6);
@@ -311,5 +324,6 @@
         private TextBox txtUsuario;
         private Label label8;
         private Button button2;
+        private TextBox txtId;
     }
 }

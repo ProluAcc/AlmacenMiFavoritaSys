@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace SISTEMA.capa_de_datos
 {
-    class ClaseUsuarios
+    public class ClaseUsuarios
     {
         private int _id_usuario;
         private string _nombre;
@@ -150,11 +150,12 @@ namespace SISTEMA.capa_de_datos
                         {
                             //la fila 0 es la contraseña y la 1 es el rol 
                             string contrasenaAlmacenada = reader.GetString(0);
-                            string rolUsuario = reader.GetString(1);
+                            rol = reader.GetString(1);
                             
-                            if (contrasena == contrasenaAlmacenada)
+                            //compara la contraseña ingresada con la almacenada en la BD
+                            if (BCrypt.Net.BCrypt.Verify(contrasena,contrasenaAlmacenada))
                             {
-                                MessageBox.Show($"Bienvenido, has iniciado sesión como {rolUsuario}.", "Acceso Concedido");
+                                MessageBox.Show($"Bienvenido, has iniciado sesión como {rol}.", "Acceso Concedido");
                                 return true;
                             }
                             else
@@ -293,6 +294,8 @@ namespace SISTEMA.capa_de_datos
                 {
                     //reemplaza el parametro @correo con el valor dado como correo
                     comando.Parameters.AddWithValue("@correo", correo);
+
+                    //encripta la contraseña antes de guardarla en la base de datos 
                     string hash = BCrypt.Net.BCrypt.HashPassword(contrasena);
                     comando.Parameters.AddWithValue("@contrasena", hash);
 
@@ -356,6 +359,26 @@ namespace SISTEMA.capa_de_datos
 
         public bool AgregarUsuario(int rol, string nombre, string username, string contrasena, string correo, string pregunta, string respuesta, string estado)
         {
+            // Validaciones en C# ANTES de enviar a BD
+            if (string.IsNullOrWhiteSpace(contrasena) || contrasena.Length < 8)
+            {
+                MessageBox.Show("La contraseña debe tener al menos 8 caracteres.", "Validación fallida", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
+            if (string.IsNullOrWhiteSpace(correo) || !correo.Contains("@"))
+            {
+                MessageBox.Show("El correo no es válido.", "Validación fallida", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
+            // Verificar si el correo ya existe ANTES de intentar insertar
+            if (VerificarSiUsuarioExiste(correo))
+            {
+                MessageBox.Show("El correo electrónico ya está registrado.", "Validación fallida", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
             //crea el objeto de conexion a la base de datos con el string de conexion
             using (NpgsqlConnection conexion = new NpgsqlConnection(connection.con))
             {
@@ -375,12 +398,15 @@ namespace SISTEMA.capa_de_datos
                 //realiza la consulta a la base de datos según la consulta anterior y a la conexión creada
                 using (NpgsqlCommand comando = new NpgsqlCommand(consulta, conexion))
                 {
+                    //Encriptar la contraseña ANTES de enviar (igual que en CambiarContrasena)
+                    string hash = BCrypt.Net.BCrypt.HashPassword(contrasena);
+
                     //reemplaza los parametros dados
                     comando.Parameters.AddWithValue("@rol", rol);
                     comando.Parameters.AddWithValue("@nombre", nombre);
                     comando.Parameters.AddWithValue("@username", username);
-                    comando.Parameters.AddWithValue("@contrasena", contrasena);
-                    comando.Parameters.AddWithValue("@correo", correo);                    
+                    comando.Parameters.AddWithValue("@contrasena", hash);
+                    comando.Parameters.AddWithValue("@correo", correo.ToLower().Trim());
                     comando.Parameters.AddWithValue("@pregunta", pregunta);
                     comando.Parameters.AddWithValue("@respuesta", respuesta);
                     comando.Parameters.AddWithValue("@estado", estado);
@@ -395,6 +421,54 @@ namespace SISTEMA.capa_de_datos
                     }
                     else
                     {                        
+                        return false;
+                    }
+                }
+            }
+        }
+
+        public bool EditarUsuario(int id, int rol, string nombre, string username, string contrasena, string correo, string pregunta, string respuesta, string estado)
+        {
+            //crea el objeto de conexion a la base de datos con el string de conexion
+            using (NpgsqlConnection conexion = new NpgsqlConnection(connection.con))
+            {
+                try
+                {
+                    //inicia la conexion 
+                    conexion.Open();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al conectar a la base de datos: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+                //hace el insert del usuario a la base de datos con los datos recolecatos de los campos en subUsuarioAgregar
+                string consulta = "update usuario set id_rol = @rol, nombre = @nombre, username = @username, contrasena = @contrasena, correo = @correo, pregunta = @pregunta, respuesta = @respuesta, estado = @estado where id_usuario = @id_usuario;";
+
+                //realiza la consulta a la base de datos según la consulta anterior y a la conexión creada
+                using (NpgsqlCommand comando = new NpgsqlCommand(consulta, conexion))
+                {
+                    //reemplaza los parametros dados
+                    comando.Parameters.AddWithValue("@id_usuario", id);
+                    comando.Parameters.AddWithValue("@rol", rol);
+                    comando.Parameters.AddWithValue("@nombre", nombre);
+                    comando.Parameters.AddWithValue("@username", username);
+                    comando.Parameters.AddWithValue("@contrasena", contrasena);
+                    comando.Parameters.AddWithValue("@correo", correo);
+                    comando.Parameters.AddWithValue("@pregunta", pregunta);
+                    comando.Parameters.AddWithValue("@respuesta", respuesta);
+                    comando.Parameters.AddWithValue("@estado", estado);
+
+                    //ExecuteNonQuery devuelve el número de filas afectadas
+                    int filasAfectadas = comando.ExecuteNonQuery();
+
+                    //Si filasAfectadas > 0, significa que el correo existe y la contraseña fue actualizada
+                    if (filasAfectadas > 0)
+                    {
+                        return true;
+                    }
+                    else
+                    {
                         return false;
                     }
                 }

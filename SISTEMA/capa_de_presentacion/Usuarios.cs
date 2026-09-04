@@ -9,15 +9,19 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static SISTEMA.subUsuarioModificar;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace SISTEMA
 {
     public partial class Usuarios : Form
     {
-        private int editingIndex = -1;
+        private int editingIndex;
         private ClaseRol r;
         private ClaseUsuarios u;
+
+        private List<ClaseUsuarios> ListaUsuarios = new List<ClaseUsuarios>();
         public Usuarios()
         {
             InitializeComponent();
@@ -26,10 +30,12 @@ namespace SISTEMA
             u = new ClaseUsuarios();
             //btnGuardarH.Click += btnGuardarH_Click;
             //btnLimpiarK.Click += btnLimpiarK_Click;
-            btnBuscarD.Click += btnBuscarD_Click;
+            btnBuscarD.Click += btnBuscarD_Click_1;
             btnEditarM.Click += btnEditarM_Click;
             btnIngresarW.Click += btnIngresarW_Click;
-            dataGridView1.CellDoubleClick += dataGridView1_CellDoubleClick;
+            dataGridView1.CellDoubleClick += dataGridView1_CellDoubleClick_1;
+            dataGridView1.CellClick += dataGridView1_CellClick;
+
             cmbBuscarQ.Items.Add("nombre");
             cmbBuscarQ.Items.Add("username");
             cmbBuscarQ.Items.Add("correo");
@@ -243,12 +249,38 @@ namespace SISTEMA
 
         private void btnEditarM_Click_1(object sender, EventArgs e)
         {
-            if (editingIndex < 0)
+            if (editingIndex < 0 || editingIndex >= dataGridView1.Rows.Count)
             {
-                MessageBox.Show("No hay ningún usuario cargado para editar. Haz doble clic en la fila a editar.", "Editar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Debes hacer clic en una fila del usuario que deseas editar.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            subUsuarioModificar obj = new subUsuarioModificar(); obj.ShowDialog();
+
+            try
+            {
+                //obtiene los datos de la fila seleccionada del DataGridView
+                DataGridViewRow fila = dataGridView1.Rows[editingIndex];
+
+                var usuarioParaEditar = new ClaseUsuarios
+                {
+                    id_usuario = Convert.ToInt32(fila.Cells[0].Value ?? 0),
+                    nombre = fila.Cells[2].Value?.ToString() ?? "",
+                    username = fila.Cells[3].Value?.ToString() ?? "",
+                    correo = fila.Cells[5].Value?.ToString() ?? "",
+                    contrasena = fila.Cells[4].Value?.ToString() ?? "",
+                    pregunta = fila.Cells[6].Value?.ToString() ?? "",
+                    respuesta = fila.Cells[7].Value?.ToString() ?? "",
+                    rol = fila.Cells[1].Value?.ToString() ?? "",
+                    estado = fila.Cells[8].Value?.ToString() ?? ""
+                };               
+
+                // Pasar el usuario directamente al formulario
+                subUsuarioModificar obj = new subUsuarioModificar(usuarioParaEditar);
+                obj.ShowDialog();
+            }
+            catch (Exception x)
+            {
+                MessageBox.Show("Error al cargar el usuario para edición: " + x.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void btnBuscarD_Click_1(object sender, EventArgs e)
@@ -260,8 +292,10 @@ namespace SISTEMA
             //si el parametro es rol
             if (parametro == "rol")
             {
+                //se consigue el id del rol 
                 int numeroRol = r.ConseguirNumeroRol(dato);
 
+                //se busca el usuario mediante el id del rol
                 u.BuscarUsuario(numeroRol, dataGridView1);
             }
             else
@@ -272,8 +306,38 @@ namespace SISTEMA
 
         private void dataGridView1_CellDoubleClick_1(object sender, DataGridViewCellEventArgs e)
         {
-            editingIndex++;
-            
+            try
+            {
+                // Guardar el índice de la fila seleccionada
+                editingIndex = e.RowIndex;
+
+                //guarda los datos del usuario en las variables de la clase usuario
+                var nuevoUser = new ClaseUsuarios
+                {
+                    id_usuario = Convert.ToInt32(dataGridView1.Rows[editingIndex].Cells[0].Value),
+                    rol = dataGridView1.Rows[editingIndex].Cells[1].Value.ToString(),
+                    nombre = dataGridView1.Rows[editingIndex].Cells[2].Value.ToString(),
+                    username = dataGridView1.Rows[editingIndex].Cells[3].Value.ToString(),
+                    contrasena = dataGridView1.Rows[editingIndex].Cells[4].Value.ToString(),
+                    correo = dataGridView1.Rows[editingIndex].Cells[5].Value.ToString(),
+                    pregunta = dataGridView1.Rows[editingIndex].Cells[6].Value.ToString(),
+                    respuesta = dataGridView1.Rows[editingIndex].Cells[7].Value.ToString(),
+                    estado = dataGridView1.Rows[editingIndex].Cells[8].Value.ToString()
+                };
+
+                //lo añade a la lista
+                ListaUsuarios.Add(nuevoUser);
+                MessageBox.Show("Usuario cargado correctamente.\nUtilice el botón ✏EDITAR para editar los datos del usuario.\nPresione ⛔DESHABILITAR para cambiar el estado del usuario a Inactivo.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception x)
+            {
+                MessageBox.Show(x.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+          
         }
     }
 }

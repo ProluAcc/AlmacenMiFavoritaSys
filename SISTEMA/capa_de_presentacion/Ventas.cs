@@ -129,6 +129,96 @@ namespace Pantalla_ventas
             { "Falda Larga", new List<string>() { "S", "M", "L", "XL" } },
         };
 
+        
+        private void CalcularFactura(double valor, double descuento)
+        {
+            double iva = valor * 0.15;
+            subtotal += valor + iva;
+            total = subtotal - descuento;
+
+            txtsubtotal.Text = subtotal.ToString("N2");
+            txtiva.Text = iva.ToString("N2");
+            txttotal.Text = total.ToString("N2");
+        }
+
+        public void Realizarcambio()
+        {
+            if (txtefectivo.Text == "")
+            {
+                MessageBox.Show("Ingrese el monto entregado por el cliente.");
+                return;
+            }
+
+            double monto = Convert.ToDouble(txtefectivo.Text);
+            double total = Convert.ToDouble(txttotal.Text);
+
+            if (monto < total)
+            {
+                MessageBox.Show("El monto es insuficiente para realizar el pago.");
+                return;
+            }
+
+            double cambio = monto - total;
+
+            MessageBox.Show("Gracias por su compra, su cambio es de C$ " + cambio.ToString("N2"), "Pago realizado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            btnfactura.Enabled = true;
+            buttonIngresar.Enabled = false;
+            btnlimpiar.Enabled = false;
+            btncambio.Enabled = false;
+        }
+
+        public void Realizarfactura()
+        {
+            numeroFactura++;
+            File.WriteAllText("factura.txt", numeroFactura.ToString("D3"));
+            txtfactura.Text = numeroFactura.ToString();
+
+            btnnuevoo.Enabled = false;
+
+            txtsubtotal.Text = "0.00";
+            txtiva.Text = "0.00";
+            txttotal.Text = "0.00";
+            subtotal = 0;
+            total = 0;
+        }
+
+        public void Validar()
+        {
+            if (txtcliente.Text == "" ||
+                cmbcategoria.Text == "" ||
+                cmbproducto.Text == "" ||
+                cmbtalla.Text == " " ||
+                txtdescuento.Text == "" ||
+                txtprecio.Text == "" ||
+                numericant.Value == 0 ||
+                cmbpago.Text == "")
+            {
+                MessageBox.Show("Debe completar todos los campos antes de ingresar la venta.", "Campos incompletos", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (cmbpago.SelectedIndex == -1)
+            {
+                MessageBox.Show("Por favor, seleccione un tipo de pago.");
+                return;
+            }
+
+            if (cmbtalla.SelectedIndex == -1)
+            {
+                MessageBox.Show("Seleccione una talla valida.");
+                return;
+            }
+        }
+
+        public void Limpiar()
+        {
+            cmbcategoria.SelectedIndex = -1;
+            cmbproducto.SelectedIndex = -1;
+            cmbtalla.SelectedIndex = -1;
+            numericant.Value = 0;
+            txtprecio.Clear();
+            txtdescuento.Clear();
+        }
 
 
         public Ventas()
@@ -283,12 +373,7 @@ namespace Pantalla_ventas
 
         private void btnlimpiar_Click(object sender, EventArgs e)
         {
-            cmbcategoria.SelectedIndex = -1;
-            cmbproducto.SelectedIndex = -1;
-            cmbtalla.SelectedIndex = -1;
-            numericant.Value = 0;
-            txtprecio.Clear();
-            txtdescuento.Clear();
+            Limpiar();
         }
 
         private void button7_Click(object sender, EventArgs e)
@@ -307,41 +392,17 @@ namespace Pantalla_ventas
                 int cantidad = (int)numericant.Value;
                 double valor = precio * cantidad;
                 string tipodepago = cmbpago.SelectedItem.ToString();
-
                 double porcentaje_descuento = Convert.ToDouble(txtdescuento.Text);
+
                 if (porcentaje_descuento < 0 || porcentaje_descuento > 100)
                 {
                     MessageBox.Show("El descuento debe estar entre 0 y 100%.");
                     return;
                 }
+                double descuento = valor * (porcentaje_descuento / 100); 
 
-                double descuento = valor * (porcentaje_descuento / 100); //valor(20% / 100)
 
-
-                if (txtcliente.Text == "" ||
-                cmbcategoria.Text == "" ||
-                cmbproducto.Text == "" ||
-                cmbtalla.Text == " " ||
-                txtdescuento.Text == "" ||
-                txtprecio.Text == "" ||
-                numericant.Value == 0 ||
-                cmbpago.Text == "")
-                {
-                    MessageBox.Show("Debe completar todos los campos antes de ingresar la venta.", "Campos incompletos", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return;
-                }
-
-                if (cmbpago.SelectedIndex == -1)
-                {
-                    MessageBox.Show("Por favor, seleccione un tipo de pago.");
-                    return;
-                }
-
-                if (cmbtalla.SelectedIndex == -1)
-                {
-                    MessageBox.Show("Seleccione una talla valida.");
-                    return;
-                }
+                Validar();
 
                 dgvventas.Rows.Add(producto, categoria, talla, precio, cantidad, valor, porcentaje_descuento.ToString() + "%", descuento, tipodepago);
 
@@ -353,7 +414,6 @@ namespace Pantalla_ventas
                 cmbproducto.SelectedIndex = -1;
                 numericant.Value = 0;
 
-
                 CalcularFactura(valor, descuento);
 
             }
@@ -361,19 +421,6 @@ namespace Pantalla_ventas
             {
                 MessageBox.Show("Error al ingresar la venta: " + ex.Message);
             }
-
-
-        }
-
-        private void CalcularFactura(double valor, double descuento)
-        {
-            double iva = valor * 0.15;
-            subtotal += valor + iva;
-            total = subtotal - descuento;
-
-            txtsubtotal.Text = subtotal.ToString("N2");
-            txtiva.Text = iva.ToString("N2");
-            txttotal.Text = total.ToString("N2");
         }
 
         private void button1_Click_1(object sender, EventArgs e)
@@ -393,28 +440,7 @@ namespace Pantalla_ventas
 
         private void button8_Click(object sender, EventArgs e)
         {
-            if (txtefectivo.Text == "")
-            {
-                MessageBox.Show("Ingrese el monto entregado por el cliente.");
-                return;
-            }
-
-            double monto = Convert.ToDouble(txtefectivo.Text);
-            double total = Convert.ToDouble(txttotal.Text);
-
-            if (monto < total)
-            {
-                MessageBox.Show("El monto es insuficiente para realizar el pago.");
-                return;
-            }
-
-            double cambio = monto - total;
-
-            MessageBox.Show("Gracias por su compra, su cambio es de C$ " + cambio.ToString("N2"), "Pago realizado", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            btnfactura.Enabled = true;
-            buttonIngresar.Enabled = false;
-            btnlimpiar.Enabled = false;
-            btncambio.Enabled = false;
+            Realizarcambio();
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
@@ -527,18 +553,7 @@ namespace Pantalla_ventas
             btnlimpiar.Enabled = true;
             btnnuevoo.Enabled = true;
 
-            numeroFactura++;
-            File.WriteAllText("factura.txt", numeroFactura.ToString("D3"));
-            txtfactura.Text = numeroFactura.ToString();
-
-            btnnuevoo.Enabled = false;
-
-            //Cuenta nueva
-            txtsubtotal.Text = "0.00";
-            txtiva.Text = "0.00";
-            txttotal.Text = "0.00";
-            subtotal = 0;
-            total = 0;
+            Realizarfactura();
         }
 
         private void cmbcategoria_SelectedIndexChanged(object sender, EventArgs e)
